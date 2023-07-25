@@ -8,6 +8,7 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody2D rb;
     private Animator anim;
     Vector2 movement;
+    public Joystick joystick;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,8 +20,8 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        movement.x = Input.GetAxisRaw("Horizontal") * moveSpeed;
-        movement.y = Input.GetAxisRaw("Vertical") * moveSpeed;
+        movement.x = joystick.Horizontal * moveSpeed;
+        movement.y = joystick.Vertical * moveSpeed;
         Vector2 speed = new Vector2(movement.x * moveSpeed, movement.y * moveSpeed).normalized;
 
         rb.velocity = new Vector2(speed.x * moveSpeed, speed.y * moveSpeed);
