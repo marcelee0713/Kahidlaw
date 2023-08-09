@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: ba6ec314f32d7cf48a0d332eafe2c68c
+guid: 6e626ea6df0c02c4ea222302803b57d0
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 64
+  spritePixelsToUnits: 32
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -136,55 +136,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Marco_head_0
+      name: Prototype_Facing_Front
       rect:
         serializedVersion: 2
-        x: 102
-        y: 187
-        width: 115
-        height: 116
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d8d593926bc2d1a4db4d10cef9b3a639
-      internalID: 1075405641
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Marco_right_thigh_1
-      rect:
-        serializedVersion: 2
-        x: 296
-        y: 227
-        width: 34
-        height: 47
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 634e2419b1b4a934984be617141f06bc
-      internalID: 538252553
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Marco_left_thigh_2
-      rect:
-        serializedVersion: 2
-        x: 408
-        y: 227
+        x: 54
+        y: 49
         width: 33
-        height: 44
+        height: 69
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -192,20 +150,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 629d812b1942dde44a767ff862431708
-      internalID: 1944833741
+      spriteID: a1033885ea147e3418a010519e3b1bae
+      internalID: -1425098880
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Marco_right_leg_3
+      name: Prototype_Back
       rect:
         serializedVersion: 2
-        x: 313
-        y: 179
+        x: 112
+        y: 48
         width: 34
-        height: 42
+        height: 70
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -213,20 +171,167 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c6c1bf85ebc3ad941bb402b1ce136f7d
-      internalID: -128767997
+      spriteID: 7d7884d7983030248a20c98fdb31dfb0
+      internalID: 1829444375
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Marco_left_leg_4
+      name: Prototype_FacingRight
       rect:
         serializedVersion: 2
-        x: 366
-        y: 175
+        x: 165
+        y: 49
+        width: 31
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de2040392afe682498832827f70a6669
+      internalID: -1390722415
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Prototype_Shotgun
+      rect:
+        serializedVersion: 2
+        x: 220
+        y: 92
+        width: 52
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6517019a834e2e54ebe19cedf093a574
+      internalID: -1981386657
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Prototype_Bolo
+      rect:
+        serializedVersion: 2
+        x: 227
+        y: 66
+        width: 54
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33b763e535a49c843bfe730059a4390a
+      internalID: 1297347598
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Prototype_left_foot
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 23
+        width: 12
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ec7460421b3ed9419ae3fa7e3793e1e
+      internalID: 669129761
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Prototype_right_foot
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 23
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22f0585f2cf8a7246a85a60b48920ba5
+      internalID: 1780318498
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Prototype_left_hand
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 22
+        width: 11
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f39fff63fc887f94996cf32be49fa426
+      internalID: 840942367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Prototype_right_hand
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 22
+        width: 11
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c3d33df475154e4f95c463ecce2d325
+      internalID: 575791364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Prototype_Rifle
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 31
         width: 42
-        height: 46
+        height: 17
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -234,20 +339,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: aab6cab14255f244c98c8ed601269599
-      internalID: -1164892358
+      spriteID: 427a59ee4988336468e4c6e30bd11233
+      internalID: -1646424130
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Marco_left_elbow_5
+      name: Prototype_M4A1_Weap
       rect:
         serializedVersion: 2
-        x: 84
-        y: 79
-        width: 28
-        height: 54
+        x: 289
+        y: 28
+        width: 60
+        height: 24
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -255,92 +360,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 45d5cf1bb81e69b47894ba49daba2e56
-      internalID: -1066257127
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Marco_body_6
-      rect:
-        serializedVersion: 2
-        x: 124
-        y: 52
-        width: 70
-        height: 98
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4adca2c6e49ac02449de208bea54fd72
-      internalID: 1750749088
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Marco_right_elbow_7
-      rect:
-        serializedVersion: 2
-        x: 217
-        y: 93
-        width: 22
-        height: 57
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4d68e3304b35c3a47b94bfe5f3098e64
-      internalID: -1738811932
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Marco_left_arm_8
-      rect:
-        serializedVersion: 2
-        x: 84
-        y: 20
-        width: 25
-        height: 54
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 25cf14423d0e8334c8b60dce897cf2e7
-      internalID: 1302257549
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Marco_left_arm_9
-      rect:
-        serializedVersion: 2
-        x: 228
-        y: 20
-        width: 24
-        height: 56
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 33df932414b98c643b529d4e63ceda01
-      internalID: 156809407
+      spriteID: d5989b3a82507454da5bb2c5e5882d3c
+      internalID: -351772818
       vertices: []
       indices: 
       edges: []
@@ -356,16 +377,17 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Marco_body_6: 1750749088
-      Marco_head_0: 1075405641
-      Marco_left_arm_8: 1302257549
-      Marco_left_arm_9: 156809407
-      Marco_left_elbow_5: -1066257127
-      Marco_left_leg_4: -1164892358
-      Marco_left_thigh_2: 1944833741
-      Marco_right_elbow_7: -1738811932
-      Marco_right_leg_3: -128767997
-      Marco_right_thigh_1: 538252553
+      Prototype_Back: 1829444375
+      Prototype_Bolo: 1297347598
+      Prototype_FacingRight: -1390722415
+      Prototype_Facing_Front: -1425098880
+      Prototype_M4A1_Weap: -351772818
+      Prototype_Rifle: -1646424130
+      Prototype_Shotgun: -1981386657
+      Prototype_left_foot: 669129761
+      Prototype_left_hand: 840942367
+      Prototype_right_foot: 1780318498
+      Prototype_right_hand: 575791364
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
