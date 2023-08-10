@@ -10,6 +10,12 @@ public class PlayerMovement : MonoBehaviour
     private Animator anim;
     Vector2 movement;
     public Joystick joystick;
+
+    private Vector2 speed;
+
+    public bool isAttacking = false;
+    public float attackCd = 0.5f;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -26,16 +32,48 @@ public class PlayerMovement : MonoBehaviour
         // X axis or pa horizontal pre na position
         movement.y = joystick.Vertical * moveSpeed;
         // 
-        Vector2 speed = new Vector2(movement.x * moveSpeed, movement.y * moveSpeed).normalized;
+        speed = new Vector2(movement.x * moveSpeed, movement.y * moveSpeed).normalized;
 
-        // Ito yung sineset niya yung velocity niya. Which is ang speed ng isang object
-        // speed ng "X axis" multiply by movespeed
-        // speed ng "Y axis" multiply by movespeed.
+        UpdateAnimations();
+    }
+
+    void UpdateAnimations()
+    {
+        if (speed != Vector2.zero)
+        {
+            UpdateMovements();
+            anim.SetFloat("Horizontal", movement.x);
+            anim.SetFloat("Vertical", movement.y);
+            anim.SetBool("isMoving", true);
+        }
+        else
+        {
+            rb.velocity = Vector2.Lerp(rb.velocity, Vector2.zero, 0.9f);
+            anim.SetBool("isMoving", false);
+
+        }
+    }
+
+    void UpdateMovements()
+    {
         rb.velocity = new Vector2(speed.x * moveSpeed, speed.y * moveSpeed);
+    }
 
-        // Animation ito pre. Tuturuan na lang kita bukas para dito
-        anim.SetFloat("Horizontal", movement.x);
-        anim.SetFloat("Vertical", movement.y);
-        anim.SetFloat("Speed", movement.sqrMagnitude);
+    public void StartAttack()
+    {
+        if (!isAttacking)
+        {
+            isAttacking = true;
+            StartCoroutine(Attack());
+        }
+    }
+
+    private IEnumerator Attack()
+    {
+        anim.SetBool("isAttacking", true);
+        yield return new WaitForSeconds(attackCd);
+        anim.SetBool("isAttacking", false);
+        isAttacking = false;
+
     }
 }
