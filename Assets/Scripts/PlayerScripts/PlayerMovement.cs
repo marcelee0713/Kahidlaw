@@ -70,9 +70,9 @@ public class PlayerMovement : MonoBehaviour
 
     private IEnumerator Attack()
     {
-        anim.SetBool("isAttacking", true);
+        anim.SetBool("isShooting", true);
         yield return new WaitForSeconds(attackCd);
-        anim.SetBool("isAttacking", false);
+        anim.SetBool("isShooting", false);
         isAttacking = false;
 
     }
