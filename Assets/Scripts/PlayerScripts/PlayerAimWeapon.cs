@@ -13,7 +13,6 @@ public class PlayerAimWeapon : MonoBehaviour
     private Rigidbody2D rb;
     private Vector3 lastAimLocalScale;
     private Vector3 lastAimEulerAngle;
-    public int topGunLayer = 6;
     private string direction;
 
     private Animator anim;
