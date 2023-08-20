@@ -35,11 +35,11 @@ public class PlayerAimWeapon : MonoBehaviour
         Vector2 aimDirection = myStick.Direction.normalized * 5;
         float angle = Mathf.Atan2(aimDirection.y, aimDirection.x) * Mathf.Rad2Deg;
         HandleDirection();
-        HandleAimDirection(aimDirection, angle);
+        HandleAimDirection(aimDirection);
         HandleMovementWithAim(angle);
     }
 
-    void HandleAimDirection(Vector2 aimDirection, float angle)
+    void HandleAimDirection(Vector2 aimDirection)
     {
         if (aimDirection != Vector2.zero)
         {
@@ -164,7 +164,7 @@ public class PlayerAimWeapon : MonoBehaviour
 
             if (angle != 0)
             {
-                gunAimTransform.eulerAngles = new Vector3(-180, 180, angle);
+                gunAimTransform.eulerAngles = new Vector3(0, 0, angle);
                 lastAimEulerAngle = new Vector3(-180, 180, angle);
             }
             else
@@ -201,8 +201,8 @@ public class PlayerAimWeapon : MonoBehaviour
 
             if (angle != 0)
             {
-                gunAimTransform.eulerAngles = new Vector3(0, 180, angle);
-                lastAimEulerAngle = new Vector3(0, 180, angle);
+                gunAimTransform.eulerAngles = new Vector3(0, 0, angle);
+                lastAimEulerAngle = new Vector3(0, 0, angle);
             }
             else
             {
@@ -220,8 +220,8 @@ public class PlayerAimWeapon : MonoBehaviour
 
             if (angle != 0)
             {
-                gunAimTransform.eulerAngles = new Vector3(0, 180, angle);
-                lastAimEulerAngle = new Vector3(0, 180, angle);
+                gunAimTransform.eulerAngles = new Vector3(0, 0, angle);
+                lastAimEulerAngle = new Vector3(0, 0, angle);
 
             }
             else
