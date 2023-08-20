@@ -13,8 +13,11 @@ public class PlayerAimWeapon : MonoBehaviour
     private Rigidbody2D rb;
     private Vector3 lastAimLocalScale;
     private Vector3 lastAimEulerAngle;
-
+    public int topGunLayer = 6;
     private string direction;
+
+    private Animator anim;
+
 
 
     void Start()
@@ -23,15 +26,64 @@ public class PlayerAimWeapon : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         Body = GameObject.Find("Body");
         bodySr = Body.GetComponent<SpriteRenderer>();
+        anim = GetComponent<Animator>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        Vector2 aimDirection = myStick.Direction.normalized;
+        Vector2 aimDirection = myStick.Direction.normalized * 5;
         float angle = Mathf.Atan2(aimDirection.y, aimDirection.x) * Mathf.Rad2Deg;
         HandleDirection();
+        HandleAimDirection(aimDirection, angle);
         HandleMovementWithAim(angle);
+    }
+
+    void HandleAimDirection(Vector2 aimDirection, float angle)
+    {
+        if (aimDirection != Vector2.zero)
+        {
+            anim.SetFloat("Horizontal", aimDirection.x);
+            anim.SetFloat("Vertical", aimDirection.y);
+
+
+
+            if (aimDirection.x >= 4 && (aimDirection.y <= 3 || aimDirection.y >= 3))
+            {
+                bodySr.sortingLayerID = SortingLayer.NameToID("Default");
+                direction = "right";
+                lastAimLocalScale = new Vector3(1, 1, 1);
+                lastAimEulerAngle = new Vector3(0, 0, -40);
+            }
+            else if (aimDirection.x <= 4 && (aimDirection.y <= 3 || aimDirection.y >= 3))
+            {
+                bodySr.sortingLayerID = SortingLayer.NameToID("Default");
+                direction = "left";
+                lastAimLocalScale = new Vector3(1, -1, 1);
+                lastAimEulerAngle = new Vector3(-180, 180, 40);
+            }
+
+            if (aimDirection.y <= -4 && (aimDirection.x <= 3 || aimDirection.x >= 3))
+            {
+                bodySr.sortingLayerID = SortingLayer.NameToID("Default");
+                direction = "bottom";
+                lastAimLocalScale = new Vector3(1, -1, 1);
+                lastAimEulerAngle = new Vector3(0, 180, -90);
+            }
+            else if (aimDirection.y >= 4 && (aimDirection.x <= 3 || aimDirection.x >= 3))
+            {
+                bodySr.sortingLayerID = SortingLayer.NameToID("TopGun");
+                direction = "top";
+                lastAimLocalScale = new Vector3(1, -1, 1);
+                lastAimEulerAngle = new Vector3(0, 0, 90);
+            }
+        }
+        else
+        {
+            gunAimTransform.localScale = lastAimLocalScale;
+            gunAimTransform.localEulerAngles = lastAimEulerAngle;
+        }
+
     }
 
     void HandleMovementWithAim(float angle)
@@ -106,6 +158,7 @@ public class PlayerAimWeapon : MonoBehaviour
     {
         if (direction == "left")
         {
+            bodySr.sortingLayerID = SortingLayer.NameToID("Default");
             gunAimTransform.transform.localScale = new Vector3(1, -1, 1);
             lastAimLocalScale = new Vector3(1, -1, 1);
 
@@ -123,6 +176,7 @@ public class PlayerAimWeapon : MonoBehaviour
         }
         else if (direction == "right")
         {
+            bodySr.sortingLayerID = SortingLayer.NameToID("Default");
             gunAimTransform.transform.localScale = new Vector3(1, 1, 1);
             lastAimLocalScale = new Vector3(1, 1, 1);
 
@@ -141,6 +195,7 @@ public class PlayerAimWeapon : MonoBehaviour
         }
         else if (direction == "bottom")
         {
+            bodySr.sortingLayerID = SortingLayer.NameToID("Default");
             gunAimTransform.transform.localScale = new Vector3(1, -1, 1);
             lastAimLocalScale = new Vector3(1, -1, 1);
 
@@ -158,6 +213,7 @@ public class PlayerAimWeapon : MonoBehaviour
         }
         else if (direction == "top")
         {
+            bodySr.sortingLayerID = SortingLayer.NameToID("TopGun");
             gunAimTransform.transform.localScale = new Vector3(1, -1, 1);
             lastAimLocalScale = new Vector3(1, -1, 1);
 
