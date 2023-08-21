@@ -18,6 +18,14 @@ public class Message
 {
     public int actorId;
     public string message;
+    public Choice[] choices;
+}
+
+[System.Serializable]
+public class Choice
+{
+    public string choice;
+    public string response;
 }
 
 [System.Serializable]

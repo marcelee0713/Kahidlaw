@@ -27,7 +27,12 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (DialogueManager.isActive) return;
+        if (DialogueManager.isActive)
+        {
+            rb.velocity = Vector2.Lerp(rb.velocity, Vector2.zero, 0.9f);
+            anim.SetBool("isMoving", false);
+            return;
+        }
         // Y axis or pa vertical pre na position
         movement.x = joystick.Horizontal * moveSpeed;
         // X axis or pa horizontal pre na position
