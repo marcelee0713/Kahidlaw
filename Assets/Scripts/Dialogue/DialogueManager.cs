@@ -95,6 +95,8 @@ public class DialogueManager : MonoBehaviour
         }
     }
 
+    // In order to have the typing effect
+    // Also checks if some "choices" exist
     private IEnumerator DisplayLine(string line)
     {
         messageText.text = "";
