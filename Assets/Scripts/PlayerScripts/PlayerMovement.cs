@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    // Pag public pre makikita mo ito doon sa right side bar ng "Player Object"
     public float moveSpeed;
     private Rigidbody2D rb;
     private Animator anim;
@@ -16,7 +15,6 @@ public class PlayerMovement : MonoBehaviour
     public bool isAttacking = false;
     public float attackCd = 0.5f;
 
-    // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -24,7 +22,6 @@ public class PlayerMovement : MonoBehaviour
     }
 
     // bao
-    // Update is called once per frame
     void Update()
     {
         if (DialogueManager.isActive)
@@ -33,11 +30,8 @@ public class PlayerMovement : MonoBehaviour
             anim.SetBool("isMoving", false);
             return;
         }
-        // Y axis or pa vertical pre na position
         movement.x = joystick.Horizontal * moveSpeed;
-        // X axis or pa horizontal pre na position
         movement.y = joystick.Vertical * moveSpeed;
-        // 
         speed = new Vector2(movement.x * moveSpeed, movement.y * moveSpeed).normalized;
 
         UpdateAnimations();
