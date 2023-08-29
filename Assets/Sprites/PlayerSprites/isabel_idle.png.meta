@@ -34,7 +34,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -43,12 +43,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 256
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -72,7 +72,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -134,7 +134,637 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: isabel_idle_0
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 3298
+        width: 293
+        height: 454
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a96cfede0630d3d4399d78871ed7089a
+      internalID: -2090938716
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isabel_idle_1
+      rect:
+        serializedVersion: 2
+        x: 769
+        y: 3298
+        width: 292
+        height: 463
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0b979ee8bdef914f9e214550fd8f621
+      internalID: -964972955
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isabel_idle_2
+      rect:
+        serializedVersion: 2
+        x: 1408
+        y: 3298
+        width: 294
+        height: 454
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2bec633f439b4e74d9d590a9d6ac247f
+      internalID: -578254446
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isabel_idle_3
+      rect:
+        serializedVersion: 2
+        x: 2049
+        y: 3298
+        width: 292
+        height: 454
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 295e3bd32810f1a45a47012f8e2bc9c1
+      internalID: -1728567071
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isabel_idle_4
+      rect:
+        serializedVersion: 2
+        x: 2688
+        y: 3298
+        width: 293
+        height: 463
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a30feb69a5a63d0488c8d66d678d6a4d
+      internalID: 137790326
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isabel_idle_5
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 2659
+        width: 293
+        height: 452
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b3431151b92f124a8b264a5daf3ae88
+      internalID: -1854601227
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isabel_idle_6
+      rect:
+        serializedVersion: 2
+        x: 769
+        y: 2659
+        width: 292
+        height: 452
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04104c901d4c67648bc7c82c2ab8ba66
+      internalID: 810467075
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isabel_idle_7
+      rect:
+        serializedVersion: 2
+        x: 1408
+        y: 2659
+        width: 294
+        height: 463
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 540bf68b1db4b2746adca2cccdf83234
+      internalID: -652826270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isabel_idle_8
+      rect:
+        serializedVersion: 2
+        x: 2049
+        y: 2659
+        width: 292
+        height: 452
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4bc1172c02a6fd842907c9290d3fd868
+      internalID: -1957739586
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isabel_idle_9
+      rect:
+        serializedVersion: 2
+        x: 2789
+        y: 2659
+        width: 182
+        height: 463
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8f7bdf6efd438e4db8cd34113a1f6d6
+      internalID: 596706592
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isabel_idle_10
+      rect:
+        serializedVersion: 2
+        x: 229
+        y: 2019
+        width: 182
+        height: 473
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10478e3370599524fae07ab96db1091f
+      internalID: -481890401
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isabel_idle_11
+      rect:
+        serializedVersion: 2
+        x: 868
+        y: 2019
+        width: 184
+        height: 462
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b554d000553e2c4da83d343b6538230
+      internalID: -1264075838
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isabel_idle_12
+      rect:
+        serializedVersion: 2
+        x: 1509
+        y: 2019
+        width: 182
+        height: 462
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc48156e85424374ea82ef3c7584a3df
+      internalID: -1256922070
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isabel_idle_13
+      rect:
+        serializedVersion: 2
+        x: 2148
+        y: 2019
+        width: 184
+        height: 473
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f23f009eedb857479da5ab29924cfc2
+      internalID: 497326305
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isabel_idle_14
+      rect:
+        serializedVersion: 2
+        x: 2789
+        y: 2019
+        width: 182
+        height: 462
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6abbb0a79f4d7af4d878a7a316b232a1
+      internalID: 12827919
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isabel_idle_15
+      rect:
+        serializedVersion: 2
+        x: 229
+        y: 1378
+        width: 182
+        height: 463
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d61b8090a1e6f0c4290edf897cc46eba
+      internalID: 871794918
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isabel_idle_16
+      rect:
+        serializedVersion: 2
+        x: 868
+        y: 1378
+        width: 184
+        height: 473
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 510ff7061081d3546bad808fd54247ca
+      internalID: 1399306739
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isabel_idle_17
+      rect:
+        serializedVersion: 2
+        x: 1509
+        y: 1378
+        width: 182
+        height: 463
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11c016ca3a98d6848a08dac170c7267a
+      internalID: -2115602191
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isabel_idle_18
+      rect:
+        serializedVersion: 2
+        x: 2139
+        y: 1378
+        width: 292
+        height: 454
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46c9918d8ff3cd54db0260df826fd6cc
+      internalID: -903908379
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isabel_idle_19
+      rect:
+        serializedVersion: 2
+        x: 2778
+        y: 1378
+        width: 293
+        height: 463
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01aa83ac7fe55f447af396ae8d6a4266
+      internalID: -1351524620
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isabel_idle_20
+      rect:
+        serializedVersion: 2
+        x: 219
+        y: 739
+        width: 293
+        height: 452
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f0d5c99dce829c4ca55843124fc43b9
+      internalID: -211189325
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isabel_idle_21
+      rect:
+        serializedVersion: 2
+        x: 859
+        y: 739
+        width: 292
+        height: 452
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c55ee8702a3fbf479419ca976f56d01
+      internalID: 97492332
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isabel_idle_22
+      rect:
+        serializedVersion: 2
+        x: 1498
+        y: 739
+        width: 294
+        height: 463
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4cb2f7364a524c549b775990fed5181b
+      internalID: 290340858
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isabel_idle_23
+      rect:
+        serializedVersion: 2
+        x: 2139
+        y: 739
+        width: 292
+        height: 452
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67ffa3a35ceeb6d4dbb637a5be2a6739
+      internalID: 1229195057
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isabel_idle_24
+      rect:
+        serializedVersion: 2
+        x: 2778
+        y: 739
+        width: 293
+        height: 452
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92f50f07097f8154f9af5f5b2882c73e
+      internalID: -1064725692
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isabel_idle_25
+      rect:
+        serializedVersion: 2
+        x: 219
+        y: 99
+        width: 293
+        height: 462
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1bd93109aa7d7474aaf17c324be96ec3
+      internalID: -85506055
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isabel_idle_26
+      rect:
+        serializedVersion: 2
+        x: 859
+        y: 99
+        width: 292
+        height: 452
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e17926413d4ccb247b9af652dedba843
+      internalID: -600649021
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isabel_idle_27
+      rect:
+        serializedVersion: 2
+        x: 1509
+        y: 79
+        width: 182
+        height: 472
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b067125366990842b5bcb4ac690db63
+      internalID: 1076999651
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isabel_idle_28
+      rect:
+        serializedVersion: 2
+        x: 2148
+        y: 79
+        width: 184
+        height: 482
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b364792ec5c98b4bbf1085ef1ba741c
+      internalID: -1128721637
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isabel_idle_29
+      rect:
+        serializedVersion: 2
+        x: 2789
+        y: 79
+        width: 182
+        height: 472
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77aeee39d60a0c34e89681fae699d0df
+      internalID: -1344504370
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -145,7 +775,37 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      isabel_idle_0: -2090938716
+      isabel_idle_1: -964972955
+      isabel_idle_10: -481890401
+      isabel_idle_11: -1264075838
+      isabel_idle_12: -1256922070
+      isabel_idle_13: 497326305
+      isabel_idle_14: 12827919
+      isabel_idle_15: 871794918
+      isabel_idle_16: 1399306739
+      isabel_idle_17: -2115602191
+      isabel_idle_18: -903908379
+      isabel_idle_19: -1351524620
+      isabel_idle_2: -578254446
+      isabel_idle_20: -211189325
+      isabel_idle_21: 97492332
+      isabel_idle_22: 290340858
+      isabel_idle_23: 1229195057
+      isabel_idle_24: -1064725692
+      isabel_idle_25: -85506055
+      isabel_idle_26: -600649021
+      isabel_idle_27: 1076999651
+      isabel_idle_28: -1128721637
+      isabel_idle_29: -1344504370
+      isabel_idle_3: -1728567071
+      isabel_idle_4: 137790326
+      isabel_idle_5: -1854601227
+      isabel_idle_6: 810467075
+      isabel_idle_7: -652826270
+      isabel_idle_8: -1957739586
+      isabel_idle_9: 596706592
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

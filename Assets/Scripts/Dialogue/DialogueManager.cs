@@ -32,8 +32,14 @@ public class DialogueManager : MonoBehaviour
 
     [Header("Handlers")]
     public GameObject movementController;
+    public GameObject gunController;
+    public GameObject talkButton;
+    public GameObject switchButton;
+    public GameObject healthBar;
+    public GameObject missionsBar;
+    public GameObject locatorBar;
 
-    public static bool isActive = false;
+    public static bool isDialogueActive = false;
     private Coroutine displayLineCoroutine;
     private bool canContinueToNextLine = true;
 
@@ -47,10 +53,10 @@ public class DialogueManager : MonoBehaviour
         activeMessage = 0;
 
         Debug.Log("Started conversation! Loaded Messages: " + messages.Length);
-        isActive = true;
+        isDialogueActive = true;
         DisplayMessage();
-        movementController.SetActive(!isActive);
-        this.gameObject.SetActive(isActive);
+        DisableHUD();
+        this.gameObject.SetActive(isDialogueActive);
     }
 
     void DisplayMessage()
@@ -132,15 +138,15 @@ public class DialogueManager : MonoBehaviour
         else
         {
             Debug.Log("Conversation ended!");
-            isActive = false;
-            this.gameObject.SetActive(isActive);
-            movementController.SetActive(!isActive);
+            isDialogueActive = false;
+            this.gameObject.SetActive(isDialogueActive);
+            EnableHUD();
         }
     }
 
     void Start()
     {
-        this.gameObject.SetActive(isActive);
+        this.gameObject.SetActive(isDialogueActive);
 
         // If choice one is pressed
         choiceOne.onClick.AddListener(delegate
@@ -197,9 +203,37 @@ public class DialogueManager : MonoBehaviour
 
     public void HandleNextMessage()
     {
-        if(isActive && canContinueToNextLine)
+        if(isDialogueActive && canContinueToNextLine)
         {
             NextMessage();
         }
+    }
+
+    void DisableHUD()
+    {
+        movementController.SetActive(false);
+        gunController.SetActive(false);
+        talkButton.SetActive(false);
+        switchButton.SetActive(false);
+        healthBar.SetActive(false);
+        missionsBar.SetActive(false);
+        locatorBar.SetActive(false);
+    }
+
+    void EnableHUD()
+    {
+        movementController.SetActive(true);
+
+        if(ModeChanger.mode == "Gun")
+        {
+            gunController.SetActive(true);
+
+        }
+
+        talkButton.SetActive(true);
+        switchButton.SetActive(true);
+        healthBar.SetActive(true);
+        missionsBar.SetActive(true);
+        locatorBar.SetActive(true);
     }
 }

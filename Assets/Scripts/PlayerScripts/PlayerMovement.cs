@@ -24,7 +24,7 @@ public class PlayerMovement : MonoBehaviour
     // bao
     void Update()
     {
-        if (DialogueManager.isActive)
+        if (DialogueManager.isDialogueActive)
         {
             rb.velocity = Vector2.Lerp(rb.velocity, Vector2.zero, 0.9f);
             anim.SetBool("isMoving", false);
