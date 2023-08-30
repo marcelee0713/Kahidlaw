@@ -37,7 +37,9 @@ public class DialogueManager : MonoBehaviour
     public GameObject switchButton;
     public GameObject healthBar;
     public GameObject missionsBar;
+    public GameObject missionsPanel;
     public GameObject locatorBar;
+    public GameObject notifierBar;
 
     public static bool isDialogueActive = false;
     private Coroutine displayLineCoroutine;
@@ -137,7 +139,6 @@ public class DialogueManager : MonoBehaviour
         }
         else
         {
-            Debug.Log("Conversation ended!");
             isDialogueActive = false;
             this.gameObject.SetActive(isDialogueActive);
             EnableHUD();
@@ -193,12 +194,6 @@ public class DialogueManager : MonoBehaviour
 
         // Can now continue to the next line
         canContinueToNextLine = true;
-
-    }
-
-    void Update()
-    {
-
     }
 
     public void HandleNextMessage()
@@ -217,7 +212,9 @@ public class DialogueManager : MonoBehaviour
         switchButton.SetActive(false);
         healthBar.SetActive(false);
         missionsBar.SetActive(false);
+        missionsPanel.SetActive(false);
         locatorBar.SetActive(false);
+        notifierBar.SetActive(false);
     }
 
     void EnableHUD()
@@ -230,10 +227,16 @@ public class DialogueManager : MonoBehaviour
 
         }
 
+        if(Environment.isMissionPanelOpen)
+        {
+            missionsPanel.SetActive(true);
+        }
+
         talkButton.SetActive(true);
         switchButton.SetActive(true);
         healthBar.SetActive(true);
         missionsBar.SetActive(true);
         locatorBar.SetActive(true);
+        notifierBar.SetActive(true);
     }
 }

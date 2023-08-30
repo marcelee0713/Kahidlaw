@@ -15,6 +15,8 @@ public class PlayerMovement : MonoBehaviour
     public bool isAttacking = false;
     public float attackCd = 0.5f;
 
+    public Environment gameManager;
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -57,6 +59,16 @@ public class PlayerMovement : MonoBehaviour
     void UpdateMovements()
     {
         rb.velocity = new Vector2(speed.x * moveSpeed, speed.y * moveSpeed);
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("TestKitchen"))
+        {
+            gameManager.UpdateMission(1);
+            gameManager.UpdateMissionsCount();
+            gameManager.ShowNotifier();
+        }
     }
 
     public void StartAttack()

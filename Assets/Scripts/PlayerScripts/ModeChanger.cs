@@ -10,11 +10,6 @@ public class ModeChanger : MonoBehaviour
         mode = "Neutral";
     }
 
-    private void Update()
-    {
-        Debug.Log(mode);
-    }
-
     public void HandleChangeMode()
     {
         if (mode == "Neutral")

@@ -4,11 +4,15 @@ using UnityEngine;
 
 public class DialogueTrigger : MonoBehaviour
 {
+    public string talkingToWho;
     public Message[] messages;
     public Actor[] actors;
+    public Environment gameManager;
 
     public void StartDialogue()
     {
+        gameManager.UpdateMission(0);
+        gameManager.UpdateMissionsCount();
         FindObjectOfType<DialogueManager>().OpenDialogue(messages, actors);
     }
 }
