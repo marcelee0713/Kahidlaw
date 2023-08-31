@@ -237,6 +237,5 @@ public class DialogueManager : MonoBehaviour
         healthBar.SetActive(true);
         missionsBar.SetActive(true);
         locatorBar.SetActive(true);
-        notifierBar.SetActive(true);
     }
 }

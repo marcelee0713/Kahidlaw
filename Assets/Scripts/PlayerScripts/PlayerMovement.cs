@@ -66,8 +66,6 @@ public class PlayerMovement : MonoBehaviour
         if (collision.gameObject.CompareTag("TestKitchen"))
         {
             gameManager.UpdateMission(1);
-            gameManager.UpdateMissionsCount();
-            gameManager.ShowNotifier();
         }
     }
 

@@ -60,11 +60,17 @@ public class Environment : MonoBehaviour
 
     public void UpdateMission(int index)
     {
-        missions[index].IsDone = true;
-        taskTexts[index].fontStyle = FontStyles.Strikethrough;
+        if (!missions[index].IsDone)
+        {
+            missions[index].IsDone = true;
+            taskTexts[index].fontStyle = FontStyles.Strikethrough;
+
+            UpdateMissionsCount();
+            ShowNotifier();
+        }
     }
 
-    public void UpdateMissionsCount()
+    private void UpdateMissionsCount()
     {
         int counter = 0;
         for (int i = 0; i < missions.Length; i++)
@@ -78,7 +84,7 @@ public class Environment : MonoBehaviour
         missionsFinishedText.text = counter.ToString();
     }
 
-    public void ShowNotifier()
+    private void ShowNotifier()
     {
         StopAllCoroutines();
         StartCoroutine(HandleNotifier());
