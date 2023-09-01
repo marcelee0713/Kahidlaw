@@ -11,7 +11,6 @@ public class DialogueTrigger : MonoBehaviour
 
     public void StartDialogue()
     {
-        gameManager.UpdateMission(0);
         FindObjectOfType<DialogueManager>().OpenDialogue(messages, actors);
     }
 }

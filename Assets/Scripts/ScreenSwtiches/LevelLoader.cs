@@ -14,6 +14,11 @@ public class LevelLoader : MonoBehaviour
         StartCoroutine(LoadLevel(1));
     }
 
+    public void LoadNewGameStartSpanishEra()
+    {
+        StartCoroutine(LoadLevel(2));
+    }
+
     IEnumerator LoadLevel (int levelIndex)
     {
         transition.SetTrigger("Start");

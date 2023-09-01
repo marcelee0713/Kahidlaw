@@ -5,11 +5,49 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
-    // Start is called before the first frame update
+    private GameObject musicFromStart;
+
+    public GameObject musicFromMainMenu;
+    public AudioSource audioSource;
+
+    public float FadeTime = 1f;
+    private void Start()
+    {
+        musicFromStart = GameObject.FindGameObjectWithTag("GameAudio");
+        if (musicFromStart != null)
+        {
+            audioSource = musicFromStart.GetComponent<AudioSource>();
+        }
+        else
+        {
+            audioSource = musicFromMainMenu.GetComponent<AudioSource>();
+        }
+    }
+
     public void PlayGame()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        SceneManager.LoadScene(2);
     }
+
+    public void FadeOutMusic()
+    {
+        StartCoroutine(FadeOutCoreMusic());
+    }
+
+    private IEnumerator FadeOutCoreMusic()
+    {
+        float startVolume = audioSource.volume;
+        while (audioSource.volume > 0f)
+        {
+            var tmp = audioSource.volume;
+            audioSource.volume = tmp - (startVolume * Time.deltaTime / FadeTime);
+            yield return new WaitForEndOfFrame();
+        }
+        audioSource.Stop();
+        audioSource.volume = startVolume;
+        Destroy(musicFromStart);
+    }
+
 
     public void QuitGame()
     {

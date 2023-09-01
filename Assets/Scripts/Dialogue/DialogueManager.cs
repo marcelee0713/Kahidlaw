@@ -40,6 +40,7 @@ public class DialogueManager : MonoBehaviour
     public GameObject missionsPanel;
     public GameObject locatorBar;
     public GameObject notifierBar;
+    public GameObject meleeController;
 
     public static bool isDialogueActive = false;
     private Coroutine displayLineCoroutine;
@@ -56,8 +57,8 @@ public class DialogueManager : MonoBehaviour
 
         Debug.Log("Started conversation! Loaded Messages: " + messages.Length);
         isDialogueActive = true;
-        DisplayMessage();
         DisableHUD();
+        DisplayMessage();
         this.gameObject.SetActive(isDialogueActive);
     }
 
@@ -77,8 +78,18 @@ public class DialogueManager : MonoBehaviour
         Actor actorToDisplay = currentActors[messageToDisplay.actorId];
         actorName.text = actorToDisplay.name;
 
-        leftCharImage.sprite = currentActors[0].sprite;
-        rightCharImage.sprite = currentActors[1].sprite;
+        if(currentActors.Length == 2)
+        {
+            rightCharImage.enabled = true;
+            leftCharImage.sprite = currentActors[0].sprite;
+            rightCharImage.sprite = currentActors[1].sprite;
+        }
+        else
+        {
+            leftCharImage.sprite = currentActors[0].sprite;
+            rightCharImage.enabled = false;
+        }
+
 
         // Display Choices
         DisplayChoices();
@@ -204,7 +215,7 @@ public class DialogueManager : MonoBehaviour
         }
     }
 
-    void DisableHUD()
+    public void DisableHUD()
     {
         movementController.SetActive(false);
         gunController.SetActive(false);
@@ -215,6 +226,7 @@ public class DialogueManager : MonoBehaviour
         missionsPanel.SetActive(false);
         locatorBar.SetActive(false);
         notifierBar.SetActive(false);
+        meleeController.SetActive(false);
     }
 
     void EnableHUD()
@@ -226,8 +238,12 @@ public class DialogueManager : MonoBehaviour
             gunController.SetActive(true);
 
         }
+        else if (ModeChanger.mode == "Melee")
+        {
+            meleeController.SetActive(true);
+        }
 
-        if(Environment.isMissionPanelOpen)
+        if (Environment.isMissionPanelOpen)
         {
             missionsPanel.SetActive(true);
         }
