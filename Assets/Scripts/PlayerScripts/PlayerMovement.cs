@@ -61,14 +61,6 @@ public class PlayerMovement : MonoBehaviour
         rb.velocity = new Vector2(speed.x * moveSpeed, speed.y * moveSpeed);
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.gameObject.CompareTag("TestKitchen"))
-        {
-            gameManager.UpdateMission(1);
-        }
-    }
-
     public void StartAttack()
     {
         if (!isAttacking)

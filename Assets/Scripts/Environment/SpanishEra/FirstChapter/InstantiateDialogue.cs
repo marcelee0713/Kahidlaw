@@ -26,6 +26,9 @@ public class InstantiateDialogue : MonoBehaviour
         yield return new WaitForSeconds(3f);
 
         DialogueBox.SetActive(true);
+        Message[] messages = dialogue.messages;
+        Actor[] actors = dialogue.actors;
+        DialogueManager.ChangeMessagesAndActors(messages, actors);
         dialogue.StartDialogue();
     }
 }

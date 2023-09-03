@@ -97,6 +97,17 @@ public class Environment : MonoBehaviour
         notifier.SetActive(false);
 
     }
+
+    // Location & Era 
+    public void ChangeLocation(string newLocation)
+    {
+        locationText.text = newLocation;
+    }
+
+    public void ChangeEra(string newEra)
+    {
+        eraText.text = newEra;
+    }
 }
 
 [System.Serializable]

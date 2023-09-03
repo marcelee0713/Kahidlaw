@@ -25,8 +25,8 @@ public class DialogueManager : MonoBehaviour
     public TextMeshProUGUI choiceOneText;
     public TextMeshProUGUI choiceTwoText;
 
-    Message[] currentMessages;
-    Actor[] currentActors;
+    public static Message[] currentMessages;
+    public static Actor[] currentActors;
     int activeMessage = 0;
     private Message messageToDisplay;
 
@@ -49,13 +49,10 @@ public class DialogueManager : MonoBehaviour
     private string choiceOneRes = "";
     private string choiceTwoRes = "";
 
-    public void OpenDialogue(Message[] messages, Actor[] actors)
+    public void OpenDialogue()
     {
-        currentMessages = messages;
-        currentActors = actors;
         activeMessage = 0;
 
-        Debug.Log("Started conversation! Loaded Messages: " + messages.Length);
         isDialogueActive = true;
         DisableHUD();
         DisplayMessage();
@@ -188,6 +185,12 @@ public class DialogueManager : MonoBehaviour
             ResetAndDeactivateChoices();
             displayLineCoroutine = StartCoroutine(DisplayLine(choiceHolder));
         });
+    }
+
+    public void ChangeMessagesAndActors(Message[] newMessages, Actor[] newActors)
+    {
+        currentMessages = newMessages;
+        currentActors = newActors;
     }
 
     void ResetAndDeactivateChoices()
