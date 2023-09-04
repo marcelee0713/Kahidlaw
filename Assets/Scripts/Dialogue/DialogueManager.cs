@@ -17,7 +17,6 @@ public class DialogueManager : MonoBehaviour
     public GameObject continueIcon;
     public float typingSpeed = 0.04f;
 
-
     [Header("Choices")]
     public GameObject choicesContainer;
     public Button choiceOne;
@@ -41,6 +40,7 @@ public class DialogueManager : MonoBehaviour
     public GameObject locatorBar;
     public GameObject notifierBar;
     public GameObject meleeController;
+    public GameObject switchCharButton;
 
     public static bool isDialogueActive = false;
     private Coroutine displayLineCoroutine;
@@ -230,6 +230,7 @@ public class DialogueManager : MonoBehaviour
         locatorBar.SetActive(false);
         notifierBar.SetActive(false);
         meleeController.SetActive(false);
+        switchCharButton.SetActive(false);
     }
 
     void EnableHUD()
@@ -256,5 +257,6 @@ public class DialogueManager : MonoBehaviour
         healthBar.SetActive(true);
         missionsBar.SetActive(true);
         locatorBar.SetActive(true);
+        switchCharButton.SetActive(true);
     }
 }

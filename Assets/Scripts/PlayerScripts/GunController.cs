@@ -20,6 +20,11 @@ public class GunController : MonoBehaviour
 
     void Update()
     {
+        if (ModeChanger.currentCharacter != this.gameObject.name)
+        {
+            return;
+        }
+
         if (ModeChanger.mode == "Gun")
         {
             onDialogue();
@@ -34,7 +39,6 @@ public class GunController : MonoBehaviour
             gunObj.SetActive(false);
             anim.SetBool("isShooting", false);
             anim.SetBool("isWShooting", false);
-
         }
 
     }

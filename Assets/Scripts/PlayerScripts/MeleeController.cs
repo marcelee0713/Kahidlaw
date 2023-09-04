@@ -19,7 +19,13 @@ public class MeleeController : MonoBehaviour
 
     void Update()
     {
-        if (ModeChanger.mode == "Melee" && !DialogueManager.isDialogueActive)
+        if (ModeChanger.currentCharacter != this.gameObject.name)
+        {
+            return;
+        }
+
+
+        if (ModeChanger.mode == "Melee")
         {
             meleeObj.SetActive(true);
         }

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Environment : MonoBehaviour
 {
@@ -23,6 +24,11 @@ public class Environment : MonoBehaviour
     public GameObject notifier;
     public TextMeshProUGUI notifierText;
 
+    [Header("Characters")]
+    [SerializeField] private Image characterImage;
+    [SerializeField] private Sprite isabelImage;
+    [SerializeField] private Sprite marcoImage;
+
     void Start()
     {
         isMissionPanelOpen = false;
@@ -31,6 +37,8 @@ public class Environment : MonoBehaviour
         locationText.text = DefaultLocation;
         eraText.text = DefaultEra;
         InstantiateMissionsUI();
+
+        characterImage.sprite = marcoImage;
     }
 
     // Missions UI
@@ -108,6 +116,19 @@ public class Environment : MonoBehaviour
     {
         eraText.text = newEra;
     }
+
+    // Switching Characters Handler
+    public void ChangeCharacterIcon()
+    {
+        if (ModeChanger.currentCharacter == "Marco")
+        {
+            characterImage.sprite = marcoImage;
+        } else
+        {
+            characterImage.sprite = isabelImage;
+        }
+    }
+
 }
 
 [System.Serializable]

@@ -17,6 +17,15 @@ public class FootstepsManager : MonoBehaviour
 
     void Update()
     {
+        if (ModeChanger.currentCharacter != this.gameObject.name)
+        {
+            footStepsAudioSource.enabled = false;
+            return;
+        } else
+        {
+            footStepsAudioSource.enabled = true;
+        }
+
         if (joystick.Direction.normalized != Vector2.zero)
         {
             IsMoving();
