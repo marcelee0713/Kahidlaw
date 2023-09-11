@@ -59,6 +59,7 @@ public class GunController : MonoBehaviour
     {
         if (rb.velocity != Vector2.zero && aimDirection != Vector2.zero)
         {
+            anim.SetBool("isMoving", false);
             anim.SetBool("isWShooting", true);
         }
         else

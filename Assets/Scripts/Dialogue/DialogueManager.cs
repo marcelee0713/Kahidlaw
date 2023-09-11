@@ -41,6 +41,7 @@ public class DialogueManager : MonoBehaviour
     public GameObject notifierBar;
     public GameObject meleeController;
     public GameObject switchCharButton;
+    public GameObject settingsButton;
 
     public static bool isDialogueActive = false;
     private Coroutine displayLineCoroutine;
@@ -231,6 +232,12 @@ public class DialogueManager : MonoBehaviour
         notifierBar.SetActive(false);
         meleeController.SetActive(false);
         switchCharButton.SetActive(false);
+    }
+
+    public void DisableSettingsButton()
+    {
+        ModeChanger.mode = "Neutral";
+        settingsButton.SetActive(false);
     }
 
     void EnableHUD()

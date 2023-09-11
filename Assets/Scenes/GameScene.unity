@@ -1095,12 +1095,12 @@ SpriteRenderer:
   m_SortingLayerID: -971667303
   m_SortingLayer: 2
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: bbddabcc00fc05441a9cd16db657fc69, type: 3}
+  m_Sprite: {fileID: -1405687363, guid: 506c62db7e40cbf4da6bee8f533300d4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 5.7511225, y: 13.1875}
+  m_Size: {x: 3.6923077, y: 3.0769231}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -1204,8 +1204,8 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 7.5, y: 7.5}
-    newSize: {x: 5.7511225, y: 13.1875}
+    oldSize: {x: 3.6923077, y: 3.0769231}
+    newSize: {x: 3.6923077, y: 3.0769231}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -12063,6 +12063,7 @@ MonoBehaviour:
   notifierBar: {fileID: 106062971}
   meleeController: {fileID: 2044109938}
   switchCharButton: {fileID: 896045216}
+  settingsButton: {fileID: 143213480}
 --- !u!1 &402021953
 GameObject:
   m_ObjectHideFlags: 0
@@ -14502,12 +14503,12 @@ SpriteRenderer:
   m_SortingLayerID: -971667303
   m_SortingLayer: 2
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 0a4085679edda5744ad01cfa80becabe, type: 3}
+  m_Sprite: {fileID: 2137742721, guid: 30be3303e039c624990eb2f5a809a33c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 7.5, y: 7.5}
+  m_Size: {x: 3.6923077, y: 3.0769231}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -14567,8 +14568,8 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 7.5, y: 7.5}
-    newSize: {x: 7.5, y: 7.5}
+    oldSize: {x: 3.6923077, y: 3.0769231}
+    newSize: {x: 3.6923077, y: 3.0769231}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -18127,6 +18128,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f0226c36c8e53c5458df560a94fc288d, type: 3}
+--- !u!114 &1273173957 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7673735281823645186, guid: f0226c36c8e53c5458df560a94fc288d, type: 3}
+  m_PrefabInstance: {fileID: 1273173956}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 086f76518d6094c4681d5eebeb231da4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &1282760186 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8713323854870886036, guid: ad92fe000d9651d4f86e30d7d4671bba, type: 3}
@@ -20457,6 +20469,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1606105029}
   - component: {fileID: 1606105028}
+  - component: {fileID: 1606105030}
   m_Layer: 0
   m_Name: BackgroundMusic
   m_TagString: Untagged
@@ -20575,6 +20588,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1606105030
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1606105027}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d708f00beca7f3e48b3250b069bd3d78, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  FadeTime: 4
 --- !u!1 &1615299030
 GameObject:
   m_ObjectHideFlags: 0
@@ -22744,9 +22770,69 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 1273173957}
+        m_TargetAssemblyTypeName: LevelLoader, Assembly-CSharp
+        m_MethodName: LoadMainMenu
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 34243992}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 1590847261}
         m_TargetAssemblyTypeName: PauseMenu, Assembly-CSharp
-        m_MethodName: GoToMainMenu
+        m_MethodName: HandlePauseMenu
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 393884937}
+        m_TargetAssemblyTypeName: DialogueManager, Assembly-CSharp
+        m_MethodName: DisableHUD
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 393884937}
+        m_TargetAssemblyTypeName: DialogueManager, Assembly-CSharp
+        m_MethodName: DisableSettingsButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1606105030}
+        m_TargetAssemblyTypeName: FadeOutMusic, Assembly-CSharp
+        m_MethodName: FadeOutBackgroundMusic
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
