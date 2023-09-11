@@ -2,17 +2,25 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class MainMenu : MonoBehaviour
 {
     private GameObject musicFromStart;
-
+    [Header("Music")]
     public GameObject musicFromMainMenu;
     public AudioSource audioSource;
-
     public float FadeTime = 1f;
+
+    [Header("Background")]
+    public Image background;
+    public Sprite mainBackground;
+    public Sprite tutorialBackground;
+
     private void Start()
     {
+        ChangeMainBackground();
+
         musicFromStart = GameObject.FindGameObjectWithTag("GameAudio");
         if (musicFromStart != null)
         {
@@ -27,6 +35,16 @@ public class MainMenu : MonoBehaviour
     public void PlayGame()
     {
         SceneManager.LoadScene(2);
+    }
+
+    public void ChangeMainBackground()
+    {
+        background.sprite = mainBackground;
+    }
+
+    public void ChangeTutorialBackground()
+    {
+        background.sprite = tutorialBackground;
     }
 
     public void FadeOutMusic()
