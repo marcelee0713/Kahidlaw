@@ -42,6 +42,7 @@ public class DialogueManager : MonoBehaviour
     public GameObject meleeController;
     public GameObject switchCharButton;
     public GameObject settingsButton;
+    public GameObject hinter;
 
     public static bool isDialogueActive = false;
     private Coroutine displayLineCoroutine;
@@ -76,7 +77,10 @@ public class DialogueManager : MonoBehaviour
         Actor actorToDisplay = currentActors[messageToDisplay.actorId];
         actorName.text = actorToDisplay.name;
 
-        if(currentActors.Length == 2)
+        // Invoke or Call the Message Callback
+        currentMessages[activeMessage].messageCallback.Invoke();
+
+        if (currentActors.Length == 2)
         {
             rightCharImage.enabled = true;
             leftCharImage.sprite = currentActors[0].sprite;
@@ -106,7 +110,8 @@ public class DialogueManager : MonoBehaviour
             choiceOneRes = choiceOne.response;
             choiceTwoRes = choiceTwo.response;
             canContinueToNextLine = false;
-        } else
+        }
+        else
         {
             canContinueToNextLine = true;
         }
@@ -126,7 +131,7 @@ public class DialogueManager : MonoBehaviour
             yield return new WaitForSeconds(typingSpeed);
         }
 
-        if(choiceOneRes != "" && choiceTwoRes != "")
+        if (choiceOneRes != "" && choiceTwoRes != "")
         {
             choicesContainer.SetActive(true);
         }
@@ -170,7 +175,7 @@ public class DialogueManager : MonoBehaviour
             ResetAndDeactivateChoices();
             displayLineCoroutine = StartCoroutine(DisplayLine(choiceHolder));
 
-            
+
 
         });
 
@@ -213,7 +218,7 @@ public class DialogueManager : MonoBehaviour
 
     public void HandleNextMessage()
     {
-        if(isDialogueActive && canContinueToNextLine)
+        if (isDialogueActive && canContinueToNextLine)
         {
             NextMessage();
         }
@@ -221,6 +226,21 @@ public class DialogueManager : MonoBehaviour
 
     public void DisableHUD()
     {
+        CheckAndRun(movementController, () => movementController.SetActive(false));
+        CheckAndRun(gunController, () => gunController.SetActive(false));
+        CheckAndRun(talkButton, () => talkButton.SetActive(false));
+        CheckAndRun(switchButton, () => switchButton.SetActive(false));
+        CheckAndRun(healthBar, () => healthBar.SetActive(false));
+        CheckAndRun(missionsBar, () => missionsBar.SetActive(false));
+        CheckAndRun(missionsPanel, () => missionsPanel.SetActive(false));
+        CheckAndRun(locatorBar, () => locatorBar.SetActive(false));
+        CheckAndRun(notifierBar, () => notifierBar.SetActive(false));
+        CheckAndRun(meleeController, () => meleeController.SetActive(false));
+        CheckAndRun(switchCharButton, () => switchCharButton.SetActive(false));
+        CheckAndRun(hinter, () => hinter.SetActive(false));
+
+
+        /*
         movementController.SetActive(false);
         gunController.SetActive(false);
         talkButton.SetActive(false);
@@ -232,6 +252,7 @@ public class DialogueManager : MonoBehaviour
         notifierBar.SetActive(false);
         meleeController.SetActive(false);
         switchCharButton.SetActive(false);
+        */
     }
 
     public void DisableSettingsButton()
@@ -242,28 +263,50 @@ public class DialogueManager : MonoBehaviour
 
     void EnableHUD()
     {
-        movementController.SetActive(true);
+        CheckAndRun(movementController, () => movementController.SetActive(true));
 
-        if(ModeChanger.mode == "Gun")
+
+        if (ModeChanger.mode == "Gun")
         {
-            gunController.SetActive(true);
+            CheckAndRun(gunController, () => gunController.SetActive(true));
 
         }
         else if (ModeChanger.mode == "Melee")
         {
-            meleeController.SetActive(true);
+            CheckAndRun(meleeController, () => meleeController.SetActive(true));
         }
 
         if (Environment.isMissionPanelOpen)
         {
-            missionsPanel.SetActive(true);
+            CheckAndRun(missionsPanel, () => missionsPanel.SetActive(true));
         }
 
+        /*
         talkButton.SetActive(true);
         switchButton.SetActive(true);
         healthBar.SetActive(true);
         missionsBar.SetActive(true);
         locatorBar.SetActive(true);
         switchCharButton.SetActive(true);
+        */
+
+        CheckAndRun(talkButton, () => talkButton.SetActive(true));
+        CheckAndRun(switchButton, () => switchButton.SetActive(true));
+        CheckAndRun(healthBar, () => healthBar.SetActive(true));
+        CheckAndRun(missionsBar, () => missionsBar.SetActive(true));
+        CheckAndRun(locatorBar, () => locatorBar.SetActive(true));
+        CheckAndRun(switchCharButton, () => switchCharButton.SetActive(true));
+        CheckAndRun(hinter, () => hinter.SetActive(true));
+
+    }
+
+    public delegate void Callback();
+
+    public void CheckAndRun(GameObject thisGameObject,Callback callback)
+    {
+        if(thisGameObject != null)
+        {
+            callback();
+        }
     }
 }

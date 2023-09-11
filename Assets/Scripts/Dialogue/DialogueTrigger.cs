@@ -24,6 +24,7 @@ public class Message
     public string message;
     public Choice[] choices;
     public Sprite messageSprite;
+    public UnityEvent messageCallback;
 }
 
 [System.Serializable]

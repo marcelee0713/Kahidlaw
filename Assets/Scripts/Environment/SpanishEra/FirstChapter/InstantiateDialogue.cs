@@ -8,6 +8,7 @@ public class InstantiateDialogue : MonoBehaviour
     public DialogueTrigger dialogue;
     public GameObject DialogueBox;
     public DialogueManager DialogueManager;
+    public float secondsToWait = 3f;
 
     void Start()
     {
@@ -16,14 +17,9 @@ public class InstantiateDialogue : MonoBehaviour
         StartCoroutine(Instantiate());
     }
 
-    void Update()
-    {
-        
-    }
-
     private IEnumerator Instantiate()
     {
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(secondsToWait);
 
         DialogueBox.SetActive(true);
         Message[] messages = dialogue.messages;

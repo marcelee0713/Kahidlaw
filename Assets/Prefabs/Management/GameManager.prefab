@@ -1,0 +1,137 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2673326113711176040
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6337756352812006855}
+  - component: {fileID: 982342440532856347}
+  - component: {fileID: 2638393845610430231}
+  - component: {fileID: 618759730724407179}
+  - component: {fileID: 7591330097357838567}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Body
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6337756352812006855
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2673326113711176040}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1055.8147, y: 495.64493, z: -21.956873}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &982342440532856347
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2673326113711176040}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9632997c8baec3642824c8dca9fe30df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pauseMenu: {fileID: 0}
+--- !u!114 &2638393845610430231
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2673326113711176040}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6cc6b322959bf97458a0d2aeaf39d1de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DefaultLocation: ?????
+  DefaultEra: ?????
+  locationText: {fileID: 0}
+  eraText: {fileID: 0}
+  missions:
+  - task: Gather information
+    IsDone: 0
+  - task: Gather more clues and info.
+    IsDone: 0
+  taskTexts:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  missionsFinishedText: {fileID: 0}
+  totalMissionsText: {fileID: 0}
+  MissionsPanel: {fileID: 0}
+  notifier: {fileID: 0}
+  notifierText: {fileID: 0}
+  characterImage: {fileID: 0}
+  isabelImage: {fileID: 21300000, guid: cda6e519f4839934789ccee291e66042, type: 3}
+  marcoImage: {fileID: 21300000, guid: b17f6ac09af833243945f700de42c26d, type: 3}
+--- !u!114 &618759730724407179
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2673326113711176040}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd492cac8feb83c4e81db5a6a19f8f07, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  messages:
+  - actorId: 0
+    message: Huh?!
+    choices: []
+    messageSprite: {fileID: 0}
+  - actorId: 0
+    message: Where am I?
+    choices: []
+    messageSprite: {fileID: 0}
+  - actorId: 0
+    message: ...
+    choices: []
+    messageSprite: {fileID: 0}
+  - actorId: 0
+    message: I need to know where I am.
+    choices: []
+    messageSprite: {fileID: 0}
+  actors:
+  - name: Marco
+    sprite: {fileID: 21300000, guid: 0c4cd6385ede6a0489f25bac3b2ada87, type: 3}
+  gameManager: {fileID: 2638393845610430231}
+  StartCallback:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &7591330097357838567
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2673326113711176040}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ab250b275c40734783db156a2932677, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  anim: {fileID: 0}
+  dialogue: {fileID: 618759730724407179}
+  DialogueBox: {fileID: 0}
+  DialogueManager: {fileID: 0}

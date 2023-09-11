@@ -9,6 +9,13 @@ public class LevelLoader : MonoBehaviour
     public Animator transition;
     public float transitionSeconds = 1f;
 
+    public bool isTransitioning = false;
+
+    public void LoadFirstTutorial()
+    {
+        StartCoroutine(LoadLevel(3));
+    }
+
     public void LoadMainMenu()
     {
         StartCoroutine(LoadLevel(1));

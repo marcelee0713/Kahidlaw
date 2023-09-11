@@ -21,8 +21,10 @@ public class ModeChanger : MonoBehaviour
     {
         if (currentCharacter == "Marco")
         {
+
+            CheckAndRun(IsabelCamera, () => IsabelCamera.enabled = false); 
             MarcoCamera.enabled = true;
-            IsabelCamera.enabled = false;
+
         } else
         {
             MarcoCamera.enabled = false;
@@ -55,6 +57,16 @@ public class ModeChanger : MonoBehaviour
         else if (currentCharacter == "Isabel")
         {
             currentCharacter = "Marco";
+        }
+    }
+
+    public delegate void Callback();
+
+    public void CheckAndRun(Camera thisGameObject, Callback callback)
+    {
+        if (thisGameObject != null)
+        {
+            callback();
         }
     }
 }

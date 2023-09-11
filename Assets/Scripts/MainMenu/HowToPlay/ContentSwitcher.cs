@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Reflection;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class ContentSwitcher : MonoBehaviour
@@ -19,6 +20,8 @@ public class ContentSwitcher : MonoBehaviour
 
     public TextMeshProUGUI tutorialHeader;
     public Button tutorialButton;
+
+    public LevelLoader levelLoader;
 
     private int selectedIndex = 0;
 
@@ -38,6 +41,18 @@ public class ContentSwitcher : MonoBehaviour
 
     private void Awake()
     {
+
+        tutorialButton.onClick.AddListener(() =>
+        {
+            if (!levelLoader.isTransitioning)
+            {
+                if (selectedIndex == 0)
+                {
+                    levelLoader.LoadFirstTutorial();
+                    levelLoader.isTransitioning = true;
+                }
+            }
+        });
 
         contentButtons[0].onClick.AddListener(delegate
         {

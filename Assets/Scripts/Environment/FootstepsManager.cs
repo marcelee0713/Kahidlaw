@@ -13,11 +13,9 @@ public class FootstepsManager : MonoBehaviour
     public Joystick joystick;
     private string stepped = "";
 
-
-
     void Update()
     {
-        if (ModeChanger.currentCharacter != this.gameObject.name)
+        if (ModeChanger.currentCharacter != this.gameObject.name || DialogueManager.isDialogueActive)
         {
             footStepsAudioSource.enabled = false;
             return;
@@ -67,6 +65,7 @@ public class FootstepsManager : MonoBehaviour
         {
             stepped = "tiles";
         }
+
 
     }
 }
