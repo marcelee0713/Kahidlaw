@@ -22,6 +22,7 @@ public class ContentSwitcher : MonoBehaviour
     public Button tutorialButton;
 
     public LevelLoader levelLoader;
+    public MainMenu mainMenu;
 
     private int selectedIndex = 0;
 
@@ -50,6 +51,7 @@ public class ContentSwitcher : MonoBehaviour
                 {
                     levelLoader.LoadFirstTutorial();
                     levelLoader.isTransitioning = true;
+                    mainMenu.FadeOutMusic();
                 }
             }
         });
