@@ -16,7 +16,7 @@ public class OnTriggerNPC : MonoBehaviour
 
     private void Start()
     {
-        if(TaskNumber != 0)
+        if (TaskNumber != 0)
         {
             parentObject.SetActive(false);
         }

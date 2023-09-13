@@ -11,7 +11,7 @@ public class FootstepsManager : MonoBehaviour
     public AudioClip tilesFootSteps;
 
     public Joystick joystick;
-    private string stepped = "";
+    public string stepped = "";
 
     void Update()
     {
@@ -19,7 +19,8 @@ public class FootstepsManager : MonoBehaviour
         {
             footStepsAudioSource.enabled = false;
             return;
-        } else
+        }
+        else
         {
             footStepsAudioSource.enabled = true;
         }

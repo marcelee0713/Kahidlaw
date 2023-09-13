@@ -53,6 +53,12 @@ public class ContentSwitcher : MonoBehaviour
                     levelLoader.isTransitioning = true;
                     mainMenu.FadeOutMusic();
                 }
+                else if (selectedIndex == 2)
+                {
+                    levelLoader.LoadThirdTutorial();
+                    levelLoader.isTransitioning = true;
+                    mainMenu.FadeOutMusic();
+                }
             }
         });
 

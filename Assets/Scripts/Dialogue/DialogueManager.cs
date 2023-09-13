@@ -73,7 +73,7 @@ public class DialogueManager : MonoBehaviour
         }
         displayLineCoroutine = StartCoroutine(DisplayLine(messageToDisplay.message));
 
-        // Display the Left and Right Character
+        // Display the Left and Right Character's Name
         Actor actorToDisplay = currentActors[messageToDisplay.actorId];
         actorName.text = actorToDisplay.name;
 
@@ -222,6 +222,16 @@ public class DialogueManager : MonoBehaviour
         {
             NextMessage();
         }
+    }
+
+    public void ChangeFirstActorName(string newFirstActorName)
+    {
+        currentActors[0].name = newFirstActorName;
+    }
+
+    public void ChangeSecondActorName(string newSecondActorName)
+    {
+        currentActors[1].name = newSecondActorName;
     }
 
     public void DisableHUD()

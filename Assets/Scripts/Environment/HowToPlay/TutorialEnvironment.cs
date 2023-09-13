@@ -20,6 +20,11 @@ public class TutorialEnvironment : MonoBehaviour
         hinterText.text = guides[i].guide;
     }
 
+    public void ChangeText(string text)
+    {
+        hinterText.text = text;
+    }
+
     [System.Serializable]
     public class Guide
     {
