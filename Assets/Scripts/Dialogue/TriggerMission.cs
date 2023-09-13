@@ -1,23 +1,19 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
-using UnityEngine.EventSystems;
 using UnityEngine.UI;
+using UnityEngine.UIElements;
 
-public class NPC : MonoBehaviour
+public class TriggerMission : MonoBehaviour
 {
-    [SerializeField] private DialogueTrigger dialogueTrigger;
-    [SerializeField] private DialogueManager dialogueManager;
-
-    public GameObject DialogueBox;
-    public Button triggerButton;
+    public UnityEngine.UI.Button triggerButton;
     public bool inRanged = false;
     public GameObject QuestionMark;
 
-    public UnityEvent currentEvent;
+    public UnityEvent eventCallback;
     private UnityAction action;
+
 
     private void Awake()
     {
@@ -26,20 +22,17 @@ public class NPC : MonoBehaviour
 
         action = () =>
         {
+            Debug.Log("Am I clicked?");
             if (triggerButton.interactable)
             {
-                DialogueBox.SetActive(true);
-                dialogueTrigger.StartDialogue();
-
-                currentEvent.Invoke();
-
-                // Also disable the button and the questionmark
+                eventCallback.Invoke();
                 inRanged = false;
                 triggerButton.interactable = inRanged;
                 QuestionMark.SetActive(inRanged);
                 triggerButton.onClick.RemoveListener(action);
             }
         };
+
 
     }
 
@@ -50,15 +43,6 @@ public class NPC : MonoBehaviour
             triggerButton.onClick.RemoveListener(action);
 
             triggerButton.onClick.AddListener(action);
-
-            Message[] newMessages = dialogueTrigger.messages;
-            Actor[] newActors = dialogueTrigger.actors;
-            UnityEvent unityEvent = dialogueTrigger.StartCallback;
-
-            currentEvent = unityEvent;
-
-            DialogueManager.currentMessages =  newMessages;
-            DialogueManager.currentActors = newActors;
 
             inRanged = true;
             triggerButton.interactable = inRanged;
@@ -77,5 +61,4 @@ public class NPC : MonoBehaviour
 
         }
     }
-
 }

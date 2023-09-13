@@ -21,6 +21,11 @@ public class LevelLoader : MonoBehaviour
         StartCoroutine(LoadLevel(4));
     }
 
+    public void LoadFourthTutorial()
+    {
+        StartCoroutine(LoadLevel(5));
+    }
+
     public void LoadMainMenu()
     {
         StartCoroutine(LoadLevel(1));

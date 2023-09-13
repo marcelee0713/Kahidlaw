@@ -38,7 +38,7 @@ public class Environment : MonoBehaviour
         eraText.text = DefaultEra;
         InstantiateMissionsUI();
 
-        characterImage.sprite = marcoImage;
+        CheckAndRun(characterImage, () => characterImage.sprite = marcoImage);
     }
 
     // Missions UI
@@ -74,7 +74,6 @@ public class Environment : MonoBehaviour
             taskTexts[index].fontStyle = FontStyles.Strikethrough;
 
             UpdateMissionsCount();
-            ShowNotifier();
         }
     }
 
@@ -92,14 +91,15 @@ public class Environment : MonoBehaviour
         missionsFinishedText.text = counter.ToString();
     }
 
-    private void ShowNotifier()
+    public void ShowNotifier(string notifierNewText)
     {
         StopAllCoroutines();
-        StartCoroutine(HandleNotifier());
+        StartCoroutine(HandleNotifier(notifierNewText));
     }
 
-    private IEnumerator HandleNotifier()
+    private IEnumerator HandleNotifier(string text)
     {
+        notifierText.text = text;
         notifier.SetActive(true);
         yield return new WaitForSeconds(3f);
         notifier.SetActive(false);
@@ -126,6 +126,16 @@ public class Environment : MonoBehaviour
         } else
         {
             characterImage.sprite = isabelImage;
+        }
+    }
+
+    public delegate void Callback();
+
+    public void CheckAndRun(Image thisGameObject, Callback callback)
+    {
+        if (thisGameObject != null)
+        {
+            callback();
         }
     }
 
