@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class TaskManager : MonoBehaviour
 {
@@ -13,6 +14,8 @@ public class TaskManager : MonoBehaviour
     public int totalCollectables;
     public GameObject[] collectibles;
 
+    [Header("Finished")]
+    public UnityEvent FinishedTaskCallback;
 
     private void Start()
     {
@@ -38,6 +41,11 @@ public class TaskManager : MonoBehaviour
     public void UpdateFinishedTask(int index)
     {
         gameManager.UpdateMission(index);
+
+        if (gameManager.AreAllMissionFinished())
+        {
+            FinishedTaskCallback.Invoke();
+        }
     }
 
     public void FinishFirstTask()

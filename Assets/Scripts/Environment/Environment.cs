@@ -91,6 +91,7 @@ public class Environment : MonoBehaviour
         missionsFinishedText.text = counter.ToString();
     }
 
+    // Notifier UI
     public void ShowNotifier(string notifierNewText)
     {
         StopAllCoroutines();
@@ -137,6 +138,22 @@ public class Environment : MonoBehaviour
         {
             callback();
         }
+    }
+
+    // Missions
+    public bool AreAllMissionFinished()
+    {
+        bool handler = true;
+        foreach (Mission mission in missions)
+        {
+            if (!mission.IsDone)
+            {
+                handler = false;
+                break;
+            }
+        }
+
+        return handler;
     }
 
 }

@@ -36,6 +36,11 @@ public class LevelLoader : MonoBehaviour
         StartCoroutine(LoadLevel(2));
     }
 
+    public void LoadChapter1OutsideSpanishEra()
+    {
+        StartCoroutine(LoadLevel(6));
+    }
+
     IEnumerator LoadLevel (int levelIndex)
     {
         transition.SetTrigger("Start");
