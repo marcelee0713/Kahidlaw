@@ -13,40 +13,40 @@ public class LevelLoader : MonoBehaviour
 
     public void LoadFirstTutorial()
     {
-        StartCoroutine(LoadLevel(3));
+        StartCoroutine(LoadLevel("MovementTutorial"));
     }
 
     public void LoadThirdTutorial()
     {
-        StartCoroutine(LoadLevel(4));
+        StartCoroutine(LoadLevel("DialogueTutorial"));
     }
 
     public void LoadFourthTutorial()
     {
-        StartCoroutine(LoadLevel(5));
+        StartCoroutine(LoadLevel("MissionsTutorial"));
     }
 
     public void LoadMainMenu()
     {
-        StartCoroutine(LoadLevel(1));
+        StartCoroutine(LoadLevel("MainMenu"));
     }
 
     public void LoadNewGameStartSpanishEra()
     {
-        StartCoroutine(LoadLevel(2));
+        StartCoroutine(LoadLevel("Chapter1-Start"));
     }
 
     public void LoadChapter1OutsideSpanishEra()
     {
-        StartCoroutine(LoadLevel(6));
+        StartCoroutine(LoadLevel("Chapter1-Outside"));
     }
 
-    IEnumerator LoadLevel (int levelIndex)
+    IEnumerator LoadLevel (string scene)
     {
         transition.SetTrigger("Start");
 
         yield return new WaitForSeconds(transitionSeconds);
 
-        SceneManager.LoadScene(levelIndex);
+        SceneManager.LoadScene(scene);
     }
 }

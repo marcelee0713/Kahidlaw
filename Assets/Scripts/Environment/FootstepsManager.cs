@@ -9,6 +9,7 @@ public class FootstepsManager : MonoBehaviour
 
     public AudioClip woodFootSteps;
     public AudioClip tilesFootSteps;
+    public AudioClip brickFootSteps;
 
     public Joystick joystick;
     public string stepped = "";
@@ -48,6 +49,10 @@ public class FootstepsManager : MonoBehaviour
         else if (stepped == "tiles")
         {
             footStepsAudioSource.clip = tilesFootSteps;
+        } 
+        else if (stepped == "brick")
+        {
+            footStepsAudioSource.clip = brickFootSteps;
         }
 
         if (!footStepsAudioSource.isPlaying)
@@ -66,7 +71,9 @@ public class FootstepsManager : MonoBehaviour
         {
             stepped = "tiles";
         }
-
-
+        else if (collision.gameObject.CompareTag("TileBrick"))
+        {
+            stepped = "brick";
+        }
     }
 }

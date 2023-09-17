@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
@@ -16,11 +17,13 @@ public class PlayerMovement : MonoBehaviour
     public float attackCd = 0.5f;
 
     public Environment gameManager;
+    private GunController gunController;
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
+        gunController = GetComponent<GunController>();
     }
 
     // bao
@@ -44,9 +47,17 @@ public class PlayerMovement : MonoBehaviour
         if (speed != Vector2.zero)
         {
             UpdateMovements();
-            anim.SetFloat("Horizontal", movement.x);
-            anim.SetFloat("Vertical", movement.y);
-            anim.SetBool("isMoving", true);
+
+            if (gunController.aimDirection == Vector2.zero)
+            {
+                anim.SetBool("isMoving", true);
+                anim.SetFloat("Horizontal", movement.x);
+                anim.SetFloat("Vertical", movement.y);
+            }
+            else
+            {
+                anim.SetBool("isMoving", false);
+            }
         }
         else
         {

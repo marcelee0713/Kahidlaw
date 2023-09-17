@@ -7,9 +7,16 @@ public class GunController : MonoBehaviour
     public Joystick gunJoyStick;
     private Animator anim;
     public GameObject gunObj;
-    Vector2 aimDirection;
+    public Vector2 aimDirection;
     private Rigidbody2D rb;
 
+    public GameObject bullet;
+    public float bulletSpeed = 1f;
+    public Transform muzzleLocation;
+
+    public Joystick movementJoyStick;
+
+    GameObject projectile;
 
     void Start()
     {
@@ -57,9 +64,8 @@ public class GunController : MonoBehaviour
 
     void ShootingWhileWalkingAnimation()
     {
-        if (rb.velocity != Vector2.zero && aimDirection != Vector2.zero)
+        if (movementJoyStick.Direction.normalized != Vector2.zero && aimDirection != Vector2.zero)
         {
-            anim.SetBool("isMoving", false);
             anim.SetBool("isWShooting", true);
         }
         else
@@ -70,7 +76,7 @@ public class GunController : MonoBehaviour
 
     void ShootingAnimation()
     {
-        if(aimDirection != Vector2.zero)
+        if (aimDirection != Vector2.zero)
         {
             anim.SetFloat("Horizontal", aimDirection.x);
             anim.SetFloat("Vertical", aimDirection.y);
@@ -82,5 +88,11 @@ public class GunController : MonoBehaviour
         }
     }
 
-
+    public void Shoot()
+    {
+        Destroy(projectile);
+        projectile = Instantiate(bullet, muzzleLocation.position, Quaternion.identity);
+        projectile.GetComponent<Rigidbody2D>().velocity = new Vector2(aimDirection.x * bulletSpeed, aimDirection.y * bulletSpeed);
+        projectile.transform.Rotate(0.0f, 0.0f, Mathf.Atan2(aimDirection.y, aimDirection.x) * Mathf.Rad2Deg);
+    }
 }
