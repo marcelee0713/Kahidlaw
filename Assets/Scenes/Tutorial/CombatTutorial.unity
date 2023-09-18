@@ -221,8 +221,8 @@ RectTransform:
   - {fileID: 2085758882}
   - {fileID: 1054016417}
   - {fileID: 1682422310}
-  - {fileID: 1764368027}
   - {fileID: 1468180524}
+  - {fileID: 1764368027}
   - {fileID: 6055422210704508638}
   - {fileID: 2014605655}
   - {fileID: 1343310839}
@@ -14883,6 +14883,10 @@ PrefabInstance:
     - target: {fileID: 877396987259275595, guid: 759dc258de2430f469d57196b1b8cc4e, type: 3}
       propertyPath: m_Name
       value: Notifier
+      objectReference: {fileID: 0}
+    - target: {fileID: 877396987259275595, guid: 759dc258de2430f469d57196b1b8cc4e, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
