@@ -2,11 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class NPCPatrolHorizontal : MonoBehaviour
+public class NPCPatrolVertical : MonoBehaviour
 {
     [Header("Patrol Points")]
-    [SerializeField] private Transform leftEdge;
-    [SerializeField] private Transform rightEdge;
+    [SerializeField] private Transform topEdge;
+    [SerializeField] private Transform backEdge;
 
     [Header("NPC")]
     [SerializeField] private Transform npc;
@@ -14,7 +14,7 @@ public class NPCPatrolHorizontal : MonoBehaviour
     [Header("Movement parameters")]
     [SerializeField] private float speed;
     private Vector3 initScale;
-    public bool movingLeft;
+    public bool movingDown;
     [SerializeField]
     private Rigidbody2D npcRb;
 
@@ -25,30 +25,24 @@ public class NPCPatrolHorizontal : MonoBehaviour
     [Header("NPC Animator")]
     [SerializeField] private Animator anim;
 
-
     private void Awake()
     {
         initScale = npc.localScale;
     }
 
-    private void OnDisable()
-    {
-        if (anim != null) anim.SetBool("isMoving", false);
-    }
-
     // Update is called once per frame
     private void Update()
     {
-        if (movingLeft)
+        if (movingDown)
         {
-            if (npc.position.x >= leftEdge.position.x)
+            if (npc.position.y >= backEdge.position.y)
                 MoveInDirection(-1, 0);
             else
                 DirectionChange();
         }
         else
         {
-            if (npc.position.x <= rightEdge.position.x)
+            if (npc.position.y <= topEdge.position.y)
                 MoveInDirection(1, 0);
             else
                 DirectionChange();
@@ -60,11 +54,11 @@ public class NPCPatrolHorizontal : MonoBehaviour
     {
         if (anim != null)
         {
-            anim.SetBool("isMoving", false);
+            anim.SetBool("isWalking", false);
             idleTimer += Time.deltaTime;
 
             if (idleTimer > idleDuration)
-                movingLeft = !movingLeft;
+                movingDown = !movingDown;
         }
 
     }
@@ -74,14 +68,14 @@ public class NPCPatrolHorizontal : MonoBehaviour
         if (anim != null)
         {
             idleTimer = timer;
-            anim.SetBool("isMoving", true);
+            anim.SetBool("isWalking", true);
 
             // Face the direciton
-            anim.SetFloat("Horizontal", _direction);
+            anim.SetFloat("Vertical", _direction);
 
             // Move to that direction
-            npc.position = new Vector3(npc.position.x + Time.deltaTime * _direction * speed,
-                npc.position.y, npc.position.z);
+            npc.position = new Vector3(npc.position.x,
+                npc.position.y + Time.deltaTime * _direction * speed, npc.position.z);
         }
 
 
