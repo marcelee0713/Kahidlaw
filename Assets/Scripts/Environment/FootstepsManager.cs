@@ -10,6 +10,7 @@ public class FootstepsManager : MonoBehaviour
     public AudioClip woodFootSteps;
     public AudioClip tilesFootSteps;
     public AudioClip brickFootSteps;
+    public AudioClip dirtFootSteps;
 
     public Joystick joystick;
     public string stepped = "";
@@ -42,17 +43,20 @@ public class FootstepsManager : MonoBehaviour
     {
         footStepsAudioSource.enabled = true;
 
-        if (stepped == "wood")
+        switch (stepped)
         {
-            footStepsAudioSource.clip = woodFootSteps;
-        }
-        else if (stepped == "tiles")
-        {
-            footStepsAudioSource.clip = tilesFootSteps;
-        } 
-        else if (stepped == "brick")
-        {
-            footStepsAudioSource.clip = brickFootSteps;
+            case "wood":
+                footStepsAudioSource.clip = woodFootSteps;
+                break;
+            case "tiles":
+                footStepsAudioSource.clip = tilesFootSteps;
+                break;
+            case "brick":
+                footStepsAudioSource.clip = brickFootSteps;
+                break;
+            case "dirt":
+                footStepsAudioSource.clip = dirtFootSteps;
+                break;
         }
 
         if (!footStepsAudioSource.isPlaying)
@@ -63,17 +67,21 @@ public class FootstepsManager : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("TileWood"))
+        Debug.Log(collision.gameObject.tag);
+        switch (collision.gameObject.tag)
         {
-            stepped = "wood";
-        }
-        else if (collision.gameObject.CompareTag("TileFloor"))
-        {
-            stepped = "tiles";
-        }
-        else if (collision.gameObject.CompareTag("TileBrick"))
-        {
-            stepped = "brick";
+            case "TileWood":
+                stepped = "wood";
+                break;
+            case "TileFloor":
+                stepped = "tiles";
+                break;
+            case "TileBrick":
+                stepped = "brick";
+                break;
+            case "TileDirt":
+                stepped = "dirt";
+                break;
         }
     }
 }

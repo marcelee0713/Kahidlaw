@@ -92,6 +92,20 @@ public class DialogueManager : MonoBehaviour
             rightCharImage.enabled = false;
         }
 
+        Debug.Log(currentMessages[activeMessage].messageSprite);
+
+        if (currentMessages[activeMessage].messageSprite != null)
+        {
+            if (messageToDisplay.actorId == 0)
+            {
+                leftCharImage.sprite = currentMessages[activeMessage].messageSprite;
+            }
+            else
+            {
+                rightCharImage.sprite = currentMessages[activeMessage].messageSprite;
+            }
+        }
+
 
         // Display Choices
         DisplayChoices();

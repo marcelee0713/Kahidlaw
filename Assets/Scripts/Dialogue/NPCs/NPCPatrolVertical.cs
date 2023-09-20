@@ -30,6 +30,11 @@ public class NPCPatrolVertical : MonoBehaviour
         initScale = npc.localScale;
     }
 
+    private void OnDisable()
+    {
+        if (anim != null) anim.SetBool("isWalking", false);
+    }
+
     // Update is called once per frame
     private void Update()
     {
