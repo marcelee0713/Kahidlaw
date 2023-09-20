@@ -67,7 +67,6 @@ public class FootstepsManager : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log(collision.gameObject.tag);
         switch (collision.gameObject.tag)
         {
             case "TileWood":

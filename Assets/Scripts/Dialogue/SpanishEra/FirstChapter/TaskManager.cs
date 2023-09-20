@@ -28,7 +28,7 @@ public class TaskManager : MonoBehaviour
 
         if (currentCollectables == totalCollectables)
         {
-            gameManager.UpdateMission(collectableMissionIndex);
+            UpdateFinishedTask(collectableMissionIndex);
             gameManager.ShowNotifier("Task Finished");
         }
         else
@@ -41,6 +41,8 @@ public class TaskManager : MonoBehaviour
     public void UpdateFinishedTask(int index)
     {
         gameManager.UpdateMission(index);
+
+        Debug.Log(gameManager.AreAllMissionFinished());
 
         if (gameManager.AreAllMissionFinished())
         {

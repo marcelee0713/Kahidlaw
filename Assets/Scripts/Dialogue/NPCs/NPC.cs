@@ -47,22 +47,25 @@ public class NPC : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            triggerButton.onClick.RemoveListener(action);
+            if(!DialogueManager.isDialogueActive)
+            {
+                triggerButton.onClick.RemoveListener(action);
 
-            triggerButton.onClick.AddListener(action);
+                triggerButton.onClick.AddListener(action);
 
-            Message[] newMessages = dialogueTrigger.messages;
-            Actor[] newActors = dialogueTrigger.actors;
-            UnityEvent unityEvent = dialogueTrigger.StartCallback;
+                Message[] newMessages = dialogueTrigger.messages;
+                Actor[] newActors = dialogueTrigger.actors;
+                UnityEvent unityEvent = dialogueTrigger.StartCallback;
 
-            currentEvent = unityEvent;
+                currentEvent = unityEvent;
 
-            DialogueManager.currentMessages =  newMessages;
-            DialogueManager.currentActors = newActors;
+                DialogueManager.currentMessages = newMessages;
+                DialogueManager.currentActors = newActors;
 
-            inRanged = true;
-            triggerButton.interactable = inRanged;
-            QuestionMark.SetActive(inRanged);
+                inRanged = true;
+                triggerButton.interactable = inRanged;
+                QuestionMark.SetActive(inRanged);
+            }
         }
     }
 

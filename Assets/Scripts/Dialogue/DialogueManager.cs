@@ -92,8 +92,6 @@ public class DialogueManager : MonoBehaviour
             rightCharImage.enabled = false;
         }
 
-        Debug.Log(currentMessages[activeMessage].messageSprite);
-
         if (currentMessages[activeMessage].messageSprite != null)
         {
             if (messageToDisplay.actorId == 0)
@@ -180,6 +178,14 @@ public class DialogueManager : MonoBehaviour
         // If choice one is pressed
         choiceOne.onClick.AddListener(delegate
         {
+            // Check if there are any functions or callback this choice has
+            if (messageToDisplay.choices[0] != null)
+            {
+                Choice choiceOne = messageToDisplay.choices[0];
+                choiceOne.callback.Invoke();
+
+            }
+
             if (displayLineCoroutine != null)
             {
                 StopCoroutine(displayLineCoroutine);
@@ -190,12 +196,19 @@ public class DialogueManager : MonoBehaviour
             displayLineCoroutine = StartCoroutine(DisplayLine(choiceHolder));
 
 
-
         });
 
         // If choice two is pressed
         choiceTwo.onClick.AddListener(delegate
         {
+            // Check if there are any functions or callback this choice has
+            if (messageToDisplay.choices[1] != null)
+            {
+                Choice choiceTwo = messageToDisplay.choices[1];
+                choiceTwo.callback.Invoke();
+
+            }
+
             if (displayLineCoroutine != null)
             {
                 StopCoroutine(displayLineCoroutine);

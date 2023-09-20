@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -49,6 +50,17 @@ public class Environment : MonoBehaviour
         for (int i = 0; i < missions.Length; i++)
         {
             taskTexts[i].text = "- " + missions[i].task;
+            taskTexts[i].fontStyle = FontStyles.Normal;
+        }
+        UpdateMissionsCount();
+
+    }
+
+    public void ClearMissionsUI()
+    {
+        for (int i = 0; i < missions.Length; i++)
+        {
+            taskTexts[i].text = "";
         }
     }
 
@@ -90,6 +102,24 @@ public class Environment : MonoBehaviour
 
         missionsFinishedText.text = counter.ToString();
     }
+
+    public void ClearMission()
+    {
+        missions = new Mission[0];
+    }
+
+    public void SetMission(string taskName)
+    {
+        int missionsCount = missions.Length;
+        Array.Resize(ref missions, missionsCount);
+
+        Mission newMission = new Mission();
+        newMission.task = taskName;
+        newMission.IsDone = false;
+
+        missions = new List<Mission>(missions) {newMission}.ToArray();
+    } 
+
 
     // Notifier UI
     public void ShowNotifier(string notifierNewText)
