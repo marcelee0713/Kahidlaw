@@ -1331,6 +1331,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: MeleeButton
       objectReference: {fileID: 0}
+    - target: {fileID: 3217504455788431410, guid: 6d495d013ea84d04584c462383100cfc, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1655097860}
+    - target: {fileID: 3217504455788431410, guid: 6d495d013ea84d04584c462383100cfc, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Attack
+      objectReference: {fileID: 0}
+    - target: {fileID: 3217504455788431410, guid: 6d495d013ea84d04584c462383100cfc, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: MeleeController, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 7909974169008598164, guid: 6d495d013ea84d04584c462383100cfc, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -1430,6 +1442,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 2463291582363380579, guid: 6d495d013ea84d04584c462383100cfc, type: 3}
   m_PrefabInstance: {fileID: 1161111679}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1161111682 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3217504455788431410, guid: 6d495d013ea84d04584c462383100cfc, type: 3}
+  m_PrefabInstance: {fileID: 1161111679}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1161111681}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1177443737
 GameObject:
   m_ObjectHideFlags: 0
@@ -14359,6 +14382,10 @@ PrefabInstance:
       propertyPath: meleeObj
       value: 
       objectReference: {fileID: 1161111681}
+    - target: {fileID: 3675237025388369100, guid: ef68e329ac781444d977c0e6f029f062, type: 3}
+      propertyPath: meleeButton
+      value: 
+      objectReference: {fileID: 1161111682}
     - target: {fileID: 4658178732056627392, guid: ef68e329ac781444d977c0e6f029f062, type: 3}
       propertyPath: m_BackGroundColor.a
       value: 1
@@ -14399,6 +14426,22 @@ PrefabInstance:
       propertyPath: m_Offset.y
       value: -0.61526084
       objectReference: {fileID: 0}
+    - target: {fileID: 6526322248136544205, guid: ef68e329ac781444d977c0e6f029f062, type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6526322248136544205, guid: ef68e329ac781444d977c0e6f029f062, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6526322248136544205, guid: ef68e329ac781444d977c0e6f029f062, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6526322248136544205, guid: ef68e329ac781444d977c0e6f029f062, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7723212044210577223, guid: ef68e329ac781444d977c0e6f029f062, type: 3}
       propertyPath: joystick
       value: 
@@ -14410,6 +14453,10 @@ PrefabInstance:
     - target: {fileID: 9178504501993565662, guid: ef68e329ac781444d977c0e6f029f062, type: 3}
       propertyPath: m_Name
       value: Marco
+      objectReference: {fileID: 0}
+    - target: {fileID: 9178504501993565662, guid: ef68e329ac781444d977c0e6f029f062, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -14448,6 +14495,17 @@ Rigidbody2D:
   m_CorrespondingSourceObject: {fileID: 5024840098198814194, guid: ef68e329ac781444d977c0e6f029f062, type: 3}
   m_PrefabInstance: {fileID: 1655097848}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1655097860 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3675237025388369100, guid: ef68e329ac781444d977c0e6f029f062, type: 3}
+  m_PrefabInstance: {fileID: 1655097848}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75012079f9a98c146a9a8056efb194c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1682422309
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15529,7 +15587,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4575433770807093145, guid: feae179b249e66d44be8df6d9d00f374, type: 3}
       propertyPath: messages.Array.size
-      value: 4
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4575433770807093145, guid: feae179b249e66d44be8df6d9d00f374, type: 3}
       propertyPath: actors.Array.data[0].name
@@ -15556,13 +15614,21 @@ PrefabInstance:
       value: Well anyways...
       objectReference: {fileID: 0}
     - target: {fileID: 4575433770807093145, guid: feae179b249e66d44be8df6d9d00f374, type: 3}
+      propertyPath: messages.Array.data[4].message
+      value: We'll be teaching you how to use your sword and gun!
+      objectReference: {fileID: 0}
+    - target: {fileID: 4575433770807093145, guid: feae179b249e66d44be8df6d9d00f374, type: 3}
+      propertyPath: messages.Array.data[5].message
+      value: First off you'll be using your Sword.
+      objectReference: {fileID: 0}
+    - target: {fileID: 4575433770807093145, guid: feae179b249e66d44be8df6d9d00f374, type: 3}
       propertyPath: messages.Array.data[2].messageSprite
       value: 
       objectReference: {fileID: 21300000, guid: 0c4cd6385ede6a0489f25bac3b2ada87, type: 3}
     - target: {fileID: 4575433770807093145, guid: feae179b249e66d44be8df6d9d00f374, type: 3}
       propertyPath: messages.Array.data[3].messageSprite
       value: 
-      objectReference: {fileID: 21300000, guid: 0c4cd6385ede6a0489f25bac3b2ada87, type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 4575433770807093145, guid: feae179b249e66d44be8df6d9d00f374, type: 3}
       propertyPath: messages.Array.data[2].choices.Array.size
       value: 2

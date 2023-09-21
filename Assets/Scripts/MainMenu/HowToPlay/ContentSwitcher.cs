@@ -47,23 +47,28 @@ public class ContentSwitcher : MonoBehaviour
         {
             if (!levelLoader.isTransitioning)
             {
-                if (selectedIndex == 0)
+                switch (selectedIndex)
                 {
-                    levelLoader.LoadFirstTutorial();
-                    levelLoader.isTransitioning = true;
-                    mainMenu.FadeOutMusic();
-                }
-                else if (selectedIndex == 2)
-                {
-                    levelLoader.LoadThirdTutorial();
-                    levelLoader.isTransitioning = true;
-                    mainMenu.FadeOutMusic();
-                }
-                else if (selectedIndex == 3)
-                {
-                    levelLoader.LoadFourthTutorial();
-                    levelLoader.isTransitioning = true;
-                    mainMenu.FadeOutMusic();
+                    case 0:
+                        levelLoader.LoadFirstTutorial();
+                        levelLoader.isTransitioning = true;
+                        mainMenu.FadeOutMusic();
+                        break;
+                    case 1:
+                        levelLoader.LoadSecondTutorial();
+                        levelLoader.isTransitioning = true;
+                        mainMenu.FadeOutMusic();
+                        break;
+                    case 2:
+                        levelLoader.LoadThirdTutorial();
+                        levelLoader.isTransitioning = true;
+                        mainMenu.FadeOutMusic();
+                        break;
+                    case 3:
+                        levelLoader.LoadFourthTutorial();
+                        levelLoader.isTransitioning = true;
+                        mainMenu.FadeOutMusic();
+                        break;
                 }
             }
         });

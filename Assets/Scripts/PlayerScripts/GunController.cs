@@ -8,19 +8,17 @@ public class GunController : MonoBehaviour
     private Animator anim;
     public GameObject gunObj;
     public Vector2 aimDirection;
-    private Rigidbody2D rb;
 
+    [Header("Muzzle")]
     public GameObject bullet;
     public float bulletSpeed = 1f;
     public Transform muzzleLocation;
-
     public Joystick movementJoyStick;
 
     GameObject projectile;
 
     void Start()
     {
-        rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         gunObj.SetActive(false);
     }
