@@ -14,8 +14,11 @@ public class TaskManager : MonoBehaviour
     public int totalCollectables;
     public GameObject[] collectibles;
 
-    [Header("Finished")]
+    [Header("Finished Callback")]
     public UnityEvent FinishedTaskCallback;
+
+    [Header("Finished Colliectibles Callback")]
+    public UnityEvent finishedCollectibles;
 
     private void Start()
     {
@@ -28,6 +31,7 @@ public class TaskManager : MonoBehaviour
 
         if (currentCollectables == totalCollectables)
         {
+            finishedCollectibles.Invoke();
             UpdateFinishedTask(collectableMissionIndex);
             gameManager.ShowNotifier("Task Finished");
         }

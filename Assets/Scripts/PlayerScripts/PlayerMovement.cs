@@ -1,7 +1,6 @@
 using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -33,6 +32,11 @@ public class PlayerMovement : MonoBehaviour
         {
             rb.velocity = Vector2.Lerp(rb.velocity, Vector2.zero, 0.9f);
             anim.SetBool("isMoving", false);
+            if (DialogueManager.isDialogueActive)
+            {
+                joystick.DisableInput();
+            }
+  
             return;
         }
         movement.x = joystick.Horizontal * moveSpeed;

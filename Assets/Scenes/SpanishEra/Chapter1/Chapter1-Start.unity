@@ -15654,7 +15654,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 11
-      m_TileSpriteIndex: 20
+      m_TileSpriteIndex: 21
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -15664,7 +15664,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 12
-      m_TileSpriteIndex: 19
+      m_TileSpriteIndex: 20
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -15694,7 +15694,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 9
-      m_TileSpriteIndex: 18
+      m_TileSpriteIndex: 19
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -15704,7 +15704,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 13
-      m_TileSpriteIndex: 16
+      m_TileSpriteIndex: 18
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -15724,7 +15724,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 8
-      m_TileSpriteIndex: 15
+      m_TileSpriteIndex: 16
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -15744,7 +15744,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 7
-      m_TileSpriteIndex: 13
+      m_TileSpriteIndex: 15
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -15764,7 +15764,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 6
-      m_TileSpriteIndex: 11
+      m_TileSpriteIndex: 13
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -15784,7 +15784,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 1
-      m_TileSpriteIndex: 10
+      m_TileSpriteIndex: 12
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -15794,7 +15794,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 0
-      m_TileSpriteIndex: 9
+      m_TileSpriteIndex: 11
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -15925,32 +15925,32 @@ Tilemap:
     m_Data: {fileID: 0}
   - m_RefCount: 0
     m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
   - m_RefCount: 1
     m_Data: {fileID: 241163189, guid: f8024c1f52a92c144b861bca1eb7ff78, type: 3}
   - m_RefCount: 1
     m_Data: {fileID: -624983953, guid: f8024c1f52a92c144b861bca1eb7ff78, type: 3}
   - m_RefCount: 1
     m_Data: {fileID: -767101443, guid: f8024c1f52a92c144b861bca1eb7ff78, type: 3}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
-  - m_RefCount: 1
-    m_Data: {fileID: 1181215058, guid: f8024c1f52a92c144b861bca1eb7ff78, type: 3}
   - m_RefCount: 1
     m_Data: {fileID: -1792727116, guid: 0d7b1c3c6fbb37243b6569a24ae5fbee, type: 3}
   - m_RefCount: 1
+    m_Data: {fileID: 1181215058, guid: f8024c1f52a92c144b861bca1eb7ff78, type: 3}
+  - m_RefCount: 1
     m_Data: {fileID: 1771896144, guid: f8024c1f52a92c144b861bca1eb7ff78, type: 3}
   - m_RefCount: 1
-    m_Data: {fileID: -711353042, guid: f8024c1f52a92c144b861bca1eb7ff78, type: 3}
-  - m_RefCount: 1
     m_Data: {fileID: -1423002045, guid: f8024c1f52a92c144b861bca1eb7ff78, type: 3}
+  - m_RefCount: 1
+    m_Data: {fileID: -711353042, guid: f8024c1f52a92c144b861bca1eb7ff78, type: 3}
   - m_RefCount: 1
     m_Data: {fileID: 2141191378, guid: f8024c1f52a92c144b861bca1eb7ff78, type: 3}
   - m_RefCount: 1
     m_Data: {fileID: 1513583987, guid: f8024c1f52a92c144b861bca1eb7ff78, type: 3}
   - m_RefCount: 1
     m_Data: {fileID: 1462465829, guid: f8024c1f52a92c144b861bca1eb7ff78, type: 3}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
   - m_RefCount: 1
     m_Data: {fileID: 2141022427, guid: 11b6d35026609f84d869097db282d3a8, type: 3}
   - m_RefCount: 1
@@ -22552,6 +22552,22 @@ PrefabInstance:
       propertyPath: IsabelCamera
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 2623742064644884414, guid: ef68e329ac781444d977c0e6f029f062, type: 3}
+      propertyPath: gunObj
+      value: 
+      objectReference: {fileID: 352953909}
+    - target: {fileID: 2623742064644884414, guid: ef68e329ac781444d977c0e6f029f062, type: 3}
+      propertyPath: gunJoyStick
+      value: 
+      objectReference: {fileID: 352953910}
+    - target: {fileID: 2623742064644884414, guid: ef68e329ac781444d977c0e6f029f062, type: 3}
+      propertyPath: muzzleLocation
+      value: 
+      objectReference: {fileID: 685142508}
+    - target: {fileID: 2623742064644884414, guid: ef68e329ac781444d977c0e6f029f062, type: 3}
+      propertyPath: movementJoyStick
+      value: 
+      objectReference: {fileID: 2929252284157797410}
     - target: {fileID: 3005626288582149102, guid: ef68e329ac781444d977c0e6f029f062, type: 3}
       propertyPath: bullet
       value: 

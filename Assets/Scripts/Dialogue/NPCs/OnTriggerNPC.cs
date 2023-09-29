@@ -14,14 +14,6 @@ public class OnTriggerNPC : MonoBehaviour
 
     public int TaskNumber;
 
-    private void Start()
-    {
-        if (TaskNumber != 0)
-        {
-            parentObject.SetActive(false);
-        }
-    }
-
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (!environment.guides[TaskNumber].IsDone)

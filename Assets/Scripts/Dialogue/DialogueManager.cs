@@ -51,6 +51,16 @@ public class DialogueManager : MonoBehaviour
     private string choiceOneRes = "";
     private string choiceTwoRes = "";
 
+    private bool hasSkippedDialogue = false;
+
+    private void Update()
+    {
+        if (Input.GetMouseButtonDown(0) && messageToDisplay != null)
+        {
+            hasSkippedDialogue = true;
+        }
+    }
+
     public void OpenDialogue()
     {
         activeMessage = 0;
@@ -77,9 +87,6 @@ public class DialogueManager : MonoBehaviour
         Actor actorToDisplay = currentActors[messageToDisplay.actorId];
         actorName.text = actorToDisplay.name;
 
-        // Invoke or Call the Message Callback
-        currentMessages[activeMessage].messageCallback.Invoke();
-
         if (currentActors.Length == 2)
         {
             rightCharImage.enabled = true;
@@ -92,18 +99,16 @@ public class DialogueManager : MonoBehaviour
             rightCharImage.enabled = false;
         }
 
+        // Display Characters reaction if they have one
         if (currentMessages[activeMessage].messageSprite != null)
         {
-            if (messageToDisplay.actorId == 0)
-            {
-                leftCharImage.sprite = currentMessages[activeMessage].messageSprite;
-            }
-            else
-            {
-                rightCharImage.sprite = currentMessages[activeMessage].messageSprite;
-            }
+            leftCharImage.sprite = currentMessages[activeMessage].messageSprite;
         }
 
+        if (currentMessages[activeMessage].messageTwoSprite != null)
+        {
+            rightCharImage.sprite = currentMessages[activeMessage].messageTwoSprite;
+        }
 
         // Display Choices
         DisplayChoices();
@@ -133,12 +138,19 @@ public class DialogueManager : MonoBehaviour
     // Also checks if some "choices" exist
     private IEnumerator DisplayLine(string line)
     {
+        hasSkippedDialogue = false;
         messageText.text = "";
         continueIcon.SetActive(false);
         choicesContainer.SetActive(false);
         canContinueToNextLine = false;
         foreach (char letter in line.ToCharArray())
         {
+            if (hasSkippedDialogue)
+            {
+                messageText.text = line;
+                break;
+            }
+
             messageText.text += letter;
             yield return new WaitForSeconds(typingSpeed);
         }
@@ -158,6 +170,13 @@ public class DialogueManager : MonoBehaviour
 
     public void NextMessage()
     {
+
+        // Invoke or Call the Message Callback
+        if(currentMessages[activeMessage].messageCallback != null)
+        {
+            currentMessages[activeMessage].messageCallback.Invoke();
+        }
+
         activeMessage++;
         if (activeMessage < currentMessages.Length)
         {
@@ -186,6 +205,17 @@ public class DialogueManager : MonoBehaviour
 
             }
 
+            // Check if there are any reactions of this choice
+            if (messageToDisplay.choices[0].actor1Reaction != null)
+            {
+                leftCharImage.sprite = messageToDisplay.choices[0].actor1Reaction;
+            }
+
+            if (messageToDisplay.choices[0].actor2Reaction != null)
+            {
+                rightCharImage.sprite = messageToDisplay.choices[0].actor2Reaction;
+            }
+
             if (displayLineCoroutine != null)
             {
                 StopCoroutine(displayLineCoroutine);
@@ -207,6 +237,17 @@ public class DialogueManager : MonoBehaviour
                 Choice choiceTwo = messageToDisplay.choices[1];
                 choiceTwo.callback.Invoke();
 
+            }
+
+            // Check if there are any reactions of this choice
+            if (messageToDisplay.choices[0].actor1Reaction != null)
+            {
+                leftCharImage.sprite = messageToDisplay.choices[0].actor1Reaction;
+            }
+
+            if (messageToDisplay.choices[0].actor2Reaction != null)
+            {
+                rightCharImage.sprite = messageToDisplay.choices[0].actor2Reaction;
             }
 
             if (displayLineCoroutine != null)
