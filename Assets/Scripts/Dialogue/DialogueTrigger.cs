@@ -24,6 +24,7 @@ public class Message
     public string message;
     public Choice[] choices;
     public Sprite messageSprite;
+    public Sprite messageTwoSprite;
     public UnityEvent messageCallback;
 }
 
@@ -33,7 +34,8 @@ public class Choice
     public string choice;
     public string response;
     public UnityEvent callback;
-    public Sprite spriteReaction;
+    public Sprite actor1Reaction;
+    public Sprite actor2Reaction;
 }
 
 [System.Serializable]

@@ -22,7 +22,6 @@ public class TriggerMission : MonoBehaviour
 
         action = () =>
         {
-            Debug.Log("Am I clicked?");
             if (triggerButton.interactable)
             {
                 eventCallback.Invoke();
