@@ -12,18 +12,15 @@ public class TriggerNPC : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Player"))
-        {
-            Message[] newMessages = dialogueTrigger.messages;
-            Actor[] newActors = dialogueTrigger.actors;
-            UnityEvent unityEvent = dialogueTrigger.StartCallback;
+        Message[] newMessages = dialogueTrigger.messages;
+        Actor[] newActors = dialogueTrigger.actors;
+        UnityEvent unityEvent = dialogueTrigger.StartCallback;
 
-            DialogueManager.currentMessages = newMessages;
-            DialogueManager.currentActors = newActors;
+        DialogueManager.currentMessages = newMessages;
+        DialogueManager.currentActors = newActors;
 
-            DialogueBox.SetActive(true);
-            dialogueTrigger.StartDialogue();
-            unityEvent.Invoke();
-        }
+        DialogueBox.SetActive(true);
+        dialogueTrigger.StartDialogue();
+        unityEvent.Invoke();
     }
 }

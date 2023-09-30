@@ -17002,7 +17002,6 @@ MonoBehaviour:
     message: Well, isn't it that easy right?
     choices: []
     messageSprite: {fileID: 0}
-    messageTwoSprite: {fileID: 0}
     messageCallback:
       m_PersistentCalls:
         m_Calls: []
@@ -17010,7 +17009,6 @@ MonoBehaviour:
     message: 'Now you have to go DOWN there. Just take a look at the flowers. '
     choices: []
     messageSprite: {fileID: 0}
-    messageTwoSprite: {fileID: 0}
     messageCallback:
       m_PersistentCalls:
         m_Calls:
@@ -17524,8 +17522,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   FadeTime: 4
-  volume: 0.2
-  intenseMusic: {fileID: 0}
 --- !u!1 &958904440
 GameObject:
   m_ObjectHideFlags: 0
@@ -17599,17 +17595,14 @@ MonoBehaviour:
       callback:
         m_PersistentCalls:
           m_Calls: []
-      actor1Reaction: {fileID: 0}
-      actor2Reaction: {fileID: 0}
+      spriteReaction: {fileID: 0}
     - choice: Nah, they're boring.
       response: Well, goodluck on the game then.
       callback:
         m_PersistentCalls:
           m_Calls: []
-      actor1Reaction: {fileID: 0}
-      actor2Reaction: {fileID: 0}
+      spriteReaction: {fileID: 0}
     messageSprite: {fileID: 0}
-    messageTwoSprite: {fileID: 0}
     messageCallback:
       m_PersistentCalls:
         m_Calls: []
@@ -17617,7 +17610,6 @@ MonoBehaviour:
     message: Well that's pretty much it you know?
     choices: []
     messageSprite: {fileID: 0}
-    messageTwoSprite: {fileID: 0}
     messageCallback:
       m_PersistentCalls:
         m_Calls: []
@@ -17625,7 +17617,6 @@ MonoBehaviour:
     message: I guess we can go to the next tutorial?
     choices: []
     messageSprite: {fileID: 0}
-    messageTwoSprite: {fileID: 0}
     messageCallback:
       m_PersistentCalls:
         m_Calls:
@@ -27615,7 +27606,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1203743687
 Transform:
   m_ObjectHideFlags: 0
@@ -28655,7 +28646,6 @@ MonoBehaviour:
     message: Wow, you just made your first move!
     choices: []
     messageSprite: {fileID: 0}
-    messageTwoSprite: {fileID: 0}
     messageCallback:
       m_PersistentCalls:
         m_Calls: []
@@ -28663,7 +28653,6 @@ MonoBehaviour:
     message: Well, of course it's not just one eh?
     choices: []
     messageSprite: {fileID: 0}
-    messageTwoSprite: {fileID: 0}
     messageCallback:
       m_PersistentCalls:
         m_Calls: []
@@ -28671,7 +28660,6 @@ MonoBehaviour:
     message: Go ahead, and check that bowl above that table.
     choices: []
     messageSprite: {fileID: 0}
-    messageTwoSprite: {fileID: 0}
     messageCallback:
       m_PersistentCalls:
         m_Calls:
@@ -28912,7 +28900,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1448755124
 Transform:
   m_ObjectHideFlags: 0
@@ -29016,7 +29004,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1662563279
 Transform:
   m_ObjectHideFlags: 0
@@ -29093,7 +29081,6 @@ MonoBehaviour:
     message: Hey there!
     choices: []
     messageSprite: {fileID: 0}
-    messageTwoSprite: {fileID: 0}
     messageCallback:
       m_PersistentCalls:
         m_Calls: []
@@ -29101,7 +29088,6 @@ MonoBehaviour:
     message: Welcome to your FIRST tutorial!
     choices: []
     messageSprite: {fileID: 0}
-    messageTwoSprite: {fileID: 0}
     messageCallback:
       m_PersistentCalls:
         m_Calls: []
@@ -29109,7 +29095,6 @@ MonoBehaviour:
     message: I am Marco, the protagonist of the Game.
     choices: []
     messageSprite: {fileID: 0}
-    messageTwoSprite: {fileID: 0}
     messageCallback:
       m_PersistentCalls:
         m_Calls: []
@@ -29117,7 +29102,6 @@ MonoBehaviour:
     message: Today, I'll be teaching you how to use your JOYSTICK
     choices: []
     messageSprite: {fileID: 0}
-    messageTwoSprite: {fileID: 0}
     messageCallback:
       m_PersistentCalls:
         m_Calls: []
@@ -29125,7 +29109,6 @@ MonoBehaviour:
     message: You can move me anywhere you want and...
     choices: []
     messageSprite: {fileID: 0}
-    messageTwoSprite: {fileID: 0}
     messageCallback:
       m_PersistentCalls:
         m_Calls: []
@@ -29133,7 +29116,6 @@ MonoBehaviour:
     message: I'll be here guiding on the top right!
     choices: []
     messageSprite: {fileID: 0}
-    messageTwoSprite: {fileID: 0}
     messageCallback:
       m_PersistentCalls:
         m_Calls:
@@ -34151,7 +34133,6 @@ MonoBehaviour:
     message: Isn't that plant beautiful? Just like you?
     choices: []
     messageSprite: {fileID: 0}
-    messageTwoSprite: {fileID: 0}
     messageCallback:
       m_PersistentCalls:
         m_Calls: []
@@ -34159,7 +34140,6 @@ MonoBehaviour:
     message: You know, you can move on 8 directions?
     choices: []
     messageSprite: {fileID: 0}
-    messageTwoSprite: {fileID: 0}
     messageCallback:
       m_PersistentCalls:
         m_Calls: []
@@ -34167,7 +34147,6 @@ MonoBehaviour:
     message: Wow right?
     choices: []
     messageSprite: {fileID: 0}
-    messageTwoSprite: {fileID: 0}
     messageCallback:
       m_PersistentCalls:
         m_Calls: []
@@ -34175,7 +34154,6 @@ MonoBehaviour:
     message: Well to get this things done, move on the right.
     choices: []
     messageSprite: {fileID: 0}
-    messageTwoSprite: {fileID: 0}
     messageCallback:
       m_PersistentCalls:
         m_Calls:
