@@ -36,6 +36,11 @@ public class LevelLoader : MonoBehaviour
         StartCoroutine(LoadLevel("MainMenu"));
     }
 
+    public void LoadChapter1SpanishEraPrologue()
+    {
+        StartCoroutine(LoadLevel("Chapter1-Prologue"));
+    }
+
     public void LoadNewGameStartSpanishEra()
     {
         StartCoroutine(LoadLevel("Chapter1-Start"));
@@ -44,6 +49,12 @@ public class LevelLoader : MonoBehaviour
     public void LoadChapter1OutsideSpanishEra()
     {
         StartCoroutine(LoadLevel("Chapter1-Outside"));
+    }
+
+
+    public void LoadChapter2SpanishEraPrologue()
+    {
+        StartCoroutine(LoadLevel("Chapter2-Prologue"));
     }
 
     IEnumerator LoadLevel (string scene)
