@@ -13,7 +13,10 @@ public class InstantiateDialogue : MonoBehaviour
     void Start()
     {
         DialogueManager.DisableHUD();
-        anim.SetFloat("Vertical", -4f);
+        if(anim != null)
+        {
+            anim.SetFloat("Vertical", -4f);
+        }
         StartCoroutine(Instantiate());
     }
 

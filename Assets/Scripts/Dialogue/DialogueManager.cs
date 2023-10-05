@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Net;
@@ -95,7 +96,14 @@ public class DialogueManager : MonoBehaviour
         }
         else
         {
-            leftCharImage.sprite = currentActors[0].sprite;
+            if(currentActors[0].sprite == null)
+            {
+                leftCharImage.enabled = false;
+            }
+            else
+            {
+                leftCharImage.sprite = currentActors[0].sprite;
+            }
             rightCharImage.enabled = false;
         }
 
@@ -184,9 +192,14 @@ public class DialogueManager : MonoBehaviour
         }
         else
         {
+            bool disabledHUD = currentMessages[activeMessage - 1].disableHUDAfterDialogue;
+            
             isDialogueActive = false;
             this.gameObject.SetActive(isDialogueActive);
-            EnableHUD();
+            if (!disabledHUD)
+            {
+                EnableHUD();
+            }
         }
     }
 
@@ -316,21 +329,6 @@ public class DialogueManager : MonoBehaviour
         CheckAndRun(meleeController, () => meleeController.SetActive(false));
         CheckAndRun(switchCharButton, () => switchCharButton.SetActive(false));
         CheckAndRun(hinter, () => hinter.SetActive(false));
-
-
-        /*
-        movementController.SetActive(false);
-        gunController.SetActive(false);
-        talkButton.SetActive(false);
-        switchButton.SetActive(false);
-        healthBar.SetActive(false);
-        missionsBar.SetActive(false);
-        missionsPanel.SetActive(false);
-        locatorBar.SetActive(false);
-        notifierBar.SetActive(false);
-        meleeController.SetActive(false);
-        switchCharButton.SetActive(false);
-        */
     }
 
     public void DisableSettingsButton()

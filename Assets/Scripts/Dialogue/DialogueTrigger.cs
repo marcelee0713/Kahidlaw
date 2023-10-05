@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -26,6 +27,7 @@ public class Message
     public Sprite messageSprite;
     public Sprite messageTwoSprite;
     public UnityEvent messageCallback;
+    public bool disableHUDAfterDialogue;
 }
 
 [System.Serializable]

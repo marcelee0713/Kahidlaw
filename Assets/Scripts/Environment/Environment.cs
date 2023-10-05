@@ -33,24 +33,27 @@ public class Environment : MonoBehaviour
     void Start()
     {
         isMissionPanelOpen = false;
-        MissionsPanel.SetActive(false);
-        notifier.SetActive(false);
-        locationText.text = DefaultLocation;
-        eraText.text = DefaultEra;
+        CheckAndRunGameObject(MissionsPanel, () => MissionsPanel.SetActive(false));
+        CheckAndRunGameObject(notifier, () => notifier.SetActive(false));
+        CheckAndRunText(locationText, () => locationText.text = DefaultLocation);
+        CheckAndRunText(eraText, () => eraText.text = DefaultEra);
         InstantiateMissionsUI();
-
-        CheckAndRun(characterImage, () => characterImage.sprite = marcoImage);
+        CheckAndRunThisImage(characterImage, () => characterImage.sprite = marcoImage);
     }
 
     // Missions UI
     public void InstantiateMissionsUI()
     {
-        totalMissionsText.text = missions.Length.ToString();
+        CheckAndRunText(totalMissionsText, () => totalMissionsText.text = missions.Length.ToString());
 
         for (int i = 0; i < missions.Length; i++)
         {
-            taskTexts[i].text = "- " + missions[i].task;
-            taskTexts[i].fontStyle = FontStyles.Normal;
+            CheckAndRunText(eraText, () =>
+            {
+                taskTexts[i].text = "- " + missions[i].task;
+                taskTexts[i].fontStyle = FontStyles.Normal;
+            });
+
         }
         UpdateMissionsCount();
 
@@ -100,7 +103,7 @@ public class Environment : MonoBehaviour
             }
         }
 
-        missionsFinishedText.text = counter.ToString();
+        CheckAndRunText(missionsFinishedText, () => missionsFinishedText.text = counter.ToString());
     }
 
     public void ClearMission()
@@ -162,7 +165,23 @@ public class Environment : MonoBehaviour
 
     public delegate void Callback();
 
-    public void CheckAndRun(Image thisGameObject, Callback callback)
+    public void CheckAndRunThisImage(Image thisGameObject, Callback callback)
+    {
+        if (thisGameObject != null)
+        {
+            callback();
+        }
+    }
+
+    public void CheckAndRunGameObject(GameObject thisGameObject, Callback callback)
+    {
+        if (thisGameObject != null)
+        {
+            callback();
+        }
+    }
+
+    public void CheckAndRunText(TextMeshProUGUI thisGameObject, Callback callback)
     {
         if (thisGameObject != null)
         {
