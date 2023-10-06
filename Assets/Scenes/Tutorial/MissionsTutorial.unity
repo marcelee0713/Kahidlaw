@@ -5995,6 +5995,9 @@ MonoBehaviour:
   currentEvent:
     m_PersistentCalls:
       m_Calls: []
+  npcAnim: {fileID: 0}
+  yDirection: 0
+  xDirection: 0
 --- !u!114 &653077982
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6012,34 +6015,43 @@ MonoBehaviour:
     message: Oh, it's a just a newspaper.
     choices: []
     messageSprite: {fileID: 0}
+    messageTwoSprite: {fileID: 0}
     messageCallback:
       m_PersistentCalls:
         m_Calls: []
+    disableHUDAfterDialogue: 0
   - actorId: 0
     message: I hope they have crossword puzzle here.
     choices: []
     messageSprite: {fileID: 0}
+    messageTwoSprite: {fileID: 0}
     messageCallback:
       m_PersistentCalls:
         m_Calls: []
+    disableHUDAfterDialogue: 0
   - actorId: 0
     message: Maybe even a sudoku?
     choices: []
     messageSprite: {fileID: 0}
+    messageTwoSprite: {fileID: 0}
     messageCallback:
       m_PersistentCalls:
         m_Calls: []
+    disableHUDAfterDialogue: 0
   - actorId: 0
     message: ...
     choices: []
     messageSprite: {fileID: 0}
+    messageTwoSprite: {fileID: 0}
     messageCallback:
       m_PersistentCalls:
         m_Calls: []
+    disableHUDAfterDialogue: 0
   - actorId: 0
     message: Meh, nevermind it then.
     choices: []
     messageSprite: {fileID: 0}
+    messageTwoSprite: {fileID: 0}
     messageCallback:
       m_PersistentCalls:
         m_Calls:
@@ -6091,6 +6103,7 @@ MonoBehaviour:
             m_StringArgument: Task finished
             m_BoolArgument: 0
           m_CallState: 2
+    disableHUDAfterDialogue: 0
   actors:
   - name: Marco
     sprite: {fileID: 21300000, guid: 6c0ecc78ad613014fa4ffbe03c90aab6, type: 3}
@@ -7388,6 +7401,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   FadeTime: 4
+  volume: 0.2
+  intenseMusic: {fileID: 0}
 --- !u!4 &1219515950
 Transform:
   m_ObjectHideFlags: 0
@@ -8807,11 +8822,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ab250b275c40734783db156a2932677, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  anim: {fileID: 1049091459}
   dialogue: {fileID: 1596038170}
   DialogueBox: {fileID: 1258826236}
   DialogueManager: {fileID: 1258826235}
   secondsToWait: 3
+  anim: {fileID: 1049091459}
+  faceYPosition: 4
+  faceXPosition: 0
 --- !u!114 &1596038170
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8829,55 +8846,70 @@ MonoBehaviour:
     message: Welcome to the Missions Tutorial!
     choices: []
     messageSprite: {fileID: 0}
+    messageTwoSprite: {fileID: 0}
     messageCallback:
       m_PersistentCalls:
         m_Calls: []
+    disableHUDAfterDialogue: 0
   - actorId: 0
     message: Where you do certain task in order to get to the next level.
     choices: []
     messageSprite: {fileID: 0}
+    messageTwoSprite: {fileID: 0}
     messageCallback:
       m_PersistentCalls:
         m_Calls: []
+    disableHUDAfterDialogue: 0
   - actorId: 0
     message: Don't worry, since this is just a tutorial.
     choices: []
     messageSprite: {fileID: 0}
+    messageTwoSprite: {fileID: 0}
     messageCallback:
       m_PersistentCalls:
         m_Calls: []
+    disableHUDAfterDialogue: 0
   - actorId: 0
     message: I'll go easy on the task or missions you are going to do!
     choices: []
     messageSprite: {fileID: 0}
+    messageTwoSprite: {fileID: 0}
     messageCallback:
       m_PersistentCalls:
         m_Calls: []
+    disableHUDAfterDialogue: 0
   - actorId: 0
     message: We also added a new thing for your screen.
     choices: []
     messageSprite: {fileID: 0}
+    messageTwoSprite: {fileID: 0}
     messageCallback:
       m_PersistentCalls:
         m_Calls: []
+    disableHUDAfterDialogue: 0
   - actorId: 0
     message: You can now see where you are and your missions tab.
     choices: []
     messageSprite: {fileID: 0}
+    messageTwoSprite: {fileID: 0}
     messageCallback:
       m_PersistentCalls:
         m_Calls: []
+    disableHUDAfterDialogue: 0
   - actorId: 0
     message: So you'll know where and what you are going to-do!
     choices: []
     messageSprite: {fileID: 0}
+    messageTwoSprite: {fileID: 0}
     messageCallback:
       m_PersistentCalls:
         m_Calls: []
+    disableHUDAfterDialogue: 0
   - actorId: 0
     message: Remember, your goal here is just to complete your missions.
     choices: []
     messageSprite: {fileID: 0}
+    messageTwoSprite: {fileID: 0}
     messageCallback:
       m_PersistentCalls:
         m_Calls:
@@ -8893,13 +8925,16 @@ MonoBehaviour:
             m_StringArgument: Check out your missions and you can also minimize them!
             m_BoolArgument: 0
           m_CallState: 2
+    disableHUDAfterDialogue: 0
   - actorId: 0
     message: If you're done with the mission, you can just go to the next tutorial.
     choices: []
     messageSprite: {fileID: 0}
+    messageTwoSprite: {fileID: 0}
     messageCallback:
       m_PersistentCalls:
         m_Calls: []
+    disableHUDAfterDialogue: 0
   actors:
   - name: Marco
     sprite: {fileID: 21300000, guid: 6c0ecc78ad613014fa4ffbe03c90aab6, type: 3}
@@ -15025,7 +15060,7 @@ TilemapRenderer:
   m_SortingLayer: 1
   m_SortingOrder: 1
   m_ChunkSize: {x: 32, y: 32, z: 32}
-  m_ChunkCullingBounds: {x: 0, y: 0.00012212992, z: 0}
+  m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
   m_MaxChunkCount: 16
   m_MaxFrameAge: 16
   m_SortOrder: 0

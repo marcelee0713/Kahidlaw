@@ -57,6 +57,46 @@ public class LevelLoader : MonoBehaviour
         StartCoroutine(LoadLevel("Chapter2-Prologue"));
     }
 
+    public void LoadChapter2StartTimeLineSpanishEra()
+    {
+        StartCoroutine(LoadLevel("Chapter2-CreepyMonce"));
+    }
+
+    public void LoadChapter2StartSpanishEra()
+    {
+        StartCoroutine(LoadLevel("Chapter2-Start"));
+    }
+
+    public void LoapChapter2AfterOutsideSpanishEra()
+    {
+        StartCoroutine(LoadLevel("Chapter2-AfterOutside"));
+    }
+
+    public void LoapChapter2PadreMonsiAttemption()
+    {
+        StartCoroutine(LoadLevel("Chapter2-PadreMonsiAttempt"));
+    }
+
+    public void LoadChapter2PadreMonsiSexualAssault()
+    {
+        StartCoroutine(LoadLevel("Chapter2-SexualAssault"));
+    }
+
+    public void LoadChapter2IsabelEscaped()
+    {
+        StartCoroutine(LoadLevel("Chapter2-Escaped"));
+    }
+
+    public void LoadChapter2IsabelRaged()
+    {
+        StartCoroutine(LoadLevel("Chapter2-IsabelRaged"));
+    }
+
+    public void LoadChapter2IsabelEscapes()
+    {
+        StartCoroutine(LoadLevel("Chapter2-IsabelEscapes"));
+    }
+
     IEnumerator LoadLevel (string scene)
     {
         transition.SetTrigger("Start");

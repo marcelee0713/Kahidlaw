@@ -10,10 +10,20 @@ public class TriggerNPC : MonoBehaviour
 
     public GameObject DialogueBox;
 
+    [SerializeField] private Animator npcAnim;
+    [SerializeField] private float yDirection;
+    [SerializeField] private float xDirection;
+ 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Player"))
         {
+            if(npcAnim != null)
+            {
+                npcAnim.SetFloat("Vertical", yDirection);
+                npcAnim.SetFloat("Horizontal", xDirection);
+            }
+
             Message[] newMessages = dialogueTrigger.messages;
             Actor[] newActors = dialogueTrigger.actors;
             UnityEvent unityEvent = dialogueTrigger.StartCallback;

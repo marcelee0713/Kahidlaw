@@ -18,11 +18,22 @@ public class PlayerMovement : MonoBehaviour
     public Environment gameManager;
     private GunController gunController;
 
+    [SerializeField] private bool enableDirection = false;
+    [SerializeField] private float faceDirectionX = 0f;
+    [SerializeField] private float faceDirectionY = 0f;
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         gunController = GetComponent<GunController>();
+
+        if(enableDirection)
+        {
+            anim.SetFloat("Horizontal", faceDirectionX);
+            anim.SetFloat("Vertical", faceDirectionY);
+
+        }
     }
 
     // bao

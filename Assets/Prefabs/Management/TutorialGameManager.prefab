@@ -63,6 +63,11 @@ MonoBehaviour:
   Hinter: {fileID: 0}
   hinterText: {fileID: 0}
   guides: []
+  FinishedDialog: {fileID: 0}
+  finishedText: 
+  finishedPlaceholder: {fileID: 0}
+  stayButton: {fileID: 0}
+  nextButton: {fileID: 0}
 --- !u!114 &4575433770807093145
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -93,8 +98,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ab250b275c40734783db156a2932677, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  anim: {fileID: 0}
-  dialogue: {fileID: 0}
+  dialogue: {fileID: 4575433770807093145}
   DialogueBox: {fileID: 0}
   DialogueManager: {fileID: 0}
   secondsToWait: 3
+  anim: {fileID: 0}
+  faceYPosition: 0
+  faceXPosition: -4

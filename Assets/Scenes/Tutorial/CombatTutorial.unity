@@ -17302,13 +17302,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1655097849}
     - target: {fileID: 6302280117205986247, guid: feae179b249e66d44be8df6d9d00f374, type: 3}
-      propertyPath: dialogue
-      value: 
-      objectReference: {fileID: 8685780081548570890}
-    - target: {fileID: 6302280117205986247, guid: feae179b249e66d44be8df6d9d00f374, type: 3}
       propertyPath: DialogueBox
       value: 
       objectReference: {fileID: 1715917049}
+    - target: {fileID: 6302280117205986247, guid: feae179b249e66d44be8df6d9d00f374, type: 3}
+      propertyPath: faceXPosition
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6302280117205986247, guid: feae179b249e66d44be8df6d9d00f374, type: 3}
+      propertyPath: faceYPosition
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 6302280117205986247, guid: feae179b249e66d44be8df6d9d00f374, type: 3}
       propertyPath: DialogueManager
       value: 
@@ -17335,17 +17339,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9632997c8baec3642824c8dca9fe30df, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &8685780081548570890 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4575433770807093145, guid: feae179b249e66d44be8df6d9d00f374, type: 3}
-  m_PrefabInstance: {fileID: 8685780081548570888}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bd492cac8feb83c4e81db5a6a19f8f07, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &8685780081548570892 stripped

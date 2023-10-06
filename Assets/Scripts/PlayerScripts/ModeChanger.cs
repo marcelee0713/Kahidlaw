@@ -6,15 +6,26 @@ using UnityEngine.UI;
 public class ModeChanger : MonoBehaviour
 {
     public static string mode;
-    public static string currentCharacter = "Marco";
 
     public Camera MarcoCamera;
     public Camera IsabelCamera;
+    public string character = "";
+    public string changeMode = "";
+    public static string currentCharacter = "Marco";
+
 
 
     void Start()
     {
-        mode = "Neutral";
+        if(changeMode != "")
+        {
+            mode = changeMode;
+        } 
+        else
+        {
+            mode = "Neutral";
+        }
+        currentCharacter = character;
     }
 
     private void Update()
@@ -27,7 +38,7 @@ public class ModeChanger : MonoBehaviour
 
         } else
         {
-            MarcoCamera.enabled = false;
+            CheckAndRun(MarcoCamera, () => MarcoCamera.enabled = false);
             IsabelCamera.enabled = true;
         }
     }
