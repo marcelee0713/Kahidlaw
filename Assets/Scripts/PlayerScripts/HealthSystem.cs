@@ -1,24 +1,62 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Search;
 using UnityEngine;
+using UnityEngine.Events;
+using UnityEngine.UI;
 
 public class HealthSystem : MonoBehaviour
 {
     public float health;
     public float maxHealth;
-
     private Animator anim;
-    private Rigidbody2D rb;
-    public PlayerMovement playerMovement;
+    public Slider healthBar;
+    public GameObject redPanel;
+    public static bool playerIsDead = false;
+
+    public UnityEvent deadPlayerCallback;
 
     void Start()
     {
-        
+        playerIsDead = false;
+        redPanel.SetActive(false);
+        anim = GetComponent<Animator>();
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        
+        if(health <= 0)
+        {
+            playerIsDead = true;
+            anim.SetTrigger("isDead");
+            deadPlayerCallback.Invoke();
+            return;
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("EnemyProjectile"))
+        {
+            TakeDamage(5);
+        }
+    }
+
+    private void TakeDamage(int damage)
+    {
+        health -= damage;
+        float value = health / maxHealth;
+        healthBar.value = value;
+
+        StopAllCoroutines();
+        StartCoroutine(HurtEffect());
+    }
+
+    private IEnumerator HurtEffect ()
+    {
+        redPanel.SetActive(true);
+        yield return new WaitForSeconds(0.5f);
+        redPanel.SetActive(false);
+
     }
 }

@@ -9,13 +9,21 @@ public class EnemyHealthSystem : MonoBehaviour
     public UnityEvent deathCallback;
     private Animator anim;
     private Rigidbody2D rb;
+
+    [Header("Init Facing Direction")]
+    [SerializeField] private float directionY = 0f;
+    [SerializeField] private float directionX = 0f;
+
     void Start()
     {
         anim = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
+
+        anim.SetFloat("Vertical", directionY);
+        anim.SetFloat("Horizontal", directionX);
+        
     }
 
-    // Update is called once per frame
     void Update()
     {
         if(health <= 0)
@@ -26,7 +34,7 @@ public class EnemyHealthSystem : MonoBehaviour
     }
 
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("PlayerAttack"))
         {
@@ -36,7 +44,6 @@ public class EnemyHealthSystem : MonoBehaviour
         {
             TakeDamage(2);
         }
-
     }
 
     private void TakeDamage(int damage)

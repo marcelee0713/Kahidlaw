@@ -97,6 +97,23 @@ public class LevelLoader : MonoBehaviour
         StartCoroutine(LoadLevel("Chapter2-IsabelEscapes"));
     }
 
+    public void LoadChapter3Prologue()
+    {
+        StartCoroutine(LoadLevel("Chapter3-Prologue"));
+    }
+
+    public void LoadChapter3Start()
+    {
+        StartCoroutine(LoadLevel("Chapter3-InsideTheDungeon"));
+    }
+
+    public void LoadCurrentScene()
+    {
+        Scene currentScene = SceneManager.GetActiveScene();
+        string currentNameScene = currentScene.name;
+        StartCoroutine(LoadLevel(currentNameScene));
+    }
+
     IEnumerator LoadLevel (string scene)
     {
         transition.SetTrigger("Start");
