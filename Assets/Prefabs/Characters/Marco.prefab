@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 286000865109884335}
   - component: {fileID: 2565581159157122589}
+  - component: {fileID: 3286748418838211033}
   m_Layer: 0
   m_Name: Back
   m_TagString: PlayerAttack
@@ -61,7 +62,7 @@ PolygonCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -86,6 +87,33 @@ PolygonCollider2D:
       - {x: 0.1586653, y: 1.0458202}
       - {x: 0.9993696, y: 0.51032084}
   m_UseDelaunayMesh: 0
+--- !u!50 &3286748418838211033
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 719666626343708465}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &857982619976731070
 GameObject:
   m_ObjectHideFlags: 0
@@ -180,6 +208,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1708319985796611184}
   - component: {fileID: 6621576586360970506}
+  - component: {fileID: 6653073546782348010}
   m_Layer: 0
   m_Name: Right
   m_TagString: PlayerAttack
@@ -231,7 +260,7 @@ PolygonCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -261,6 +290,33 @@ PolygonCollider2D:
       - {x: 2.2628279, y: -0.050048113}
       - {x: 2.283162, y: 0.48047608}
   m_UseDelaunayMesh: 0
+--- !u!50 &6653073546782348010
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1362272658770738465}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &4638057856241821499
 GameObject:
   m_ObjectHideFlags: 0
@@ -399,6 +455,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7409548148476424576}
   - component: {fileID: 7658447086821327047}
+  - component: {fileID: 7201719352412452247}
   m_Layer: 0
   m_Name: BackRight
   m_TagString: PlayerAttack
@@ -450,7 +507,7 @@ PolygonCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -475,6 +532,33 @@ PolygonCollider2D:
       - {x: 1.7025948, y: 0.0634408}
       - {x: 1.9167099, y: 0.6853009}
   m_UseDelaunayMesh: 0
+--- !u!50 &7201719352412452247
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4737518252049012462}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &4790277356744041055
 GameObject:
   m_ObjectHideFlags: 0
@@ -555,6 +639,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4994315065778719307}
   - component: {fileID: 3633945867209738835}
+  - component: {fileID: 235956959415673809}
   m_Layer: 0
   m_Name: FrontRight
   m_TagString: PlayerAttack
@@ -606,7 +691,7 @@ PolygonCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -635,6 +720,33 @@ PolygonCollider2D:
       - {x: 1.1422138, y: 0.75637805}
       - {x: 0.75954056, y: 0.4047752}
   m_UseDelaunayMesh: 0
+--- !u!50 &235956959415673809
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5329070661990580818}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &5703611475713377305
 GameObject:
   m_ObjectHideFlags: 0
@@ -645,6 +757,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8592440576129302163}
   - component: {fileID: 3061518494534904222}
+  - component: {fileID: 1635391387075183015}
   m_Layer: 0
   m_Name: FrontLeft
   m_TagString: PlayerAttack
@@ -696,7 +809,7 @@ PolygonCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -723,6 +836,33 @@ PolygonCollider2D:
       - {x: 0.45653152, y: -0.6323416}
       - {x: 0.6981087, y: 0.43549126}
   m_UseDelaunayMesh: 0
+--- !u!50 &1635391387075183015
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5703611475713377305}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &5780333950252930707
 GameObject:
   m_ObjectHideFlags: 0
@@ -733,6 +873,7 @@ GameObject:
   m_Component:
   - component: {fileID: 285554935381403793}
   - component: {fileID: 9122152871373879475}
+  - component: {fileID: 9218176729900735061}
   m_Layer: 0
   m_Name: BackLeft
   m_TagString: PlayerAttack
@@ -784,7 +925,7 @@ PolygonCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -811,6 +952,33 @@ PolygonCollider2D:
       - {x: -0.93049335, y: 0.37618876}
       - {x: -0.70091915, y: 0.70851463}
   m_UseDelaunayMesh: 0
+--- !u!50 &9218176729900735061
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5780333950252930707}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &7191389958501461665
 GameObject:
   m_ObjectHideFlags: 0
@@ -821,6 +989,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1737172863296321041}
   - component: {fileID: 2430562745723928512}
+  - component: {fileID: 6450121558389543866}
   m_Layer: 0
   m_Name: Left
   m_TagString: PlayerAttack
@@ -872,7 +1041,7 @@ PolygonCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -899,6 +1068,33 @@ PolygonCollider2D:
       - {x: 0.23499548, y: -0.8090174}
       - {x: 0.8832121, y: 0.44470543}
   m_UseDelaunayMesh: 0
+--- !u!50 &6450121558389543866
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7191389958501461665}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &7615318603724154397
 GameObject:
   m_ObjectHideFlags: 0
@@ -1009,6 +1205,8 @@ GameObject:
   - component: {fileID: 4906363685058888888}
   - component: {fileID: 3675237025388369100}
   - component: {fileID: 2623742064644884414}
+  - component: {fileID: 4634713044701198614}
+  - component: {fileID: 9016294091202336304}
   m_Layer: 0
   m_Name: Marco
   m_TagString: Player
@@ -1198,6 +1396,9 @@ MonoBehaviour:
   isAttacking: 0
   attackCd: 0.5
   gameManager: {fileID: 0}
+  enableDirection: 0
+  faceDirectionX: 0
+  faceDirectionY: 0
 --- !u!114 &1421916861459586685
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1213,6 +1414,7 @@ MonoBehaviour:
   MarcoCamera: {fileID: 4658178732056627392}
   IsabelCamera: {fileID: 0}
   character: Marco
+  changeMode: 
 --- !u!114 &4906363685058888888
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1266,6 +1468,82 @@ MonoBehaviour:
   bulletSpeed: 1
   muzzleLocation: {fileID: 0}
   movementJoyStick: {fileID: 0}
+--- !u!114 &4634713044701198614
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9178504501993565662}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1dba21159f04e64a9da7d5274f3d3a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 100
+  maxHealth: 100
+  healthBar: {fileID: 0}
+  redPanel: {fileID: 0}
+  deadPlayerCallback:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+--- !u!61 &9016294091202336304
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9178504501993565662}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.043087006, y: 0.057449013}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 3.6923077, y: 3.0769231}
+    newSize: {x: 3.6923077, y: 3.0769231}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.0496521, y: 1.8130434}
+  m_EdgeRadius: 0
 --- !u!1 &9184553589747404398
 GameObject:
   m_ObjectHideFlags: 0
@@ -1276,6 +1554,7 @@ GameObject:
   m_Component:
   - component: {fileID: 339915880355858082}
   - component: {fileID: 2124378788000674289}
+  - component: {fileID: 7003087265644598549}
   m_Layer: 0
   m_Name: Front
   m_TagString: PlayerAttack
@@ -1327,7 +1606,7 @@ PolygonCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -1351,3 +1630,30 @@ PolygonCollider2D:
       - {x: 1.222126, y: -0.44442487}
       - {x: 0.9791622, y: 0.33712238}
   m_UseDelaunayMesh: 0
+--- !u!50 &7003087265644598549
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9184553589747404398}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0

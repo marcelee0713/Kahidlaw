@@ -19,7 +19,10 @@ public class HealthSystem : MonoBehaviour
     void Start()
     {
         playerIsDead = false;
-        redPanel.SetActive(false);
+        if(redPanel != null)
+        {
+            redPanel.SetActive(false);
+        }
         anim = GetComponent<Animator>();
     }
 
