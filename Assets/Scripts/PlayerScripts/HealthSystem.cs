@@ -62,4 +62,24 @@ public class HealthSystem : MonoBehaviour
         redPanel.SetActive(false);
 
     }
+
+    public void SetHealth(float extraHealth)
+    {
+        float thisHealth = health + extraHealth;
+
+        if(thisHealth >= 100)
+        {
+            health = 100;
+        } else
+        {
+            health += extraHealth;
+        }
+        float value = health / maxHealth;
+        healthBar.value = value;
+    }
+
+    public void KillPlayer()
+    {
+        TakeDamage(100);
+    }
 }

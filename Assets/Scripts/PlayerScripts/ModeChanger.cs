@@ -59,6 +59,11 @@ public class ModeChanger : MonoBehaviour
         }
     }
 
+    public void SetMode(string changeMode)
+    {
+        mode = changeMode;
+    }
+
     public void HandleChangeCharacter()
     {
         if(currentCharacter == "Marco")

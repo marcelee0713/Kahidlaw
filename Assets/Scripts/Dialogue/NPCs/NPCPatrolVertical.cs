@@ -32,7 +32,17 @@ public class NPCPatrolVertical : MonoBehaviour
 
     private void OnDisable()
     {
-        if (anim != null) anim.SetBool("isMoving", false);
+        if (anim != null)
+        {
+
+            if (movingDown)
+                anim.SetFloat("Vertical", -1);
+            else
+                anim.SetFloat("Vertical", 1);
+
+
+            anim.SetBool("isMoving", false);
+        }
     }
 
     // Update is called once per frame
@@ -72,11 +82,10 @@ public class NPCPatrolVertical : MonoBehaviour
     {
         if (anim != null)
         {
-            idleTimer = timer;
-            anim.SetBool("isMoving", true);
-
             // Face the direciton
             anim.SetFloat("Vertical", _direction);
+            anim.SetBool("isMoving", true);
+            idleTimer = timer;
 
             // Move to that direction
             npc.position = new Vector3(npc.position.x,

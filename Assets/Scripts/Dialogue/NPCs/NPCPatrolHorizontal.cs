@@ -33,7 +33,15 @@ public class NPCPatrolHorizontal : MonoBehaviour
 
     private void OnDisable()
     {
-        if (anim != null) anim.SetBool("isMoving", false);
+        if (anim != null)
+        {
+            if (movingLeft)
+                anim.SetFloat("Horizontal", -1);
+            else
+                anim.SetFloat("Horizontal", 1);
+
+            anim.SetBool("isMoving", false);
+        }
     }
 
     // Update is called once per frame

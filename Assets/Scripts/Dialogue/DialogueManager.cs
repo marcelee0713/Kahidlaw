@@ -305,6 +305,12 @@ public class DialogueManager : MonoBehaviour
         }
     }
 
+    public void SetSwitchButton(bool setSwitch)
+    {
+        CheckAndRun(switchButton, () => switchButton.SetActive(setSwitch));
+
+    }
+
     public void ChangeFirstActorName(string newFirstActorName)
     {
         currentActors[0].name = newFirstActorName;
