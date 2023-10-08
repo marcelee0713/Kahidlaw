@@ -102,6 +102,12 @@ public class LevelLoader : MonoBehaviour
         StartCoroutine(LoadLevel("Chapter2-IsabelEscapes"));
     }
 
+    public void LoadChapter2SpanishEraEnding()
+    {
+        StartCoroutine(LoadLevel("Chapter2-EndingOutside"));
+
+    }
+
     public void LoadChapter3Prologue()
     {
         StartCoroutine(LoadLevel("Chapter3-Prologue"));
