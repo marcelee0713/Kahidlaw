@@ -32,7 +32,7 @@ public class NPCPatrolVertical : MonoBehaviour
 
     private void OnDisable()
     {
-        if (anim != null) anim.SetBool("isWalking", false);
+        if (anim != null) anim.SetBool("isMoving", false);
     }
 
     // Update is called once per frame
@@ -59,7 +59,7 @@ public class NPCPatrolVertical : MonoBehaviour
     {
         if (anim != null)
         {
-            anim.SetBool("isWalking", false);
+            anim.SetBool("isMoving", false);
             idleTimer += Time.deltaTime;
 
             if (idleTimer > idleDuration)
@@ -73,7 +73,7 @@ public class NPCPatrolVertical : MonoBehaviour
         if (anim != null)
         {
             idleTimer = timer;
-            anim.SetBool("isWalking", true);
+            anim.SetBool("isMoving", true);
 
             // Face the direciton
             anim.SetFloat("Vertical", _direction);

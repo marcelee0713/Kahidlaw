@@ -67,6 +67,11 @@ public class LevelLoader : MonoBehaviour
         StartCoroutine(LoadLevel("Chapter2-Start"));
     }
 
+    public void LoadChapter2OutsideSpanishEra()
+    {
+        StartCoroutine(LoadLevel("Chapter2-Outside"));
+    }
+
     public void LoapChapter2AfterOutsideSpanishEra()
     {
         StartCoroutine(LoadLevel("Chapter2-AfterOutside"));
