@@ -7833,11 +7833,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 215346899188379701, guid: 229d8a7aa5a300b4999474ef1f9dc170, type: 3}
   m_PrefabInstance: {fileID: 1838384917}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &61609928 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2992003976622590729, guid: f0226c36c8e53c5458df560a94fc288d, type: 3}
-  m_PrefabInstance: {fileID: 297369894}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &63656282
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8368,7 +8363,7 @@ PrefabInstance:
     - target: {fileID: 8985469487564271737, guid: ca8634174b1a45f43bee54e025d0d564, type: 3}
       propertyPath: GoToScene.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 61609928}
+      objectReference: {fileID: 600662294}
     - target: {fileID: 8985469487564271737, guid: ca8634174b1a45f43bee54e025d0d564, type: 3}
       propertyPath: GoToScene.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
@@ -8383,7 +8378,7 @@ PrefabInstance:
       objectReference: {fileID: 818971504}
     - target: {fileID: 8985469487564271737, guid: ca8634174b1a45f43bee54e025d0d564, type: 3}
       propertyPath: GoToScene.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: 
+      value: LoadChapter3AfterDungeon
       objectReference: {fileID: 0}
     - target: {fileID: 8985469487564271737, guid: ca8634174b1a45f43bee54e025d0d564, type: 3}
       propertyPath: GoToScene.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
@@ -8396,6 +8391,10 @@ PrefabInstance:
     - target: {fileID: 8985469487564271737, guid: ca8634174b1a45f43bee54e025d0d564, type: 3}
       propertyPath: GoToScene.m_PersistentCalls.m_Calls.Array.data[3].m_MethodName
       value: FadeOutBackgroundMusic
+      objectReference: {fileID: 0}
+    - target: {fileID: 8985469487564271737, guid: ca8634174b1a45f43bee54e025d0d564, type: 3}
+      propertyPath: GoToScene.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: LevelLoader, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 8985469487564271737, guid: ca8634174b1a45f43bee54e025d0d564, type: 3}
       propertyPath: GoToScene.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
@@ -16744,7 +16743,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7673735281823645186, guid: f0226c36c8e53c5458df560a94fc288d, type: 3}
   m_PrefabInstance: {fileID: 297369894}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 61609928}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 086f76518d6094c4681d5eebeb231da4, type: 3}

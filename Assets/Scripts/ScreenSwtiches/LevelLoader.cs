@@ -118,6 +118,16 @@ public class LevelLoader : MonoBehaviour
         StartCoroutine(LoadLevel("Chapter3-InsideTheDungeon"));
     }
 
+    public void LoadChapter3AfterDungeon()
+    {
+        StartCoroutine(LoadLevel("Chapter3-AfterDungeon"));
+    }
+
+    public void LoadChapter3TheMeetUp()
+    {
+        StartCoroutine(LoadLevel("Chapter3-TheMeetUp"));
+    }
+
     public void LoadCurrentScene()
     {
         Scene currentScene = SceneManager.GetActiveScene();
