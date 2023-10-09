@@ -128,6 +128,36 @@ public class LevelLoader : MonoBehaviour
         StartCoroutine(LoadLevel("Chapter3-TheMeetUp"));
     }
 
+    public void LoadChapter3StartGuerrillas()
+    {
+        StartCoroutine(LoadLevel("Chapter3-StartGuerrillasPrologue"));
+    }
+
+    public void LoadChapter3GuerrillasPlace()
+    {
+        StartCoroutine(LoadLevel("Chapter3-GuerrillasPlace"));
+    }
+
+    public void LoadChapter3InsideGuerrillasHouse()
+    {
+        StartCoroutine(LoadLevel("Chapter3-InsideGuerillaHouse"));
+    }
+
+    public void LoadChapter3GuerrillaAmbush()
+    {
+        StartCoroutine(LoadLevel("Chapter3-GuerrillaAmbush"));
+    }
+
+    public void LoadChapter3GuerillaFight()
+    {
+        StartCoroutine(LoadLevel("Chapter3-GuerillaFight"));
+    }
+
+    public void LoadChapter3GuerillaPostFight()
+    {
+        StartCoroutine(LoadLevel("Chapter3-GuerillaPostFight"));
+    }
+
     public void LoadCurrentScene()
     {
         Scene currentScene = SceneManager.GetActiveScene();

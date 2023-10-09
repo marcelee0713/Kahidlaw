@@ -22,6 +22,8 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float faceDirectionX = 0f;
     [SerializeField] private float faceDirectionY = 0f;
 
+    public bool AllowToMoveBoth = false;
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -39,17 +41,21 @@ public class PlayerMovement : MonoBehaviour
     // bao
     void Update()
     {
-        if (DialogueManager.isDialogueActive || ModeChanger.currentCharacter != this.gameObject.name)
+        if (!AllowToMoveBoth)
         {
-            rb.velocity = Vector2.Lerp(rb.velocity, Vector2.zero, 0.9f);
-            anim.SetBool("isMoving", false);
-            if (DialogueManager.isDialogueActive)
+            if (DialogueManager.isDialogueActive || ModeChanger.currentCharacter != this.gameObject.name)
             {
-                joystick.DisableInput();
+                rb.velocity = Vector2.Lerp(rb.velocity, Vector2.zero, 0.9f);
+                anim.SetBool("isMoving", false);
+                if (DialogueManager.isDialogueActive)
+                {
+                    joystick.DisableInput();
+                }
+
+                return;
             }
-  
-            return;
         }
+
         movement.x = joystick.Horizontal * moveSpeed;
         movement.y = joystick.Vertical * moveSpeed;
         speed = new Vector2(movement.x * moveSpeed, movement.y * moveSpeed).normalized;
