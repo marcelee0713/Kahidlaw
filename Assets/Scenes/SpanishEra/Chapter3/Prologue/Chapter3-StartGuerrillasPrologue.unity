@@ -883,7 +883,7 @@ PrefabInstance:
     - target: {fileID: 618759730724407179, guid: 254bbc6b98c03b54cad1e56b9fa5249f, type: 3}
       propertyPath: messages.Array.data[5].messageCallback.m_PersistentCalls.m_Calls.Array.data[2].m_Target
       value: 
-      objectReference: {fileID: 2099203641}
+      objectReference: {fileID: 2099203640}
     - target: {fileID: 618759730724407179, guid: 254bbc6b98c03b54cad1e56b9fa5249f, type: 3}
       propertyPath: messages.Array.data[7].messageCallback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -998,7 +998,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 618759730724407179, guid: 254bbc6b98c03b54cad1e56b9fa5249f, type: 3}
       propertyPath: messages.Array.data[5].messageCallback.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
-      value: 
+      value: LoadChapter3GuerrillasPlace
       objectReference: {fileID: 0}
     - target: {fileID: 618759730724407179, guid: 254bbc6b98c03b54cad1e56b9fa5249f, type: 3}
       propertyPath: messages.Array.data[7].messageCallback.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
@@ -1054,7 +1054,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 618759730724407179, guid: 254bbc6b98c03b54cad1e56b9fa5249f, type: 3}
       propertyPath: messages.Array.data[5].messageCallback.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
-      value: FadeOutMusic, Assembly-CSharp
+      value: LevelLoader, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 618759730724407179, guid: 254bbc6b98c03b54cad1e56b9fa5249f, type: 3}
       propertyPath: messages.Array.data[7].messageCallback.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
@@ -6475,14 +6475,9 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7673735281823645186, guid: f0226c36c8e53c5458df560a94fc288d, type: 3}
   m_PrefabInstance: {fileID: 2099203639}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2099203641}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 086f76518d6094c4681d5eebeb231da4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &2099203641 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2992003976622590729, guid: f0226c36c8e53c5458df560a94fc288d, type: 3}
-  m_PrefabInstance: {fileID: 2099203639}
-  m_PrefabAsset: {fileID: 0}

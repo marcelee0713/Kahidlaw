@@ -11,6 +11,8 @@ public class FirstDoor : MonoBehaviour
     private bool inRanged = false;
     private DoorToDoor doorManager;
 
+    public UnityEvent onDoorCallback;
+
     private void Start()
     {
         doorManager = GetComponentInParent<DoorToDoor>();
@@ -19,6 +21,7 @@ public class FirstDoor : MonoBehaviour
         {
             if (interact.interactable)
             {
+                onDoorCallback.Invoke();
                 doorManager.GoToSecondDoor();
             }
         };
