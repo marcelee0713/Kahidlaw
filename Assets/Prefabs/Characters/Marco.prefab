@@ -95,7 +95,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 719666626343708465}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -113,7 +113,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 7
 --- !u!1 &857982619976731070
 GameObject:
   m_ObjectHideFlags: 0
@@ -277,14 +277,17 @@ PolygonCollider2D:
     m_Paths:
     - - {x: 1.8477325, y: 1.0770864}
       - {x: 1.1923199, y: 1.3070695}
-      - {x: 0.48799992, y: 0.9208653}
+      - {x: 0.9376707, y: 1.4338226}
+      - {x: 0.5840149, y: 1.2729313}
       - {x: 0.9361477, y: 0.56996095}
       - {x: 1.0964785, y: 0.19097495}
-      - {x: 0.7816076, y: -0.2970835}
-      - {x: 0.12319183, y: -0.33313537}
-      - {x: -0.83235365, y: 0.42771962}
-      - {x: -0.39587498, y: -0.5483713}
-      - {x: 0.25632054, y: -1.059611}
+      - {x: 1.181673, y: -0.36109412}
+      - {x: 0.7311039, y: -0.85972595}
+      - {x: 0.09118557, y: -1.0372522}
+      - {x: -0.3451414, y: -0.9279022}
+      - {x: -1.1524057, y: -0.35639903}
+      - {x: -0.6199112, y: -1.1404734}
+      - {x: 0.25632054, y: -1.3636576}
       - {x: 1.0688782, y: -1.1026292}
       - {x: 1.8470789, y: -0.8222065}
       - {x: 2.2628279, y: -0.050048113}
@@ -298,7 +301,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1362272658770738465}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -316,7 +319,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 7
 --- !u!1 &4638057856241821499
 GameObject:
   m_ObjectHideFlags: 0
@@ -540,7 +543,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4737518252049012462}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -558,7 +561,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 7
 --- !u!1 &4790277356744041055
 GameObject:
   m_ObjectHideFlags: 0
@@ -708,12 +711,13 @@ PolygonCollider2D:
     m_Paths:
     - - {x: 1.066802, y: 0.08709431}
       - {x: 0.86293507, y: -0.31343365}
-      - {x: 0.3950014, y: -0.4004619}
-      - {x: -0.1068449, y: -0.29830766}
-      - {x: -0.7116614, y: 0.5364423}
-      - {x: -0.6492691, y: -0.63736486}
-      - {x: 0.011722147, y: -1.2998844}
-      - {x: 1.0476274, y: -1.2585471}
+      - {x: 0.69905186, y: -0.80051684}
+      - {x: 0.47778988, y: -1.0182495}
+      - {x: 0.05318165, y: -1.1624587}
+      - {x: -0.34360123, y: -1.079845}
+      - {x: 0.26287937, y: -1.3894858}
+      - {x: 1.0038838, y: -1.3798863}
+      - {x: 1.4796972, y: -1.2265494}
       - {x: 1.5812756, y: -0.9287145}
       - {x: 1.9235334, y: -0.24433613}
       - {x: 1.7803497, y: 0.5094751}
@@ -728,7 +732,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5329070661990580818}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -746,7 +750,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 7
 --- !u!1 &5703611475713377305
 GameObject:
   m_ObjectHideFlags: 0
@@ -787,7 +791,7 @@ PolygonCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5703611475713377305}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:
@@ -824,17 +828,21 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: -0.5621071, y: -0.29284608}
-      - {x: -0.91411686, y: -0.22232199}
+    - - {x: 0.80166245, y: -0.81840515}
+      - {x: -0.19709492, y: -1.1645355}
+      - {x: -0.754138, y: -0.7889246}
+      - {x: -1.1061478, y: -0.39836264}
       - {x: -1.128995, y: 0.13552785}
-      - {x: -0.712162, y: 0.4214381}
-      - {x: -1.2388659, y: 0.8773799}
+      - {x: -1.1602354, y: 0.18140209}
+      - {x: -1.0148287, y: 1.2774348}
       - {x: -1.7144556, y: 0.44776607}
       - {x: -1.9714594, y: -0.1600964}
       - {x: -1.585525, y: -1.0900706}
-      - {x: -0.15700758, y: -1.314913}
-      - {x: 0.45653152, y: -0.6323416}
-      - {x: 0.6981087, y: 0.43549126}
+      - {x: -0.8301239, y: -1.5973511}
+      - {x: -0.10899961, y: -1.6189597}
+      - {x: 0.6485634, y: -1.4484732}
+      - {x: 1.0169449, y: -1.1009369}
+      - {x: 1.4982386, y: -0.70067817}
   m_UseDelaunayMesh: 0
 --- !u!50 &1635391387075183015
 Rigidbody2D:
@@ -844,7 +852,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5703611475713377305}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -862,7 +870,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 7
 --- !u!1 &5780333950252930707
 GameObject:
   m_ObjectHideFlags: 0
@@ -960,7 +968,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5780333950252930707}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -978,7 +986,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 7
 --- !u!1 &7191389958501461665
 GameObject:
   m_ObjectHideFlags: 0
@@ -1056,17 +1064,20 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: -0.06840801, y: -0.32311988}
+    - - {x: -0.3724575, y: -0.8512113}
       - {x: -0.8560524, y: -0.21400154}
       - {x: -1.1582317, y: 0.28652406}
       - {x: -0.43420315, y: 1.0271376}
       - {x: -1.0050058, y: 1.396011}
       - {x: -1.804698, y: 1.0640025}
       - {x: -2.1179752, y: 0.4989804}
-      - {x: -1.9069777, y: -0.412807}
-      - {x: -0.9134373, y: -1.039687}
-      - {x: 0.23499548, y: -0.8090174}
-      - {x: 0.8832121, y: 0.44470543}
+      - {x: -1.8589697, y: -0.36480284}
+      - {x: -1.4433794, y: -1.0476379}
+      - {x: -0.9934496, y: -1.4237508}
+      - {x: -0.27427483, y: -1.5287781}
+      - {x: 0.18698752, y: -1.4491236}
+      - {x: 0.51935196, y: -1.3843079}
+      - {x: -0.044938087, y: -1.1555448}
   m_UseDelaunayMesh: 0
 --- !u!50 &6450121558389543866
 Rigidbody2D:
@@ -1076,7 +1087,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7191389958501461665}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -1094,7 +1105,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 7
 --- !u!1 &7615318603724154397
 GameObject:
   m_ObjectHideFlags: 0
@@ -1207,7 +1218,7 @@ GameObject:
   - component: {fileID: 2623742064644884414}
   - component: {fileID: 4634713044701198614}
   - component: {fileID: 9016294091202336304}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Marco
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -1399,6 +1410,7 @@ MonoBehaviour:
   enableDirection: 0
   faceDirectionX: 0
   faceDirectionY: 0
+  AllowToMoveBoth: 0
 --- !u!114 &1421916861459586685
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1430,10 +1442,10 @@ MonoBehaviour:
   footStepsAudioSource: {fileID: 3599507681512013523}
   woodFootSteps: {fileID: 8300000, guid: 9841bdcd89da3b44184e61f3158f2d6a, type: 3}
   tilesFootSteps: {fileID: 8300000, guid: a5bff3c1486eed34192491ed4ee26cd9, type: 3}
-  brickFootSteps: {fileID: 0}
-  dirtFootSteps: {fileID: 0}
+  brickFootSteps: {fileID: 8300000, guid: 18a2af57f1ddd7f49875bffea77da36d, type: 3}
+  dirtFootSteps: {fileID: 8300000, guid: 563c547cf5b9b5e4e91d90e125d4d26d, type: 3}
   joystick: {fileID: 0}
-  stepped: 
+  stepped: dirt
 --- !u!114 &3675237025388369100
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1449,6 +1461,7 @@ MonoBehaviour:
   meleeObj: {fileID: 0}
   meleeButton: {fileID: 0}
   attackCooldown: 0.5
+  isAttackCooldown: 0
 --- !u!114 &2623742064644884414
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1499,6 +1512,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+  flashMaterial: {fileID: 0}
+  flashDuration: 0
 --- !u!61 &9016294091202336304
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1621,7 +1636,9 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 0, y: -0.70037365}
+    - - {x: 0.6725073, y: -0.76034546}
+      - {x: 0.112018585, y: -1.4044905}
+      - {x: -0.5742121, y: -0.89689636}
       - {x: -1.1056366, y: 0.1403847}
       - {x: -1.0509834, y: -0.713917}
       - {x: -0.840733, y: -1.2587026}
@@ -1638,7 +1655,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9184553589747404398}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -1656,4 +1673,4 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 7

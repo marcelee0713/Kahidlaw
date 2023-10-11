@@ -17,6 +17,7 @@ public class PlayerMovement : MonoBehaviour
 
     public Environment gameManager;
     private GunController gunController;
+    private MeleeController meleeController;
 
     [SerializeField] private bool enableDirection = false;
     [SerializeField] private float faceDirectionX = 0f;
@@ -29,6 +30,7 @@ public class PlayerMovement : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         gunController = GetComponent<GunController>();
+        meleeController = GetComponent<MeleeController>();
 
         if(enableDirection)
         {
@@ -90,7 +92,25 @@ public class PlayerMovement : MonoBehaviour
 
     void UpdateMovements()
     {
-        rb.velocity = new Vector2(speed.x * moveSpeed, speed.y * moveSpeed);
+        if(meleeController != null)
+        {
+            bool isAttacking = meleeController.isAttackCooldown;
+            if(isAttacking)
+            {
+                rb.velocity = new Vector2(speed.x * (moveSpeed - 1.5f), speed.y * (moveSpeed - 1.5f));
+            }
+            else
+            {
+                rb.velocity = new Vector2(speed.x * moveSpeed, speed.y * moveSpeed);
+            }
+
+
+        } 
+        else
+        {
+            rb.velocity = new Vector2(speed.x * moveSpeed, speed.y * moveSpeed);
+        }
+
     }
 
     public void StartAttack()
@@ -109,5 +129,10 @@ public class PlayerMovement : MonoBehaviour
         anim.SetBool("isShooting", false);
         isAttacking = false;
 
+    }
+
+    public void DisableGloballyAnyMovements()
+    {
+        joystick.DisableInput();
     }
 }

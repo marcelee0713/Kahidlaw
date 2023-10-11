@@ -8,17 +8,12 @@ public class TurningDirectionHandler : MonoBehaviour
     [SerializeField] private float yDirection = 0f;
     [SerializeField] private float xDirection = 0f;
 
-    void Start()
+    private void Awake()
     {
         if (npcAnim != null)
         {
             npcAnim.SetFloat("Vertical", yDirection);
             npcAnim.SetFloat("Horizontal", xDirection);
         }
-    }
-
-    void Update()
-    {
-        
     }
 }

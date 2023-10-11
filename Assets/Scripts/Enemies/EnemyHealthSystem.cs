@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -14,14 +15,41 @@ public class EnemyHealthSystem : MonoBehaviour
     [SerializeField] private float directionY = 0f;
     [SerializeField] private float directionX = 0f;
 
+    [Header("Hit Effect")]
+    [SerializeField] private Material flashMaterial;
+    [SerializeField] private float flashDuration;
+    private SpriteRenderer spriteRenderer;
+    private Material originalMaterial;
+    private Coroutine flashRoutine;
+
     void Start()
     {
+        spriteRenderer = GetComponent<SpriteRenderer>();
         anim = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
 
         anim.SetFloat("Vertical", directionY);
         anim.SetFloat("Horizontal", directionX);
-        
+
+        originalMaterial = spriteRenderer.material;
+    }
+
+    public void Flash()
+    {
+        if(flashRoutine != null)
+        {
+            StopCoroutine(flashRoutine);
+        }
+
+        flashRoutine = StartCoroutine(FlashRoutine());
+    }
+
+    private IEnumerator FlashRoutine()
+    {
+        spriteRenderer.material = flashMaterial;
+        yield return new WaitForSeconds(flashDuration);
+        spriteRenderer.material = originalMaterial;
+        flashRoutine = null;
     }
 
     void Update()
@@ -29,6 +57,7 @@ public class EnemyHealthSystem : MonoBehaviour
         if(health <= 0)
         {
             deathCallback.Invoke();
+            spriteRenderer.material = flashMaterial;
             Destroy(this.gameObject, 1f);
         }
     }
@@ -49,6 +78,6 @@ public class EnemyHealthSystem : MonoBehaviour
     public void TakeDamage(int damage)
     {
         health -= damage;
-        anim.SetTrigger("isHurt");
+        Flash();
     }
 }

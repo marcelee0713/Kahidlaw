@@ -8,7 +8,7 @@ public class PlayerRefs : MonoBehaviour
     public GameObject FidelAssistance;
     public GameObject IsabelsAloneDialogue;
 
-    private void Awake()
+    private void Start()
     {
         if(FidelAssistance  != null && IsabelsAloneDialogue != null)
         {
@@ -35,7 +35,7 @@ public class PlayerRefs : MonoBehaviour
 
     public void SetHasBeenAssaulted(string choice)
     {
-        PlayerPrefs.SetString("Chapter2-HelpedIndios", choice);
+        PlayerPrefs.SetString("Chapter2-Assaulted", choice);
     }
 
     private void Chapter2ButterflyEffect()
@@ -45,7 +45,7 @@ public class PlayerRefs : MonoBehaviour
             FidelAssistance.SetActive(true);
             IsabelsAloneDialogue.SetActive(false);
         }
-        else
+        else if (DidHelpedTheIndios() == "n")
         {
             FidelAssistance.SetActive(false);
             IsabelsAloneDialogue.SetActive(true);

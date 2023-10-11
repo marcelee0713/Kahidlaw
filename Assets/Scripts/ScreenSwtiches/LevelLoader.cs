@@ -158,6 +158,16 @@ public class LevelLoader : MonoBehaviour
         StartCoroutine(LoadLevel("Chapter3-GuerillaPostFight"));
     }
 
+    public void LoadChapter3FinalFight()
+    {
+       StartCoroutine(LoadLevel("Chapter3-FinalFight"));
+    }
+
+    public void LoadChapter3PadreMonsiCaught()
+    {
+        StartCoroutine(LoadLevel("Chapter3-PadreMonsiCaught"));
+    }
+
     public void LoadCurrentScene()
     {
         Scene currentScene = SceneManager.GetActiveScene();

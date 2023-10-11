@@ -16,6 +16,7 @@ public class EnemyShooting : MonoBehaviour
     [SerializeField] private LeftDetector leftDetector;
     [SerializeField] private RightDetector rightDetector;
     [SerializeField] private HorizontalOnRanged OnRangedH;
+    [SerializeField] private FourDirectionOnRanged OnRanged4D;
 
     [Header("Vertical Detectors")]
     [SerializeField] private FrontDetector FDetector;
@@ -27,12 +28,23 @@ public class EnemyShooting : MonoBehaviour
     {
         Destroy(projectile);
         projectile = Instantiate(bullet, muzzleLocation.position, Quaternion.identity);
-        if (OnRangedH.inRangedEnemy)
+        if(OnRanged4D == null)
         {
-            Vector2 moveDirection = (playerLocation.transform.position - projectile.transform.position).normalized * bulletSpeed;
-            projectile.GetComponent<Rigidbody2D>().velocity = new Vector2(moveDirection.x, moveDirection.y);
-            projectile.transform.Rotate(0.0f, 0.0f, Mathf.Atan2(0, 0) * Mathf.Rad2Deg);
+            if (OnRangedH.inRangedEnemy)
+            {
+                Vector2 moveDirection = (playerLocation.transform.position - projectile.transform.position).normalized * bulletSpeed;
+                projectile.GetComponent<Rigidbody2D>().velocity = new Vector2(moveDirection.x, moveDirection.y);
+                projectile.transform.Rotate(0.0f, 0.0f, Mathf.Atan2(0, 0) * Mathf.Rad2Deg);
+            }
         }
-
+        else
+        {
+            if (OnRanged4D.inRangedOn4d)
+            {
+                Vector2 moveDirection = (playerLocation.transform.position - projectile.transform.position).normalized * bulletSpeed;
+                projectile.GetComponent<Rigidbody2D>().velocity = new Vector2(moveDirection.x, moveDirection.y);
+                projectile.transform.Rotate(0.0f, 0.0f, Mathf.Atan2(0, 0) * Mathf.Rad2Deg);
+            }
+        }
     }
 }

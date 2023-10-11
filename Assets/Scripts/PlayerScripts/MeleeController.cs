@@ -10,11 +10,13 @@ public class MeleeController : MonoBehaviour
     public GameObject meleeObj;
     public Button meleeButton;
     public float attackCooldown = 0.5f;
-    private bool isAttackCooldown = false;
+    public bool isAttackCooldown = false;
     private Direction currentDirection;
 
     private float lastHorizontalDirection = 0f;
     private float lastVerticalDirection = -1f;
+
+    private Coroutine attackRoutine;
 
     private enum Direction
     {
@@ -131,7 +133,16 @@ public class MeleeController : MonoBehaviour
 
     public void Attack()
     {
-        if(!isAttackCooldown) StartCoroutine(StartAttack());
+        
+        if(!isAttackCooldown)
+        {
+            if(attackRoutine != null)
+            {
+                StopCoroutine(attackRoutine);
+            }
+
+            attackRoutine = StartCoroutine(StartAttack());
+        }
     }
 
     IEnumerator StartAttack()
@@ -144,5 +155,6 @@ public class MeleeController : MonoBehaviour
         yield return new WaitForSeconds(attackCooldown);
         anim.SetBool("isAttacking", false);
         isAttackCooldown = false;
+        attackRoutine = null;
     }
 }
