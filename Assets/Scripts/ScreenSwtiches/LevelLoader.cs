@@ -1,4 +1,5 @@
 using JetBrains.Annotations;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -158,6 +159,11 @@ public class LevelLoader : MonoBehaviour
         StartCoroutine(LoadLevel("Chapter3-GuerillaPostFight"));
     }
 
+    public void LoadChapter3TrapHouse()
+    {
+        StartCoroutine(LoadLevel("Chapter3-TrapHouse"));
+    }
+
     public void LoadChapter3FinalFight()
     {
        StartCoroutine(LoadLevel("Chapter3-FinalFight"));
@@ -166,6 +172,39 @@ public class LevelLoader : MonoBehaviour
     public void LoadChapter3PadreMonsiCaught()
     {
         StartCoroutine(LoadLevel("Chapter3-PadreMonsiCaught"));
+    }
+
+    public void LoadChapter3FinalConsqeuences()
+    {
+        string hasBeenAssaulted = PlayerPrefs.GetString("Chapter2-Assaulted", "y");
+
+        if (hasBeenAssaulted == "n")
+        {
+            StartCoroutine(LoadLevel("Chapter3-FinalGuerrillaPrologue"));
+        } else
+        {
+            StartCoroutine(LoadLevel("Chapter3-IsabelKillsMonsi"));
+        }
+    }
+
+    public void LoadChapter3BadEndingPrologue()
+    {
+        StartCoroutine(LoadLevel("Chapter3-BadEndingPrologue"));
+    }
+
+    public void LoadChapter3GuerrillaCelebration()
+    {
+        StartCoroutine(LoadLevel("Chapter3-GuerrillaCelebration"));
+    }
+
+    public void LoadChapter3PadreMonsiLockedUp()
+    {
+        StartCoroutine(LoadLevel("Chapter3-PadreMonsiLockedUp"));
+    }
+
+    public void LoadChapter3EndingMessage()
+    {
+        StartCoroutine(LoadLevel("Chapter3-EndingMessage"));
     }
 
     public void LoadCurrentScene()
