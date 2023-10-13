@@ -42,7 +42,7 @@ GameObject:
   - component: {fileID: 8474660717878180265}
   - component: {fileID: 2453115578184916667}
   - component: {fileID: 1798937406172056573}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: DetectionDown
   m_TagString: EnemyDetails
   m_Icon: {fileID: 0}
@@ -57,7 +57,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 227594729351225753}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -5.98, z: 0}
+  m_LocalPosition: {x: 0, y: -4, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -93,7 +93,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -124,7 +124,7 @@ MonoBehaviour:
   playerIsOnFront: 0
   detectorCollider: {fileID: 2453115578184916667}
   colliderDistance: 0
-  detectorRangeY: 9.23
+  detectorRangeY: 5.05
   detectorRangeX: 20.9
   playerLayer:
     serializedVersion: 2
@@ -140,7 +140,7 @@ GameObject:
   - component: {fileID: 2852748355715168348}
   - component: {fileID: 3641304133637352447}
   - component: {fileID: 4599901991282239301}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: DetectionRight
   m_TagString: EnemyDetails
   m_Icon: {fileID: 0}
@@ -191,7 +191,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -222,7 +222,7 @@ MonoBehaviour:
   playerIsOnRight: 0
   detectorCollider: {fileID: 3641304133637352447}
   colliderDistance: 0.6
-  detectorRangeY: 10
+  detectorRangeY: 6
   detectorRangeX: 10
   playerLayer:
     serializedVersion: 2
@@ -237,7 +237,7 @@ GameObject:
   m_Component:
   - component: {fileID: 295520779238477840}
   - component: {fileID: 4004153717825696610}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: StopRanged
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -288,7 +288,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -315,7 +315,7 @@ GameObject:
   - component: {fileID: 1788219843784647960}
   - component: {fileID: 3368750833128056352}
   - component: {fileID: 6047642929912935897}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: DetectionUp
   m_TagString: EnemyDetails
   m_Icon: {fileID: 0}
@@ -330,7 +330,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2765440082914458468}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 5.98, z: 0}
+  m_LocalPosition: {x: 0, y: 4, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -366,7 +366,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -397,11 +397,103 @@ MonoBehaviour:
   playerIsOnBack: 0
   detectorCollider: {fileID: 3368750833128056352}
   colliderDistance: 0
-  detectorRangeY: 9.23
+  detectorRangeY: 5.05
   detectorRangeX: 20.9
   playerLayer:
     serializedVersion: 2
     m_Bits: 8
+--- !u!1 &4431342452322257967
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 9012305229291757103}
+  - component: {fileID: 1170700797860789168}
+  - component: {fileID: 1376758040833391097}
+  m_Layer: 9
+  m_Name: Hitbox
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &9012305229291757103
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4431342452322257967}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2229599394981868296}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &1170700797860789168
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4431342452322257967}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.055532932, y: 0.19228795}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 3.6923077, y: 3.0769231}
+    newSize: {x: 3.6923077, y: 3.0769231}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.8169489, y: 2.0246663}
+  m_EdgeRadius: 0
+--- !u!114 &1376758040833391097
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4431342452322257967}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ba371bcdb926e8499019ec99247f7de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rb: {fileID: 0}
+  knockbackForce: 10
 --- !u!1 &4687841368859483277
 GameObject:
   m_ObjectHideFlags: 0
@@ -413,7 +505,7 @@ GameObject:
   - component: {fileID: 5902400527029941127}
   - component: {fileID: 8949468975260981767}
   - component: {fileID: 6453723018425498223}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: DetectionLeft
   m_TagString: EnemyDetails
   m_Icon: {fileID: 0}
@@ -464,7 +556,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -495,7 +587,7 @@ MonoBehaviour:
   playerIsOnLeft: 0
   detectorCollider: {fileID: 8949468975260981767}
   colliderDistance: 0.6
-  detectorRangeY: 10
+  detectorRangeY: 6
   detectorRangeX: 10
   playerLayer:
     serializedVersion: 2
@@ -513,10 +605,9 @@ GameObject:
   - component: {fileID: 8539203798625570616}
   - component: {fileID: 5606534077158517079}
   - component: {fileID: 8857942239397482123}
-  - component: {fileID: 5458192625584908147}
   - component: {fileID: 8674632597203740447}
   - component: {fileID: 4289801527326702688}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: EnemyGuardiaLongRanged
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -542,6 +633,7 @@ Transform:
   - {fileID: 1788219843784647960}
   - {fileID: 8474660717878180265}
   - {fileID: 295520779238477840}
+  - {fileID: 9012305229291757103}
   m_Father: {fileID: 0}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -630,7 +722,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1000
+  m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 0
@@ -657,7 +749,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f8e1aac4e407ee45865a48036e382fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 20
+  health: 100
   deathCallback:
     m_PersistentCalls:
       m_Calls: []
@@ -665,51 +757,9 @@ MonoBehaviour:
   directionX: 0
   flashMaterial: {fileID: 2100000, guid: 9db01f4575cce734e98ca5e4e6a661de, type: 2}
   flashDuration: 0.125
---- !u!61 &5458192625584908147
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6343824160471492972}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.055532932, y: 0.19228795}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 3.6923077, y: 3.0769231}
-    newSize: {x: 3.6923077, y: 3.0769231}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.8169489, y: 2.0246663}
-  m_EdgeRadius: 0
+  enemyIsHurt: 0
+  slash: 50
+  gun: 25
 --- !u!61 &8674632597203740447
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -789,7 +839,7 @@ GameObject:
   - component: {fileID: 6621808078272360359}
   - component: {fileID: 2564978574528814625}
   - component: {fileID: 7267182576826118650}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: FourDirectionalRange
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -840,7 +890,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -876,7 +926,7 @@ MonoBehaviour:
   playerPosition: {fileID: 0}
   enemyPosition: {fileID: 2229599394981868296}
   movementSpeed: 2.5
-  allowToMove: 1
+  allowToMove: 0
   colliderDistance: 0
   boxCollider: {fileID: 4004153717825696610}
   stopMovingRangeY: 8
@@ -886,5 +936,6 @@ MonoBehaviour:
     m_Bits: 8
   shootingDistance: 0
   shootBoxCollider: {fileID: 2564978574528814625}
-  shootRangeY: 20
+  shootRangeY: 12
   shootRangeX: 20
+  enemyHealthSystem: {fileID: 0}

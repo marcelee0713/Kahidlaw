@@ -303,7 +303,7 @@ GameObject:
   - component: {fileID: 524986368}
   - component: {fileID: 524986367}
   - component: {fileID: 524986366}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Guardia (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -339,7 +339,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.050011158, y: -0.6110877}
@@ -384,7 +384,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.055532932, y: 0.19228795}
@@ -412,7 +412,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f8e1aac4e407ee45865a48036e382fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 20
+  health: 200
   deathCallback:
     m_PersistentCalls:
       m_Calls:
@@ -431,6 +431,11 @@ MonoBehaviour:
         m_CallState: 2
   directionY: 0
   directionX: 0
+  flashMaterial: {fileID: 2100000, guid: 9db01f4575cce734e98ca5e4e6a661de, type: 2}
+  flashDuration: 0.125
+  enemyIsHurt: 0
+  slash: 5
+  gun: 2
 --- !u!50 &524986369
 Rigidbody2D:
   serializedVersion: 4
@@ -1389,7 +1394,7 @@ GameObject:
   - component: {fileID: 816348825}
   - component: {fileID: 816348824}
   - component: {fileID: 816348823}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Guardia (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1425,7 +1430,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.050011158, y: -0.6110877}
@@ -1470,7 +1475,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.055532932, y: 0.19228795}
@@ -1498,7 +1503,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f8e1aac4e407ee45865a48036e382fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 20
+  health: 200
   deathCallback:
     m_PersistentCalls:
       m_Calls:
@@ -1517,6 +1522,11 @@ MonoBehaviour:
         m_CallState: 2
   directionY: 0
   directionX: 0
+  flashMaterial: {fileID: 2100000, guid: 9db01f4575cce734e98ca5e4e6a661de, type: 2}
+  flashDuration: 0.125
+  enemyIsHurt: 0
+  slash: 5
+  gun: 2
 --- !u!50 &816348826
 Rigidbody2D:
   serializedVersion: 4
@@ -15678,7 +15688,7 @@ GameObject:
   - component: {fileID: 1728063044}
   - component: {fileID: 1728063043}
   - component: {fileID: 1728063038}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Guardia
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15714,7 +15724,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.050011158, y: -0.6110877}
@@ -15874,7 +15884,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.055532932, y: 0.2020652}
@@ -15902,7 +15912,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f8e1aac4e407ee45865a48036e382fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 20
+  health: 200
   deathCallback:
     m_PersistentCalls:
       m_Calls:
@@ -15960,6 +15970,11 @@ MonoBehaviour:
         m_CallState: 2
   directionY: 0
   directionX: 0
+  flashMaterial: {fileID: 2100000, guid: 9db01f4575cce734e98ca5e4e6a661de, type: 2}
+  flashDuration: 0.125
+  enemyIsHurt: 0
+  slash: 5
+  gun: 2
 --- !u!1 &1736516978
 GameObject:
   m_ObjectHideFlags: 0
@@ -16289,7 +16304,7 @@ GameObject:
   - component: {fileID: 2048875050}
   - component: {fileID: 2048875049}
   - component: {fileID: 2048875048}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Guardia (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16325,7 +16340,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.050011158, y: -0.6110877}
@@ -16370,7 +16385,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.055532932, y: 0.19228795}
@@ -16398,7 +16413,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f8e1aac4e407ee45865a48036e382fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 20
+  health: 200
   deathCallback:
     m_PersistentCalls:
       m_Calls:
@@ -16417,6 +16432,11 @@ MonoBehaviour:
         m_CallState: 2
   directionY: 0
   directionX: 0
+  flashMaterial: {fileID: 2100000, guid: 9db01f4575cce734e98ca5e4e6a661de, type: 2}
+  flashDuration: 0.125
+  enemyIsHurt: 0
+  slash: 5
+  gun: 2
 --- !u!50 &2048875051
 Rigidbody2D:
   serializedVersion: 4

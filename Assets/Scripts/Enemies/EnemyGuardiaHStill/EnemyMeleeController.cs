@@ -27,10 +27,13 @@ public class EnemyMeleeController : MonoBehaviour
     [SerializeField] private float stopMovingRangeX;
     [SerializeField] private LayerMask playerLayer;
 
+    [SerializeField] private EnemyHealthSystem enemyHealthSystem;
+
     private void Start()
     {
         anim = GetComponentInParent<Animator>();
         rb = GetComponentInParent<Rigidbody2D>();
+        enemyHealthSystem = GetComponentInParent<EnemyHealthSystem>();
     }
 
     private void Update()
@@ -47,7 +50,7 @@ public class EnemyMeleeController : MonoBehaviour
                     cooldownTimer = 0;
                 }
                 anim.SetBool("isMoving", false);
-                rb.velocity = Vector2.zero;
+                if (!enemyHealthSystem.enemyIsHurt) rb.velocity = Vector2.zero;
             }
             else
             {

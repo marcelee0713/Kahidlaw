@@ -9,13 +9,4 @@ public class EnemyHitMelee : MonoBehaviour
     {
         healthSystem = GetComponentInParent<EnemyHealthSystem>();
     }
-
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.gameObject.CompareTag("PlayerAttack"))
-        {
-            healthSystem.TakeDamage(5);
-        }
-    }
-
 }

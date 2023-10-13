@@ -21,6 +21,11 @@ public class EnemyHealthSystem : MonoBehaviour
     private SpriteRenderer spriteRenderer;
     private Material originalMaterial;
     private Coroutine flashRoutine;
+    public bool enemyIsHurt = false;
+
+    [Header("Player Damages")]
+    [SerializeField] private int slash = 5;
+    [SerializeField] private int gun = 2;
 
     void Start()
     {
@@ -46,10 +51,12 @@ public class EnemyHealthSystem : MonoBehaviour
 
     private IEnumerator FlashRoutine()
     {
+        enemyIsHurt = true;
         spriteRenderer.material = flashMaterial;
         yield return new WaitForSeconds(flashDuration);
         spriteRenderer.material = originalMaterial;
         flashRoutine = null;
+        enemyIsHurt = false;
     }
 
     void Update()
@@ -62,16 +69,16 @@ public class EnemyHealthSystem : MonoBehaviour
         }
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("PlayerAttack"))
         {
-            TakeDamage(5);
+            TakeDamage(slash);
         }
 
         if (collision.gameObject.CompareTag("Projectile"))
         {
-            TakeDamage(2);
+            TakeDamage(gun);
         }
     }
 

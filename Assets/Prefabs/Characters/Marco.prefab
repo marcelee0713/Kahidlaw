@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 286000865109884335}
   - component: {fileID: 2565581159157122589}
   - component: {fileID: 3286748418838211033}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Back
   m_TagString: PlayerAttack
   m_Icon: {fileID: 0}
@@ -62,7 +62,7 @@ PolygonCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -209,7 +209,7 @@ GameObject:
   - component: {fileID: 1708319985796611184}
   - component: {fileID: 6621576586360970506}
   - component: {fileID: 6653073546782348010}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Right
   m_TagString: PlayerAttack
   m_Icon: {fileID: 0}
@@ -260,7 +260,7 @@ PolygonCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -459,7 +459,7 @@ GameObject:
   - component: {fileID: 7409548148476424576}
   - component: {fileID: 7658447086821327047}
   - component: {fileID: 7201719352412452247}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: BackRight
   m_TagString: PlayerAttack
   m_Icon: {fileID: 0}
@@ -510,7 +510,7 @@ PolygonCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -643,7 +643,7 @@ GameObject:
   - component: {fileID: 4994315065778719307}
   - component: {fileID: 3633945867209738835}
   - component: {fileID: 235956959415673809}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: FrontRight
   m_TagString: PlayerAttack
   m_Icon: {fileID: 0}
@@ -694,7 +694,7 @@ PolygonCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -762,7 +762,7 @@ GameObject:
   - component: {fileID: 8592440576129302163}
   - component: {fileID: 3061518494534904222}
   - component: {fileID: 1635391387075183015}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: FrontLeft
   m_TagString: PlayerAttack
   m_Icon: {fileID: 0}
@@ -791,7 +791,7 @@ PolygonCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5703611475713377305}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:
@@ -813,7 +813,7 @@ PolygonCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -882,7 +882,7 @@ GameObject:
   - component: {fileID: 285554935381403793}
   - component: {fileID: 9122152871373879475}
   - component: {fileID: 9218176729900735061}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: BackLeft
   m_TagString: PlayerAttack
   m_Icon: {fileID: 0}
@@ -933,7 +933,7 @@ PolygonCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -998,7 +998,7 @@ GameObject:
   - component: {fileID: 1737172863296321041}
   - component: {fileID: 2430562745723928512}
   - component: {fileID: 6450121558389543866}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Left
   m_TagString: PlayerAttack
   m_Icon: {fileID: 0}
@@ -1049,7 +1049,7 @@ PolygonCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -1514,6 +1514,8 @@ MonoBehaviour:
         m_CallState: 2
   flashMaterial: {fileID: 0}
   flashDuration: 0
+  enemyProjectiles: 5
+  enemySlash: 10
 --- !u!61 &9016294091202336304
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1570,7 +1572,7 @@ GameObject:
   - component: {fileID: 339915880355858082}
   - component: {fileID: 2124378788000674289}
   - component: {fileID: 7003087265644598549}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Front
   m_TagString: PlayerAttack
   m_Icon: {fileID: 0}
@@ -1621,7 +1623,7 @@ PolygonCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}

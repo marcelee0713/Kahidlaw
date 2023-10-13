@@ -16,18 +16,25 @@ public class HealthSystem : MonoBehaviour
     [Header("Hit Effect")]
     [SerializeField] private Material flashMaterial;
     [SerializeField] private float flashDuration;
+
+    [Header("Enemy Damages")]
+    [SerializeField] private float enemyProjectiles = 5f;
+    [SerializeField] private float enemySlash = 10f;
+
     private SpriteRenderer spriteRenderer;
     private Material originalMaterial;
     private Coroutine flashRoutine;
     private PlayerMovement playerMovement;
-
     private bool deathAnimAlreadyPlayed = false;
+
+    private Rigidbody2D rb;
 
     void Start()
     {
         playerMovement = GetComponent<PlayerMovement>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         originalMaterial = spriteRenderer.material;
+        rb = GetComponent<Rigidbody2D>();
 
         playerIsDead = false;
         if(redPanel != null)
@@ -57,10 +64,12 @@ public class HealthSystem : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("EnemyProjectile"))
         {
-            TakeDamage(5);
-        } else if (collision.gameObject.CompareTag("EnemySlash"))
+            TakeDamage((int)enemyProjectiles);
+
+        } 
+        else if (collision.gameObject.CompareTag("EnemySlash"))
         {
-            TakeDamage(10);
+            TakeDamage((int)enemySlash);
         }
     }
 
@@ -69,6 +78,7 @@ public class HealthSystem : MonoBehaviour
         health -= damage;
         float value = health / maxHealth;
         healthBar.value = value;
+
         Flash();
     }
 

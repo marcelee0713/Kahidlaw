@@ -36,10 +36,13 @@ public class FourDirectionOnRanged : MonoBehaviour
     [SerializeField] private float shootRangeY;
     [SerializeField] private float shootRangeX;
 
+    [SerializeField] private EnemyHealthSystem enemyHealthSystem;
+
     private void Start()
     {
         anim = GetComponentInParent<Animator>();
         rb = GetComponentInParent<Rigidbody2D>();
+        enemyHealthSystem = GetComponentInParent<EnemyHealthSystem>();
     }
 
     private void Update()
@@ -49,10 +52,7 @@ public class FourDirectionOnRanged : MonoBehaviour
             inRangedOn4d = false;
             anim.SetBool("isShooting", false);
             rb.velocity = Vector2.zero;
-            if (allowToMove)
-            {
-                anim.SetBool("isWShooting", false);
-            }
+            if (allowToMove) anim.SetBool("isWShooting", false);
 
             return;
         }
@@ -64,21 +64,33 @@ public class FourDirectionOnRanged : MonoBehaviour
             {
                 if (EnemyOnExactRange())
                 {
-                    rb.velocity = Vector2.zero;
+                    if (!enemyHealthSystem.enemyIsHurt) rb.velocity = Vector2.zero;
                     anim.SetBool("isShooting", true);
                     anim.SetBool("isWShooting", false);
                 }
                 else
                 {
                     anim.SetBool("isWShooting", true);
-
                     Vector2 headThroughPlayer = (playerPosition.transform.position - enemyPosition.transform.position).normalized * movementSpeed;
 
                     rb.velocity = headThroughPlayer;
                 }
 
-            } else
+            } 
+            else
             {
+
+                if (!enemyHealthSystem.enemyIsHurt)
+                {
+                    rb.velocity = Vector2.zero;
+                    rb.constraints = RigidbodyConstraints2D.FreezeAll;
+                } 
+                else
+                {
+                    rb.constraints = RigidbodyConstraints2D.None;
+                    rb.constraints = RigidbodyConstraints2D.FreezeRotation;
+                }
+
                 anim.SetBool("isShooting", true);
             }
 
@@ -88,10 +100,7 @@ public class FourDirectionOnRanged : MonoBehaviour
             inRangedOn4d = false;
             anim.SetBool("isShooting", false);
             rb.velocity = Vector2.zero;
-            if (allowToMove)
-            {
-                anim.SetBool("isWShooting", false);
-            }
+            if (allowToMove) anim.SetBool("isWShooting", false);
         }
 
 
