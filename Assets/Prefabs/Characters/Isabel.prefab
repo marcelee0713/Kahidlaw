@@ -237,7 +237,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &5442604727174308086
 Transform:
   m_ObjectHideFlags: 0
@@ -255,7 +255,7 @@ Transform:
   - {fileID: 8033933898384219515}
   - {fileID: 1996665299296586051}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &4399107862625909151
 SpriteRenderer:
@@ -308,7 +308,7 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
+  m_SpriteSortPoint: 1
 --- !u!95 &3174846192887172403
 Animator:
   serializedVersion: 5
@@ -362,10 +362,10 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.003802687, y: -0.7282329}
+  m_Offset: {x: 0.003802687, y: 0.13}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
+    pivot: {x: 0.5, y: 0.2}
     oldSize: {x: 3.6923077, y: 3.0769231}
     newSize: {x: 3.6923077, y: 3.0769231}
     adaptiveTilingThreshold: 0.5
@@ -457,7 +457,7 @@ MonoBehaviour:
   MarcoCamera: {fileID: 0}
   IsabelCamera: {fileID: 1842581172637663799}
   character: Isabel
-  changeMode: 
+  changeMode: Gun
 --- !u!61 &7580035525257673415
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -490,10 +490,10 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.015380859, y: 0.007675171}
+  m_Offset: {x: 0.015380859, y: 0.93}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
+    pivot: {x: 0.5, y: 0.2}
     oldSize: {x: 3.6923077, y: 3.0769231}
     newSize: {x: 3.6923077, y: 3.0769231}
     adaptiveTilingThreshold: 0.5
@@ -510,7 +510,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4269201331760515393}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f1dba21159f04e64a9da7d5274f3d3a3, type: 3}
   m_Name: 
@@ -560,6 +560,8 @@ MonoBehaviour:
         m_CallState: 2
   flashMaterial: {fileID: 2100000, guid: 9db01f4575cce734e98ca5e4e6a661de, type: 2}
   flashDuration: 0.125
+  enemyProjectiles: 5
+  enemySlash: 10
 --- !u!114 &7358265149938818466
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -567,7 +569,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4269201331760515393}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ac4872d6e4a0e1f419a98d62dc3ae1e9, type: 3}
   m_Name: 
@@ -605,7 +607,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4646761294888174729}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalPosition: {x: 0, y: 1, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -695,7 +697,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5260247395404140220}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.03, y: -1.51, z: 0}
+  m_LocalPosition: {x: -0.03, y: 1.9, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
