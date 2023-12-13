@@ -11,8 +11,6 @@ GameObject:
   - component: {fileID: 1093701051896714868}
   - component: {fileID: 3562258997432866125}
   - component: {fileID: 5127890656519382715}
-  - component: {fileID: 7356366500028792500}
-  - component: {fileID: 7827744223643643415}
   m_Layer: 0
   m_Name: Market_Cart_3
   m_TagString: Untagged
@@ -132,61 +130,3 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.9783578, y: 0.4780507}
   m_EdgeRadius: 0
---- !u!61 &7356366500028792500
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1417829478577253965}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.31724048, y: 0.41162014}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.3}
-    oldSize: {x: 2, y: 2}
-    newSize: {x: 2, y: 2}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1.365519, y: 0.5974083}
-  m_EdgeRadius: 0
---- !u!114 &7827744223643643415
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1417829478577253965}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad1147e7c4f3ecd4e9a2bb2dd420445a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  fadeOutValue: 0.8
