@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Tilemaps;
 
 public class FadeOutTallObjects : MonoBehaviour
 {
@@ -10,9 +11,9 @@ public class FadeOutTallObjects : MonoBehaviour
 
     void Start()
     {
-        sr = GetComponent<SpriteRenderer>();
-        color = sr.color;
-    }
+            sr = GetComponent<SpriteRenderer>();
+            color = sr.color;
+        }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
