@@ -11365,7 +11365,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5442604727174308086, guid: dbb9655fdf05e8847be66b5efb3142a7, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 426.95
+      value: 425.859
       objectReference: {fileID: 0}
     - target: {fileID: 5442604727174308086, guid: dbb9655fdf05e8847be66b5efb3142a7, type: 3}
       propertyPath: m_LocalPosition.z
@@ -11411,6 +11411,10 @@ PrefabInstance:
       propertyPath: character
       value: Isabel
       objectReference: {fileID: 0}
+    - target: {fileID: 7037952979124180247, guid: dbb9655fdf05e8847be66b5efb3142a7, type: 3}
+      propertyPath: changeMode
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 7358265149938818466, guid: dbb9655fdf05e8847be66b5efb3142a7, type: 3}
       propertyPath: stepped
       value: wood
@@ -11419,6 +11423,10 @@ PrefabInstance:
       propertyPath: joystick
       value: 
       objectReference: {fileID: 2129459835}
+    - target: {fileID: 7358265149938818466, guid: dbb9655fdf05e8847be66b5efb3142a7, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 7990464760255341826, guid: dbb9655fdf05e8847be66b5efb3142a7, type: 3}
     - {fileID: 7101424236605583605, guid: dbb9655fdf05e8847be66b5efb3142a7, type: 3}
