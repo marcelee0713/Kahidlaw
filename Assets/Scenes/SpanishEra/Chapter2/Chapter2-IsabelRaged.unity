@@ -5236,7 +5236,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1788219843784647960, guid: 7ed9160a7dbb55a4291fbd598aa1cf96, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.35
+      value: 4.16
       objectReference: {fileID: 0}
     - target: {fileID: 1798937406172056573, guid: 7ed9160a7dbb55a4291fbd598aa1cf96, type: 3}
       propertyPath: detectorRangeY
@@ -5248,11 +5248,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2229599394981868296, guid: 7ed9160a7dbb55a4291fbd598aa1cf96, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1158.26
+      value: 1158.48
       objectReference: {fileID: 0}
     - target: {fileID: 2229599394981868296, guid: 7ed9160a7dbb55a4291fbd598aa1cf96, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 416.29
+      value: 414.42
       objectReference: {fileID: 0}
     - target: {fileID: 2229599394981868296, guid: 7ed9160a7dbb55a4291fbd598aa1cf96, type: 3}
       propertyPath: m_LocalPosition.z
@@ -5320,7 +5320,7 @@ PrefabInstance:
       objectReference: {fileID: 697406280}
     - target: {fileID: 8474660717878180265, guid: 7ed9160a7dbb55a4291fbd598aa1cf96, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.35
+      value: -2.65
       objectReference: {fileID: 0}
     - target: {fileID: 8857942239397482123, guid: 7ed9160a7dbb55a4291fbd598aa1cf96, type: 3}
       propertyPath: deathCallback.m_PersistentCalls.m_Calls.Array.size
@@ -5456,6 +5456,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 739093206}
     - target: {fileID: 7101424236605583605, guid: dbb9655fdf05e8847be66b5efb3142a7, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7101424236605583605, guid: dbb9655fdf05e8847be66b5efb3142a7, type: 3}
       propertyPath: maxHealth
       value: 200
       objectReference: {fileID: 0}
@@ -5475,6 +5479,10 @@ PrefabInstance:
       propertyPath: joystick
       value: 
       objectReference: {fileID: 256308630}
+    - target: {fileID: 7358265149938818466, guid: dbb9655fdf05e8847be66b5efb3142a7, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5641,7 +5649,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1788219843784647960, guid: 7ed9160a7dbb55a4291fbd598aa1cf96, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.35
+      value: 4.96
       objectReference: {fileID: 0}
     - target: {fileID: 1798937406172056573, guid: 7ed9160a7dbb55a4291fbd598aa1cf96, type: 3}
       propertyPath: detectorRangeY
@@ -5729,7 +5737,7 @@ PrefabInstance:
       objectReference: {fileID: 697406280}
     - target: {fileID: 8474660717878180265, guid: 7ed9160a7dbb55a4291fbd598aa1cf96, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.35
+      value: -3.23
       objectReference: {fileID: 0}
     - target: {fileID: 8857942239397482123, guid: 7ed9160a7dbb55a4291fbd598aa1cf96, type: 3}
       propertyPath: deathCallback.m_PersistentCalls.m_Calls.Array.size
@@ -14944,7 +14952,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1649030252}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.12, y: 1.11, z: 9.886294}
+  m_LocalPosition: {x: -0.13, y: 1.41, z: 9.886294}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -16027,7 +16035,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1842495301}
   m_LocalRotation: {x: 0, y: 0, z: 0.6938419, w: 0.72012734}
-  m_LocalPosition: {x: 1177.93, y: 426.36, z: 5.97639}
+  m_LocalPosition: {x: 1178.57, y: 426.36, z: 5.97639}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -16072,7 +16080,7 @@ BoxCollider2D:
   m_Offset: {x: 0.019714355, y: -0.5914612}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
+    pivot: {x: 0.5, y: 0.3}
     oldSize: {x: 3.6923077, y: 3.0769231}
     newSize: {x: 3.6923077, y: 3.0769231}
     adaptiveTilingThreshold: 0.5
