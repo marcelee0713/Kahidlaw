@@ -33,7 +33,7 @@ Transform:
   - {fileID: 5449778519014524720}
   - {fileID: 1842667544256653374}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &3919196902715470620
 MonoBehaviour:
@@ -142,7 +142,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4737214740049026354}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.1, y: 1.15, z: -0.015822357}
+  m_LocalPosition: {x: 0.1, y: 2, z: -0.015822357}
   m_LocalScale: {x: 0.1, y: 0.1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -278,7 +278,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 1.0008836, y: -0.45201182}
+  m_Offset: {x: 1.0008836, y: 0.05}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -381,7 +381,7 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
+  m_SpriteSortPoint: 1
 --- !u!95 &1005753716845692574
 Animator:
   serializedVersion: 5
@@ -462,11 +462,11 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.11752719, y: -0.4547794}
+  m_Offset: {x: 0.11752719, y: 0.05}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 3, y: 2.5}
+    pivot: {x: 0.5, y: 0.3}
+    oldSize: {x: 3.6923077, y: 3.0769231}
     newSize: {x: 3, y: 2.5}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -492,37 +492,47 @@ MonoBehaviour:
     message: Hello?
     choices: []
     messageSprite: {fileID: 0}
+    messageTwoSprite: {fileID: 0}
     messageCallback:
       m_PersistentCalls:
         m_Calls: []
+    disableHUDAfterDialogue: 0
   - actorId: 1
     message: Uhh... Huh?
     choices: []
     messageSprite: {fileID: 0}
+    messageTwoSprite: {fileID: 0}
     messageCallback:
       m_PersistentCalls:
         m_Calls: []
+    disableHUDAfterDialogue: 0
   - actorId: 1
     message: Who's there?
     choices: []
     messageSprite: {fileID: 0}
+    messageTwoSprite: {fileID: 0}
     messageCallback:
       m_PersistentCalls:
         m_Calls: []
+    disableHUDAfterDialogue: 0
   - actorId: 0
     message: Uhm, hey there old man.
     choices: []
     messageSprite: {fileID: 0}
+    messageTwoSprite: {fileID: 0}
     messageCallback:
       m_PersistentCalls:
         m_Calls: []
+    disableHUDAfterDialogue: 0
   - actorId: 1
     message: Don't call me old you young boy.
     choices: []
     messageSprite: {fileID: 0}
+    messageTwoSprite: {fileID: 0}
     messageCallback:
       m_PersistentCalls:
         m_Calls: []
+    disableHUDAfterDialogue: 0
   - actorId: 1
     message: Do I look that old to you?
     choices:
@@ -531,38 +541,48 @@ MonoBehaviour:
       callback:
         m_PersistentCalls:
           m_Calls: []
-      spriteReaction: {fileID: 0}
+      actor1Reaction: {fileID: 0}
+      actor2Reaction: {fileID: 0}
     - choice: No
       response: Then why did you call me old a while ago?
       callback:
         m_PersistentCalls:
           m_Calls: []
-      spriteReaction: {fileID: 0}
+      actor1Reaction: {fileID: 0}
+      actor2Reaction: {fileID: 0}
     messageSprite: {fileID: 0}
+    messageTwoSprite: {fileID: 0}
     messageCallback:
       m_PersistentCalls:
         m_Calls: []
+    disableHUDAfterDialogue: 0
   - actorId: 1
     message: '*cough cough*'
     choices: []
     messageSprite: {fileID: 0}
+    messageTwoSprite: {fileID: 0}
     messageCallback:
       m_PersistentCalls:
         m_Calls: []
+    disableHUDAfterDialogue: 0
   - actorId: 1
     message: Whatever...
     choices: []
     messageSprite: {fileID: 0}
+    messageTwoSprite: {fileID: 0}
     messageCallback:
       m_PersistentCalls:
         m_Calls: []
+    disableHUDAfterDialogue: 0
   - actorId: 0
     message: Have a good day.
     choices: []
     messageSprite: {fileID: 0}
+    messageTwoSprite: {fileID: 0}
     messageCallback:
       m_PersistentCalls:
         m_Calls: []
+    disableHUDAfterDialogue: 0
   actors:
   - name: Marco
     sprite: {fileID: 21300000, guid: 6c0ecc78ad613014fa4ffbe03c90aab6, type: 3}
@@ -593,3 +613,6 @@ MonoBehaviour:
   currentEvent:
     m_PersistentCalls:
       m_Calls: []
+  npcAnim: {fileID: 0}
+  yDirection: 0
+  xDirection: 0

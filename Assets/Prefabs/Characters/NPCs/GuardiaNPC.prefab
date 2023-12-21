@@ -36,7 +36,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &5314641472627121917
 SpriteRenderer:
@@ -89,7 +89,7 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
+  m_SpriteSortPoint: 1
 --- !u!50 &3150761394613589375
 Rigidbody2D:
   serializedVersion: 4
@@ -149,10 +149,10 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.15220594, y: -0.60190344}
+  m_Offset: {x: -0.15220594, y: 0.06}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
+    pivot: {x: 0.5, y: 0.3}
     oldSize: {x: 3.6923077, y: 3.0769231}
     newSize: {x: 3.6923077, y: 3.0769231}
     adaptiveTilingThreshold: 0.5
@@ -215,10 +215,10 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -1.4579878, y: -0.6070268}
+  m_Offset: {x: -1.4579878, y: 0.06}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
+    pivot: {x: 0.5, y: 0.3}
     oldSize: {x: 3.6923077, y: 3.0769231}
     newSize: {x: 3.6923077, y: 3.0769231}
     adaptiveTilingThreshold: 0.5
@@ -249,6 +249,7 @@ MonoBehaviour:
     messageCallback:
       m_PersistentCalls:
         m_Calls: []
+    disableHUDAfterDialogue: 0
   - actorId: 1
     message: Where do you think you're going?
     choices: []
@@ -257,6 +258,7 @@ MonoBehaviour:
     messageCallback:
       m_PersistentCalls:
         m_Calls: []
+    disableHUDAfterDialogue: 0
   - actorId: 0
     message: Oh I want to go to the city.
     choices: []
@@ -265,6 +267,7 @@ MonoBehaviour:
     messageCallback:
       m_PersistentCalls:
         m_Calls: []
+    disableHUDAfterDialogue: 0
   - actorId: 1
     message: And what's the reason?
     choices: []
@@ -273,6 +276,7 @@ MonoBehaviour:
     messageCallback:
       m_PersistentCalls:
         m_Calls: []
+    disableHUDAfterDialogue: 0
   - actorId: 0
     message: I am finding someone...
     choices: []
@@ -281,6 +285,7 @@ MonoBehaviour:
     messageCallback:
       m_PersistentCalls:
         m_Calls: []
+    disableHUDAfterDialogue: 0
   - actorId: 0
     message: Because someone told me she lives in the city.
     choices: []
@@ -289,6 +294,7 @@ MonoBehaviour:
     messageCallback:
       m_PersistentCalls:
         m_Calls: []
+    disableHUDAfterDialogue: 0
   - actorId: 1
     message: Who told you where she lives?
     choices: []
@@ -297,6 +303,7 @@ MonoBehaviour:
     messageCallback:
       m_PersistentCalls:
         m_Calls: []
+    disableHUDAfterDialogue: 0
   - actorId: 0
     message: Someone named Tia.
     choices: []
@@ -305,6 +312,7 @@ MonoBehaviour:
     messageCallback:
       m_PersistentCalls:
         m_Calls: []
+    disableHUDAfterDialogue: 0
   - actorId: 0
     message: She's an alcoholic person as well.
     choices: []
@@ -313,6 +321,7 @@ MonoBehaviour:
     messageCallback:
       m_PersistentCalls:
         m_Calls: []
+    disableHUDAfterDialogue: 0
   - actorId: 1
     message: So who's the person you are finding?
     choices: []
@@ -321,6 +330,7 @@ MonoBehaviour:
     messageCallback:
       m_PersistentCalls:
         m_Calls: []
+    disableHUDAfterDialogue: 0
   - actorId: 0
     message: Well her name is...
     choices: []
@@ -329,6 +339,7 @@ MonoBehaviour:
     messageCallback:
       m_PersistentCalls:
         m_Calls: []
+    disableHUDAfterDialogue: 0
   - actorId: 0
     message: Isabel. I just want to be with her and talk about things we miss.
     choices: []
@@ -337,6 +348,7 @@ MonoBehaviour:
     messageCallback:
       m_PersistentCalls:
         m_Calls: []
+    disableHUDAfterDialogue: 0
   - actorId: 1
     message: Do you have any IDEA who you're talking about?!
     choices: []
@@ -345,6 +357,7 @@ MonoBehaviour:
     messageCallback:
       m_PersistentCalls:
         m_Calls: []
+    disableHUDAfterDialogue: 0
   - actorId: 1
     message: What are your intentions to Isabel?!
     choices:
@@ -367,6 +380,7 @@ MonoBehaviour:
     messageCallback:
       m_PersistentCalls:
         m_Calls: []
+    disableHUDAfterDialogue: 0
   - actorId: 1
     message: She won't even like you because you are an Indio.
     choices: []
@@ -375,6 +389,7 @@ MonoBehaviour:
     messageCallback:
       m_PersistentCalls:
         m_Calls: []
+    disableHUDAfterDialogue: 0
   - actorId: 1
     message: You're also coming with me.
     choices: []
@@ -383,6 +398,7 @@ MonoBehaviour:
     messageCallback:
       m_PersistentCalls:
         m_Calls: []
+    disableHUDAfterDialogue: 0
   - actorId: 0
     message: Wha- what?!
     choices: []
@@ -391,6 +407,7 @@ MonoBehaviour:
     messageCallback:
       m_PersistentCalls:
         m_Calls: []
+    disableHUDAfterDialogue: 0
   - actorId: 0
     message: Please I just really need her!
     choices: []
@@ -399,6 +416,7 @@ MonoBehaviour:
     messageCallback:
       m_PersistentCalls:
         m_Calls: []
+    disableHUDAfterDialogue: 0
   actors:
   - name: Marco
     sprite: {fileID: 21300000, guid: 0c4cd6385ede6a0489f25bac3b2ada87, type: 3}
@@ -423,3 +441,6 @@ MonoBehaviour:
   dialogueTrigger: {fileID: 5624564379189523119}
   dialogueManager: {fileID: 0}
   DialogueBox: {fileID: 0}
+  npcAnim: {fileID: 0}
+  yDirection: 0
+  xDirection: 0

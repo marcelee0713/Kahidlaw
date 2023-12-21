@@ -121,7 +121,7 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
+  m_SpriteSortPoint: 1
 --- !u!50 &4051578017708161264
 Rigidbody2D:
   serializedVersion: 4
@@ -181,10 +181,10 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.05272031, y: -0.4547794}
+  m_Offset: {x: 0.05272031, y: 0.02}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
+    pivot: {x: 0.5, y: 0.3}
     oldSize: {x: 3.6923077, y: 3.0769231}
     newSize: {x: 3, y: 2.5}
     adaptiveTilingThreshold: 0.5
@@ -232,59 +232,75 @@ MonoBehaviour:
     message: Hello there Ma'am.
     choices: []
     messageSprite: {fileID: 0}
+    messageTwoSprite: {fileID: 0}
     messageCallback:
       m_PersistentCalls:
         m_Calls: []
+    disableHUDAfterDialogue: 0
   - actorId: 0
     message: Do you perhaps know about Isabel?
     choices: []
     messageSprite: {fileID: 0}
+    messageTwoSprite: {fileID: 0}
     messageCallback:
       m_PersistentCalls:
         m_Calls: []
+    disableHUDAfterDialogue: 0
   - actorId: 1
     message: Yes, but you shouldn't be asking me.
     choices: []
     messageSprite: {fileID: 0}
+    messageTwoSprite: {fileID: 0}
     messageCallback:
       m_PersistentCalls:
         m_Calls: []
+    disableHUDAfterDialogue: 0
   - actorId: 0
     message: Who am I suppose to ask then Ma'am?
     choices: []
     messageSprite: {fileID: 21300000, guid: 0c4cd6385ede6a0489f25bac3b2ada87, type: 3}
+    messageTwoSprite: {fileID: 0}
     messageCallback:
       m_PersistentCalls:
         m_Calls: []
+    disableHUDAfterDialogue: 0
   - actorId: 1
     message: Not here in the Slums. You should go to the City.
     choices: []
     messageSprite: {fileID: 0}
+    messageTwoSprite: {fileID: 0}
     messageCallback:
       m_PersistentCalls:
         m_Calls: []
+    disableHUDAfterDialogue: 0
   - actorId: 1
     message: They know more about this Isabel. Head up to the north and you'll be
       there shortly.
     choices: []
     messageSprite: {fileID: 0}
+    messageTwoSprite: {fileID: 0}
     messageCallback:
       m_PersistentCalls:
         m_Calls: []
+    disableHUDAfterDialogue: 0
   - actorId: 0
     message: Thank you Ma'am.
     choices: []
     messageSprite: {fileID: 0}
+    messageTwoSprite: {fileID: 0}
     messageCallback:
       m_PersistentCalls:
         m_Calls: []
+    disableHUDAfterDialogue: 0
   - actorId: 1
     message: You're welcome
     choices: []
     messageSprite: {fileID: 0}
+    messageTwoSprite: {fileID: 0}
     messageCallback:
       m_PersistentCalls:
         m_Calls: []
+    disableHUDAfterDialogue: 0
   actors:
   - name: Marco
     sprite: {fileID: 21300000, guid: 6c0ecc78ad613014fa4ffbe03c90aab6, type: 3}
@@ -315,6 +331,9 @@ MonoBehaviour:
   currentEvent:
     m_PersistentCalls:
       m_Calls: []
+  npcAnim: {fileID: 0}
+  yDirection: 0
+  xDirection: 0
 --- !u!1 &2620687565146938827
 GameObject:
   m_ObjectHideFlags: 0
@@ -340,7 +359,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2620687565146938827}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.06, y: 1.38, z: -0.04959841}
+  m_LocalPosition: {x: 0.06, y: 2.03, z: -0.04959841}
   m_LocalScale: {x: 0.099999994, y: 0.099999994, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -432,7 +451,7 @@ Transform:
   - {fileID: 4675481400681406945}
   - {fileID: 8192043976687121635}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2895630830829010529
 MonoBehaviour:
@@ -480,7 +499,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3598450463603314527}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.3, z: -0.033776052}
+  m_LocalPosition: {x: 0, y: -0.02, z: -0.033776052}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
