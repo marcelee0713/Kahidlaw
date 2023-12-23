@@ -16,6 +16,7 @@ public class Environment : MonoBehaviour
     [Header("Missions")]
     public Mission[] missions;
     public TextMeshProUGUI[] taskTexts;
+    public GameObject[] missionsHolder;
     public TextMeshProUGUI missionsFinishedText;
     public TextMeshProUGUI totalMissionsText;
     public GameObject MissionsPanel;
@@ -37,6 +38,7 @@ public class Environment : MonoBehaviour
         CheckAndRunGameObject(notifier, () => notifier.SetActive(false));
         CheckAndRunText(locationText, () => locationText.text = DefaultLocation);
         CheckAndRunText(eraText, () => eraText.text = DefaultEra);
+        ClearMissionsUI();
         InstantiateMissionsUI();
         CheckAndRunThisImage(characterImage, () => characterImage.sprite = marcoImage);
     }
@@ -50,8 +52,9 @@ public class Environment : MonoBehaviour
         {
             CheckAndRunText(eraText, () =>
             {
-                taskTexts[i].text = "- " + missions[i].task;
+                taskTexts[i].text = missions[i].task;
                 taskTexts[i].fontStyle = FontStyles.Normal;
+                missionsHolder[i].SetActive(true);
             });
 
         }
@@ -61,6 +64,11 @@ public class Environment : MonoBehaviour
 
     public void ClearMissionsUI()
     {
+        for (int i = 0; i < missionsHolder.Length; i++)
+        {
+            missionsHolder[i].SetActive(false);
+        }
+
         for (int i = 0; i < missions.Length; i++)
         {
             taskTexts[i].text = "";
