@@ -13,7 +13,7 @@ public class Environment : MonoBehaviour
     public TextMeshProUGUI locationText;
     public TextMeshProUGUI eraText;
 
-    [Header("Missions")]
+    [Header("Missions Tab")]
     public Mission[] missions;
     public TextMeshProUGUI[] taskTexts;
     public GameObject[] missionsHolder;
@@ -31,6 +31,9 @@ public class Environment : MonoBehaviour
     [SerializeField] private Sprite isabelImage;
     [SerializeField] private Sprite marcoImage;
 
+    [Header("Map tab")]
+    public GameObject minimap;
+
     void Start()
     {
         isMissionPanelOpen = false;
@@ -41,6 +44,17 @@ public class Environment : MonoBehaviour
         ClearMissionsUI();
         InstantiateMissionsUI();
         CheckAndRunThisImage(characterImage, () => characterImage.sprite = marcoImage);
+    }
+
+    public void HandleMinimap()
+    {
+        if (minimap.activeSelf)
+        {
+            minimap.SetActive(false);
+            return;
+        }
+
+        minimap.SetActive(true);
     }
 
     // Missions UI
