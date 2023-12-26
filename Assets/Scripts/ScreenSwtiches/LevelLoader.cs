@@ -37,6 +37,13 @@ public class LevelLoader : MonoBehaviour
         StartCoroutine(LoadLevel("MainMenu"));
     }
 
+    public void LoadLastGame()
+    {
+        string lastSave = PlayerPrefs.GetString("Spanish-Era", "Chapter1-Prologue");
+
+        StartCoroutine(LoadLevel(lastSave));
+    }
+
     public void LoadChapter1SpanishEraPrologue()
     {
         StartCoroutine(LoadLevel("Chapter1-Prologue"));

@@ -38,6 +38,14 @@ public class PlayerRefs : MonoBehaviour
         PlayerPrefs.SetString("Chapter2-Assaulted", choice);
     }
 
+    public void SpanishEraSaveGame(string savename)
+    {
+        if(savename != "")
+        {
+            PlayerPrefs.SetString("Spanish-Era", savename);
+        }
+    }
+
     private void Chapter2ButterflyEffect()
     {
         if (DidHelpedTheIndios() == "y")
