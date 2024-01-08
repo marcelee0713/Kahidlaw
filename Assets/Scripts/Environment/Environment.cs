@@ -33,6 +33,8 @@ public class Environment : MonoBehaviour
 
     [Header("Map tab")]
     public GameObject minimap;
+    public GameObject marcoCamera;
+    public GameObject isabelCamera;
 
     void Start()
     {
@@ -51,8 +53,22 @@ public class Environment : MonoBehaviour
         if (minimap.activeSelf)
         {
             minimap.SetActive(false);
+
             return;
         }
+
+
+        if (ModeChanger.currentCharacter == "Marco")
+        {
+            CheckAndRunGameObject(marcoCamera, () => marcoCamera.SetActive(true));
+            CheckAndRunGameObject(isabelCamera, () => isabelCamera.SetActive(false));
+        }
+        else
+        {
+            CheckAndRunGameObject(isabelCamera, () => isabelCamera.SetActive(true));
+            CheckAndRunGameObject(marcoCamera, () => marcoCamera.SetActive(false));
+        }
+
 
         minimap.SetActive(true);
     }
@@ -68,7 +84,7 @@ public class Environment : MonoBehaviour
             {
                 taskTexts[i].text = missions[i].task;
                 taskTexts[i].fontStyle = FontStyles.Normal;
-                missionsHolder[i].SetActive(true);
+                CheckAndRunGameObject(missionsHolder[i], () => missionsHolder[i].SetActive(true));
             });
 
         }
@@ -80,7 +96,7 @@ public class Environment : MonoBehaviour
     {
         for (int i = 0; i < missionsHolder.Length; i++)
         {
-            missionsHolder[i].SetActive(false);
+            CheckAndRunGameObject(missionsHolder[i], () => missionsHolder[i].SetActive(false));
         }
 
         for (int i = 0; i < missions.Length; i++)

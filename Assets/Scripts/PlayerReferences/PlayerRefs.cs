@@ -15,11 +15,6 @@ public class PlayerRefs : MonoBehaviour
     public GameObject FidelAssistance;
     public GameObject IsabelsAloneDialogue;
 
-    private void Awake()
-    {
-        inputField = GameObject.Find("NameField").GetComponent<TMP_InputField>();
-    }
-
     private void Start()
     {
         if (FidelAssistance  != null && IsabelsAloneDialogue != null)

@@ -41,7 +41,15 @@ public class LevelLoader : MonoBehaviour
     {
         string lastSave = PlayerPrefs.GetString("Spanish-Era", "Chapter1-Prologue");
 
-        StartCoroutine(LoadLevel(lastSave));
+        if (lastSave != "")
+        {
+            StartCoroutine(LoadLevel(lastSave));
+        }
+        else
+        {
+            StartCoroutine(LoadLevel("Chapter1-Prologue"));
+        }
+
     }
 
     public void LoadChapter1SpanishEraPrologue()
