@@ -7441,7 +7441,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2992003976622590729, guid: f0226c36c8e53c5458df560a94fc288d, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7673735281823645186, guid: f0226c36c8e53c5458df560a94fc288d, type: 3}
       propertyPath: transitionSeconds
@@ -7945,7 +7945,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 618759730724407179, guid: 254bbc6b98c03b54cad1e56b9fa5249f, type: 3}
       propertyPath: messages.Array.data[9].messageCallback.m_PersistentCalls.m_Calls.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 618759730724407179, guid: 254bbc6b98c03b54cad1e56b9fa5249f, type: 3}
       propertyPath: messages.Array.data[6].messageCallback.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
@@ -7953,6 +7953,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 618759730724407179, guid: 254bbc6b98c03b54cad1e56b9fa5249f, type: 3}
       propertyPath: messages.Array.data[9].messageCallback.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 618759730724407179, guid: 254bbc6b98c03b54cad1e56b9fa5249f, type: 3}
+      propertyPath: messages.Array.data[9].messageCallback.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
       value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 618759730724407179, guid: 254bbc6b98c03b54cad1e56b9fa5249f, type: 3}
@@ -7964,11 +7968,19 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 343792218}
     - target: {fileID: 618759730724407179, guid: 254bbc6b98c03b54cad1e56b9fa5249f, type: 3}
+      propertyPath: messages.Array.data[9].messageCallback.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 437338263}
+    - target: {fileID: 618759730724407179, guid: 254bbc6b98c03b54cad1e56b9fa5249f, type: 3}
       propertyPath: messages.Array.data[6].messageCallback.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 618759730724407179, guid: 254bbc6b98c03b54cad1e56b9fa5249f, type: 3}
       propertyPath: messages.Array.data[9].messageCallback.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 618759730724407179, guid: 254bbc6b98c03b54cad1e56b9fa5249f, type: 3}
+      propertyPath: messages.Array.data[9].messageCallback.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 618759730724407179, guid: 254bbc6b98c03b54cad1e56b9fa5249f, type: 3}
@@ -7980,6 +7992,10 @@ PrefabInstance:
       value: SetActive
       objectReference: {fileID: 0}
     - target: {fileID: 618759730724407179, guid: 254bbc6b98c03b54cad1e56b9fa5249f, type: 3}
+      propertyPath: messages.Array.data[9].messageCallback.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: SetActive
+      objectReference: {fileID: 0}
+    - target: {fileID: 618759730724407179, guid: 254bbc6b98c03b54cad1e56b9fa5249f, type: 3}
       propertyPath: messages.Array.data[6].messageCallback.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: LevelLoader, Assembly-CSharp
       objectReference: {fileID: 0}
@@ -7988,7 +8004,15 @@ PrefabInstance:
       value: UnityEngine.GameObject, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 618759730724407179, guid: 254bbc6b98c03b54cad1e56b9fa5249f, type: 3}
+      propertyPath: messages.Array.data[9].messageCallback.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: UnityEngine.GameObject, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 618759730724407179, guid: 254bbc6b98c03b54cad1e56b9fa5249f, type: 3}
       propertyPath: messages.Array.data[9].messageCallback.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_BoolArgument
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 618759730724407179, guid: 254bbc6b98c03b54cad1e56b9fa5249f, type: 3}
+      propertyPath: messages.Array.data[9].messageCallback.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_BoolArgument
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 618759730724407179, guid: 254bbc6b98c03b54cad1e56b9fa5249f, type: 3}
@@ -7997,6 +8021,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 618759730724407179, guid: 254bbc6b98c03b54cad1e56b9fa5249f, type: 3}
       propertyPath: messages.Array.data[9].messageCallback.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 618759730724407179, guid: 254bbc6b98c03b54cad1e56b9fa5249f, type: 3}
+      propertyPath: messages.Array.data[9].messageCallback.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 982342440532856347, guid: 254bbc6b98c03b54cad1e56b9fa5249f, type: 3}
@@ -8262,6 +8290,30 @@ MonoBehaviour:
             m_StringArgument: Chapter2-SexualAssault
             m_BoolArgument: 0
           m_CallState: 2
+        - m_Target: {fileID: 437338262}
+          m_TargetAssemblyTypeName: PlayerRefs, Assembly-CSharp
+          m_MethodName: PauseGameTimer
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: Chapter2-SexualAssault
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 437338262}
+          m_TargetAssemblyTypeName: PlayerRefs, Assembly-CSharp
+          m_MethodName: SaveGameTimer
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: Chapter2-SexualAssault
+            m_BoolArgument: 0
+          m_CallState: 2
     failedCallback:
       m_PersistentCalls:
         m_Calls:
@@ -8313,6 +8365,30 @@ MonoBehaviour:
             m_StringArgument: Chapter2-Escaped
             m_BoolArgument: 0
           m_CallState: 2
+        - m_Target: {fileID: 437338262}
+          m_TargetAssemblyTypeName: PlayerRefs, Assembly-CSharp
+          m_MethodName: PauseGameTimer
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: Chapter2-Escaped
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 437338262}
+          m_TargetAssemblyTypeName: PlayerRefs, Assembly-CSharp
+          m_MethodName: SaveGameTimer
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: Chapter2-Escaped
+            m_BoolArgument: 0
+          m_CallState: 2
     amountToPress: 10
   QTEBox: {fileID: 791502056}
 --- !u!114 &343792223
@@ -8341,6 +8417,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 27595792664558293, guid: c4e799a235f91c04ea81788857654ed0, type: 3}
+      propertyPath: era
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 27595792664558293, guid: c4e799a235f91c04ea81788857654ed0, type: 3}
+      propertyPath: allowToCount
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1142472038696717262, guid: c4e799a235f91c04ea81788857654ed0, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -8391,7 +8475,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5322855214900393830, guid: c4e799a235f91c04ea81788857654ed0, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -8403,12 +8487,17 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 27595792664558293, guid: c4e799a235f91c04ea81788857654ed0, type: 3}
   m_PrefabInstance: {fileID: 437338261}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 437338263}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: db1bb62ffe5f2524f9eb3610eacb26a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &437338263 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5322855214900393830, guid: c4e799a235f91c04ea81788857654ed0, type: 3}
+  m_PrefabInstance: {fileID: 437338261}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &455628705
 GameObject:
   m_ObjectHideFlags: 0

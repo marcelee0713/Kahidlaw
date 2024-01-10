@@ -43,6 +43,16 @@ public class PlayerRefs : MonoBehaviour
         StartGameTimer(era);
     }
 
+    public void PauseGameTimer()
+    {
+        allowToCount = false;
+    }
+
+    public void ResumeGameTimer() {
+    
+        allowToCount = true;
+    } 
+
     private void GetGameTimer (Eras eras)
     {
         if (!allowToCount) return;
@@ -81,9 +91,9 @@ public class PlayerRefs : MonoBehaviour
         }
     }
 
-    public void SaveGameTimer (Eras eras)
+    public void SaveGameTimer ()
     {
-        switch (eras)
+        switch (era)
         {
             case Eras.PreColonial:
                 break;
