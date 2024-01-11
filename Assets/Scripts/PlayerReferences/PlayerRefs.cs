@@ -32,6 +32,12 @@ public class PlayerRefs : MonoBehaviour
     {
         GetGameTimer(era);
         currentUsername = PlayerPrefs.GetString("Username", "");
+
+        if (currentUsername == "")
+        {
+            CheckAndRunThisGameObject(nameInputPanel, () => nameInputPanel.SetActive(true));
+        }
+
         if (FidelAssistance  != null && IsabelsAloneDialogue != null)
         {
             Chapter2ButterflyEffect();
@@ -43,6 +49,7 @@ public class PlayerRefs : MonoBehaviour
         StartGameTimer(era);
     }
 
+    // Timer Refs
     public void PauseGameTimer()
     {
         allowToCount = false;
@@ -152,7 +159,7 @@ public class PlayerRefs : MonoBehaviour
         }
     }
 
-
+    // Spanish Era Refs
     public string GetHasBeenAssaulted()
     {
         string hasBeenAssaulted = PlayerPrefs.GetString("Chapter2-Assaulted", "y");
@@ -194,6 +201,34 @@ public class PlayerRefs : MonoBehaviour
         {
             FidelAssistance.SetActive(false);
             IsabelsAloneDialogue.SetActive(true);
+        }
+    }
+
+    public void SetEraFinished()
+    {
+        switch (era)
+        {
+            case Eras.PreColonial:
+                break;
+            case Eras.Spanish:
+                PlayerPrefs.SetString("FinishedSpanishEra", "true");
+                break;
+            case Eras.American:
+                break;
+            case Eras.Japanese:
+                break;
+            case Eras.MartialLaw:
+                break;
+        }
+    }
+
+    public delegate void Callback();
+
+    public void CheckAndRunThisGameObject(GameObject thisGameObject, Callback callback)
+    {
+        if (thisGameObject != null)
+        {
+            callback();
         }
     }
 
