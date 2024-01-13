@@ -66,15 +66,19 @@ public class PlayerRefs : MonoBehaviour
         switch (eras)
         {
             case Eras.PreColonial:
+                spanishEraTimer = PlayerPrefs.GetFloat("PreColonialEraCurrentTime", 0f);
                 break;
             case Eras.Spanish:
                 spanishEraTimer = PlayerPrefs.GetFloat("SpanishEraCurrentTime", 0f);
                 break;
             case Eras.American:
+                spanishEraTimer = PlayerPrefs.GetFloat("AmericanEraCurrentTime", 0f);
                 break;
             case Eras.Japanese:
+                spanishEraTimer = PlayerPrefs.GetFloat("JapaneseEraCurrentTime", 0f);
                 break;
             case Eras.MartialLaw:
+                spanishEraTimer = PlayerPrefs.GetFloat("MartialLawEraCurrentTime", 0f);
                 break;
         }
     }
@@ -85,15 +89,19 @@ public class PlayerRefs : MonoBehaviour
         switch (eras)
         {
             case Eras.PreColonial:
+                preColonialTimer += Time.deltaTime;
                 break;
             case Eras.Spanish:
                 spanishEraTimer += Time.deltaTime;
                 break;
             case Eras.American:
+                americanEraTimer += Time.deltaTime;
                 break;
             case Eras.Japanese:
+                japaneseEraTimer += Time.deltaTime;
                 break;
             case Eras.MartialLaw:
+                martialLawEraTimer += Time.deltaTime;
                 break;
         }
     }
@@ -103,16 +111,24 @@ public class PlayerRefs : MonoBehaviour
         switch (era)
         {
             case Eras.PreColonial:
+                float newRecord_1 = preColonialTimer;
+                PlayerPrefs.SetFloat("PreColonialEraCurrentTime", newRecord_1);
                 break;
             case Eras.Spanish:
-                float newRecord = spanishEraTimer;
-                PlayerPrefs.SetFloat("SpanishEraCurrentTime", newRecord);
+                float newRecord_2 = spanishEraTimer;
+                PlayerPrefs.SetFloat("SpanishEraCurrentTime", newRecord_2);
                 break;
             case Eras.American:
+                float newRecord_3 = americanEraTimer;
+                PlayerPrefs.SetFloat("AmericanEraCurrentTime", newRecord_3);
                 break;
             case Eras.Japanese:
+                float newRecord_4 = japaneseEraTimer;
+                PlayerPrefs.SetFloat("JapaneseEraCurrentTime", newRecord_4);
                 break;
             case Eras.MartialLaw:
+                float newRecord_5 = martialLawEraTimer;
+                PlayerPrefs.SetFloat("MartialLawEraCurrentTime", newRecord_5);
                 break;
         }
     }
@@ -122,15 +138,19 @@ public class PlayerRefs : MonoBehaviour
         switch (eras)
         {
             case Eras.PreColonial:
+                PlayerPrefs.SetFloat("PreColonialEraCurrentTime", 0f);
                 break;
             case Eras.Spanish:
                 PlayerPrefs.SetFloat("SpanishEraCurrentTime", 0f);
                 break;
             case Eras.American:
+                PlayerPrefs.SetFloat("AmericanEraCurrentTime", 0f);
                 break;
             case Eras.Japanese:
+                PlayerPrefs.SetFloat("JapaneseEraCurrentTime", 0f);
                 break;
             case Eras.MartialLaw:
+                PlayerPrefs.SetFloat("MartialLawEraCurrentTime", 0f);
                 break;
         }
     }
@@ -156,6 +176,28 @@ public class PlayerRefs : MonoBehaviour
             errorInputHandler.text = "";
             nameInputPanel.SetActive(false);
             PlayerPrefs.SetString("Username", userName);
+        }
+    }
+
+    public void SetEraFinished()
+    {
+        switch (era)
+        {
+            case Eras.PreColonial:
+                PlayerPrefs.SetString("FinishedPreColonialEra", "true");
+                break;
+            case Eras.Spanish:
+                PlayerPrefs.SetString("FinishedSpanishEra", "true");
+                break;
+            case Eras.American:
+                PlayerPrefs.SetString("FinishedAmericanEra", "true");
+                break;
+            case Eras.Japanese:
+                PlayerPrefs.SetString("FinishedJapaneseEra", "true");
+                break;
+            case Eras.MartialLaw:
+                PlayerPrefs.SetString("FinishedMartialLawEra", "true");
+                break;
         }
     }
 
@@ -201,24 +243,6 @@ public class PlayerRefs : MonoBehaviour
         {
             FidelAssistance.SetActive(false);
             IsabelsAloneDialogue.SetActive(true);
-        }
-    }
-
-    public void SetEraFinished()
-    {
-        switch (era)
-        {
-            case Eras.PreColonial:
-                break;
-            case Eras.Spanish:
-                PlayerPrefs.SetString("FinishedSpanishEra", "true");
-                break;
-            case Eras.American:
-                break;
-            case Eras.Japanese:
-                break;
-            case Eras.MartialLaw:
-                break;
         }
     }
 
