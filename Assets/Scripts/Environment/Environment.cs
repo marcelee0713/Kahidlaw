@@ -101,7 +101,7 @@ public class Environment : MonoBehaviour
 
         for (int i = 0; i < missions.Length; i++)
         {
-            taskTexts[i].text = "";
+            CheckAndRunText(taskTexts[i], () => taskTexts[i].text = "");
         }
     }
 

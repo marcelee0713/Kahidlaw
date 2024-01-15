@@ -30,7 +30,7 @@ public class PlayerRefs : MonoBehaviour
 
     private void Start()
     {
-        GetGameTimer(era);
+        InstantiateGameTimer(era);
         currentUsername = PlayerPrefs.GetString("Username", "");
 
         if (currentUsername == "")
@@ -58,28 +58,52 @@ public class PlayerRefs : MonoBehaviour
     public void ResumeGameTimer() {
     
         allowToCount = true;
-    } 
+    }
 
-    private void GetGameTimer (Eras eras)
+    private void InstantiateGameTimer(Eras eras)
     {
         if (!allowToCount) return;
         switch (eras)
         {
             case Eras.PreColonial:
-                spanishEraTimer = PlayerPrefs.GetFloat("PreColonialEraCurrentTime", 0f);
+                preColonialTimer = PlayerPrefs.GetFloat("PreColonialEraCurrentTime", 0f);
                 break;
             case Eras.Spanish:
                 spanishEraTimer = PlayerPrefs.GetFloat("SpanishEraCurrentTime", 0f);
                 break;
             case Eras.American:
-                spanishEraTimer = PlayerPrefs.GetFloat("AmericanEraCurrentTime", 0f);
+                americanEraTimer = PlayerPrefs.GetFloat("AmericanEraCurrentTime", 0f);
                 break;
             case Eras.Japanese:
-                spanishEraTimer = PlayerPrefs.GetFloat("JapaneseEraCurrentTime", 0f);
+                japaneseEraTimer = PlayerPrefs.GetFloat("JapaneseEraCurrentTime", 0f);
                 break;
             case Eras.MartialLaw:
-                spanishEraTimer = PlayerPrefs.GetFloat("MartialLawEraCurrentTime", 0f);
+                martialLawEraTimer = PlayerPrefs.GetFloat("MartialLawEraCurrentTime", 0f);
                 break;
+        }
+    }
+
+    public float GetGameTImer(Eras eras)
+    {
+        switch (eras)
+        {
+            case Eras.PreColonial:
+                float timer_1= PlayerPrefs.GetFloat("PreColonialEraCurrentTime", 0f);
+                return timer_1;
+            case Eras.Spanish:
+                float timer_2 = PlayerPrefs.GetFloat("SpanishEraCurrentTime", 0f);
+                return timer_2;
+            case Eras.American:
+                float timer_3 = PlayerPrefs.GetFloat("AmericanEraCurrentTime", 0f);
+                return timer_3;
+            case Eras.Japanese:
+                float timer_4 = PlayerPrefs.GetFloat("JapaneseEraCurrentTime", 0f);
+                return timer_4;
+            case Eras.MartialLaw:
+                float timer_5 = PlayerPrefs.GetFloat("MartialLawEraCurrentTime", 0f);
+                return timer_5;
+            default:
+                return 0f;
         }
     }
 
@@ -201,6 +225,29 @@ public class PlayerRefs : MonoBehaviour
         }
     }
 
+    public string GetEraFinished(Eras thisEra)
+    {
+        switch (thisEra)
+        {
+            case Eras.PreColonial:
+                string era1_ = PlayerPrefs.GetString("FinishedPreColonialEra", "false");
+                return era1_;
+            case Eras.Spanish:
+                string era2_ = PlayerPrefs.GetString("FinishedSpanishEra", "false");
+                return era2_;
+            case Eras.American:
+                string era3_ = PlayerPrefs.GetString("FinishedAmericanEra", "false");
+                return era3_;
+            case Eras.Japanese:
+                string era4_ = PlayerPrefs.GetString("FinishedJapaneseEra", "false");
+                return era4_;
+            case Eras.MartialLaw:
+                string era5_ = PlayerPrefs.GetString("FinishedMartialLawEra", "false");
+                return era5_;
+            default:
+                return "false";
+        }
+    }
     // Spanish Era Refs
     public string GetHasBeenAssaulted()
     {
