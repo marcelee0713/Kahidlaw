@@ -10,7 +10,10 @@ public class DatabaseManager : MonoBehaviour
     [SerializeField] private string databaseCollection;
     [SerializeField] private Button submitButton;
     [SerializeField] private PlayerRefs playerRefs;
-    [SerializeField] private Eras era;
+
+    [SerializeField] private GameObject loading;
+    [SerializeField] private GameObject error;
+    [SerializeField] private GameObject success;
 
 
     private void Start()
@@ -19,10 +22,8 @@ public class DatabaseManager : MonoBehaviour
         {
             submitButton.onClick.AddListener(() =>
             {
-                Debug.Log("Hello");
-                string isFinished = playerRefs.GetEraFinished(era);
+                string isFinished = playerRefs.GetEraFinished(playerRefs.era);
                 if (isFinished == "false") return;
-                Debug.Log(isFinished);
                 SubmitRecord();
             });
         }
@@ -73,10 +74,15 @@ public class DatabaseManager : MonoBehaviour
 
     }
 
+    public void ChangeCollection(string firebaseCollectionName)
+    {
+        databaseCollection = firebaseCollectionName;
+    }
+
     public void SubmitRecord()
     {
         string userName = PlayerPrefs.GetString("Username", "Unknown");
-        string totalTime = Mathf.FloorToInt(playerRefs.GetGameTImer(era)).ToString();
+        string totalTime = Mathf.FloorToInt(playerRefs.GetGameTImer(playerRefs.era)).ToString();
 
         var recordData = new UserFinishedEraData
         {
@@ -90,13 +96,24 @@ public class DatabaseManager : MonoBehaviour
 
         firestore.Document(databaseCollection + "/" + id).SetAsync(recordData).ContinueWithOnMainThread(task =>
         {
+            loading.SetActive(true);
+            error.SetActive(false);
+            success.SetActive(false);
+
             if (task.IsFaulted || task.IsCanceled)
             {
                 Debug.LogError("Failed to set document: " + task.Exception);
+                loading.SetActive(false);
+                error.SetActive(true);
+                success.SetActive(false);
             }
             else if (task.IsCompleted)
             {
                 Debug.Log("Document set successfully!");
+                loading.SetActive(false);
+                error.SetActive(false);
+                success.SetActive(true);
+                playerRefs.SetUploadedRecord(playerRefs.era);
             }
         });
     }

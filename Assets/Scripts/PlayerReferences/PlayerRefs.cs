@@ -1,10 +1,5 @@
-using JetBrains.Annotations;
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
-using UnityEngine.UI;
 using static PlayerRefs;
 
 public class PlayerRefs : MonoBehaviour
@@ -248,6 +243,58 @@ public class PlayerRefs : MonoBehaviour
                 return "false";
         }
     }
+
+    public void ChangeEra(Eras thisEra)
+    {
+        era = thisEra;
+    }
+
+    public void SetUploadedRecord(Eras thisEra)
+    {
+        switch (thisEra)
+        {
+            case Eras.PreColonial:
+                PlayerPrefs.SetString("UploadedPreColonialEra", "true");
+                break;
+            case Eras.Spanish:
+                PlayerPrefs.SetString("UploadedSpanishEra", "true");
+                break;
+            case Eras.American:
+                PlayerPrefs.SetString("UploadedAmericanEra", "true");
+                break;
+            case Eras.Japanese:
+                PlayerPrefs.SetString("UploadedJapaneseEra", "true");
+                break;
+            case Eras.MartialLaw:
+                PlayerPrefs.SetString("UploadedMartialLawEra", "true");
+                break;
+        }
+    }
+
+    public bool IsItUploaded (Eras thisEra)
+    {
+        switch (thisEra)
+        {
+            case Eras.PreColonial:
+                string u_1 = PlayerPrefs.GetString("UploadedPreColonialEra", "false");
+                return u_1 == "true";
+            case Eras.Spanish:
+                string u_2 = PlayerPrefs.GetString("UploadedSpanishEra", "false");
+                return u_2 == "true";
+            case Eras.American:
+                string u_3 = PlayerPrefs.GetString("UploadedAmericanEra", "false");
+                return u_3 == "true";
+            case Eras.Japanese:
+                string u_4 = PlayerPrefs.GetString("UploadedJapaneseEra", "false");
+                return u_4 == "true";
+            case Eras.MartialLaw:
+                string u_5 = PlayerPrefs.GetString("UploadedMartialLawEra", "false");
+                return u_5 == "true";
+            default:
+                return false;
+        }
+    }
+
     // Spanish Era Refs
     public string GetHasBeenAssaulted()
     {
