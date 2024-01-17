@@ -50,22 +50,22 @@ public class ContentSwitcher : MonoBehaviour
                 switch (selectedIndex)
                 {
                     case 0:
-                        levelLoader.LoadFirstTutorial();
+                        levelLoader.LoadGame("MovementTutorial");
                         levelLoader.isTransitioning = true;
                         mainMenu.FadeOutMusic();
                         break;
                     case 1:
-                        levelLoader.LoadSecondTutorial();
+                        levelLoader.LoadGame("CombatTutorial");
                         levelLoader.isTransitioning = true;
                         mainMenu.FadeOutMusic();
                         break;
                     case 2:
-                        levelLoader.LoadThirdTutorial();
+                        levelLoader.LoadGame("DialogueTutorial");
                         levelLoader.isTransitioning = true;
                         mainMenu.FadeOutMusic();
                         break;
                     case 3:
-                        levelLoader.LoadFourthTutorial();
+                        levelLoader.LoadGame("MissionsTutorial");
                         levelLoader.isTransitioning = true;
                         mainMenu.FadeOutMusic();
                         break;

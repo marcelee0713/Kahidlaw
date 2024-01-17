@@ -19336,18 +19336,6 @@ MonoBehaviour:
   GoToScene:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1273173957}
-        m_TargetAssemblyTypeName: LevelLoader, Assembly-CSharp
-        m_MethodName: LoadChapter1OutsideSpanishEra
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 1606105030}
         m_TargetAssemblyTypeName: FadeOutMusic, Assembly-CSharp
         m_MethodName: FadeOutBackgroundMusic
@@ -19400,6 +19388,18 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: PlayerRefs, Assembly-CSharp
         m_MethodName: SaveGameTimer
         m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Chapter1-Outside
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1273173957}
+        m_TargetAssemblyTypeName: LevelLoader, Assembly-CSharp
+        m_MethodName: LoadGame
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine

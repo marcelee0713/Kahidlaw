@@ -5239,7 +5239,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 618759730724407179, guid: 254bbc6b98c03b54cad1e56b9fa5249f, type: 3}
       propertyPath: messages.Array.data[6].messageCallback.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 618759730724407179, guid: 254bbc6b98c03b54cad1e56b9fa5249f, type: 3}
       propertyPath: messages.Array.data[6].messageCallback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -5251,11 +5251,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 618759730724407179, guid: 254bbc6b98c03b54cad1e56b9fa5249f, type: 3}
       propertyPath: messages.Array.data[6].messageCallback.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: LoadChapter2StartSpanishEra
+      value: LoadGame
       objectReference: {fileID: 0}
     - target: {fileID: 618759730724407179, guid: 254bbc6b98c03b54cad1e56b9fa5249f, type: 3}
       propertyPath: messages.Array.data[6].messageCallback.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: LevelLoader, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 618759730724407179, guid: 254bbc6b98c03b54cad1e56b9fa5249f, type: 3}
+      propertyPath: messages.Array.data[6].messageCallback.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: Chapter2-Start
       objectReference: {fileID: 0}
     - target: {fileID: 618759730724407179, guid: 254bbc6b98c03b54cad1e56b9fa5249f, type: 3}
       propertyPath: messages.Array.data[6].messageCallback.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName

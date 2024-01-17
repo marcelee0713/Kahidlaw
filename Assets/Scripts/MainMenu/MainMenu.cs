@@ -154,7 +154,7 @@ public class MainMenu : MonoBehaviour
                 FadeOutMusic();
                 break;
             case Eras.Spanish:
-                levelLoader.LoadLastGame();
+                levelLoader.LoadLastGame("Spanish-Era", "Chapter1-Prologue");
                 FadeOutMusic();
                 break;
             case Eras.American:
@@ -240,7 +240,7 @@ public class MainMenu : MonoBehaviour
                 ResetEra("Japanese-Era", "JapaneseEraCurrentTime", "FinishedJapaneseEra", "UploadedJapaneseEra");
                 ResetEra("MartialLaw-Era", "MartialLawEraCurrentTime", "FinishedMartialLawEra", "UploadedMartialLawEra");
 
-                levelLoader.LoadChapter1SpanishEraPrologue();
+                levelLoader.LoadGame("Chapter1-Prologue");
                 FadeOutMusic();
                 break;
             case Eras.American:

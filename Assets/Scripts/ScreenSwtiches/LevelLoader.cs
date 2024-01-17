@@ -78,34 +78,14 @@ public class LevelLoader : MonoBehaviour
         }
     }
 
-    public void LoadFirstTutorial()
+    public void LoadGame(string sceneName)
     {
-        StartCoroutine(LoadLevel("MovementTutorial"));
+        StartCoroutine(LoadLevel(sceneName));
     }
 
-    public void LoadSecondTutorial()
+    public void LoadLastGame(string SaveStatePrefName, string fallbackScene)
     {
-        StartCoroutine(LoadLevel("CombatTutorial"));
-    }
-
-    public void LoadThirdTutorial()
-    {
-        StartCoroutine(LoadLevel("DialogueTutorial"));
-    }
-
-    public void LoadFourthTutorial()
-    {
-        StartCoroutine(LoadLevel("MissionsTutorial"));
-    }
-
-    public void LoadMainMenu()
-    {
-        StartCoroutine(LoadLevel("MainMenu"));
-    }
-
-    public void LoadLastGame()
-    {
-        string lastSave = PlayerPrefs.GetString("Spanish-Era", "Chapter1-Prologue");
+        string lastSave = PlayerPrefs.GetString(SaveStatePrefName, fallbackScene);
 
         if (lastSave != "")
         {
@@ -113,146 +93,9 @@ public class LevelLoader : MonoBehaviour
         }
         else
         {
-            StartCoroutine(LoadLevel("Chapter1-Prologue"));
+            StartCoroutine(LoadLevel(fallbackScene));
         }
 
-    }
-
-    public void LoadChapter1SpanishEraPrologue()
-    {
-        StartCoroutine(LoadLevel("Chapter1-Prologue"));
-    }
-
-    public void LoadNewGameStartSpanishEra()
-    {
-        StartCoroutine(LoadLevel("Chapter1-Start"));
-    }
-
-    public void LoadChapter1OutsideSpanishEra()
-    {
-        StartCoroutine(LoadLevel("Chapter1-Outside"));
-    }
-
-
-    public void LoadChapter2SpanishEraPrologue()
-    {
-        StartCoroutine(LoadLevel("Chapter2-Prologue"));
-    }
-
-    public void LoadChapter2StartTimeLineSpanishEra()
-    {
-        StartCoroutine(LoadLevel("Chapter2-CreepyMonce"));
-    }
-
-    public void LoadChapter2StartSpanishEra()
-    {
-        StartCoroutine(LoadLevel("Chapter2-Start"));
-    }
-
-    public void LoadChapter2OutsideSpanishEra()
-    {
-        StartCoroutine(LoadLevel("Chapter2-Outside"));
-    }
-
-    public void LoapChapter2AfterOutsideSpanishEra()
-    {
-        StartCoroutine(LoadLevel("Chapter2-AfterOutside"));
-    }
-
-    public void LoapChapter2PadreMonsiAttemption()
-    {
-        StartCoroutine(LoadLevel("Chapter2-PadreMonsiAttempt"));
-    }
-
-    public void LoadChapter2PadreMonsiSexualAssault()
-    {
-        StartCoroutine(LoadLevel("Chapter2-SexualAssault"));
-    }
-
-    public void LoadChapter2IsabelEscaped()
-    {
-        StartCoroutine(LoadLevel("Chapter2-Escaped"));
-    }
-
-    public void LoadChapter2IsabelRaged()
-    {
-        StartCoroutine(LoadLevel("Chapter2-IsabelRaged"));
-    }
-
-    public void LoadChapter2IsabelEscapes()
-    {
-        StartCoroutine(LoadLevel("Chapter2-IsabelEscapes"));
-    }
-
-    public void LoadChapter2SpanishEraEnding()
-    {
-        StartCoroutine(LoadLevel("Chapter2-EndingOutside"));
-
-    }
-
-    public void LoadChapter3Prologue()
-    {
-        StartCoroutine(LoadLevel("Chapter3-Prologue"));
-    }
-
-    public void LoadChapter3Start()
-    {
-        StartCoroutine(LoadLevel("Chapter3-InsideTheDungeon"));
-    }
-
-    public void LoadChapter3AfterDungeon()
-    {
-        StartCoroutine(LoadLevel("Chapter3-AfterDungeon"));
-    }
-
-    public void LoadChapter3TheMeetUp()
-    {
-        StartCoroutine(LoadLevel("Chapter3-TheMeetUp"));
-    }
-
-    public void LoadChapter3StartGuerrillas()
-    {
-        StartCoroutine(LoadLevel("Chapter3-StartGuerrillasPrologue"));
-    }
-
-    public void LoadChapter3GuerrillasPlace()
-    {
-        StartCoroutine(LoadLevel("Chapter3-GuerrillasPlace"));
-    }
-
-    public void LoadChapter3InsideGuerrillasHouse()
-    {
-        StartCoroutine(LoadLevel("Chapter3-InsideGuerillaHouse"));
-    }
-
-    public void LoadChapter3GuerrillaAmbush()
-    {
-        StartCoroutine(LoadLevel("Chapter3-GuerrillaAmbush"));
-    }
-
-    public void LoadChapter3GuerillaFight()
-    {
-        StartCoroutine(LoadLevel("Chapter3-GuerillaFight"));
-    }
-
-    public void LoadChapter3GuerillaPostFight()
-    {
-        StartCoroutine(LoadLevel("Chapter3-GuerillaPostFight"));
-    }
-
-    public void LoadChapter3TrapHouse()
-    {
-        StartCoroutine(LoadLevel("Chapter3-TrapHouse"));
-    }
-
-    public void LoadChapter3FinalFight()
-    {
-       StartCoroutine(LoadLevel("Chapter3-FinalFight"));
-    }
-
-    public void LoadChapter3PadreMonsiCaught()
-    {
-        StartCoroutine(LoadLevel("Chapter3-PadreMonsiCaught"));
     }
 
     public void LoadChapter3FinalConsqeuences()
@@ -266,26 +109,6 @@ public class LevelLoader : MonoBehaviour
         {
             StartCoroutine(LoadLevel("Chapter3-IsabelKillsMonsi"));
         }
-    }
-
-    public void LoadChapter3BadEndingPrologue()
-    {
-        StartCoroutine(LoadLevel("Chapter3-BadEndingPrologue"));
-    }
-
-    public void LoadChapter3GuerrillaCelebration()
-    {
-        StartCoroutine(LoadLevel("Chapter3-GuerrillaCelebration"));
-    }
-
-    public void LoadChapter3PadreMonsiLockedUp()
-    {
-        StartCoroutine(LoadLevel("Chapter3-PadreMonsiLockedUp"));
-    }
-
-    public void LoadChapter3EndingMessage()
-    {
-        StartCoroutine(LoadLevel("Chapter3-EndingMessage"));
     }
 
     public void LoadCurrentScene()

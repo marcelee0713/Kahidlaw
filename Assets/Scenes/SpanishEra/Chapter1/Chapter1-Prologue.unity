@@ -1136,7 +1136,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 618759730724407179, guid: 254bbc6b98c03b54cad1e56b9fa5249f, type: 3}
       propertyPath: messages.Array.data[7].messageCallback.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
-      value: 1
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 618759730724407179, guid: 254bbc6b98c03b54cad1e56b9fa5249f, type: 3}
       propertyPath: messages.Array.data[7].messageCallback.m_PersistentCalls.m_Calls.Array.data[3].m_Mode
@@ -1149,11 +1149,11 @@ PrefabInstance:
     - target: {fileID: 618759730724407179, guid: 254bbc6b98c03b54cad1e56b9fa5249f, type: 3}
       propertyPath: messages.Array.data[7].messageCallback.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
-      objectReference: {fileID: 446868090}
+      objectReference: {fileID: 704319405}
     - target: {fileID: 618759730724407179, guid: 254bbc6b98c03b54cad1e56b9fa5249f, type: 3}
       propertyPath: messages.Array.data[7].messageCallback.m_PersistentCalls.m_Calls.Array.data[2].m_Target
       value: 
-      objectReference: {fileID: 704319405}
+      objectReference: {fileID: 446868090}
     - target: {fileID: 618759730724407179, guid: 254bbc6b98c03b54cad1e56b9fa5249f, type: 3}
       propertyPath: messages.Array.data[7].messageCallback.m_PersistentCalls.m_Calls.Array.data[3].m_Target
       value: 
@@ -1184,11 +1184,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 618759730724407179, guid: 254bbc6b98c03b54cad1e56b9fa5249f, type: 3}
       propertyPath: messages.Array.data[7].messageCallback.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: LoadNewGameStartSpanishEra
+      value: FadeOutBackgroundMusic
       objectReference: {fileID: 0}
     - target: {fileID: 618759730724407179, guid: 254bbc6b98c03b54cad1e56b9fa5249f, type: 3}
       propertyPath: messages.Array.data[7].messageCallback.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
-      value: FadeOutBackgroundMusic
+      value: LoadGame
       objectReference: {fileID: 0}
     - target: {fileID: 618759730724407179, guid: 254bbc6b98c03b54cad1e56b9fa5249f, type: 3}
       propertyPath: messages.Array.data[7].messageCallback.m_PersistentCalls.m_Calls.Array.data[3].m_MethodName
@@ -1200,15 +1200,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 618759730724407179, guid: 254bbc6b98c03b54cad1e56b9fa5249f, type: 3}
       propertyPath: messages.Array.data[7].messageCallback.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
-      value: LevelLoader, Assembly-CSharp
+      value: FadeOutMusic, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 618759730724407179, guid: 254bbc6b98c03b54cad1e56b9fa5249f, type: 3}
       propertyPath: messages.Array.data[7].messageCallback.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
-      value: FadeOutMusic, Assembly-CSharp
+      value: LevelLoader, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 618759730724407179, guid: 254bbc6b98c03b54cad1e56b9fa5249f, type: 3}
       propertyPath: messages.Array.data[7].messageCallback.m_PersistentCalls.m_Calls.Array.data[3].m_TargetAssemblyTypeName
       value: FadeOutMusic, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 618759730724407179, guid: 254bbc6b98c03b54cad1e56b9fa5249f, type: 3}
+      propertyPath: messages.Array.data[7].messageCallback.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_StringArgument
+      value: Chapter1-Start
       objectReference: {fileID: 0}
     - target: {fileID: 618759730724407179, guid: 254bbc6b98c03b54cad1e56b9fa5249f, type: 3}
       propertyPath: messages.Array.data[7].messageCallback.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName

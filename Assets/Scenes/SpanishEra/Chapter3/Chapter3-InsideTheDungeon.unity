@@ -8370,6 +8370,10 @@ PrefabInstance:
       value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8985469487564271737, guid: ca8634174b1a45f43bee54e025d0d564, type: 3}
+      propertyPath: GoToScene.m_PersistentCalls.m_Calls.Array.data[3].m_Mode
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8985469487564271737, guid: ca8634174b1a45f43bee54e025d0d564, type: 3}
       propertyPath: GoToScene.m_PersistentCalls.m_Calls.Array.data[4].m_Mode
       value: 1
       objectReference: {fileID: 0}
@@ -8435,7 +8439,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8985469487564271737, guid: ca8634174b1a45f43bee54e025d0d564, type: 3}
       propertyPath: GoToScene.m_PersistentCalls.m_Calls.Array.data[3].m_MethodName
-      value: LoadChapter3AfterDungeon
+      value: LoadGame
       objectReference: {fileID: 0}
     - target: {fileID: 8985469487564271737, guid: ca8634174b1a45f43bee54e025d0d564, type: 3}
       propertyPath: GoToScene.m_PersistentCalls.m_Calls.Array.data[4].m_MethodName
@@ -8487,6 +8491,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8985469487564271737, guid: ca8634174b1a45f43bee54e025d0d564, type: 3}
       propertyPath: GoToScene.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_StringArgument
+      value: Chapter3-AfterDungeon
+      objectReference: {fileID: 0}
+    - target: {fileID: 8985469487564271737, guid: ca8634174b1a45f43bee54e025d0d564, type: 3}
+      propertyPath: GoToScene.m_PersistentCalls.m_Calls.Array.data[3].m_Arguments.m_StringArgument
       value: Chapter3-AfterDungeon
       objectReference: {fileID: 0}
     - target: {fileID: 8985469487564271737, guid: ca8634174b1a45f43bee54e025d0d564, type: 3}
