@@ -20,6 +20,7 @@ public class MainMenu : MonoBehaviour
     public Sprite mainBackground;
     public Sprite tutorialBackground;
     public Sprite storyModeBackground;
+    public Sprite leaderboardsBackground;
 
     [Header("Player State")]
     [SerializeField] private PlayerRefs playerRefs;
@@ -47,12 +48,8 @@ public class MainMenu : MonoBehaviour
     private void Start()
     {
         PlayerPrefs.SetString("FinishedPreColonialEra", "true");
-        PlayerPrefs.SetString("FinishedSpanishEra", "true");
-        PlayerPrefs.SetFloat("SpanishEraCurrentTime", 1243f);
-        PlayerPrefs.SetString("Spanish-Era", "Chapter1-Start");
-        PlayerPrefs.SetString("UploadedPreColonialEra", "");
-        
-
+        PlayerPrefs.SetFloat("SpanishEraCurrentTime", 0f);
+        PlayerPrefs.SetString("Spanish-Era", "");
 
         defaultContinuePosX = continueGameObj.transform.position.x;
         defaultNewPosX = newGameObj.transform.position.x;
@@ -358,6 +355,11 @@ public class MainMenu : MonoBehaviour
     public void ChangeTutorialBackground()
     {
         background.sprite = tutorialBackground;
+    }
+
+    public void ChangeLeaderboardBackground()
+    {
+        background.sprite = leaderboardsBackground;
     }
 
     public void FadeOutMusic()

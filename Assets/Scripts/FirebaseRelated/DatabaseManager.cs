@@ -1,24 +1,36 @@
 using Firebase.Extensions;
 using Firebase.Firestore;
+using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 using static PlayerRefs;
 
 public class DatabaseManager : MonoBehaviour
 {
+    [Header("Essentials")]
     [SerializeField] private string databaseCollection;
     [SerializeField] private Button submitButton;
     [SerializeField] private PlayerRefs playerRefs;
 
+    [Header("Upload State")]
     [SerializeField] private GameObject loading;
     [SerializeField] private GameObject error;
     [SerializeField] private GameObject success;
 
+    [Header("Leaderboards & State")]
+    public TextMeshProUGUI selectedEraText;
+    public TextMeshProUGUI[] playerNamesText;
+    public TextMeshProUGUI[] playerRecordsText;
+    public GameObject leaderBoardError;
 
     private void Start()
     {
-        if(submitButton != null)
+        ChangeEra(0);
+        if (submitButton != null)
         {
             submitButton.onClick.AddListener(() =>
             {
@@ -30,7 +42,7 @@ public class DatabaseManager : MonoBehaviour
 
     }
 
-    public async void GetMyCollections()
+    public async Task<List<UserFinishedEraData>> GetMyCollections()
     {
         List<UserFinishedEraData> list = new List<UserFinishedEraData>();
 
@@ -60,16 +72,20 @@ public class DatabaseManager : MonoBehaviour
                 list.Add(obj);
             }
 
-            foreach (var item in list)
-            {
-                Debug.Log(item);
-            }
+            list = list.OrderBy(x => int.Parse(x.totalTimeInSeconds)).ToList();
+
+            if(list.Count > 5) list = list.Take(5).ToList();
+
+            return list;
 
         }
         catch
         {
             // Show no internet connection in the UI
             Debug.Log("may error pre");
+            list.Clear();
+            leaderBoardError.SetActive(true);
+            return list;
         }
 
     }
@@ -77,6 +93,79 @@ public class DatabaseManager : MonoBehaviour
     public void ChangeCollection(string firebaseCollectionName)
     {
         databaseCollection = firebaseCollectionName;
+    }
+
+    public async void ChangeEra (int eraIndex)
+    {
+        Debug.Log("I got pressed");
+        ResetTexts();
+        switch (eraIndex)
+        {
+            case 0:
+                playerRefs.era = Eras.PreColonial;
+                ChangeCollection("PreColonialEra");
+                selectedEraText.text = "Pre-Colonial Era";
+                List<UserFinishedEraData> preColonialList = await GetMyCollections();
+                ShowRecords(preColonialList);
+                break;
+            case 1:
+                playerRefs.era = Eras.Spanish;
+                ChangeCollection("SpanishEra");
+                selectedEraText.text = "Spanish Era";
+                List<UserFinishedEraData> spanishList = await GetMyCollections();
+                ShowRecords(spanishList);
+                break;
+            case 2:
+                playerRefs.era = Eras.American;
+                ChangeCollection("AmericanEra");
+                selectedEraText.text = "American Era";
+                List<UserFinishedEraData> americanList = await GetMyCollections();
+                ShowRecords(americanList);
+                break;
+            case 3:
+                playerRefs.era = Eras.Japanese;
+                ChangeCollection("JapaneseEra");
+                selectedEraText.text = "Japanese Era";
+                List<UserFinishedEraData> japaneseList = await GetMyCollections();
+                ShowRecords(japaneseList);
+                break;
+            case 4:
+                playerRefs.era = Eras.MartialLaw;
+                ChangeCollection("MartialLawEra");
+                selectedEraText.text = "Martial Law Era";
+                List<UserFinishedEraData> martialLawList = await GetMyCollections();
+                ShowRecords(martialLawList);
+                break;
+        }
+    }
+
+    public void ResetTexts ()
+    {
+        foreach(TextMeshProUGUI name in playerNamesText)
+        {
+            name.text = "";
+        }
+
+        foreach(TextMeshProUGUI record in playerRecordsText)
+        {
+            record.text = "";
+        } 
+    }
+
+    public void ShowRecords(List<UserFinishedEraData> list)
+    {
+        for (int i = 0; i < list.Count; i++)
+        {
+            playerNamesText[i].text = list[i].name;
+            playerRecordsText[i].text = FormatTime(int.Parse(list[i].totalTimeInSeconds));
+        }
+    }
+
+    public string FormatTime(int time)
+    {
+        TimeSpan timeSpan_0 = TimeSpan.FromSeconds(time);
+        string formattedTime_0 = $"{(int)timeSpan_0.TotalHours:D2}:{timeSpan_0.Minutes:D2}:{timeSpan_0.Seconds:D2}";
+        return formattedTime_0;
     }
 
     public void SubmitRecord()

@@ -30,7 +30,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &7156691377357895359
 MonoBehaviour:
@@ -47,4 +47,19 @@ MonoBehaviour:
   databaseCollection: SpanishEra
   submitButton: {fileID: 0}
   playerRefs: {fileID: 0}
-  era: 1
+  loading: {fileID: 0}
+  error: {fileID: 0}
+  success: {fileID: 0}
+  selectedEraText: {fileID: 0}
+  playerNamesText:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  playerRecordsText:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
