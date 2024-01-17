@@ -2,8 +2,11 @@ using JetBrains.Annotations;
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Tilemaps;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
+using static PlayerRefs;
 
 public class LevelLoader : MonoBehaviour
 {
@@ -11,6 +14,69 @@ public class LevelLoader : MonoBehaviour
     public float transitionSeconds = 1f;
 
     public bool isTransitioning = false;
+
+    [Header("Loading Screen Handlers")]
+    [SerializeField] private Image loadingImage;
+    [SerializeField] private Eras eras;
+    public Sprite preColonialEraImage;
+    public Sprite spanishEraImage;
+    public Sprite japaneseEraImage;
+    public Sprite martialLawEraImage;
+    public Sprite justBlackImage;
+
+    private void Awake()
+    {
+        ChangeLoadingImage();
+    }
+
+    public void ChangeLoadingImage()
+    {
+        switch (eras)
+        {
+            case Eras.PreColonial:
+                loadingImage.sprite = preColonialEraImage;
+                break;
+            case Eras.Spanish:
+                loadingImage.sprite = spanishEraImage;
+                break;
+            case Eras.American:
+                loadingImage.sprite = japaneseEraImage;
+                break;
+            case Eras.Japanese:
+                loadingImage.sprite = japaneseEraImage;
+                break;
+            case Eras.MartialLaw:
+                loadingImage.sprite = martialLawEraImage;
+                break;
+            case Eras.None:
+                loadingImage.sprite = justBlackImage;
+                break;
+        }
+    }
+
+    public void ChangeErasForLoadingScreen(int eraIndex)
+    {
+        switch(eraIndex) {
+            case 0:
+                eras = Eras.PreColonial;
+                break;
+            case 1:
+                eras = Eras.Spanish;
+                break;
+            case 2:
+                eras = Eras.Japanese;
+                break;
+            case 3:
+                eras = Eras.American;
+                break;
+            case 4:
+                eras = Eras.MartialLaw;
+                break;
+            case 5:
+                eras = Eras.None;
+                break;
+        }
+    }
 
     public void LoadFirstTutorial()
     {

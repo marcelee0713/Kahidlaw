@@ -48,8 +48,6 @@ public class MainMenu : MonoBehaviour
     private void Start()
     {
         PlayerPrefs.SetString("FinishedPreColonialEra", "true");
-        PlayerPrefs.SetFloat("SpanishEraCurrentTime", 0f);
-        PlayerPrefs.SetString("Spanish-Era", "");
 
         defaultContinuePosX = continueGameObj.transform.position.x;
         defaultNewPosX = newGameObj.transform.position.x;
