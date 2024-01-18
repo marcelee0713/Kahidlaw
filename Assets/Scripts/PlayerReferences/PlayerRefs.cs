@@ -1,6 +1,6 @@
 using TMPro;
+using UnityEditor.Experimental.GraphView;
 using UnityEngine;
-using static PlayerRefs;
 
 public class PlayerRefs : MonoBehaviour
 {
@@ -23,6 +23,17 @@ public class PlayerRefs : MonoBehaviour
     public float martialLawEraTimer;
     public bool allowToCount = false;
 
+    [Header("SFX & Background Music")]
+    public AudioSource[] SFXs;
+    public AudioSource[] BackgroundMusics;
+    public TextMeshProUGUI sfxDash;
+    public TextMeshProUGUI backgroundMusicDash;
+
+    private void Awake()
+    {
+        InstantiateSounds();
+    }
+
     private void Start()
     {
         InstantiateGameTimer(era);
@@ -42,6 +53,97 @@ public class PlayerRefs : MonoBehaviour
     private void Update()
     {
         StartGameTimer(era);
+    }
+
+    // Sound Effects & Music Prefs
+
+    public void InstantiateSounds()
+    {
+        string BgMusicMuted = PlayerPrefs.GetString("BackgroundMusic", "false");
+        string sfxMuted = PlayerPrefs.GetString("SFX", "false");
+
+        if (BgMusicMuted == "true")
+        {
+            CheckAndRunText(backgroundMusicDash, () => backgroundMusicDash.text = "/");
+            foreach (AudioSource audio in BackgroundMusics)
+            {
+                audio.volume = 0.0f;
+            }
+        }
+        else 
+        {
+            CheckAndRunText(backgroundMusicDash, () => backgroundMusicDash.text = "");
+            foreach (AudioSource audio in BackgroundMusics)
+            {
+                audio.volume = 0.5f;
+            }
+        }
+
+        if (sfxMuted == "true")
+        {
+            CheckAndRunText(sfxDash, () => sfxDash.text = "/");
+            foreach (AudioSource sfx in SFXs)
+            {
+                sfx.volume = 0.0f;
+            }
+
+        }
+        else
+        {
+            CheckAndRunText(sfxDash, () => sfxDash.text = "");
+            foreach (AudioSource sfx in SFXs)
+            {
+                sfx.volume = 0.45f;
+            }
+        }
+    }
+
+    public void ToggleBgMusic()
+    {
+        string BgMusicMuted = PlayerPrefs.GetString("BackgroundMusic", "false");
+
+        if (BgMusicMuted == "true")
+        {
+            foreach (AudioSource audio in BackgroundMusics)
+            {
+                audio.volume = 0.5f;
+            }
+            CheckAndRunText(backgroundMusicDash, () => backgroundMusicDash.text = ""); 
+            PlayerPrefs.SetString("BackgroundMusic", "false");
+        }
+        else
+        {
+            foreach (AudioSource audio in BackgroundMusics)
+            {
+                audio.volume = 0.0f;
+            }
+            CheckAndRunText(backgroundMusicDash, () => backgroundMusicDash.text = "/");
+            PlayerPrefs.SetString("BackgroundMusic", "true");
+        }
+    }
+
+    public void ToggleSFXMusic()
+    {
+        string sfxMuted = PlayerPrefs.GetString("SFX", "false");
+
+        if (sfxMuted == "true")
+        {
+            foreach (AudioSource sfx in SFXs)
+            {
+                sfx.volume = 0.45f;
+            }
+            CheckAndRunText(sfxDash, () => sfxDash.text = "");
+            PlayerPrefs.SetString("SFX", "false");
+        }
+        else
+        {
+            foreach (AudioSource sfx in SFXs)
+            {
+                sfx.volume = 0.0f;
+            }
+            CheckAndRunText(sfxDash, () => sfxDash.text = "/");
+            PlayerPrefs.SetString("SFX", "true");
+        }
     }
 
     // Timer Refs
@@ -343,6 +445,14 @@ public class PlayerRefs : MonoBehaviour
     public delegate void Callback();
 
     public void CheckAndRunThisGameObject(GameObject thisGameObject, Callback callback)
+    {
+        if (thisGameObject != null)
+        {
+            callback();
+        }
+    }
+
+    public void CheckAndRunText(TextMeshProUGUI thisGameObject, Callback callback)
     {
         if (thisGameObject != null)
         {

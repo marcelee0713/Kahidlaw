@@ -7,16 +7,31 @@ public class FadeOutMusic : MonoBehaviour
 {
     private AudioSource audioSource;
     public int FadeTime = 1;
-    public float volume = 0.2f;
+    public float volume = 0.5f;
 
     [SerializeField]
     private AudioClip intenseMusic;
+
+    private void Awake()
+    {
+        CheckPrefs();
+    }
 
     void Start()
     {
         audioSource = GetComponent<AudioSource>();
         audioSource.volume = volume;
     }
+
+    public void CheckPrefs()
+    {
+        string BgMusicMuted = PlayerPrefs.GetString("BackgroundMusic", "false");
+
+        if (BgMusicMuted == "true")
+        {
+            volume = 0f;
+        }
+    } 
 
     public void ChangeMusicToIntense()
     {
