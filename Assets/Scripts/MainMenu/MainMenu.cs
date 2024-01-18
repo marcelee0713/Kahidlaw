@@ -48,6 +48,9 @@ public class MainMenu : MonoBehaviour
     private void Start()
     {
         PlayerPrefs.SetString("FinishedPreColonialEra", "true");
+        PlayerPrefs.SetString("PreColonial-Era", "PreColonial-Chapter1-Start");
+        PlayerPrefs.SetFloat("PreColonialEraCurrentTime", 2144f);
+
 
         defaultContinuePosX = continueGameObj.transform.position.x;
         defaultNewPosX = newGameObj.transform.position.x;
