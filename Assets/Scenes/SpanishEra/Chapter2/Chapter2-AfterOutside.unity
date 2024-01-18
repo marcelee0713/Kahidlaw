@@ -357,7 +357,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6569211130247230921, guid: 8daefdb8ceeed164b815d8709c4f2f5d, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6569211130247230921, guid: 8daefdb8ceeed164b815d8709c4f2f5d, type: 3}
       propertyPath: m_AnchorMin.x
@@ -365,7 +365,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6569211130247230921, guid: 8daefdb8ceeed164b815d8709c4f2f5d, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6569211130247230921, guid: 8daefdb8ceeed164b815d8709c4f2f5d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -401,7 +401,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6569211130247230921, guid: 8daefdb8ceeed164b815d8709c4f2f5d, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 44.039997
+      value: -15
       objectReference: {fileID: 0}
     - target: {fileID: 6569211130247230921, guid: 8daefdb8ceeed164b815d8709c4f2f5d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -30320,17 +30320,12 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 27595792664558293, guid: c4e799a235f91c04ea81788857654ed0, type: 3}
   m_PrefabInstance: {fileID: 1950474457}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1950474459}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: db1bb62ffe5f2524f9eb3610eacb26a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &1950474459 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5322855214900393830, guid: c4e799a235f91c04ea81788857654ed0, type: 3}
-  m_PrefabInstance: {fileID: 1950474457}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1959442374
 GameObject:
   m_ObjectHideFlags: 0
@@ -30479,7 +30474,19 @@ PrefabInstance:
     - target: {fileID: 2187755297427035917, guid: 838be757bb7fab5438b4c4ab51057201, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1950474459}
+      objectReference: {fileID: 1950474458}
+    - target: {fileID: 2187755297427035917, guid: 838be757bb7fab5438b4c4ab51057201, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ToggleBgMusic
+      objectReference: {fileID: 0}
+    - target: {fileID: 2187755297427035917, guid: 838be757bb7fab5438b4c4ab51057201, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: PlayerRefs, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 2187755297427035917, guid: 838be757bb7fab5438b4c4ab51057201, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 5615147034407671432, guid: 838be757bb7fab5438b4c4ab51057201, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
       value: 5
@@ -30531,7 +30538,19 @@ PrefabInstance:
     - target: {fileID: 5830270803839937922, guid: 838be757bb7fab5438b4c4ab51057201, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1950474459}
+      objectReference: {fileID: 1950474458}
+    - target: {fileID: 5830270803839937922, guid: 838be757bb7fab5438b4c4ab51057201, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ToggleSFXMusic
+      objectReference: {fileID: 0}
+    - target: {fileID: 5830270803839937922, guid: 838be757bb7fab5438b4c4ab51057201, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: PlayerRefs, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 5830270803839937922, guid: 838be757bb7fab5438b4c4ab51057201, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 8693030453280509603, guid: 838be757bb7fab5438b4c4ab51057201, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
