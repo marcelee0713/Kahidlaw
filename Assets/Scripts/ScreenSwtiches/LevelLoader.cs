@@ -20,6 +20,11 @@ public class LevelLoader : MonoBehaviour
     public Sprite martialLawEraImage;
     public Sprite justBlackImage;
 
+    private void Start()
+    {
+        PlayerPrefs.SetString("Username", "");
+    }
+
     private void Awake()
     {
         ChangeLoadingImage();
