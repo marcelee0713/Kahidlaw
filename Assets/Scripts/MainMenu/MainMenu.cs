@@ -47,6 +47,7 @@ public class MainMenu : MonoBehaviour
 
     private void Start()
     {
+        // Remove soon, this is for testing purposes.
         PlayerPrefs.SetString("FinishedPreColonialEra", "true");
         PlayerPrefs.SetString("PreColonial-Era", "PreColonial-Chapter1-Start");
         PlayerPrefs.SetFloat("PreColonialEraCurrentTime", 2144f);
@@ -235,6 +236,7 @@ public class MainMenu : MonoBehaviour
 
 
                 // Make a function for the start of PreColonial;
+                levelLoader.LoadGame("PreColonialFullMap"); // Remove soon because this is just a testing scene for checking.
                 FadeOutMusic();
                 break;
             case Eras.Spanish:
