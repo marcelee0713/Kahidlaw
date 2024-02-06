@@ -15,23 +15,30 @@ public class TutorialEnvironment : MonoBehaviour
     public Button nextButton;
     private bool stayed = false;
 
+    [Header("Map tab")]
+    public GameObject minimap;
+
     private void Start()
     {
-        FinishedDialog.SetActive(false);
-
-        stayButton.onClick.AddListener(() =>
+        if (FinishedDialog != null)
         {
-            stayed = true;
             FinishedDialog.SetActive(false);
-            stayButton.onClick.RemoveAllListeners();
-        });
 
-        nextButton.onClick.AddListener(() =>
-        {
+            stayButton.onClick.AddListener(() =>
+            {
+                stayed = true;
+                FinishedDialog.SetActive(false);
+                stayButton.onClick.RemoveAllListeners();
+            });
 
-            stayed = true;
-            nextButton.onClick.RemoveAllListeners();
-        });
+            nextButton.onClick.AddListener(() =>
+            {
+
+                stayed = true;
+                nextButton.onClick.RemoveAllListeners();
+            });
+        }
+
     }
 
     private void Update()
@@ -41,6 +48,18 @@ public class TutorialEnvironment : MonoBehaviour
             finishedPlaceholder.text = finishedText;
             FinishedDialog.SetActive(true);
         }
+    }
+
+    public void HandleMinimap()
+    {
+        if (minimap.activeSelf)
+        {
+            minimap.SetActive(false);
+
+            return;
+        }
+
+        minimap.SetActive(true);
     }
 
     public void SetGuideDone (int i)
