@@ -9082,6 +9082,7 @@ MonoBehaviour:
   finishedPlaceholder: {fileID: 497823993}
   stayButton: {fileID: 1525009371}
   nextButton: {fileID: 1413452904}
+  minimap: {fileID: 0}
 --- !u!114 &1596038172
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16443,7 +16444,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1537168068402146951, guid: 1d9d54a57fb7a5447aec134d7b6c1aa7, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[4].m_Arguments.m_StringArgument
-      value: MainMenu
+      value: StealthTutorial
       objectReference: {fileID: 0}
     - target: {fileID: 4253960072379569009, guid: 1d9d54a57fb7a5447aec134d7b6c1aa7, type: 3}
       propertyPath: m_Pivot.x
