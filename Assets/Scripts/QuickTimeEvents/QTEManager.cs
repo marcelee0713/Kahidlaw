@@ -23,6 +23,8 @@ public class QTEManager : MonoBehaviour
 
     public static bool QTEIsActive = false;
 
+    [SerializeField] private GameObject controller;
+
     public void StartQTE(QTEDetails initDetails)
     {
         QTEIsActive = true;
@@ -41,6 +43,8 @@ public class QTEManager : MonoBehaviour
 
         mashButton.onClick.RemoveListener(action);
         mashButton.onClick.AddListener(action);
+
+        controller.SetActive(!QTEIsActive);
     }
 
 
@@ -66,6 +70,8 @@ public class QTEManager : MonoBehaviour
                 mashButton.interactable = false;
                 this.gameObject.SetActive(false);
                 QTEIsActive = false;
+                
+                if (controller != null) controller.SetActive(!QTEIsActive);
                 return;
             }
 
@@ -81,6 +87,7 @@ public class QTEManager : MonoBehaviour
                 mashButton.interactable = false;
                 this.gameObject.SetActive(false);
                 QTEIsActive = false;
+                if (controller != null) controller.SetActive(!QTEIsActive);
             }
         }
     }

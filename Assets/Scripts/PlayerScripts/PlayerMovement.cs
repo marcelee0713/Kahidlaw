@@ -45,7 +45,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if (!AllowToMoveBoth)
         {
-            if (DialogueManager.isDialogueActive || ModeChanger.currentCharacter != this.gameObject.name)
+            if (DialogueManager.isDialogueActive || QTEManager.QTEIsActive || ModeChanger.currentCharacter != this.gameObject.name)
             {
                 rb.velocity = Vector2.Lerp(rb.velocity, Vector2.zero, 0.9f);
                 anim.SetBool("isMoving", false);

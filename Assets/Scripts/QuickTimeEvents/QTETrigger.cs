@@ -14,6 +14,11 @@ public class QTETrigger : MonoBehaviour
         QTEBox.SetActive(true);
         FindObjectOfType<QTEManager>().StartQTE(qteDetail);
     }
+
+    public void SelfDestruct()
+    {
+        Destroy(this.gameObject);
+    }
 }
 
 [System.Serializable]
