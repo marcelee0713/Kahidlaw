@@ -234,9 +234,7 @@ public class MainMenu : MonoBehaviour
                 ResetEra("Japanese-Era", "JapaneseEraCurrentTime", "FinishedJapaneseEra", "UploadedJapaneseEra");
                 ResetEra("MartialLaw-Era", "MartialLawEraCurrentTime", "FinishedMartialLawEra", "UploadedMartialLawEra");
 
-
-                // Make a function for the start of PreColonial;
-                levelLoader.LoadGame("PreColonialFullMap"); // Remove soon because this is just a testing scene for checking.
+                levelLoader.LoadGame("PreColonial-Chapter1-Prologue"); 
                 FadeOutMusic();
                 break;
             case Eras.Spanish:
