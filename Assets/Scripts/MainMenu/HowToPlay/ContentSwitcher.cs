@@ -69,6 +69,17 @@ public class ContentSwitcher : MonoBehaviour
                         levelLoader.isTransitioning = true;
                         mainMenu.FadeOutMusic();
                         break;
+                    case 4:
+                        levelLoader.LoadGame("StealthTutorial");
+                        levelLoader.isTransitioning = true;
+                        mainMenu.FadeOutMusic();
+                        break;
+                    case 5:
+                        levelLoader.LoadGame("QTETutorial");
+                        levelLoader.isTransitioning = true;
+                        mainMenu.FadeOutMusic();
+                        break;
+
                 }
             }
         });
