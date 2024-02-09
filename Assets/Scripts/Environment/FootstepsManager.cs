@@ -17,7 +17,7 @@ public class FootstepsManager : MonoBehaviour
 
     void Update()
     {
-        if (ModeChanger.currentCharacter != this.gameObject.name || DialogueManager.isDialogueActive)
+        if (ModeChanger.currentCharacter != this.gameObject.name || DialogueManager.isDialogueActive || QTEManager.QTEIsActive)
         {
             footStepsAudioSource.enabled = false;
             return;
