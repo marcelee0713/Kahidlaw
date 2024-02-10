@@ -27,6 +27,10 @@ public class EnemyHealthSystem : MonoBehaviour
     [SerializeField] private int slash = 5;
     [SerializeField] private int gun = 2;
 
+    [Header("Rage State")]
+    public bool enableRage = false;
+    private int rageHealth;
+
     void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
@@ -37,6 +41,7 @@ public class EnemyHealthSystem : MonoBehaviour
         anim.SetFloat("Horizontal", directionX);
 
         originalMaterial = spriteRenderer.material;
+        rageHealth = health / 2;
     }
 
     public void Flash()
@@ -67,6 +72,8 @@ public class EnemyHealthSystem : MonoBehaviour
             spriteRenderer.material = flashMaterial;
             Destroy(this.gameObject, 1f);
         }
+
+        if (enableRage) RageChecker();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -86,5 +93,13 @@ public class EnemyHealthSystem : MonoBehaviour
     {
         health -= damage;
         Flash();
+    }
+
+    private void RageChecker ()
+    {
+        if (health <= rageHealth)
+        {
+            anim.SetBool("onStageTwo", true);
+        }
     }
 }
