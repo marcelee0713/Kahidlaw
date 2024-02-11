@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngineInternal;
 
 public class FourDirectionOnRanged : MonoBehaviour
 {
@@ -37,6 +38,10 @@ public class FourDirectionOnRanged : MonoBehaviour
     [SerializeField] private float shootRangeX;
 
     [SerializeField] private EnemyHealthSystem enemyHealthSystem;
+
+    [Header("Attack Queue")]
+    public List<GameObject> targets;
+    public Transform currentTargetPos;
 
     private void Start()
     {
@@ -108,14 +113,26 @@ public class FourDirectionOnRanged : MonoBehaviour
 
     public bool EnemyOnShootingRange()
     {
-        RaycastHit2D hit =
-            Physics2D.BoxCast(shootBoxCollider.bounds.center + transform.right * shootRangeX * transform.localScale.x * shootingDistance,
+        RaycastHit2D[] hit =
+            Physics2D.BoxCastAll(shootBoxCollider.bounds.center + transform.right * shootRangeX * transform.localScale.x * shootingDistance,
             new Vector3(shootBoxCollider.bounds.size.x * shootRangeX, shootBoxCollider.bounds.size.y * shootRangeY, shootBoxCollider.bounds.size.z),
             0, Vector2.left, 0, playerLayer);
 
-        inRangedOn4d = hit.collider != null;
+        inRangedOn4d = hit.Length != 0;
 
-        return hit.collider != null;
+        if (inRangedOn4d)
+        {
+            for(int i = 0; i < hit.Length; i++)
+            {
+                // TODO: Remove the target list when the name or the gameobject left the radius
+                Debug.Log(hit[i].collider.name);
+            }
+
+        }
+
+        // Find a way to also know if one of the gameObject left the range or radius.
+
+        return hit.Length != 0;
     }
 
     public bool EnemyOnExactRange()

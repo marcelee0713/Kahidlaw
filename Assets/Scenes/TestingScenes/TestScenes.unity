@@ -3771,11 +3771,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 611420375271677053, guid: ef68e329ac781444d977c0e6f029f062, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.72
+      value: -23.05
       objectReference: {fileID: 0}
     - target: {fileID: 611420375271677053, guid: ef68e329ac781444d977c0e6f029f062, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4.9
+      value: 2.15
       objectReference: {fileID: 0}
     - target: {fileID: 611420375271677053, guid: ef68e329ac781444d977c0e6f029f062, type: 3}
       propertyPath: m_LocalPosition.z
@@ -3885,6 +3885,10 @@ PrefabInstance:
       propertyPath: DialogueManager
       value: 
       objectReference: {fileID: 1513000069}
+    - target: {fileID: 5665012284289669927, guid: ef68e329ac781444d977c0e6f029f062, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7723212044210577223, guid: ef68e329ac781444d977c0e6f029f062, type: 3}
       propertyPath: joystick
       value: 
@@ -3947,7 +3951,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4269201331760515393, guid: dbb9655fdf05e8847be66b5efb3142a7, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5442604727174308086, guid: dbb9655fdf05e8847be66b5efb3142a7, type: 3}
       propertyPath: m_RootOrder
@@ -3955,11 +3959,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5442604727174308086, guid: dbb9655fdf05e8847be66b5efb3142a7, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.07
+      value: -14.58
       objectReference: {fileID: 0}
     - target: {fileID: 5442604727174308086, guid: dbb9655fdf05e8847be66b5efb3142a7, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.16
+      value: -0.21
       objectReference: {fileID: 0}
     - target: {fileID: 5442604727174308086, guid: dbb9655fdf05e8847be66b5efb3142a7, type: 3}
       propertyPath: m_LocalPosition.z
@@ -3991,6 +3995,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5442604727174308086, guid: dbb9655fdf05e8847be66b5efb3142a7, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5891320554730609029, guid: dbb9655fdf05e8847be66b5efb3142a7, type: 3}
+      propertyPath: m_Layer
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6080389042709906065, guid: dbb9655fdf05e8847be66b5efb3142a7, type: 3}
@@ -5588,7 +5596,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2992003976622590729, guid: f0226c36c8e53c5458df560a94fc288d, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8384622440693253671, guid: f0226c36c8e53c5458df560a94fc288d, type: 3}
       propertyPath: m_RootOrder
@@ -6463,11 +6471,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2229599394981868296, guid: 7ed9160a7dbb55a4291fbd598aa1cf96, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -8.34
+      value: -6.61
       objectReference: {fileID: 0}
     - target: {fileID: 2229599394981868296, guid: 7ed9160a7dbb55a4291fbd598aa1cf96, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -5.08
+      value: -4.11
       objectReference: {fileID: 0}
     - target: {fileID: 2229599394981868296, guid: 7ed9160a7dbb55a4291fbd598aa1cf96, type: 3}
       propertyPath: m_LocalPosition.z
@@ -6501,6 +6509,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4004153717825696610, guid: 7ed9160a7dbb55a4291fbd598aa1cf96, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4289801527326702688, guid: 7ed9160a7dbb55a4291fbd598aa1cf96, type: 3}
       propertyPath: playerLocation
       value: 
@@ -6511,7 +6523,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7267182576826118650, guid: 7ed9160a7dbb55a4291fbd598aa1cf96, type: 3}
       propertyPath: allowToMove
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7267182576826118650, guid: 7ed9160a7dbb55a4291fbd598aa1cf96, type: 3}
       propertyPath: playerPosition
