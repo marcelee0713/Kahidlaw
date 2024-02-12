@@ -1,6 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
+using System.Linq;
+using Unity.Burst.CompilerServices;
+using Unity.VisualScripting;
+using UnityEditor.SceneManagement;
 using UnityEngine;
+using UnityEngine.UIElements;
 using UnityEngineInternal;
 
 public class FourDirectionOnRanged : MonoBehaviour
@@ -40,8 +46,10 @@ public class FourDirectionOnRanged : MonoBehaviour
     [SerializeField] private EnemyHealthSystem enemyHealthSystem;
 
     [Header("Attack Queue")]
-    public List<GameObject> targets;
     public Transform currentTargetPos;
+    public RaycastHit2D currentHit;
+    public GameObject currentlyTargetObj;
+    private RaycastHit2D[] detectionRadius;
 
     private void Start()
     {
@@ -76,7 +84,7 @@ public class FourDirectionOnRanged : MonoBehaviour
                 else
                 {
                     anim.SetBool("isWShooting", true);
-                    Vector2 headThroughPlayer = (playerPosition.transform.position - enemyPosition.transform.position).normalized * movementSpeed;
+                    Vector2 headThroughPlayer = (currentTargetPos.transform.position - enemyPosition.transform.position).normalized * movementSpeed;
 
                     rb.velocity = headThroughPlayer;
                 }
@@ -113,26 +121,16 @@ public class FourDirectionOnRanged : MonoBehaviour
 
     public bool EnemyOnShootingRange()
     {
-        RaycastHit2D[] hit =
+        detectionRadius =
             Physics2D.BoxCastAll(shootBoxCollider.bounds.center + transform.right * shootRangeX * transform.localScale.x * shootingDistance,
             new Vector3(shootBoxCollider.bounds.size.x * shootRangeX, shootBoxCollider.bounds.size.y * shootRangeY, shootBoxCollider.bounds.size.z),
             0, Vector2.left, 0, playerLayer);
 
-        inRangedOn4d = hit.Length != 0;
+        inRangedOn4d = detectionRadius.Length != 0;
 
-        if (inRangedOn4d)
-        {
-            for(int i = 0; i < hit.Length; i++)
-            {
-                // TODO: Remove the target list when the name or the gameobject left the radius
-                Debug.Log(hit[i].collider.name);
-            }
+        TargetHandler(inRangedOn4d, detectionRadius);
 
-        }
-
-        // Find a way to also know if one of the gameObject left the range or radius.
-
-        return hit.Length != 0;
+        return detectionRadius.Length != 0;
     }
 
     public bool EnemyOnExactRange()
@@ -153,6 +151,46 @@ public class FourDirectionOnRanged : MonoBehaviour
             Gizmos.color = Color.red;
             Gizmos.DrawWireCube(boxCollider.bounds.center + transform.right * stopMovingRangeX * transform.localScale.x * colliderDistance,
                 new Vector3(boxCollider.bounds.size.x * stopMovingRangeX, boxCollider.bounds.size.y * stopMovingRangeY, boxCollider.bounds.size.z));
+        }
+    }
+
+    public void TargetHandler(bool onRanged, RaycastHit2D[] hits)
+    {
+        if (onRanged)
+        {
+            if (hits.Length <= 1)
+            {
+                currentTargetPos = hits[0].collider.gameObject.transform;
+                currentHit = hits[0];
+                currentlyTargetObj = hits[0].collider.gameObject;
+            }
+            else
+            {
+                if (!hits.Contains(currentHit))
+                {
+                    currentHit = hits[0];
+                    currentTargetPos = hits[0].collider.gameObject.transform;
+                    currentlyTargetObj = hits[0].collider.gameObject;
+                }
+            }
+
+        }
+        else
+        {
+            currentTargetPos = null;
+        }
+    }
+
+    public void ChangeTarget(GameObject obj)
+    {
+        for (int i = 0 ; i < detectionRadius.Length; i++)
+        {
+            if (detectionRadius[i].collider.gameObject == obj)
+            {
+                currentHit = detectionRadius[i];
+                currentTargetPos = detectionRadius[i].collider.gameObject.transform;
+                currentlyTargetObj = detectionRadius[i].collider.gameObject;
+            }
         }
     }
 }

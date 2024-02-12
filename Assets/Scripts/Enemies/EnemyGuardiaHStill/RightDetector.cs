@@ -12,9 +12,9 @@ public class RightDetector : MonoBehaviour
     [SerializeField] private float detectorRangeY;
     [SerializeField] private float detectorRangeX;
     [SerializeField] private LayerMask playerLayer;
+    [SerializeField] private FourDirectionOnRanged onRanged;
 
     private Animator anim;
-
 
     private void Awake()
     {
@@ -44,7 +44,9 @@ public class RightDetector : MonoBehaviour
             new Vector3(detectorCollider.bounds.size.x * detectorRangeX, detectorCollider.bounds.size.y * detectorRangeY, detectorCollider.bounds.size.z),
             0, Vector2.left, 0, playerLayer);
 
-        return hit.collider != null;
+        if (onRanged.currentlyTargetObj == null || hit.collider == null) return false;
+
+        return hit.collider.gameObject == onRanged.currentlyTargetObj;
     }
 
     private void OnDrawGizmos()

@@ -10,6 +10,7 @@ public class EnemyHealthSystem : MonoBehaviour
     public UnityEvent deathCallback;
     private Animator anim;
     private Rigidbody2D rb;
+    [SerializeField] private FourDirectionOnRanged OnRanged4D;
 
     [Header("Init Facing Direction")]
     [SerializeField] private float directionY = 0f;
@@ -81,11 +82,13 @@ public class EnemyHealthSystem : MonoBehaviour
         if (collision.gameObject.CompareTag("PlayerAttack"))
         {
             TakeDamage(slash);
+            OnRanged4D.ChangeTarget(collision.gameObject);
         }
 
         if (collision.gameObject.CompareTag("Projectile"))
         {
             TakeDamage(gun);
+            OnRanged4D.ChangeTarget(collision.gameObject);
         }
     }
 

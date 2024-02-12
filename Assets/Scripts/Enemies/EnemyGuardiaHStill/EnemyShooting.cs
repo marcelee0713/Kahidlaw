@@ -26,7 +26,7 @@ public class EnemyShooting : MonoBehaviour
 
     public void EnemyShoot()
     {
-        Destroy(projectile);
+        //Destroy(projectile);
         projectile = Instantiate(bullet, muzzleLocation.position, Quaternion.identity);
         if(OnRanged4D == null)
         {
@@ -41,7 +41,7 @@ public class EnemyShooting : MonoBehaviour
         {
             if (OnRanged4D.inRangedOn4d)
             {
-                Vector2 moveDirection = (playerLocation.transform.position - projectile.transform.position).normalized * bulletSpeed;
+                Vector2 moveDirection = (OnRanged4D.currentTargetPos.transform.position - projectile.transform.position).normalized * bulletSpeed;
                 projectile.GetComponent<Rigidbody2D>().velocity = new Vector2(moveDirection.x, moveDirection.y);
                 projectile.transform.Rotate(0.0f, 0.0f, Mathf.Atan2(0, 0) * Mathf.Rad2Deg);
             }

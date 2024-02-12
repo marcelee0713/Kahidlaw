@@ -129,6 +129,7 @@ MonoBehaviour:
   playerLayer:
     serializedVersion: 2
     m_Bits: 8
+  onRanged: {fileID: 7267182576826118650}
 --- !u!1 &1908626306521452307
 GameObject:
   m_ObjectHideFlags: 0
@@ -227,6 +228,7 @@ MonoBehaviour:
   playerLayer:
     serializedVersion: 2
     m_Bits: 8
+  onRanged: {fileID: 7267182576826118650}
 --- !u!1 &2560516781203986213
 GameObject:
   m_ObjectHideFlags: 0
@@ -402,6 +404,7 @@ MonoBehaviour:
   playerLayer:
     serializedVersion: 2
     m_Bits: 8
+  onRanged: {fileID: 7267182576826118650}
 --- !u!1 &4431342452322257967
 GameObject:
   m_ObjectHideFlags: 0
@@ -492,7 +495,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ba371bcdb926e8499019ec99247f7de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rb: {fileID: 0}
+  rb: {fileID: 5606534077158517079}
   knockbackForce: 10
 --- !u!1 &4687841368859483277
 GameObject:
@@ -592,6 +595,7 @@ MonoBehaviour:
   playerLayer:
     serializedVersion: 2
     m_Bits: 8
+  onRanged: {fileID: 7267182576826118650}
 --- !u!1 &6343824160471492972
 GameObject:
   m_ObjectHideFlags: 0
@@ -753,6 +757,7 @@ MonoBehaviour:
   deathCallback:
     m_PersistentCalls:
       m_Calls: []
+  OnRanged4D: {fileID: 7267182576826118650}
   directionY: -4
   directionX: 0
   flashMaterial: {fileID: 2100000, guid: 9db01f4575cce734e98ca5e4e6a661de, type: 2}
@@ -760,6 +765,7 @@ MonoBehaviour:
   enemyIsHurt: 0
   slash: 50
   gun: 25
+  enableRage: 0
 --- !u!61 &8674632597203740447
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -938,4 +944,6 @@ MonoBehaviour:
   shootBoxCollider: {fileID: 2564978574528814625}
   shootRangeY: 12
   shootRangeX: 20
-  enemyHealthSystem: {fileID: 0}
+  enemyHealthSystem: {fileID: 8857942239397482123}
+  currentTargetPos: {fileID: 0}
+  currentlyTargetObj: {fileID: 0}
