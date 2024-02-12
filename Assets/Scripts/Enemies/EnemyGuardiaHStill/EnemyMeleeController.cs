@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class EnemyMeleeController : MonoBehaviour
@@ -29,6 +30,12 @@ public class EnemyMeleeController : MonoBehaviour
 
     [SerializeField] private EnemyHealthSystem enemyHealthSystem;
 
+    [Header("Attack Queue")]
+    public Transform currentTargetPos;
+    public RaycastHit2D currentHit;
+    public GameObject currentlyTargetObj;
+    private RaycastHit2D[] detectionRadius;
+
     private void Start()
     {
         anim = GetComponentInParent<Animator>();
@@ -54,7 +61,7 @@ public class EnemyMeleeController : MonoBehaviour
             }
             else
             {
-                Vector2 headThroughPlayer = (playerPosition.transform.position - enemyPosition.transform.position).normalized * movementSpeed;
+                Vector2 headThroughPlayer = (currentTargetPos.transform.position - enemyPosition.transform.position).normalized * movementSpeed;
 
                 rb.velocity = headThroughPlayer;
                 anim.SetBool("isMoving", true);
@@ -70,13 +77,55 @@ public class EnemyMeleeController : MonoBehaviour
 
     public bool PlayerDetectected()
     {
-        RaycastHit2D hit =
-            Physics2D.BoxCast(detectorCollider.bounds.center + transform.right * detectorRangeX * transform.localScale.x * colliderDistance,
+        detectionRadius =
+            Physics2D.BoxCastAll(detectorCollider.bounds.center + transform.right * detectorRangeX * transform.localScale.x * colliderDistance,
             new Vector3(detectorCollider.bounds.size.x * detectorRangeX, detectorCollider.bounds.size.y * detectorRangeY, detectorCollider.bounds.size.z),
             0, Vector2.left, 0, playerLayer);
 
-        return hit.collider != null;
-    } 
+        TargetHandler(detectionRadius.Length != 0, detectionRadius);
+
+        return detectionRadius.Length != 0;
+    }
+
+    public void TargetHandler(bool onRanged, RaycastHit2D[] hits)
+    {
+        if (onRanged)
+        {
+            if (hits.Length <= 1)
+            {
+                currentTargetPos = hits[0].collider.gameObject.transform;
+                currentHit = hits[0];
+                currentlyTargetObj = hits[0].collider.gameObject;
+            }
+            else
+            {
+                if (!hits.Contains(currentHit))
+                {
+                    currentHit = hits[0];
+                    currentTargetPos = hits[0].collider.gameObject.transform;
+                    currentlyTargetObj = hits[0].collider.gameObject;
+                }
+            }
+
+        }
+        else
+        {
+            currentTargetPos = null;
+        }
+    }
+
+    public void ChangeTarget(GameObject obj)
+    {
+        for (int i = 0; i < detectionRadius.Length; i++)
+        {
+            if (detectionRadius[i].collider.gameObject == obj)
+            {
+                currentHit = detectionRadius[i];
+                currentTargetPos = detectionRadius[i].collider.gameObject.transform;
+                currentlyTargetObj = detectionRadius[i].collider.gameObject;
+            }
+        }
+    }
 
     public bool EnemyOnExactRange()
     {
@@ -85,7 +134,7 @@ public class EnemyMeleeController : MonoBehaviour
             new Vector3(boxCollider.bounds.size.x * stopMovingRangeX, boxCollider.bounds.size.y * stopMovingRangeY, boxCollider.bounds.size.z),
             0, Vector2.left, 0, playerLayer);
 
-        return hit.collider != null;
+        return hit == currentHit;
     }
 
     // Para kumulay lang yung detection

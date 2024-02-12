@@ -62,7 +62,7 @@ PolygonCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -100,7 +100,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 103919759975586664}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -118,7 +118,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 7
 --- !u!1 &743757910645247410
 GameObject:
   m_ObjectHideFlags: 0
@@ -254,7 +254,9 @@ MonoBehaviour:
   playerLayer:
     serializedVersion: 2
     m_Bits: 8
-  enemyHealthSystem: {fileID: 0}
+  enemyHealthSystem: {fileID: 8999628069160379948}
+  currentTargetPos: {fileID: 0}
+  currentlyTargetObj: {fileID: 0}
 --- !u!1 &1860373185078594904
 GameObject:
   m_ObjectHideFlags: 0
@@ -353,6 +355,8 @@ MonoBehaviour:
   playerLayer:
     serializedVersion: 2
     m_Bits: 8
+  onRanged: {fileID: 0}
+  onRangedMelee: {fileID: 5367579335749400248}
 --- !u!1 &2897286788543545608
 GameObject:
   m_ObjectHideFlags: 0
@@ -528,6 +532,8 @@ MonoBehaviour:
   playerLayer:
     serializedVersion: 2
     m_Bits: 8
+  onRanged: {fileID: 0}
+  onRangedMelee: {fileID: 5367579335749400248}
 --- !u!1 &4397057334687608572
 GameObject:
   m_ObjectHideFlags: 0
@@ -590,7 +596,7 @@ PolygonCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -627,7 +633,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4397057334687608572}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -645,7 +651,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 7
 --- !u!1 &5283549406507443506
 GameObject:
   m_ObjectHideFlags: 0
@@ -744,6 +750,8 @@ MonoBehaviour:
   playerLayer:
     serializedVersion: 2
     m_Bits: 8
+  onRanged: {fileID: 0}
+  onRangedMelee: {fileID: 5367579335749400248}
 --- !u!1 &6430833330497740290
 GameObject:
   m_ObjectHideFlags: 0
@@ -842,6 +850,8 @@ MonoBehaviour:
   playerLayer:
     serializedVersion: 2
     m_Bits: 8
+  onRanged: {fileID: 0}
+  onRangedMelee: {fileID: 5367579335749400248}
 --- !u!1 &7479943194527653459
 GameObject:
   m_ObjectHideFlags: 0
@@ -904,7 +914,7 @@ PolygonCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -939,7 +949,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7479943194527653459}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -957,7 +967,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 7
 --- !u!1 &7480490393142785608
 GameObject:
   m_ObjectHideFlags: 0
@@ -1119,6 +1129,8 @@ MonoBehaviour:
   deathCallback:
     m_PersistentCalls:
       m_Calls: []
+  onRanged4D: {fileID: 0}
+  onRangedMelee4D: {fileID: 5367579335749400248}
   directionY: 0
   directionX: -4
   flashMaterial: {fileID: 2100000, guid: 9db01f4575cce734e98ca5e4e6a661de, type: 2}
@@ -1126,6 +1138,7 @@ MonoBehaviour:
   enemyIsHurt: 0
   slash: 50
   gun: 25
+  enableRage: 0
 --- !u!61 &3628492650287951091
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1233,7 +1246,7 @@ PolygonCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -1263,7 +1276,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7802913306688057553}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -1281,7 +1294,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 7
 --- !u!1 &8132598724911133123
 GameObject:
   m_ObjectHideFlags: 0
@@ -1372,7 +1385,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ba371bcdb926e8499019ec99247f7de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rb: {fileID: 0}
+  rb: {fileID: 7718395979333370444}
   knockbackForce: 25
 --- !u!1 &8975307724095247174
 GameObject:

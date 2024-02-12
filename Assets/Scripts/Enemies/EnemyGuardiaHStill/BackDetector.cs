@@ -15,6 +15,7 @@ public class BackDetector : MonoBehaviour
     [SerializeField] private float detectorRangeX;
     [SerializeField] private LayerMask playerLayer;
     [SerializeField] private FourDirectionOnRanged onRanged;
+    [SerializeField] private EnemyMeleeController onRangedMelee;
 
     private void Awake()
     {
@@ -43,9 +44,19 @@ public class BackDetector : MonoBehaviour
             new Vector3(detectorCollider.bounds.size.x * detectorRangeX, detectorCollider.bounds.size.y * detectorRangeY, detectorCollider.bounds.size.z),
             0, Vector2.left, 0, playerLayer);
 
-        if (onRanged.currentlyTargetObj == null || hit.collider == null) return false;
+        // Range Weapon Detection
+        if (onRanged != null)
+        {
+            if (onRanged.currentlyTargetObj == null || hit.collider == null) return false;
 
-        return hit.collider.gameObject == onRanged.currentlyTargetObj;
+            return hit.collider.gameObject == onRanged.currentlyTargetObj;
+        }
+
+        // Melee Weapon Detection
+        if (onRangedMelee.currentlyTargetObj == null || hit.collider == null) return false;
+
+
+        return hit.collider.gameObject == onRangedMelee.currentlyTargetObj;
     }
 
     private void OnDrawGizmos()
