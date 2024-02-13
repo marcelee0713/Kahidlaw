@@ -42342,12 +42342,20 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3128826440703943662, guid: 20779ea41537f44409ef080fb848e3bc, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3128826440703943662, guid: 20779ea41537f44409ef080fb848e3bc, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 830370507}
     - target: {fileID: 3128826440703943662, guid: 20779ea41537f44409ef080fb848e3bc, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: LoadMainMenu
+      value: LoadGame
+      objectReference: {fileID: 0}
+    - target: {fileID: 3128826440703943662, guid: 20779ea41537f44409ef080fb848e3bc, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: MainMenu
       objectReference: {fileID: 0}
     - target: {fileID: 3915595150048748147, guid: 20779ea41537f44409ef080fb848e3bc, type: 3}
       propertyPath: m_Name
