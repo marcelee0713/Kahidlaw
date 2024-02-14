@@ -29,12 +29,15 @@ public class EnemyMeleeController : MonoBehaviour
     [SerializeField] private LayerMask playerLayer;
 
     [SerializeField] private EnemyHealthSystem enemyHealthSystem;
+    [SerializeField] private EnemyKnockback knockback;
 
     [Header("Attack Queue")]
     public Transform currentTargetPos;
     public RaycastHit2D currentHit;
     public GameObject currentlyTargetObj;
     private RaycastHit2D[] detectionRadius;
+
+    private bool onSpecial = false;
 
     private void Start()
     {
@@ -47,13 +50,19 @@ public class EnemyMeleeController : MonoBehaviour
     {
         cooldownTimer += Time.deltaTime;
 
+        if (enemyHealthSystem.onRage)
+        {
+            attackCooldown = 0.50f;
+            movementSpeed = 4.5f;
+        }
+
         if (PlayerDetectected() && !HealthSystem.playerIsDead)
         {
             if (EnemyOnExactRange())
             {
                 if (cooldownTimer >= attackCooldown)
                 {
-                    anim.SetTrigger("isAttacking");
+                    EnemyAttack();
                     cooldownTimer = 0;
                 }
                 anim.SetBool("isMoving", false);
@@ -61,10 +70,14 @@ public class EnemyMeleeController : MonoBehaviour
             }
             else
             {
-                Vector2 headThroughPlayer = (currentTargetPos.transform.position - enemyPosition.transform.position).normalized * movementSpeed;
+                if (!onSpecial)
+                {
+                    Vector2 headThroughPlayer = (currentTargetPos.transform.position - enemyPosition.transform.position).normalized * movementSpeed;
 
-                rb.velocity = headThroughPlayer;
-                anim.SetBool("isMoving", true);
+                    rb.velocity = headThroughPlayer;
+                    anim.SetBool("isMoving", true);
+                }
+
             }
         }
         else
@@ -140,8 +153,40 @@ public class EnemyMeleeController : MonoBehaviour
     // Para kumulay lang yung detection
     private void OnDrawGizmos()
     {
-       Gizmos.color = Color.red;
-            Gizmos.DrawWireCube(boxCollider.bounds.center + transform.right * stopMovingRangeX * transform.localScale.x * colliderDistance,
-                new Vector3(boxCollider.bounds.size.x * stopMovingRangeX, boxCollider.bounds.size.y * stopMovingRangeY, boxCollider.bounds.size.z));
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireCube(boxCollider.bounds.center + transform.right * stopMovingRangeX * transform.localScale.x * colliderDistance,
+            new Vector3(boxCollider.bounds.size.x * stopMovingRangeX, boxCollider.bounds.size.y * stopMovingRangeY, boxCollider.bounds.size.z));
+    }
+
+    private void EnemyAttack()
+    {
+        int range = Random.Range(1, 10);
+        if (enemyHealthSystem.onRage)
+        {
+            if (range <= 3)
+            {
+                anim.SetTrigger("isAttacking");
+            }
+            else
+            {
+                StartCoroutine(SpecialAttack());
+            }
+
+        }
+        else
+        {
+            anim.SetTrigger("isAttacking");
+        }
+    }
+
+    private IEnumerator SpecialAttack()
+    {
+        float tempForce = knockback.knockbackForce;
+        knockback.knockbackForce = 0;
+        onSpecial = true;
+        anim.SetTrigger("isSpecialAttacking");
+        yield return new WaitForSeconds(2.5f);
+        onSpecial = false;
+        knockback.knockbackForce = tempForce;
     }
 }

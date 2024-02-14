@@ -117,6 +117,17 @@ public class DialogueManager : MonoBehaviour
         {
             rightCharImage.sprite = currentMessages[activeMessage].messageTwoSprite;
         }
+        
+        // Flipping Images
+        if (currentActors[0].flipImage)
+        {
+            leftCharImage.rectTransform.rotation = Quaternion.Euler(0f, 180f, 0f);
+        }
+        
+        if (currentActors[1].flipImage)
+        {
+            rightCharImage.rectTransform.rotation = Quaternion.Euler(0f, 180f, 0f);
+        }
 
         // Display Choices
         DisplayChoices();
@@ -192,6 +203,8 @@ public class DialogueManager : MonoBehaviour
         }
         else
         {
+            leftCharImage.rectTransform.rotation = Quaternion.Euler(0f, 0f, 0f);
+            rightCharImage.rectTransform.rotation = Quaternion.Euler(0f, 0f, 0f);
             bool disabledHUD = currentMessages[activeMessage - 1].disableHUDAfterDialogue;
             
             isDialogueActive = false;

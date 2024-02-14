@@ -121,15 +121,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa7e68f4f6e3e1849aecab8994de5a64, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerIsOnFront: 0
+  targetOnFront: 0
   detectorCollider: {fileID: 2453115578184916667}
   colliderDistance: 0
   detectorRangeY: 5.05
   detectorRangeX: 20.9
-  playerLayer:
+  detectionLayer:
     serializedVersion: 2
     m_Bits: 8
   onRanged: {fileID: 7267182576826118650}
+  onRangedMelee: {fileID: 0}
+  onRangedAllyMelee: {fileID: 0}
 --- !u!1 &1908626306521452307
 GameObject:
   m_ObjectHideFlags: 0
@@ -220,15 +222,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52ef0cf34e91b1c45bea77c2a478db80, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerIsOnRight: 0
+  targetOnRight: 0
   detectorCollider: {fileID: 3641304133637352447}
   colliderDistance: 0.6
   detectorRangeY: 6
   detectorRangeX: 10
-  playerLayer:
+  detectionLayer:
     serializedVersion: 2
     m_Bits: 8
   onRanged: {fileID: 7267182576826118650}
+  onRangedMelee: {fileID: 0}
+  onRangedAllyMelee: {fileID: 0}
 --- !u!1 &2560516781203986213
 GameObject:
   m_ObjectHideFlags: 0
@@ -396,15 +400,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4703cbc2595e3904aa1b44daa64ec8b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerIsOnBack: 0
+  targetOnBack: 0
   detectorCollider: {fileID: 3368750833128056352}
   colliderDistance: 0
   detectorRangeY: 5.05
   detectorRangeX: 20.9
-  playerLayer:
+  detectionLayer:
     serializedVersion: 2
     m_Bits: 8
   onRanged: {fileID: 7267182576826118650}
+  onRangedMelee: {fileID: 0}
+  onRangedAllyMelee: {fileID: 0}
 --- !u!1 &4431342452322257967
 GameObject:
   m_ObjectHideFlags: 0
@@ -587,15 +593,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 485915b39da203a42a5e494372ecf0f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerIsOnLeft: 0
+  targetOnLeft: 0
   detectorCollider: {fileID: 8949468975260981767}
   colliderDistance: 0.6
   detectorRangeY: 6
   detectorRangeX: 10
-  playerLayer:
+  detectionLayer:
     serializedVersion: 2
     m_Bits: 8
   onRanged: {fileID: 7267182576826118650}
+  onRangedMelee: {fileID: 0}
+  onRangedAllyMelee: {fileID: 0}
 --- !u!1 &6343824160471492972
 GameObject:
   m_ObjectHideFlags: 0
@@ -639,7 +647,7 @@ Transform:
   - {fileID: 295520779238477840}
   - {fileID: 9012305229291757103}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &2788832061979707297
 SpriteRenderer:
@@ -753,11 +761,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f8e1aac4e407ee45865a48036e382fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 100
+  health: 300
   deathCallback:
     m_PersistentCalls:
       m_Calls: []
-  OnRanged4D: {fileID: 7267182576826118650}
+  onRanged4D: {fileID: 7267182576826118650}
+  onRangedMelee4D: {fileID: 0}
   directionY: -4
   directionX: 0
   flashMaterial: {fileID: 2100000, guid: 9db01f4575cce734e98ca5e4e6a661de, type: 2}
@@ -932,7 +941,7 @@ MonoBehaviour:
   playerPosition: {fileID: 0}
   enemyPosition: {fileID: 2229599394981868296}
   movementSpeed: 2.5
-  allowToMove: 0
+  allowToMove: 1
   colliderDistance: 0
   boxCollider: {fileID: 4004153717825696610}
   stopMovingRangeY: 8

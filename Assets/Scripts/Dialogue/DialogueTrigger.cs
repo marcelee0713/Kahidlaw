@@ -45,4 +45,5 @@ public class Actor
 {
     public string name;
     public Sprite sprite;
+    public bool flipImage;
 }

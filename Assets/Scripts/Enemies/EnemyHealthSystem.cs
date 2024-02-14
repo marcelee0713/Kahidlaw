@@ -32,6 +32,7 @@ public class EnemyHealthSystem : MonoBehaviour
     [Header("Rage State")]
     public bool enableRage = false;
     private int rageHealth;
+    public bool onRage = false;
 
     void Start()
     {
@@ -97,8 +98,12 @@ public class EnemyHealthSystem : MonoBehaviour
 
     public void TakeDamage(int damage)
     {
-        health -= damage;
-        Flash();
+        if (!enemyIsHurt)
+        {
+            health -= damage;
+            Flash();
+        }
+
     }
 
     private void RageChecker ()
@@ -106,6 +111,7 @@ public class EnemyHealthSystem : MonoBehaviour
         if (health <= rageHealth)
         {
             anim.SetBool("onStageTwo", true);
+            onRage = true;
         }
     }
 }

@@ -249,7 +249,7 @@ MonoBehaviour:
   detectorRangeX: 20
   colliderDistance: 0
   boxCollider: {fileID: 117929464961842064}
-  stopMovingRangeY: 2.75
+  stopMovingRangeY: 2.05
   stopMovingRangeX: 2
   playerLayer:
     serializedVersion: 2
@@ -347,16 +347,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4703cbc2595e3904aa1b44daa64ec8b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerIsOnBack: 0
+  targetOnBack: 0
   detectorCollider: {fileID: 8769852813667990706}
   colliderDistance: 0
   detectorRangeY: 5.76
   detectorRangeX: 10
-  playerLayer:
+  detectionLayer:
     serializedVersion: 2
     m_Bits: 8
   onRanged: {fileID: 0}
   onRangedMelee: {fileID: 5367579335749400248}
+  onRangedAllyMelee: {fileID: 0}
 --- !u!1 &2897286788543545608
 GameObject:
   m_ObjectHideFlags: 0
@@ -524,16 +525,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52ef0cf34e91b1c45bea77c2a478db80, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerIsOnRight: 0
+  targetOnRight: 0
   detectorCollider: {fileID: 5730709950862511191}
   colliderDistance: 0.6
   detectorRangeY: 9
   detectorRangeX: 10
-  playerLayer:
+  detectionLayer:
     serializedVersion: 2
     m_Bits: 8
   onRanged: {fileID: 0}
   onRangedMelee: {fileID: 5367579335749400248}
+  onRangedAllyMelee: {fileID: 0}
 --- !u!1 &4397057334687608572
 GameObject:
   m_ObjectHideFlags: 0
@@ -742,16 +744,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa7e68f4f6e3e1849aecab8994de5a64, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerIsOnFront: 0
+  targetOnFront: 0
   detectorCollider: {fileID: 7025961440212808864}
   colliderDistance: 0
   detectorRangeY: 5.76
   detectorRangeX: 10
-  playerLayer:
+  detectionLayer:
     serializedVersion: 2
     m_Bits: 8
   onRanged: {fileID: 0}
   onRangedMelee: {fileID: 5367579335749400248}
+  onRangedAllyMelee: {fileID: 0}
 --- !u!1 &6430833330497740290
 GameObject:
   m_ObjectHideFlags: 0
@@ -842,16 +845,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 485915b39da203a42a5e494372ecf0f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerIsOnLeft: 0
+  targetOnLeft: 0
   detectorCollider: {fileID: 4301058551415679091}
   colliderDistance: 0.6
   detectorRangeY: 9
   detectorRangeX: 10
-  playerLayer:
+  detectionLayer:
     serializedVersion: 2
     m_Bits: 8
   onRanged: {fileID: 0}
   onRangedMelee: {fileID: 5367579335749400248}
+  onRangedAllyMelee: {fileID: 0}
 --- !u!1 &7479943194527653459
 GameObject:
   m_ObjectHideFlags: 0

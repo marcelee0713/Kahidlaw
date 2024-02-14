@@ -8,6 +8,8 @@ public class NPCBehavior : MonoBehaviour
     private NPCPatrolHorizontal npcPatrol;
     private bool userOnSight = false;
 
+    public bool enablePatrol = true;
+
     private void Awake()
     {
         npcPatrol = GetComponentInParent<NPCPatrolHorizontal>();
@@ -16,18 +18,26 @@ public class NPCBehavior : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
-        if (npcPatrol != null)
+        if (enablePatrol)
         {
-            npcPatrol.enabled = !userOnSight;
-            if (npcPatrol.movingLeft)
+            if (npcPatrol != null)
             {
-                transform.localScale = new Vector3(-1, 1, 1);
-            }
-            else
-            {
-                transform.localScale = new Vector3(1, 1, 1);
+                npcPatrol.enabled = !userOnSight;
+                if (npcPatrol.movingLeft)
+                {
+                    transform.localScale = new Vector3(-1, 1, 1);
+                }
+                else
+                {
+                    transform.localScale = new Vector3(1, 1, 1);
+                }
             }
         }
+        else
+        {
+            npcPatrol.enabled = enablePatrol;
+        }
+
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

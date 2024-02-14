@@ -5,7 +5,7 @@ using UnityEngine;
 public class EnemyKnockback : MonoBehaviour
 {
     [SerializeField] private Rigidbody2D rb;
-    [SerializeField] private float knockbackForce = 50f;
+    public float knockbackForce = 50f;
 
     private void Start()
     {

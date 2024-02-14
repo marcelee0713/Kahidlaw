@@ -18,22 +18,22 @@ public class HorizontalOnRanged : MonoBehaviour
     private void Update()
     {
         
-        if (LDetector != null && LDetector.playerIsOnLeft)
+        if (LDetector != null && LDetector.targetOnLeft)
         {
             transform.localScale = new Vector3(-1, 1, 1);
         }
 
-        if (RDetector != null && RDetector.playerIsOnRight)
+        if (RDetector != null && RDetector.targetOnRight)
         {
             transform.localScale = new Vector3(1, 1, 1);
         }
 
-        if (FDetector != null && FDetector.playerIsOnFront)
+        if (FDetector != null && FDetector.targetOnFront)
         {
             transform.localScale = new Vector3(1, 1, 1);
         }
 
-        if (BDetector != null && BDetector.playerIsOnBack)
+        if (BDetector != null && BDetector.targetOnBack)
         {
             transform.localScale = new Vector3(1, -1, 1);
         }
