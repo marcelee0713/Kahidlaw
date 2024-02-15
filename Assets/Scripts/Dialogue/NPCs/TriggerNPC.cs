@@ -13,11 +13,15 @@ public class TriggerNPC : MonoBehaviour
     [SerializeField] private Animator npcAnim;
     [SerializeField] private float yDirection;
     [SerializeField] private float xDirection;
- 
+
+    public UnityEvent callback;
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Player"))
         {
+            callback.Invoke();
+
             if(npcAnim != null)
             {
                 npcAnim.SetFloat("Vertical", yDirection);

@@ -1,5 +1,6 @@
 using TMPro;
 using UnityEngine;
+using static PlayerRefs;
 
 public class PlayerRefs : MonoBehaviour
 {
@@ -423,6 +424,15 @@ public class PlayerRefs : MonoBehaviour
         if(savename != "")
         {
             PlayerPrefs.SetString("Spanish-Era", savename);
+        }
+    }
+
+    public void PreColonialSaveGame(string savename)
+    {
+       
+        if (savename != "")
+        {
+            PlayerPrefs.SetString("PreColonial-Era", savename);
         }
     }
 
