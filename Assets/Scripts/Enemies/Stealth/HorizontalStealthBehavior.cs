@@ -33,7 +33,7 @@ public class HorizontalStealthBehavior : MonoBehaviour
 
         if (hit.collider != null)
         {
-            if (hit.collider.gameObject.CompareTag("Player") || hit.collider.gameObject.CompareTag("PlayerFeet"))
+            if (hit.collider.gameObject.name == "IsabelRadius" || hit.collider.gameObject.CompareTag("Player") || hit.collider.gameObject.CompareTag("PlayerFeet"))
             {
                 
                 if (!DialogueManager.isDialogueActive && !HealthSystem.playerIsDead)

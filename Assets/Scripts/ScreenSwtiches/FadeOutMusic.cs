@@ -11,6 +11,7 @@ public class FadeOutMusic : MonoBehaviour
 
     [SerializeField]
     private AudioClip intenseMusic;
+    [SerializeField] private AudioClip defaultMusic; 
 
     private void Awake()
     {
@@ -36,6 +37,11 @@ public class FadeOutMusic : MonoBehaviour
     public void ChangeMusicToIntense()
     {
         audioSource.clip = intenseMusic; 
+    }
+
+    public void DefaultMusic()
+    {
+        audioSource.clip = defaultMusic;
     }
 
     public void FadeInBackgroundMusic()

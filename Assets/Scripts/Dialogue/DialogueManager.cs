@@ -124,10 +124,14 @@ public class DialogueManager : MonoBehaviour
             leftCharImage.rectTransform.rotation = Quaternion.Euler(0f, 180f, 0f);
         }
         
-        if (currentActors[1].flipImage)
+        if (currentActors.Length >= 2)
         {
-            rightCharImage.rectTransform.rotation = Quaternion.Euler(0f, 180f, 0f);
+            if (currentActors[1].flipImage)
+            {
+                rightCharImage.rectTransform.rotation = Quaternion.Euler(0f, 180f, 0f);
+            }
         }
+
 
         // Display Choices
         DisplayChoices();

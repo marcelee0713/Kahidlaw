@@ -83,7 +83,16 @@ public class Environment : MonoBehaviour
             CheckAndRunText(eraText, () =>
             {
                 taskTexts[i].text = missions[i].task;
-                taskTexts[i].fontStyle = FontStyles.Normal;
+
+                if (missions[i].IsDone)
+                {
+                    taskTexts[i].fontStyle = FontStyles.Strikethrough;
+                }
+                else
+                {
+                    taskTexts[i].fontStyle = FontStyles.Normal;
+                }
+
                 CheckAndRunGameObject(missionsHolder[i], () => missionsHolder[i].SetActive(true));
             });
 
@@ -99,7 +108,7 @@ public class Environment : MonoBehaviour
             CheckAndRunGameObject(missionsHolder[i], () => missionsHolder[i].SetActive(false));
         }
 
-        for (int i = 0; i < missions.Length; i++)
+        for (int i = 0; i < taskTexts.Length; i++)
         {
             CheckAndRunText(taskTexts[i], () => taskTexts[i].text = "");
         }
