@@ -10,6 +10,9 @@ public class PlayerRefs : MonoBehaviour
     public GameObject nameInputPanel;
     public string currentUsername;
 
+    [Header("Pre Colonial Era Consequences")]
+    public GameObject LapuLapu;
+
     [Header("Spanish Era Chapter 2 Consequences")]
     public GameObject FidelAssistance;
     public GameObject IsabelsAloneDialogue;
@@ -43,10 +46,12 @@ public class PlayerRefs : MonoBehaviour
             CheckAndRunThisGameObject(nameInputPanel, () => nameInputPanel.SetActive(true));
         }
 
-        if (FidelAssistance  != null && IsabelsAloneDialogue != null)
+        if (FidelAssistance != null && IsabelsAloneDialogue != null)
         {
             Chapter2ButterflyEffect();
         }
+
+        IsWithLapuLapu();
     }
 
     private void Update()
@@ -393,6 +398,24 @@ public class PlayerRefs : MonoBehaviour
                 return u_5 == "true";
             default:
                 return false;
+        }
+    }
+
+    // Pre Colonial Era Refs
+
+    public void WithLapuLapu(string choice)
+    {
+        PlayerPrefs.SetString("PreColonial-Chapter3-LapuLapu", choice);
+    }
+
+    public void IsWithLapuLapu()
+    {
+        if (LapuLapu != null)
+        {
+            string result = PlayerPrefs.GetString("PreColonial-Chapter3-LapuLapu", "n");
+
+            if (result != "n") LapuLapu.SetActive(true);
+            else LapuLapu.SetActive(false);
         }
     }
 

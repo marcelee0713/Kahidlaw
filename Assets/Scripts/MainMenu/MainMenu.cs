@@ -48,10 +48,7 @@ public class MainMenu : MonoBehaviour
     private void Start()
     {
         // Remove soon, this is for testing purposes.
-        PlayerPrefs.SetString("FinishedPreColonialEra", "true");
-        PlayerPrefs.SetString("PreColonial-Era", "PreColonial-Chapter1-Start");
-        PlayerPrefs.SetFloat("PreColonialEraCurrentTime", 2144f);
-
+        PlayerPrefs.SetString("FinishedPreColonialEra", "false");
 
         defaultContinuePosX = continueGameObj.transform.position.x;
         defaultNewPosX = newGameObj.transform.position.x;
@@ -154,7 +151,7 @@ public class MainMenu : MonoBehaviour
         switch (playerRefs.era)
         {
             case Eras.PreColonial:
-                // Add a LoadLastGame for PreColonial
+                levelLoader.LoadLastGame("PreColonial-Era", "PreColonial-Chapter1-Prologue");
                 FadeOutMusic();
                 break;
             case Eras.Spanish:

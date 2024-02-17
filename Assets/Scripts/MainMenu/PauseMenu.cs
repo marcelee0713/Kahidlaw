@@ -12,12 +12,6 @@ public class PauseMenu : MonoBehaviour
         pauseMenu.SetActive(false);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     public void GoToMainMenu()
     {
         SceneManager.LoadScene(1);

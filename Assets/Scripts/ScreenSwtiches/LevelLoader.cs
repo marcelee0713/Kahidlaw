@@ -20,11 +20,6 @@ public class LevelLoader : MonoBehaviour
     public Sprite martialLawEraImage;
     public Sprite justBlackImage;
 
-    private void Start()
-    {
-        PlayerPrefs.SetString("Username", "");
-    }
-
     private void Awake()
     {
         ChangeLoadingImage();
@@ -97,6 +92,26 @@ public class LevelLoader : MonoBehaviour
             StartCoroutine(LoadLevel(fallbackScene));
         }
 
+    }
+
+    public bool IsWithLapuLapu()
+    {
+        string result = PlayerPrefs.GetString("PreColonial-Chapter3-LapuLapu", "n");
+        return result != "n";
+    }
+
+    public void CutsceneConsequencesChapter3Ambush()
+    {
+        if (IsWithLapuLapu())
+        {
+            PlayerPrefs.SetString("PreColonial-Era", "PreColonial-Chapter3-WithLapuLapu");
+            StartCoroutine(LoadLevel("PreColonial-Chapter3-WithLapuLapu"));
+        }
+        else
+        {
+            PlayerPrefs.SetString("PreColonial-Era", "PreColonial-Chapter3-WithoutLapuLapu");
+            StartCoroutine(LoadLevel("PreColonial-Chapter3-WithoutLapuLapu"));
+        }
     }
 
     public void LoadChapter3FinalConsqeuences()

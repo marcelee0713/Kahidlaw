@@ -8,7 +8,7 @@ public class TurningDirectionHandler : MonoBehaviour
     [SerializeField] private float yDirection = 0f;
     [SerializeField] private float xDirection = 0f;
 
-    private void Awake()
+    private void Start()
     {
         if (npcAnim != null)
         {
