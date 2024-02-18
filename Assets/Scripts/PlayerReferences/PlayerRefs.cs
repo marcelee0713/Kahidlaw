@@ -1,4 +1,5 @@
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using static PlayerRefs;
 
@@ -32,6 +33,7 @@ public class PlayerRefs : MonoBehaviour
     public TextMeshProUGUI sfxDash;
     public TextMeshProUGUI backgroundMusicDash;
 
+
     private void Awake()
     {
         InstantiateSounds();
@@ -40,6 +42,8 @@ public class PlayerRefs : MonoBehaviour
     private void Start()
     {
         InstantiateGameTimer(era);
+
+        currentUsername = PlayerPrefs.GetString("Username", "");
 
         if (currentUsername == "")
         {

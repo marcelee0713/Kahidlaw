@@ -47,9 +47,6 @@ public class MainMenu : MonoBehaviour
 
     private void Start()
     {
-        // Remove soon, this is for testing purposes.
-        PlayerPrefs.SetString("FinishedPreColonialEra", "false");
-
         defaultContinuePosX = continueGameObj.transform.position.x;
         defaultNewPosX = newGameObj.transform.position.x;
         defaultNewAndContinuePosY = newGameObj.transform.position.y;
