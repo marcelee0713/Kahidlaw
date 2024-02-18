@@ -1,13 +1,6 @@
-using System.Collections;
-using System.Collections.Generic;
-using System.Diagnostics.CodeAnalysis;
 using System.Linq;
-using Unity.Burst.CompilerServices;
 using Unity.VisualScripting;
-using UnityEditor.SceneManagement;
 using UnityEngine;
-using UnityEngine.UIElements;
-using UnityEngineInternal;
 
 public class FourDirectionOnRanged : MonoBehaviour
 {
