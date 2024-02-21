@@ -42,8 +42,6 @@ public class PlayerRefs : MonoBehaviour
 
     private void Start()
     {
-        PlayerPrefs.SetString("Username", "");
-
         InstantiateGameTimer(era);
 
         currentUsername = PlayerPrefs.GetString("Username", "");
