@@ -314,7 +314,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -971667303
   m_SortingLayer: 2
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: 1630dfccf78aa2449b4f1e6ffdffcd55, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -371,7 +371,7 @@ Transform:
   - {fileID: 3889727707650157728}
   - {fileID: 5904552772186275013}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &5478013948701236030
 SpriteRenderer:
@@ -633,6 +633,7 @@ MonoBehaviour:
   flashDuration: 0.125
   enemyProjectiles: 5
   enemySlash: 10
+  flameDamage: 2
 --- !u!114 &269428084458176715
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -662,6 +663,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8925526710738876367}
   - component: {fileID: 6528282981968860980}
+  - component: {fileID: 9176429864964885741}
   m_Layer: 3
   m_Name: PlayerFeet
   m_TagString: PlayerFeet
@@ -729,6 +731,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.87556916, y: 0.32949245}
   m_EdgeRadius: 0
+--- !u!114 &9176429864964885741
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5061610319901504260}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 425baa3445c84944e9b77a1cecce877d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5777021774326888631
 GameObject:
   m_ObjectHideFlags: 0

@@ -10,9 +10,7 @@ public class IsabelRadius : MonoBehaviour
     [SerializeField] private bool turnOn = true;
 
     [Header("Dialogues")]
-    public DialogueTrigger dialogue;
-    public GameObject DialogueBox;
-    public DialogueManager DialogueManager;
+    [SerializeField] private GameObject isabelInfo;
 
     private void Update()
     {
@@ -31,6 +29,7 @@ public class IsabelRadius : MonoBehaviour
         if(collision.gameObject.name == "Isabel")
         {
             onRadius = true;
+            isabelInfo.SetActive(!onRadius);
         }
     }
 
@@ -41,11 +40,7 @@ public class IsabelRadius : MonoBehaviour
             onRadius = false;
             if (turnOn)
             {
-                DialogueBox.SetActive(true);
-                Message[] messages = dialogue.messages;
-                Actor[] actors = dialogue.actors;
-                DialogueManager.ChangeMessagesAndActors(messages, actors);
-                dialogue.StartDialogue();
+                isabelInfo.SetActive(!onRadius);
             }
 
         }

@@ -20,6 +20,7 @@ public class HealthSystem : MonoBehaviour
     [Header("Enemy Damages")]
     [SerializeField] private float enemyProjectiles = 5f;
     [SerializeField] private float enemySlash = 10f;
+    public float flameDamage = 2f;
 
     private SpriteRenderer spriteRenderer;
     private Material originalMaterial;
@@ -27,14 +28,13 @@ public class HealthSystem : MonoBehaviour
     private PlayerMovement playerMovement;
     private bool deathAnimAlreadyPlayed = false;
 
-    private Rigidbody2D rb;
+    private bool isHurt = false;
 
     void Start()
     {
         playerMovement = GetComponent<PlayerMovement>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         originalMaterial = spriteRenderer.material;
-        rb = GetComponent<Rigidbody2D>();
 
         playerIsDead = false;
         if(redPanel != null)
@@ -66,20 +66,23 @@ public class HealthSystem : MonoBehaviour
         {
             TakeDamage((int)enemyProjectiles);
 
-        } 
+        }
         else if (collision.gameObject.CompareTag("EnemySlash"))
         {
             TakeDamage((int)enemySlash);
         }
     }
 
-    private void TakeDamage(int damage)
+    public void TakeDamage(int damage)
     {
-        health -= damage;
-        float value = health / maxHealth;
-        healthBar.value = value;
+        if (!isHurt)
+        {
+            health -= damage;
+            float value = health / maxHealth;
+            healthBar.value = value;
 
-        Flash();
+            Flash();
+        }
     }
 
     public void Flash()
@@ -94,12 +97,14 @@ public class HealthSystem : MonoBehaviour
 
     private IEnumerator FlashRoutine()
     {
+        isHurt = true;
         spriteRenderer.material = flashMaterial;
         redPanel.SetActive(true);
         yield return new WaitForSeconds(flashDuration);
         spriteRenderer.material = originalMaterial;
         redPanel.SetActive(false);
         flashRoutine = null;
+        isHurt = false;
     }
 
     public void SetHealth(float extraHealth)

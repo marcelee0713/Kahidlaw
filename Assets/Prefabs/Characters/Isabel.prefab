@@ -708,6 +708,7 @@ MonoBehaviour:
   flashDuration: 0.125
   enemyProjectiles: 5
   enemySlash: 10
+  flameDamage: 2
 --- !u!114 &7358265149938818466
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -860,6 +861,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6306962577569726091}
   - component: {fileID: 3413054675629445051}
+  - component: {fileID: 3606908602637199009}
   m_Layer: 3
   m_Name: PlayerFeet
   m_TagString: PlayerFeet
@@ -927,3 +929,15 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.87556916, y: 0.32949245}
   m_EdgeRadius: 0
+--- !u!114 &3606908602637199009
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5891320554730609029}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 425baa3445c84944e9b77a1cecce877d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

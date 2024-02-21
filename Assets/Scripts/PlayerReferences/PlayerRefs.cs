@@ -1,3 +1,4 @@
+using System.Text.RegularExpressions;
 using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
@@ -41,6 +42,8 @@ public class PlayerRefs : MonoBehaviour
 
     private void Start()
     {
+        PlayerPrefs.SetString("Username", "");
+
         InstantiateGameTimer(era);
 
         currentUsername = PlayerPrefs.GetString("Username", "");
@@ -299,13 +302,25 @@ public class PlayerRefs : MonoBehaviour
         else if (userName.Length >= 15)
         {
             errorInputHandler.text = "Name is too long.";
-        } 
+        }
+        else if (!IsLettersOnly(userName))
+        {
+            errorInputHandler.text = "Strictly letters only.";
+        }
         else
         {
             errorInputHandler.text = "";
             nameInputPanel.SetActive(false);
             PlayerPrefs.SetString("Username", userName);
         }
+    }
+
+    static bool IsLettersOnly(string input)
+    {
+        // Regular expression to match only letters
+        Regex regex = new Regex(@"^[a-zA-Z]+$");
+
+        return regex.IsMatch(input);
     }
 
     public void SetEraFinished()

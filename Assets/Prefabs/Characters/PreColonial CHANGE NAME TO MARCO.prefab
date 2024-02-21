@@ -354,8 +354,10 @@ MonoBehaviour:
   actors:
   - name: Isabel
     sprite: {fileID: 21300000, guid: ccad13bbc1eeaa847b8c8f8b2790ac9e, type: 3}
+    flipImage: 0
   - name: Marco
     sprite: {fileID: 21300000, guid: 0c4cd6385ede6a0489f25bac3b2ada87, type: 3}
+    flipImage: 0
   gameManager: {fileID: 0}
   StartCallback:
     m_PersistentCalls:
@@ -1791,6 +1793,7 @@ MonoBehaviour:
   flashDuration: 0.2
   enemyProjectiles: 5
   enemySlash: 10
+  flameDamage: 2
 --- !u!61 &7260563077848408811
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1846,6 +1849,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5258179310238934899}
   - component: {fileID: 4432870319788861188}
+  - component: {fileID: 1237745087310745908}
   m_Layer: 0
   m_Name: PlayerFeet
   m_TagString: PlayerFeet
@@ -1913,6 +1917,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.6717291, y: 0.36063385}
   m_EdgeRadius: 0
+--- !u!114 &1237745087310745908
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7611875156806708458}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 425baa3445c84944e9b77a1cecce877d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &9059171302017739166
 GameObject:
   m_ObjectHideFlags: 0
