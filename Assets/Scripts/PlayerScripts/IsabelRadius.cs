@@ -26,7 +26,7 @@ public class IsabelRadius : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.gameObject.name == "Isabel")
+        if(turnOn && collision.gameObject.name == "Isabel")
         {
             onRadius = true;
             isabelInfo.SetActive(!onRadius);
