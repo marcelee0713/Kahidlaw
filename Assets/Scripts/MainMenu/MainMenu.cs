@@ -33,23 +33,30 @@ public class MainMenu : MonoBehaviour
     public TextMeshProUGUI eraText;
     public TextMeshProUGUI currentTimeRecordText;
     public TextMeshProUGUI completedTimeRecordText;
+    public Image currentEraImage;
+    public Sprite[] eraImages;
 
     [Header("Playable Buttons")]
     [SerializeField] private LevelLoader levelLoader;
     [SerializeField] private GameObject newGamePanel;
     private float defaultContinuePosX;
+    private float defaultContinuePosY;
     private float defaultNewPosX;
-    private float defaultNewAndContinuePosY;
+    private float defaultNewPosY;
     [SerializeField] private GameObject continueGameObj;
     [SerializeField] private GameObject newGameObj;
     [SerializeField] private GameObject uploadBtnGameObj;
     [SerializeField] private TextMeshProUGUI recordInfoText;
 
+    // This is just for the UI bug
+    private bool isUploadableContainer = false;
+
     private void Start()
     {
-        defaultContinuePosX = continueGameObj.transform.position.x;
-        defaultNewPosX = newGameObj.transform.position.x;
-        defaultNewAndContinuePosY = newGameObj.transform.position.y;
+        defaultContinuePosX = continueGameObj.transform.localPosition.x;
+        defaultContinuePosY = continueGameObj.transform.localPosition.y;
+        defaultNewPosX = newGameObj.transform.localPosition.x;
+        defaultNewPosY = newGameObj.transform.localPosition.y;
         ChangeMainBackground();
 
         musicFromStart = GameObject.FindGameObjectWithTag("GameAudio");
@@ -73,9 +80,9 @@ public class MainMenu : MonoBehaviour
                 playerRefs.ChangeEra(Eras.PreColonial);
                 eraInformation.SetActive(true);
                 ChangeButtonPositionsAndStates(Eras.PreColonial);
-                eraText.text = "Pre-Colonial Era";
                 ChangeTimeRecords(Eras.PreColonial);
                 db.ChangeCollection("PreColonialEra");
+                currentEraImage.sprite = eraImages[0];
                 break;
 
             case 1:
@@ -84,9 +91,9 @@ public class MainMenu : MonoBehaviour
                     playerRefs.ChangeEra(Eras.Spanish);
                     eraInformation.SetActive(true);
                     ChangeButtonPositionsAndStates(Eras.Spanish);
-                    eraText.text = "Spanish Era";
                     ChangeTimeRecords(Eras.Spanish);
                     db.ChangeCollection("SpanishEra");
+                    currentEraImage.sprite = eraImages[1];
                     break;
                 }
 
@@ -99,9 +106,9 @@ public class MainMenu : MonoBehaviour
                     playerRefs.ChangeEra(Eras.American);
                     eraInformation.SetActive(true);
                     ChangeButtonPositionsAndStates(Eras.American);
-                    eraText.text = "American Era";
                     ChangeTimeRecords(Eras.American);
                     db.ChangeCollection("AmericanEra");
+                    currentEraImage.sprite = eraImages[2];
                     break;
                 }
 
@@ -114,9 +121,9 @@ public class MainMenu : MonoBehaviour
                     playerRefs.ChangeEra(Eras.Japanese);
                     eraInformation.SetActive(true);
                     ChangeButtonPositionsAndStates(Eras.Japanese);
-                    eraText.text = "Japanese Era";
                     ChangeTimeRecords(Eras.Japanese);
                     db.ChangeCollection("JapaneseEra");
+                    currentEraImage.sprite = eraImages[2];
                     break;
                 }
 
@@ -129,9 +136,9 @@ public class MainMenu : MonoBehaviour
                     playerRefs.ChangeEra(Eras.MartialLaw);
                     eraInformation.SetActive(true);
                     ChangeButtonPositionsAndStates(Eras.MartialLaw);
-                    eraText.text = "Martial Law Era";
                     ChangeTimeRecords(Eras.MartialLaw);
                     db.ChangeCollection("MartialLawEra");
+                    currentEraImage.sprite = eraImages[3];
                     break;
                 }
 
@@ -212,9 +219,32 @@ public class MainMenu : MonoBehaviour
             return false;
         }
 
+        if (uploadableInfoContainer.activeSelf && !recordInfoContainer.activeSelf) 
+        {
+            isUploadableContainer = true;
+            uploadableInfoContainer.SetActive(false);
+        }
+        else
+        {
+            isUploadableContainer = false;
+            recordInfoContainer.SetActive(false);
+        }
+
         newGamePanel.SetActive(true);
         return true;
 
+    }
+
+    public void OnNo()
+    {
+        if (isUploadableContainer)
+        {
+            uploadableInfoContainer.SetActive(true);
+        }
+        else
+        {
+            recordInfoContainer.SetActive(true);
+        }
     }
 
     public void StartNewGame()
@@ -280,7 +310,7 @@ public class MainMenu : MonoBehaviour
             recordInfoContainer.SetActive(false);
             continueGameObj.SetActive(false);
             newGameObj.SetActive(true);
-            newGameObj.transform.position = new Vector3(0, defaultNewAndContinuePosY);
+            newGameObj.transform.localPosition = new Vector3(0, defaultNewPosY);
         }
         else
         {
@@ -289,13 +319,13 @@ public class MainMenu : MonoBehaviour
             if (gameTime <= 0)
             {
                 newGameObj.SetActive(true);
-                newGameObj.transform.position = new Vector3(0, defaultNewAndContinuePosY);
+                newGameObj.transform.localPosition = new Vector3(0, defaultNewPosY);
                 continueGameObj.SetActive(false);
             }
             else
             {
-                newGameObj.transform.position = new Vector3(defaultNewPosX, defaultNewAndContinuePosY);
-                continueGameObj.transform.position = new Vector3(defaultContinuePosX, defaultNewAndContinuePosY);
+                newGameObj.transform.localPosition = new Vector3(defaultNewPosX, defaultNewPosY);
+                continueGameObj.transform.localPosition = new Vector3(defaultContinuePosX, defaultContinuePosY);
                 continueGameObj.SetActive(true);
                 newGameObj.SetActive(true);
             }
