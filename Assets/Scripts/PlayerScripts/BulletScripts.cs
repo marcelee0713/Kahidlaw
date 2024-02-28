@@ -13,7 +13,7 @@ public class BulletScripts : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("Triggered by: " + collision.tag);
+        Debug.Log("Triggered by: " + collision.gameObject.name);
         Destroy(gameObject);
     }
 }

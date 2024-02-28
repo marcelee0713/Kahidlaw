@@ -29,7 +29,6 @@ public class FourDirectionOnRanged : MonoBehaviour
     [SerializeField] private float stopMovingRangeX;
     [SerializeField] private LayerMask playerLayer;
 
-
     [Header("Shooting Distance")]
     [SerializeField] private float shootingDistance;
     [SerializeField] private BoxCollider2D shootBoxCollider;
@@ -43,6 +42,16 @@ public class FourDirectionOnRanged : MonoBehaviour
     public RaycastHit2D currentHit;
     public GameObject currentlyTargetObj;
     private RaycastHit2D[] detectionRadius;
+
+    [Header("Capture The Flag")]
+    [SerializeField] private Transform flagLocation;
+    public bool CTFEnable = false;
+
+    [SerializeField] private BoxCollider2D ctfCollider;
+    [SerializeField] private float ctfDetectionRangeY;
+    [SerializeField] private float ctfDetectionRangeX;
+    [SerializeField] private LayerMask ctfLayer;
+
 
     private void Start()
     {
@@ -65,6 +74,7 @@ public class FourDirectionOnRanged : MonoBehaviour
 
         if(EnemyOnShootingRange())
         {
+            anim.SetBool("isMoving", false);
 
             if (allowToMove)
             {
@@ -103,13 +113,34 @@ public class FourDirectionOnRanged : MonoBehaviour
         }
         else
         {
-            inRangedOn4d = false;
-            anim.SetBool("isShooting", false);
-            rb.velocity = Vector2.zero;
-            if (allowToMove) anim.SetBool("isWShooting", false);
+            if (!CTFEnable)
+            {
+                StandStill();
+                return;
+            }
+
+            CaptureTheFlag();
+
         }
+    }
 
+    private void CaptureTheFlag()
+    {
+        if (!OnCTFRange())
+        {
+            anim.SetBool("isWShooting", false);
+            anim.SetBool("isShooting", false);
+            anim.SetBool("isMoving", true);
+            Vector2 headThroughFlag = (flagLocation.transform.position - enemyPosition.transform.position).normalized * movementSpeed;
+            rb.velocity = headThroughFlag;
+            anim.SetFloat("Horizontal", rb.velocity.x);
+            anim.SetFloat("Vertical", rb.velocity.y);
 
+        }
+        else
+        {
+            StandStill();
+        }
     }
 
     public bool EnemyOnShootingRange()
@@ -132,6 +163,16 @@ public class FourDirectionOnRanged : MonoBehaviour
             Physics2D.BoxCast(boxCollider.bounds.center + transform.right * stopMovingRangeX * transform.localScale.x * colliderDistance,
             new Vector3(boxCollider.bounds.size.x * stopMovingRangeX, boxCollider.bounds.size.y * stopMovingRangeY, boxCollider.bounds.size.z),
             0, Vector2.left, 0, playerLayer);
+
+        return hit.collider != null;
+    }
+
+    public bool OnCTFRange()
+    {
+        RaycastHit2D hit =
+            Physics2D.BoxCast(ctfCollider.bounds.center + transform.right * ctfDetectionRangeX * transform.localScale.x * colliderDistance,
+            new Vector3(ctfCollider.bounds.size.x * ctfDetectionRangeX, ctfCollider.bounds.size.y * ctfDetectionRangeY, ctfCollider.bounds.size.z),
+            0, Vector2.left, 0, ctfLayer);
 
         return hit.collider != null;
     }
@@ -185,5 +226,14 @@ public class FourDirectionOnRanged : MonoBehaviour
                 currentlyTargetObj = detectionRadius[i].collider.gameObject;
             }
         }
+    }
+
+    private void StandStill()
+    {
+        inRangedOn4d = false;
+        anim.SetBool("isShooting", false);
+        rb.velocity = Vector2.zero;
+        if (allowToMove) anim.SetBool("isWShooting", false);
+        anim.SetBool("isMoving", false);
     }
 }
