@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
@@ -9,6 +10,7 @@ public class CTF : MonoBehaviour
     [SerializeField] private GameObject barObject;
     [SerializeField] private Slider bar;
     [SerializeField] private Image fill;
+    [SerializeField] private TextMeshProUGUI flagTextInfo;
     [SerializeField] private SpriteRenderer flag;
     [SerializeField] private Sprite defaultFlag;
     [SerializeField] private Sprite playerFlag;
@@ -36,11 +38,21 @@ public class CTF : MonoBehaviour
     [SerializeField] private UnityEvent playerCapturedCallback;
     [SerializeField] private UnityEvent enemyCapturedCallback;
 
+    private bool haveStarted = false;
+
     void Start()
     {
-        defaultFlag = flag.sprite;
-        value = 0f;
-        bar.maxValue = maxValue;
+        if (!haveStarted)
+        {
+            defaultFlag = flag.sprite;
+            value = 0f;
+            bar.value = value;
+            bar.maxValue = maxValue;
+
+            haveStarted = true;
+            barObject.SetActive(false);
+        }
+
     }
 
     void Update ()
@@ -73,15 +85,22 @@ public class CTF : MonoBehaviour
     }
 
     private void ReCapturingTheFlag() 
-    {  
+    {
+        if (players.Count == enemies.Count)
+        {
+            CheckAndRun(barObject, () => flagTextInfo.text = playerMajority ? "defend your flag" : "enemy's flag");
+            return;
+        }
 
         if (playerMajority)
         {
             ReCaptureValueHandler(playerMajority, players, enemies);
+            //CheckAndRun(barObject, () => flagTextInfo.text = "re-capturing the flag");
         }
         else
         {
             ReCaptureValueHandler(enemyMajority, enemies, players);
+            //CheckAndRun(barObject, () => flagTextInfo.text = "the enemy is re-capturing the flag");
         }
     }
 
@@ -91,30 +110,40 @@ public class CTF : MonoBehaviour
         if (majority && (opposingList.Count > demensedList.Count))
         {
             value -= Time.deltaTime;
-            bar.value = value;
+            CheckAndRun(barObject, () => bar.value = value);
+            CheckAndRun(barObject, () => flagTextInfo.text = playerMajority ? "the enemy re-capturing the flag" : "re-capturing the flag");
+
         }
+
         // If there is no longer enemies around the radius of the captured flag
         else if (majority && (opposingList.Count <= 0 || opposingList.Count < demensedList.Count))
         {
             if (value <= maxValue) value += Time.deltaTime;
-            bar.value = value;
+            CheckAndRun(barObject, () => bar.value = value);
+            CheckAndRun(barObject, () => flagTextInfo.text = "");
         }
     }
 
     private void ValueHandler()
     {
-        if (players.Count == enemies.Count) return;
+        if (players.Count == enemies.Count)
+        {
+            CheckAndRun(barObject, () => flagTextInfo.text = "both teams are equally competing the flag!");
+            return;
+        }
 
         value += Time.deltaTime;
-        bar.value = value;
+        CheckAndRun(barObject, () => bar.value = value);
 
         if (players.Count > enemies.Count)
         {
+            CheckAndRun(barObject,() => flagTextInfo.text = "capturing the flag");
             playerMajority = true;
             enemyMajority = false;
         }
         else
         {
+            CheckAndRun(barObject, () => flagTextInfo.text = "the enemy is capturing the flag");
             playerMajority = false;
             enemyMajority = true;
         }
@@ -126,7 +155,7 @@ public class CTF : MonoBehaviour
         if (players.Count == enemies.Count)
         {
             radiusSr.color = defaultColor;
-            fill.color = defaultColor;
+            CheckAndRun(barObject, () => fill.color = defaultColor);
 
             return;
         }
@@ -136,13 +165,16 @@ public class CTF : MonoBehaviour
 
 
         radiusSr.color = players.Count > enemies.Count ? radiusSr.color = playerColor : radiusSr.color = enemyColor;
-        fill.color = players.Count > enemies.Count ? fill.color = playerColorFill : fill.color = enemyColorFill;
+        CheckAndRun(barObject, () => fill.color = players.Count > enemies.Count ? fill.color = playerColorFill : fill.color = enemyColorFill);
+
+        
     } 
 
     private void Absence()
     {
         radiusSr.color = defaultColor;
-        fill.color = defaultColor;
+        CheckAndRun(barObject, () => fill.color = defaultColor);
+        CheckAndRun(barObject, () => flagTextInfo.text = "");
 
         if (value != 0f) value -= Time.deltaTime;
 
@@ -191,6 +223,11 @@ public class CTF : MonoBehaviour
             GameObject obj = collision.gameObject;
 
             if (!players.Contains(obj)) players.Add(obj);
+
+            if (collision.gameObject.name == "Marco" || collision.gameObject.name == "Isabel")
+            {
+                barObject.SetActive(true);
+            }
         }
 
         if (collision.gameObject.CompareTag("Enemy"))
@@ -208,6 +245,12 @@ public class CTF : MonoBehaviour
             GameObject obj = collision.gameObject;
 
             if (players.Contains(obj)) players.Remove(obj);
+
+
+            if (collision.gameObject.name == "Marco" || collision.gameObject.name == "Isabel")
+            {
+               if (haveStarted) barObject.SetActive(false);
+            }
         }
 
         if (collision.gameObject.CompareTag("Enemy"))
@@ -215,6 +258,15 @@ public class CTF : MonoBehaviour
             GameObject obj = collision.gameObject;
 
             if (enemies.Remove(obj)) enemies.Remove(obj);
+        }
+    }
+
+    public delegate void Callback();
+    public void CheckAndRun(GameObject thisGameObject, Callback callback)
+    {
+        if (thisGameObject != null)
+        {
+            callback();
         }
     }
 }
