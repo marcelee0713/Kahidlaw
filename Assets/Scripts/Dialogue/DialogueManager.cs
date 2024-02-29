@@ -357,7 +357,8 @@ public class DialogueManager : MonoBehaviour
     public void DisableSettingsButton()
     {
         ModeChanger.mode = "Neutral";
-        settingsButton.SetActive(false);
+        CheckAndRun(settingsButton, () => settingsButton.SetActive(false));
+        
     }
 
     void EnableHUD()

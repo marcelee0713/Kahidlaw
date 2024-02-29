@@ -168,6 +168,7 @@ public class MainMenu : MonoBehaviour
                 break;
             case Eras.Japanese:
                 // Add a LoadLastGame for Japanese
+                levelLoader.LoadLastGame("Japanese-Era", "Japanese-Chapter1-Prologue");
                 FadeOutMusic();
                 break;
             case Eras.MartialLaw:
@@ -282,7 +283,7 @@ public class MainMenu : MonoBehaviour
                 ResetEra("Japanese-Era", "JapaneseEraCurrentTime", "FinishedJapaneseEra", "UploadedJapaneseEra");
                 ResetEra("MartialLaw-Era", "MartialLawEraCurrentTime", "FinishedMartialLawEra", "UploadedMartialLawEra");
 
-                // Make a function for the start of Japanese;
+                levelLoader.LoadGame("Japanese-Chapter1-Prologue");
                 FadeOutMusic();
                 break;
             case Eras.MartialLaw:

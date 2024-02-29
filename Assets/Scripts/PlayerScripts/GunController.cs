@@ -88,7 +88,7 @@ public class GunController : MonoBehaviour
 
     public void Shoot()
     {
-        Destroy(projectile);
+        //Destroy(projectile);
         projectile = Instantiate(bullet, muzzleLocation.position, Quaternion.identity);
         projectile.GetComponent<Rigidbody2D>().velocity = new Vector2(aimDirection.x * bulletSpeed, aimDirection.y * bulletSpeed);
         projectile.transform.Rotate(0.0f, 0.0f, Mathf.Atan2(aimDirection.y, aimDirection.x) * Mathf.Rad2Deg);
