@@ -24,6 +24,7 @@ public class Environment : MonoBehaviour
 
     [Header("Notifier")]
     public GameObject notifier;
+    public TextMeshProUGUI notifierHeadText;
     public TextMeshProUGUI notifierText;
 
     [Header("Characters")]
@@ -176,6 +177,11 @@ public class Environment : MonoBehaviour
     {
         StopAllCoroutines();
         StartCoroutine(HandleNotifier(notifierNewText));
+    }
+
+    public void ChangeHeadNotifierText(string text)
+    {
+        notifierHeadText.text = text;
     }
 
     private IEnumerator HandleNotifier(string text)
