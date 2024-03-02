@@ -73,7 +73,7 @@ SpriteRenderer:
   m_SortingLayerID: -971667303
   m_SortingLayer: 2
   m_SortingOrder: 2
-  m_Sprite: {fileID: 21300000, guid: 54fe671487fe2ea4c938fcca52fa566e, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 5885093748ad4ed47ad49768b2d25eb4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -302,8 +302,10 @@ MonoBehaviour:
   actors:
   - name: Isabel
     sprite: {fileID: 21300000, guid: ccad13bbc1eeaa847b8c8f8b2790ac9e, type: 3}
+    flipImage: 0
   - name: Guardia Roberto
     sprite: {fileID: 21300000, guid: 3250ddc6110bb62448c7e5265163d8f9, type: 3}
+    flipImage: 0
   gameManager: {fileID: 0}
   StartCallback:
     m_PersistentCalls:
