@@ -36,12 +36,15 @@ public class FourDirectionOnRanged : MonoBehaviour
     [SerializeField] private float shootRangeX;
 
     [SerializeField] private EnemyHealthSystem enemyHealthSystem;
+    [SerializeField] private int halfHealth;
+    private bool isHalfed = false;
 
     [Header("Attack Queue")]
     public Transform currentTargetPos;
     public RaycastHit2D currentHit;
     public GameObject currentlyTargetObj;
     private RaycastHit2D[] detectionRadius;
+    public bool allowDifferentMovesets = false;
 
     [Header("Capture The Flag")]
     [SerializeField] private Transform flagLocation;
@@ -58,6 +61,7 @@ public class FourDirectionOnRanged : MonoBehaviour
         anim = GetComponentInParent<Animator>();
         rb = GetComponentInParent<Rigidbody2D>();
         enemyHealthSystem = GetComponentInParent<EnemyHealthSystem>();
+        halfHealth = enemyHealthSystem.health / 2;
     }
 
     private void Update()
@@ -78,20 +82,7 @@ public class FourDirectionOnRanged : MonoBehaviour
 
             if (allowToMove)
             {
-                if (EnemyOnExactRange())
-                {
-                    if (!enemyHealthSystem.enemyIsHurt) rb.velocity = Vector2.zero;
-                    anim.SetBool("isShooting", true);
-                    anim.SetBool("isWShooting", false);
-                }
-                else
-                {
-                    anim.SetBool("isWShooting", true);
-                    Vector2 headThroughPlayer = (currentTargetPos.transform.position - enemyPosition.transform.position).normalized * movementSpeed;
-
-                    rb.velocity = headThroughPlayer;
-                }
-
+                Movesets();
             } 
             else
             {
@@ -226,6 +217,65 @@ public class FourDirectionOnRanged : MonoBehaviour
                 currentlyTargetObj = detectionRadius[i].collider.gameObject;
             }
         }
+    }
+
+    // Movesets
+
+    private void Movesets()
+    {
+        if (!allowDifferentMovesets)
+        {
+            ForwardWhileShooting();
+            return;
+        }
+
+        if (halfHealth <= enemyHealthSystem.health)
+        {
+            ForwardWhileShooting();
+        }
+        else
+        {
+            if (!isHalfed)
+            {
+                stopMovingRangeX += 10f;
+                stopMovingRangeY += 3f;
+                isHalfed = true;
+            }
+            BackWhileShooting();
+        }
+    }
+    private void ForwardWhileShooting()
+    {
+        if (EnemyOnExactRange())
+        {
+            if (!enemyHealthSystem.enemyIsHurt) rb.velocity = Vector2.zero;
+            anim.SetBool("isShooting", true);
+            anim.SetBool("isWShooting", false);
+        }
+        else
+        {
+            anim.SetBool("isWShooting", true);
+            Vector2 headThroughPlayer = (currentTargetPos.transform.position - enemyPosition.transform.position).normalized * movementSpeed;
+            rb.velocity = headThroughPlayer;
+        }
+    }
+
+    private void BackWhileShooting()
+    {
+        if (EnemyOnExactRange())
+        {
+            anim.SetBool("isShooting", true);
+            anim.SetBool("isWShooting", true);
+            Vector2 headThroughPlayer = (currentTargetPos.transform.position - enemyPosition.transform.position).normalized * movementSpeed;
+            rb.velocity = -headThroughPlayer;
+        }
+        else
+        {
+            anim.SetBool("isShooting", true);
+            anim.SetBool("isWShooting", false);
+            rb.velocity = Vector2.zero;
+        }
+
     }
 
     private void StandStill()
