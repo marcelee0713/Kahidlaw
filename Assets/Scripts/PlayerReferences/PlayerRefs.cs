@@ -419,7 +419,6 @@ public class PlayerRefs : MonoBehaviour
     }
 
     // Pre Colonial Era Refs
-
     public void WithLapuLapu(string choice)
     {
         PlayerPrefs.SetString("PreColonial-Chapter3-LapuLapu", choice);
@@ -473,6 +472,15 @@ public class PlayerRefs : MonoBehaviour
         if (savename != "")
         {
             PlayerPrefs.SetString("PreColonial-Era", savename);
+        }
+    }
+
+    public void JapaneseSaveGame(string savename)
+    {
+
+        if (savename != "")
+        {
+            PlayerPrefs.SetString("Japanese-Era", savename);
         }
     }
 

@@ -724,8 +724,8 @@ MonoBehaviour:
   footStepsAudioSource: {fileID: 8821701584277118571}
   woodFootSteps: {fileID: 8300000, guid: 9841bdcd89da3b44184e61f3158f2d6a, type: 3}
   tilesFootSteps: {fileID: 8300000, guid: a5bff3c1486eed34192491ed4ee26cd9, type: 3}
-  brickFootSteps: {fileID: 0}
-  dirtFootSteps: {fileID: 0}
+  brickFootSteps: {fileID: 8300000, guid: 18a2af57f1ddd7f49875bffea77da36d, type: 3}
+  dirtFootSteps: {fileID: 8300000, guid: 563c547cf5b9b5e4e91d90e125d4d26d, type: 3}
   joystick: {fileID: 0}
   stepped: wood
 --- !u!1 &4646761294888174729
@@ -800,7 +800,7 @@ Camera:
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 2097151
+    m_Bits: 102760447
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
