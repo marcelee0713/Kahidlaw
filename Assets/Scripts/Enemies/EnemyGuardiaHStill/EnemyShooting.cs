@@ -17,6 +17,7 @@ public class EnemyShooting : MonoBehaviour
     [SerializeField] private RightDetector rightDetector;
     [SerializeField] private HorizontalOnRanged OnRangedH;
     [SerializeField] private FourDirectionOnRanged OnRanged4D;
+    [SerializeField] private AllyGunController allyOnRanged4D;
 
     [Header("Vertical Detectors")]
     [SerializeField] private FrontDetector FDetector;
@@ -28,7 +29,19 @@ public class EnemyShooting : MonoBehaviour
     {
         //Destroy(projectile);
         projectile = Instantiate(bullet, muzzleLocation.position, Quaternion.identity);
-        if(OnRanged4D == null)
+
+        if (allyOnRanged4D != null)
+        {
+            if (allyOnRanged4D.inRangedOn4d)
+            {
+                Vector2 moveDirection = (allyOnRanged4D.currentTargetPos.transform.position - projectile.transform.position).normalized * bulletSpeed;
+                projectile.GetComponent<Rigidbody2D>().velocity = new Vector2(moveDirection.x, moveDirection.y);
+                projectile.transform.Rotate(0.0f, 0.0f, Mathf.Atan2(0, 0) * Mathf.Rad2Deg);
+            }
+            return;
+        }
+
+        if (OnRanged4D == null)
         {
             if (OnRangedH.inRangedEnemy)
             {
@@ -37,7 +50,7 @@ public class EnemyShooting : MonoBehaviour
                 projectile.transform.Rotate(0.0f, 0.0f, Mathf.Atan2(0, 0) * Mathf.Rad2Deg);
             }
         }
-        else
+        else if (OnRanged4D)
         {
             if (OnRanged4D.inRangedOn4d)
             {

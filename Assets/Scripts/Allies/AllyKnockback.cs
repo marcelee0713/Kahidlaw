@@ -10,6 +10,7 @@ public class AllyKnockback : MonoBehaviour
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        if (rb == null) rb = GetComponentInParent<Rigidbody2D>();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

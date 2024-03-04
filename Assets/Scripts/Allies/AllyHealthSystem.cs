@@ -10,6 +10,8 @@ public class AllyHealthSystem : MonoBehaviour
     private Animator anim;
     private Rigidbody2D rb;
     [SerializeField] private AllyMeleeController allyMeleeController;
+    [SerializeField] private AllyGunController onRanged4D;
+
 
     [Header("Init Facing Direction")]
     [SerializeField] private float directionY = 0f;
@@ -81,11 +83,14 @@ public class AllyHealthSystem : MonoBehaviour
         if (collision.gameObject.CompareTag("EnemyProjectile"))
         {
             TakeDamage(gun);
+            if (onRanged4D) onRanged4D.ChangeTarget(collision.gameObject);
+            if (allyMeleeController) allyMeleeController.ChangeTarget(collision.gameObject);
         }
 
         if (collision.gameObject.CompareTag("EnemySlash"))
         {
             TakeDamage(slash);
+            if (onRanged4D) onRanged4D.ChangeTarget(collision.gameObject);
             if (allyMeleeController) allyMeleeController.ChangeTarget(collision.gameObject);
         }
     }

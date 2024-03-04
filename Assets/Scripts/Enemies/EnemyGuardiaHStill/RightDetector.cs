@@ -19,7 +19,7 @@ public class RightDetector : MonoBehaviour
 
     [Header("Ally Related")]
     [SerializeField] private AllyMeleeController onRangedAllyMelee;
-
+    [SerializeField] private AllyGunController onRangedAlly;
 
     private Animator anim;
 
@@ -74,6 +74,14 @@ public class RightDetector : MonoBehaviour
 
 
             return hit.collider.gameObject == onRangedAllyMelee.currentlyTargetObj;
+        }
+
+        if (onRangedAlly != null)
+        {
+            if (onRangedAlly.currentlyTargetObj == null || hit.collider == null) return false;
+
+
+            return hit.collider.gameObject == onRangedAlly.currentlyTargetObj;
         }
 
         return false;
