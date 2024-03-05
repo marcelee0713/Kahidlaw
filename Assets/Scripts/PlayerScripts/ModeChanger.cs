@@ -13,7 +13,7 @@ public class ModeChanger : MonoBehaviour
     public string changeMode = "";
     public static string currentCharacter = "Marco";
 
-
+    public GameObject meleeObject;
 
     void Start()
     {
@@ -40,6 +40,11 @@ public class ModeChanger : MonoBehaviour
         {
             CheckAndRun(MarcoCamera, () => MarcoCamera.enabled = false);
             IsabelCamera.enabled = true;
+            if (mode == "Melee")
+            {
+                mode = "Neutral";
+                CheckGameObject(meleeObject, () => meleeObject.SetActive(false));
+            }
         }
     }
 
@@ -52,6 +57,7 @@ public class ModeChanger : MonoBehaviour
         else if (mode == "Gun")
         {
             mode = "Melee";
+            if (currentCharacter == "Isabel") mode = "Neutral";
         }
         else
         {
@@ -79,6 +85,14 @@ public class ModeChanger : MonoBehaviour
     public delegate void Callback();
 
     public void CheckAndRun(Camera thisGameObject, Callback callback)
+    {
+        if (thisGameObject != null)
+        {
+            callback();
+        }
+    }
+
+    public void CheckGameObject(GameObject thisGameObject, Callback callback)
     {
         if (thisGameObject != null)
         {

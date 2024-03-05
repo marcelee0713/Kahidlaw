@@ -18,6 +18,8 @@ public class CTF : MonoBehaviour
     [SerializeField] private float value;
     [SerializeField] private float maxValue;
     [SerializeField] private bool isCaptured = false;
+    [SerializeField] private bool capturedFlagInit = false;
+
 
     [Header ("Current Majority")]
     public bool playerMajority = false;
@@ -51,6 +53,11 @@ public class CTF : MonoBehaviour
 
             haveStarted = true;
             barObject.SetActive(false);
+        }
+
+        if (capturedFlagInit)
+        {
+            value = maxValue;
         }
 
     }
@@ -226,7 +233,7 @@ public class CTF : MonoBehaviour
 
             if (collision.gameObject.name == "Marco" || collision.gameObject.name == "Isabel")
             {
-                barObject.SetActive(true);
+                if(!DialogueManager.isDialogueActive) barObject.SetActive(true);
             }
         }
 

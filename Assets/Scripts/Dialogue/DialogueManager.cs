@@ -44,6 +44,7 @@ public class DialogueManager : MonoBehaviour
     public GameObject switchCharButton;
     public GameObject settingsButton;
     public GameObject hinter;
+    public GameObject flagbar;
 
     public static bool isDialogueActive = false;
     private Coroutine displayLineCoroutine;
@@ -352,6 +353,7 @@ public class DialogueManager : MonoBehaviour
         CheckAndRun(meleeController, () => meleeController.SetActive(false));
         CheckAndRun(switchCharButton, () => switchCharButton.SetActive(false));
         CheckAndRun(hinter, () => hinter.SetActive(false));
+        CheckAndRun(flagbar, () => flagbar.SetActive(false));
     }
 
     public void DisableSettingsButton()
