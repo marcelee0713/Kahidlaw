@@ -45,4 +45,15 @@ public class IsabelRadius : MonoBehaviour
 
         }
     }
+
+    public void TurnOff()
+    {
+        turnOn = false;
+        onRadius = false;
+    }
+
+    public void TurnOn()
+    {
+        turnOn = true;
+    }
 }

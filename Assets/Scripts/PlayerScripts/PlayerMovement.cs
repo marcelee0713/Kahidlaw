@@ -135,4 +135,9 @@ public class PlayerMovement : MonoBehaviour
     {
         joystick.DisableInput();
     }
+
+    public void DoNotAllowToBothMove()
+    {
+        AllowToMoveBoth = false;
+    }
 }
