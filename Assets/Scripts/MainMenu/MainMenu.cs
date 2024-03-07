@@ -289,7 +289,7 @@ public class MainMenu : MonoBehaviour
             case Eras.MartialLaw:
                 ResetEra("MartialLaw-Era", "MartialLawEraCurrentTime", "FinishedMartialLawEra", "UploadedMartialLawEra");
 
-                // Make a function for the start of MartialLaw;
+                levelLoader.LoadGame("MartialLaw-Chapter1-Prologue");
                 FadeOutMusic();
                 break;
         }

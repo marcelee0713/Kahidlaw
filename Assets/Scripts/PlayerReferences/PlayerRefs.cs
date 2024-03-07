@@ -484,6 +484,14 @@ public class PlayerRefs : MonoBehaviour
         }
     }
 
+    public void MartialLawSaveGame(string savename)
+    {
+        if (savename != "")
+        {
+            PlayerPrefs.SetString("MartialLaw-Era", savename);
+        }
+    }
+
     private void Chapter2ButterflyEffect()
     {
         if (DidHelpedTheIndios() == "y")
