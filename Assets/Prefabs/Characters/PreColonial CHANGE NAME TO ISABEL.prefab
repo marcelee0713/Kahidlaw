@@ -371,7 +371,7 @@ Transform:
   - {fileID: 3889727707650157728}
   - {fileID: 5904552772186275013}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &5478013948701236030
 SpriteRenderer:
@@ -529,6 +529,7 @@ MonoBehaviour:
   IsabelCamera: {fileID: 3261260882437049789}
   character: Isabel
   changeMode: 
+  meleeObject: {fileID: 0}
 --- !u!61 &6541101342259135664
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -921,7 +922,7 @@ Camera:
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 2097151
+    m_Bits: 132120575
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
