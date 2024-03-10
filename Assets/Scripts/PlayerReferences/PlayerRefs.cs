@@ -466,6 +466,15 @@ public class PlayerRefs : MonoBehaviour
         }
     }
 
+    // Martial Law Prefs
+    public void PickASide(string side)
+    {
+        if (side != "")
+        {
+            PlayerPrefs.SetString("Martial-Law-Side", side);
+        }
+    } 
+
     public void PreColonialSaveGame(string savename)
     {
        

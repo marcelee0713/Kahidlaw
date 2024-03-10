@@ -100,6 +100,22 @@ public class LevelLoader : MonoBehaviour
         return result != "n";
     }
 
+    public void MartialLawSideLoadGameHandler()
+    {
+        string result = PlayerPrefs.GetString("Martial-Law-Side", "Isabel");
+
+        if (result == "Marco")
+        {
+            // Add Deathmatch for Marco Soon;
+            LoadGame("");
+        }
+        else
+        {
+            // Add Deathmatch for Isabel Soon;
+            LoadGame("");
+        }
+    }
+
     public void CutsceneConsequencesChapter3Ambush()
     {
         if (IsWithLapuLapu())
