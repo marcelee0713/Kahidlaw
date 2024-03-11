@@ -1783,6 +1783,7 @@ MonoBehaviour:
   IsabelCamera: {fileID: 0}
   character: Marco
   changeMode: 
+  meleeObject: {fileID: 0}
 --- !u!114 &4906363685058888888
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1869,7 +1870,7 @@ MonoBehaviour:
           m_BoolArgument: 1
         m_CallState: 2
   flashMaterial: {fileID: 2100000, guid: 9db01f4575cce734e98ca5e4e6a661de, type: 2}
-  flashDuration: 0
+  flashDuration: 0.125
   enemyProjectiles: 5
   enemySlash: 10
   flameDamage: 2
