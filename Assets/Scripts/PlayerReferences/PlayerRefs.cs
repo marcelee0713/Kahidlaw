@@ -473,6 +473,14 @@ public class PlayerRefs : MonoBehaviour
         {
             PlayerPrefs.SetString("Martial-Law-Side", side);
         }
+    }
+
+    public void EndingSelecter(string pick)
+    {
+        if (pick != "")
+        {
+            PlayerPrefs.SetString("Martial-Law-EndingSelector", pick);
+        }
     } 
 
     public void PreColonialSaveGame(string savename)

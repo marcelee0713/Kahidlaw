@@ -143,6 +143,31 @@ public class LevelLoader : MonoBehaviour
         }
     }
 
+    public void MartialLawEnding()
+    {
+        string result = PlayerPrefs.GetString("Martial-Law-EndingSelector", "good");
+
+        if (result == "good")
+        {
+            PlayerPrefs.SetString("MartialLaw-Era", "MartialLaw-Chapter2-GoodEnding");
+            StartCoroutine(LoadLevel("MartialLaw-Chapter2-GoodEnding"));
+        }
+        else if (result == "marco-bad")
+        {
+            PlayerPrefs.SetString("MartialLaw-Era", "MartialLaw-Chapter2-MarcoBadEnding");
+            StartCoroutine(LoadLevel("MartialLaw-Chapter2-MarcoBadEnding"));
+        }
+        else if (result == "isabel-bad")
+        {
+            PlayerPrefs.SetString("MartialLaw-Era", "MartialLaw-Chapter2-IsabelBadEnding");
+            StartCoroutine(LoadLevel("MartialLaw-Chapter2-IsabelBadEnding"));
+        }
+        else
+        {
+            Debug.Log("Error Ending...");
+        }
+    }
+
     public void LoadCurrentScene()
     {
         Scene currentScene = SceneManager.GetActiveScene();
