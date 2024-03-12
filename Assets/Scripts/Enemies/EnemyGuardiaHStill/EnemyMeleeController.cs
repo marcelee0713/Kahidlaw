@@ -10,11 +10,15 @@ public class EnemyMeleeController : MonoBehaviour
 
     private float cooldownTimer = Mathf.Infinity;
     [SerializeField] private float attackCooldown = 1f;
+    [SerializeField] private float attackCooldownOnRage = .5f;
+
 
     [Header("Chasing")]
     public Transform playerPosition;
     public Transform enemyPosition;
     public float movementSpeed = 2.5f;
+    public float movementSpeedOnRage = 4.5f;
+
 
     [Header("Detector Distance")]
     [SerializeField] private BoxCollider2D detectorCollider;
@@ -52,8 +56,8 @@ public class EnemyMeleeController : MonoBehaviour
 
         if (enemyHealthSystem.onRage)
         {
-            attackCooldown = 0.50f;
-            movementSpeed = 4.5f;
+            attackCooldown = attackCooldownOnRage;
+            movementSpeed = movementSpeedOnRage;
         }
 
         if (PlayerDetectected() && !HealthSystem.playerIsDead)
