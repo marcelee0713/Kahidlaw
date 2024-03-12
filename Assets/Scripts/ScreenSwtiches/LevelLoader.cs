@@ -106,15 +106,13 @@ public class LevelLoader : MonoBehaviour
 
         if (result == "Marco")
         {
-            // Add Deathmatch for Marco Soon;
             PlayerPrefs.SetString("MartialLaw-Era", "MartialLaw-Chapter2-MarcoDeathMatch");
             LoadGame("MartialLaw-Chapter2-MarcoDeathMatch");
         }
         else
         {
-            // Add Deathmatch for Isabel Soon;
-            PlayerPrefs.SetString("MartialLaw-Era", "");
-            LoadGame("");
+            PlayerPrefs.SetString("MartialLaw-Era", "MartialLaw-Chapter2-IsabelDeathMatch");
+            LoadGame("MartialLaw-Chapter2-IsabelDeathMatch");
         }
     }
 
