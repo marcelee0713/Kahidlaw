@@ -173,6 +173,7 @@ public class MainMenu : MonoBehaviour
                 break;
             case Eras.MartialLaw:
                 // Add a LoadLastGame for MartialLaw
+                levelLoader.LoadLastGame("MartialLaw-Era", "Japanese-Chapter1-Prologue");
                 FadeOutMusic();
                 break;
         }
