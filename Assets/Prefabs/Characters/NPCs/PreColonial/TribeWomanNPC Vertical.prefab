@@ -291,7 +291,13 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls: []
     disableHUDAfterDialogue: 0
-  actors: []
+  actors:
+  - name: Marco
+    sprite: {fileID: 21300000, guid: 26e8d70f3226b5542b243c412886d46e, type: 3}
+    flipImage: 0
+  - name: Tribewoman
+    sprite: {fileID: 21300000, guid: b8f31054e91a9fa4795712f83f1860e6, type: 3}
+    flipImage: 0
   gameManager: {fileID: 0}
   StartCallback:
     m_PersistentCalls:

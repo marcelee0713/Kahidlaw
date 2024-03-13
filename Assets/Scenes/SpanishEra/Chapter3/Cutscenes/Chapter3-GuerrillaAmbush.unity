@@ -551,9 +551,11 @@ MonoBehaviour:
     disableHUDAfterDialogue: 1
   actors:
   - name: Isabel
-    sprite: {fileID: 21300000, guid: ccad13bbc1eeaa847b8c8f8b2790ac9e, type: 3}
+    sprite: {fileID: 21300000, guid: 869bc1f3e07ceb04bbdc93cfc16b681d, type: 3}
+    flipImage: 0
   - name: Marco
-    sprite: {fileID: 21300000, guid: 475debb61c9f88248aae6a386bbb105f, type: 3}
+    sprite: {fileID: 21300000, guid: d2d749534e64b2247a94191eeb09d8cd, type: 3}
+    flipImage: 1
   gameManager: {fileID: 0}
   StartCallback:
     m_PersistentCalls:
@@ -79321,6 +79323,10 @@ PrefabInstance:
       propertyPath: actors.Array.data[1].name
       value: Guerrilla Man
       objectReference: {fileID: 0}
+    - target: {fileID: 618759730724407179, guid: 254bbc6b98c03b54cad1e56b9fa5249f, type: 3}
+      propertyPath: actors.Array.data[0].sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: d2d749534e64b2247a94191eeb09d8cd, type: 3}
     - target: {fileID: 618759730724407179, guid: 254bbc6b98c03b54cad1e56b9fa5249f, type: 3}
       propertyPath: actors.Array.data[1].sprite
       value: 

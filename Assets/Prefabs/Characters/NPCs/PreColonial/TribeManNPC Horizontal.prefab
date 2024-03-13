@@ -490,9 +490,27 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls: []
     disableHUDAfterDialogue: 0
+  - actorId: 1
+    message: Found someone to talk to yet?
+    choices: []
+    messageSprite: {fileID: 0}
+    messageTwoSprite: {fileID: 0}
+    messageCallback:
+      m_PersistentCalls:
+        m_Calls: []
+    disableHUDAfterDialogue: 0
+  - actorId: 0
+    message: No I still have to talk to someone.
+    choices: []
+    messageSprite: {fileID: 0}
+    messageTwoSprite: {fileID: 0}
+    messageCallback:
+      m_PersistentCalls:
+        m_Calls: []
+    disableHUDAfterDialogue: 0
   actors:
   - name: Marco
-    sprite: {fileID: 21300000, guid: c5d66fa056cd8a54abe9a37ae39d379c, type: 3}
+    sprite: {fileID: 21300000, guid: 26e8d70f3226b5542b243c412886d46e, type: 3}
     flipImage: 0
   - name: Tribe Man
     sprite: {fileID: 21300000, guid: ceb015d630347b740994798dea7d3fd3, type: 3}

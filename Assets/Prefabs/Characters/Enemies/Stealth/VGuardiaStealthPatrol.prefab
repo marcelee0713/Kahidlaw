@@ -284,8 +284,10 @@ MonoBehaviour:
   actors:
   - name: Guardia
     sprite: {fileID: 21300000, guid: 0ccbd53c98fbc2e449d10afcd67fb2a9, type: 3}
+    flipImage: 0
   - name: Marco
-    sprite: {fileID: 21300000, guid: 0c4cd6385ede6a0489f25bac3b2ada87, type: 3}
+    sprite: {fileID: 21300000, guid: d2d749534e64b2247a94191eeb09d8cd, type: 3}
+    flipImage: 0
   gameManager: {fileID: 0}
   StartCallback:
     m_PersistentCalls:

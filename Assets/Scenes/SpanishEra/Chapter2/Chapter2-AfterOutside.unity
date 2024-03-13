@@ -757,7 +757,7 @@ MonoBehaviour:
     disableHUDAfterDialogue: 0
   actors:
   - name: Isabel
-    sprite: {fileID: 21300000, guid: ccad13bbc1eeaa847b8c8f8b2790ac9e, type: 3}
+    sprite: {fileID: 21300000, guid: 869bc1f3e07ceb04bbdc93cfc16b681d, type: 3}
     flipImage: 0
   - name: Guardia Serafin
     sprite: {fileID: 21300000, guid: 3250ddc6110bb62448c7e5265163d8f9, type: 3}
@@ -3759,7 +3759,7 @@ PrefabInstance:
     - target: {fileID: 618759730724407179, guid: 254bbc6b98c03b54cad1e56b9fa5249f, type: 3}
       propertyPath: actors.Array.data[0].sprite
       value: 
-      objectReference: {fileID: 21300000, guid: ccad13bbc1eeaa847b8c8f8b2790ac9e, type: 3}
+      objectReference: {fileID: 21300000, guid: 869bc1f3e07ceb04bbdc93cfc16b681d, type: 3}
     - target: {fileID: 618759730724407179, guid: 254bbc6b98c03b54cad1e56b9fa5249f, type: 3}
       propertyPath: messages.Array.data[0].message
       value: Well I guess, that was a tiring day.
@@ -9003,7 +9003,7 @@ MonoBehaviour:
     disableHUDAfterDialogue: 0
   actors:
   - name: Isabel
-    sprite: {fileID: 21300000, guid: ccad13bbc1eeaa847b8c8f8b2790ac9e, type: 3}
+    sprite: {fileID: 21300000, guid: 869bc1f3e07ceb04bbdc93cfc16b681d, type: 3}
     flipImage: 0
   - name: Guardia Raymundo
     sprite: {fileID: 21300000, guid: 3250ddc6110bb62448c7e5265163d8f9, type: 3}
@@ -10956,7 +10956,7 @@ MonoBehaviour:
     disableHUDAfterDialogue: 0
   actors:
   - name: Isabel
-    sprite: {fileID: 21300000, guid: ccad13bbc1eeaa847b8c8f8b2790ac9e, type: 3}
+    sprite: {fileID: 21300000, guid: 869bc1f3e07ceb04bbdc93cfc16b681d, type: 3}
     flipImage: 0
   - name: Padre Monsi
     sprite: {fileID: 21300000, guid: 70338c0dac067fb4a9aef49d05195339, type: 3}
@@ -11787,7 +11787,7 @@ MonoBehaviour:
     disableHUDAfterDialogue: 0
   actors:
   - name: Isabel
-    sprite: {fileID: 21300000, guid: ccad13bbc1eeaa847b8c8f8b2790ac9e, type: 3}
+    sprite: {fileID: 21300000, guid: 869bc1f3e07ceb04bbdc93cfc16b681d, type: 3}
     flipImage: 0
   - name: Padre Monsi
     sprite: {fileID: 21300000, guid: 70338c0dac067fb4a9aef49d05195339, type: 3}
@@ -18945,7 +18945,7 @@ PrefabInstance:
     - target: {fileID: 5778202519994947523, guid: 0bc77bf0a91806546ae5bae5989bf1ae, type: 3}
       propertyPath: actors.Array.data[0].sprite
       value: 
-      objectReference: {fileID: 21300000, guid: ccad13bbc1eeaa847b8c8f8b2790ac9e, type: 3}
+      objectReference: {fileID: 21300000, guid: 869bc1f3e07ceb04bbdc93cfc16b681d, type: 3}
     - target: {fileID: 5778202519994947523, guid: 0bc77bf0a91806546ae5bae5989bf1ae, type: 3}
       propertyPath: messages.Array.data[0].message
       value: Hello there, have you found your mop yet?
@@ -19415,27 +19415,27 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+        - m_Target: {fileID: 1950474458}
+          m_TargetAssemblyTypeName: PlayerRefs, Assembly-CSharp
+          m_MethodName: SpanishEraSaveGame
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: Chapter2-PadreMonsiAttempt
+            m_BoolArgument: 0
+          m_CallState: 2
     disableHUDAfterDialogue: 1
   actors:
   - name: Isabel
-    sprite: {fileID: 21300000, guid: ccad13bbc1eeaa847b8c8f8b2790ac9e, type: 3}
+    sprite: {fileID: 21300000, guid: 869bc1f3e07ceb04bbdc93cfc16b681d, type: 3}
     flipImage: 0
   gameManager: {fileID: 290026969}
   StartCallback:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1950474458}
-        m_TargetAssemblyTypeName: PlayerRefs, Assembly-CSharp
-        m_MethodName: SpanishEraSaveGame
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: Chapter2-PadreMonsiAttempt
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!61 &1158162563
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -31359,6 +31359,10 @@ PrefabInstance:
       propertyPath: gameManager
       value: 
       objectReference: {fileID: 290026969}
+    - target: {fileID: 4236133141842598221, guid: 2bd6c0c3cc6668248bf1dc8d4f02e464, type: 3}
+      propertyPath: actors.Array.data[0].sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 869bc1f3e07ceb04bbdc93cfc16b681d, type: 3}
     - target: {fileID: 4451314622542048344, guid: 2bd6c0c3cc6668248bf1dc8d4f02e464, type: 3}
       propertyPath: m_Name
       value: HGuardiaNPCPatrolLeftAndRight
@@ -31380,6 +31384,10 @@ PrefabInstance:
       propertyPath: gameManager
       value: 
       objectReference: {fileID: 290026969}
+    - target: {fileID: 2090928992443999049, guid: a17f4ea773f32524fb5f605ed7b5c168, type: 3}
+      propertyPath: actors.Array.data[0].sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 869bc1f3e07ceb04bbdc93cfc16b681d, type: 3}
     - target: {fileID: 2721595121609792810, guid: a17f4ea773f32524fb5f605ed7b5c168, type: 3}
       propertyPath: m_RootOrder
       value: 15
