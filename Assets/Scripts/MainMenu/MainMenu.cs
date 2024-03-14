@@ -70,6 +70,16 @@ public class MainMenu : MonoBehaviour
         }
     }
 
+    // For Testing
+    private void UnlockAll()
+    {
+        PlayerPrefs.SetString("FinishedPreColonialEra", "true");
+        PlayerPrefs.SetString("FinishedSpanishEra", "true");
+        PlayerPrefs.SetString("FinishedAmericanEra", "true");
+        PlayerPrefs.SetString("FinishedJapaneseEra", "true");
+        PlayerPrefs.SetString("FinishedMartialLawEra", "true");
+    }
+
     // Main Menu | Initialize Game Related
 
     public void OpenEra(int selectedEraIndex)
