@@ -118,7 +118,7 @@ GameObject:
   - component: {fileID: 2030967853355076064}
   m_Layer: 0
   m_Name: MiniMapCamera
-  m_TagString: Untagged
+  m_TagString: IsabelMinimapCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -604,6 +604,7 @@ MonoBehaviour:
   IsabelCamera: {fileID: 1842581172637663799}
   character: Isabel
   changeMode: 
+  meleeObject: {fileID: 0}
 --- !u!61 &7580035525257673415
 BoxCollider2D:
   m_ObjectHideFlags: 0

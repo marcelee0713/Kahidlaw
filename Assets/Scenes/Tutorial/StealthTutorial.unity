@@ -2930,6 +2930,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 435268787}
     m_Modifications:
+    - target: {fileID: 35162997634791990, guid: a0deed81202212a4f9e52032f1f89cd2, type: 3}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1398350653}
+    - target: {fileID: 35162997634791990, guid: a0deed81202212a4f9e52032f1f89cd2, type: 3}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: HandleMinimap
+      objectReference: {fileID: 0}
+    - target: {fileID: 35162997634791990, guid: a0deed81202212a4f9e52032f1f89cd2, type: 3}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: TutorialEnvironment, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 3115549935530956098, guid: a0deed81202212a4f9e52032f1f89cd2, type: 3}
       propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -5788,6 +5800,7 @@ MonoBehaviour:
   actors:
   - name: Marco
     sprite: {fileID: 21300000, guid: 6c0ecc78ad613014fa4ffbe03c90aab6, type: 3}
+    flipImage: 0
   gameManager: {fileID: 0}
   StartCallback:
     m_PersistentCalls:
@@ -5810,6 +5823,9 @@ MonoBehaviour:
   npcAnim: {fileID: 0}
   yDirection: 0
   xDirection: 0
+  callback:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!61 &1377725254
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6477,6 +6493,7 @@ MonoBehaviour:
   actors:
   - name: Marco
     sprite: {fileID: 21300000, guid: 6c0ecc78ad613014fa4ffbe03c90aab6, type: 3}
+    flipImage: 0
   gameManager: {fileID: 0}
   StartCallback:
     m_PersistentCalls:
@@ -6499,6 +6516,9 @@ MonoBehaviour:
   npcAnim: {fileID: 0}
   yDirection: 0
   xDirection: 0
+  callback:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!61 &1524523332
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6663,6 +6683,9 @@ MonoBehaviour:
   npcAnim: {fileID: 0}
   yDirection: 0
   xDirection: 0
+  callback:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &1626341752
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6730,6 +6753,7 @@ MonoBehaviour:
   actors:
   - name: Marco
     sprite: {fileID: 21300000, guid: 6c0ecc78ad613014fa4ffbe03c90aab6, type: 3}
+    flipImage: 0
   gameManager: {fileID: 0}
   StartCallback:
     m_PersistentCalls:
