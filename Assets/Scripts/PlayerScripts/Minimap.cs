@@ -50,7 +50,7 @@ public class Minimap : MonoBehaviour
         position.x = 0f;
         position.y = 1f;
         position.z = -10f;
-
+        mapController.DisableInput();
         if (cameraTransform == null) return;
         cameraTransform.localPosition = position;
     }
