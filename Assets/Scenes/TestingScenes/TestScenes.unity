@@ -2133,7 +2133,7 @@ PrefabInstance:
     - target: {fileID: 3217504455788431410, guid: 6d495d013ea84d04584c462383100cfc, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1715530056}
     - target: {fileID: 3217504455788431410, guid: 6d495d013ea84d04584c462383100cfc, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: Attack
@@ -4023,7 +4023,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4027006227499487763, guid: d5dbfaa4b1bb07940bb5df11a5eef6b4, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4461686281828794530, guid: d5dbfaa4b1bb07940bb5df11a5eef6b4, type: 3}
       propertyPath: m_Sprite
@@ -4031,11 +4031,11 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: 955b7a0e30406a6418ff8c9b4e906894, type: 3}
     - target: {fileID: 4849691117357153947, guid: d5dbfaa4b1bb07940bb5df11a5eef6b4, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4849691117357153947, guid: d5dbfaa4b1bb07940bb5df11a5eef6b4, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6361310423480873915, guid: d5dbfaa4b1bb07940bb5df11a5eef6b4, type: 3}
       propertyPath: m_text
@@ -5556,144 +5556,155 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 3675237025388369100, guid: ef68e329ac781444d977c0e6f029f062, type: 3}
-      propertyPath: meleeObj
-      value: 
-      objectReference: {fileID: 436855334}
-    - target: {fileID: 3675237025388369100, guid: ef68e329ac781444d977c0e6f029f062, type: 3}
-      propertyPath: meleeButton
-      value: 
-      objectReference: {fileID: 436855335}
     - target: {fileID: 7037952979124180247, guid: dbb9655fdf05e8847be66b5efb3142a7, type: 3}
       propertyPath: changeMode
       value: Gun
       objectReference: {fileID: 0}
-    - target: {fileID: 470512055812542986, guid: caa5b40f68eb24a4bb644ba1d99dd8d0, type: 3}
-      propertyPath: joystick
-      value: 
-      objectReference: {fileID: 1337263913}
-    - target: {fileID: 742869106664115449, guid: caa5b40f68eb24a4bb644ba1d99dd8d0, type: 3}
-      propertyPath: m_Name
-      value: Isabel
-      objectReference: {fileID: 0}
-    - target: {fileID: 742869106664115449, guid: caa5b40f68eb24a4bb644ba1d99dd8d0, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1161629466891365164, guid: caa5b40f68eb24a4bb644ba1d99dd8d0, type: 3}
-      propertyPath: health
-      value: 250
-      objectReference: {fileID: 0}
-    - target: {fileID: 1161629466891365164, guid: caa5b40f68eb24a4bb644ba1d99dd8d0, type: 3}
-      propertyPath: redPanel
-      value: 
-      objectReference: {fileID: 1990038717}
-    - target: {fileID: 1161629466891365164, guid: caa5b40f68eb24a4bb644ba1d99dd8d0, type: 3}
-      propertyPath: healthBar
-      value: 
-      objectReference: {fileID: 1608261521}
-    - target: {fileID: 1161629466891365164, guid: caa5b40f68eb24a4bb644ba1d99dd8d0, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1161629466891365164, guid: caa5b40f68eb24a4bb644ba1d99dd8d0, type: 3}
-      propertyPath: maxHealth
-      value: 250
-      objectReference: {fileID: 0}
-    - target: {fileID: 1161629466891365164, guid: caa5b40f68eb24a4bb644ba1d99dd8d0, type: 3}
-      propertyPath: flashDuration
-      value: 0.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1161629466891365164, guid: caa5b40f68eb24a4bb644ba1d99dd8d0, type: 3}
-      propertyPath: deadPlayerCallback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1337691525}
-    - target: {fileID: 2100128342573527582, guid: caa5b40f68eb24a4bb644ba1d99dd8d0, type: 3}
-      propertyPath: m_Layer
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4564020799562302937, guid: caa5b40f68eb24a4bb644ba1d99dd8d0, type: 3}
+    - target: {fileID: 207039046113428720, guid: 3b1ad91ed97843b4d8b7486800c2ff1a, type: 3}
       propertyPath: changeMode
-      value: Gun
+      value: Melee
       objectReference: {fileID: 0}
-    - target: {fileID: 6444032524044246628, guid: caa5b40f68eb24a4bb644ba1d99dd8d0, type: 3}
-      propertyPath: gunObj
-      value: 
-      objectReference: {fileID: 734573518}
-    - target: {fileID: 6444032524044246628, guid: caa5b40f68eb24a4bb644ba1d99dd8d0, type: 3}
-      propertyPath: gunJoyStick
-      value: 
-      objectReference: {fileID: 734573519}
-    - target: {fileID: 6444032524044246628, guid: caa5b40f68eb24a4bb644ba1d99dd8d0, type: 3}
-      propertyPath: movementJoyStick
-      value: 
-      objectReference: {fileID: 1337263913}
-    - target: {fileID: 7370436204145086126, guid: caa5b40f68eb24a4bb644ba1d99dd8d0, type: 3}
-      propertyPath: m_RootOrder
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 7370436204145086126, guid: caa5b40f68eb24a4bb644ba1d99dd8d0, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -8.19
-      objectReference: {fileID: 0}
-    - target: {fileID: 7370436204145086126, guid: caa5b40f68eb24a4bb644ba1d99dd8d0, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -1.21
-      objectReference: {fileID: 0}
-    - target: {fileID: 7370436204145086126, guid: caa5b40f68eb24a4bb644ba1d99dd8d0, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7370436204145086126, guid: caa5b40f68eb24a4bb644ba1d99dd8d0, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7370436204145086126, guid: caa5b40f68eb24a4bb644ba1d99dd8d0, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7370436204145086126, guid: caa5b40f68eb24a4bb644ba1d99dd8d0, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7370436204145086126, guid: caa5b40f68eb24a4bb644ba1d99dd8d0, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7370436204145086126, guid: caa5b40f68eb24a4bb644ba1d99dd8d0, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7370436204145086126, guid: caa5b40f68eb24a4bb644ba1d99dd8d0, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7370436204145086126, guid: caa5b40f68eb24a4bb644ba1d99dd8d0, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9202871022581174786, guid: caa5b40f68eb24a4bb644ba1d99dd8d0, type: 3}
+    - target: {fileID: 232257813231191419, guid: 3b1ad91ed97843b4d8b7486800c2ff1a, type: 3}
       propertyPath: stepped
       value: dirt
       objectReference: {fileID: 0}
-    - target: {fileID: 9202871022581174786, guid: caa5b40f68eb24a4bb644ba1d99dd8d0, type: 3}
+    - target: {fileID: 232257813231191419, guid: 3b1ad91ed97843b4d8b7486800c2ff1a, type: 3}
       propertyPath: joystick
       value: 
       objectReference: {fileID: 1337263913}
-    - target: {fileID: 9202871022581174786, guid: caa5b40f68eb24a4bb644ba1d99dd8d0, type: 3}
+    - target: {fileID: 232257813231191419, guid: 3b1ad91ed97843b4d8b7486800c2ff1a, type: 3}
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2785724121080149321, guid: 3b1ad91ed97843b4d8b7486800c2ff1a, type: 3}
+      propertyPath: m_RootOrder
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 2785724121080149321, guid: 3b1ad91ed97843b4d8b7486800c2ff1a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -8.19
+      objectReference: {fileID: 0}
+    - target: {fileID: 2785724121080149321, guid: 3b1ad91ed97843b4d8b7486800c2ff1a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.21
+      objectReference: {fileID: 0}
+    - target: {fileID: 2785724121080149321, guid: 3b1ad91ed97843b4d8b7486800c2ff1a, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2785724121080149321, guid: 3b1ad91ed97843b4d8b7486800c2ff1a, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2785724121080149321, guid: 3b1ad91ed97843b4d8b7486800c2ff1a, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2785724121080149321, guid: 3b1ad91ed97843b4d8b7486800c2ff1a, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2785724121080149321, guid: 3b1ad91ed97843b4d8b7486800c2ff1a, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2785724121080149321, guid: 3b1ad91ed97843b4d8b7486800c2ff1a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2785724121080149321, guid: 3b1ad91ed97843b4d8b7486800c2ff1a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2785724121080149321, guid: 3b1ad91ed97843b4d8b7486800c2ff1a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6902681418732807794, guid: 3b1ad91ed97843b4d8b7486800c2ff1a, type: 3}
+      propertyPath: gunObj
+      value: 
+      objectReference: {fileID: 734573518}
+    - target: {fileID: 6902681418732807794, guid: 3b1ad91ed97843b4d8b7486800c2ff1a, type: 3}
+      propertyPath: gunJoyStick
+      value: 
+      objectReference: {fileID: 734573519}
+    - target: {fileID: 6902681418732807794, guid: 3b1ad91ed97843b4d8b7486800c2ff1a, type: 3}
+      propertyPath: movementJoyStick
+      value: 
+      objectReference: {fileID: 1337263913}
+    - target: {fileID: 7017767251398212930, guid: 3b1ad91ed97843b4d8b7486800c2ff1a, type: 3}
+      propertyPath: m_Name
+      value: Marco
+      objectReference: {fileID: 0}
+    - target: {fileID: 7017767251398212930, guid: 3b1ad91ed97843b4d8b7486800c2ff1a, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7611875156806708458, guid: 3b1ad91ed97843b4d8b7486800c2ff1a, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8187997164540241723, guid: 3b1ad91ed97843b4d8b7486800c2ff1a, type: 3}
+      propertyPath: health
+      value: 250
+      objectReference: {fileID: 0}
+    - target: {fileID: 8187997164540241723, guid: 3b1ad91ed97843b4d8b7486800c2ff1a, type: 3}
+      propertyPath: redPanel
+      value: 
+      objectReference: {fileID: 1990038717}
+    - target: {fileID: 8187997164540241723, guid: 3b1ad91ed97843b4d8b7486800c2ff1a, type: 3}
+      propertyPath: healthBar
+      value: 
+      objectReference: {fileID: 1608261521}
+    - target: {fileID: 8187997164540241723, guid: 3b1ad91ed97843b4d8b7486800c2ff1a, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8187997164540241723, guid: 3b1ad91ed97843b4d8b7486800c2ff1a, type: 3}
+      propertyPath: maxHealth
+      value: 250
+      objectReference: {fileID: 0}
+    - target: {fileID: 8187997164540241723, guid: 3b1ad91ed97843b4d8b7486800c2ff1a, type: 3}
+      propertyPath: flashDuration
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8187997164540241723, guid: 3b1ad91ed97843b4d8b7486800c2ff1a, type: 3}
+      propertyPath: deadPlayerCallback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1337691525}
+    - target: {fileID: 8263159730879567505, guid: 3b1ad91ed97843b4d8b7486800c2ff1a, type: 3}
+      propertyPath: meleeObj
+      value: 
+      objectReference: {fileID: 436855334}
+    - target: {fileID: 8263159730879567505, guid: 3b1ad91ed97843b4d8b7486800c2ff1a, type: 3}
+      propertyPath: meleeButton
+      value: 
+      objectReference: {fileID: 436855335}
+    - target: {fileID: 8383431698207389703, guid: 3b1ad91ed97843b4d8b7486800c2ff1a, type: 3}
+      propertyPath: joystick
+      value: 
+      objectReference: {fileID: 1337263913}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: caa5b40f68eb24a4bb644ba1d99dd8d0, type: 3}
+  m_SourcePrefab: {fileID: 100100000, guid: 3b1ad91ed97843b4d8b7486800c2ff1a, type: 3}
 --- !u!1 &1700263132 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 877396987259275595, guid: 759dc258de2430f469d57196b1b8cc4e, type: 3}
   m_PrefabInstance: {fileID: 540956074}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1715530056 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8263159730879567505, guid: 3b1ad91ed97843b4d8b7486800c2ff1a, type: 3}
+  m_PrefabInstance: {fileID: 1646575255}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75012079f9a98c146a9a8056efb194c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1728790251
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7418,6 +7429,10 @@ PrefabInstance:
     - target: {fileID: 3247096236911884456, guid: 11688f11497167c41bcba36d26bbf343, type: 3}
       propertyPath: m_Name
       value: MarcoBoss
+      objectReference: {fileID: 0}
+    - target: {fileID: 3247096236911884456, guid: 11688f11497167c41bcba36d26bbf343, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

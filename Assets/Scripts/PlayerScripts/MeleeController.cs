@@ -59,7 +59,7 @@ public class MeleeController : MonoBehaviour
         if (ModeChanger.mode == "Melee")
         {
             meleeObj.SetActive(true);
-            meleeButton.interactable = rb2d.velocity == Vector2.zero;
+            //meleeButton.interactable = rb2d.velocity == Vector2.zero;
         }
         else
         {
