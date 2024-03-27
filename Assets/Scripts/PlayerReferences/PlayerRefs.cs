@@ -509,6 +509,18 @@ public class PlayerRefs : MonoBehaviour
         }
     }
 
+    public void UpgradeWeapon()
+    {
+        if (ModeChanger.currentCharacter == "Marco")
+        {
+            PlayerPrefs.SetString("MarcoGun", "2ndGun");
+        }
+        else
+        {
+            PlayerPrefs.SetString("IsabelGun", "2ndGun");
+        }
+    }
+
     private void Chapter2ButterflyEffect()
     {
         if (DidHelpedTheIndios() == "y")

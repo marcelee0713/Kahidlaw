@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 4fe3dba03e452044ab667d7cac836f2e
+guid: be2f68f0f434b104a9fd6a5f3f2bdd2f
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -120,7 +120,7 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
-    buildTarget: WebGL
+    buildTarget: iPhone
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -133,11 +133,11 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
-    buildTarget: iPhone
+    buildTarget: WebGL
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -149,7 +149,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: chara_Marco-Sheet_0
+      name: Gun upgrade_0
       rect:
         serializedVersion: 2
         x: 0
@@ -157,20 +157,20 @@ TextureImporter:
         width: 96
         height: 80
       alignment: 9
-      pivot: {x: 0.5088183, y: 0.28}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 73701c7a13d6df648977324afe739b21
-      internalID: -515234995
+      spriteID: b9b903b0b7208ec408b724dd2b6d2082
+      internalID: -634849290
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: chara_Marco-Sheet_1
+      name: Gun upgrade_1
       rect:
         serializedVersion: 2
         x: 96
@@ -178,20 +178,20 @@ TextureImporter:
         width: 96
         height: 80
       alignment: 9
-      pivot: {x: 0.5088183, y: 0.28}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b7e810ec6d8889248be17f9da2b866b0
-      internalID: 1594905123
+      spriteID: cd2a8e1aae89f5a4194b69bf6071b4a0
+      internalID: 1937592213
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: chara_Marco-Sheet_2
+      name: Gun upgrade_2
       rect:
         serializedVersion: 2
         x: 192
@@ -199,14 +199,77 @@ TextureImporter:
         width: 96
         height: 80
       alignment: 9
-      pivot: {x: 0.5088183, y: 0.28}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 98613caf1e1efb94eafe5041b7590bab
-      internalID: 657083737
+      spriteID: 330b93c576baaa4409363d2b78960e3b
+      internalID: -1154731481
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gun upgrade_3
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 0
+        width: 96
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 204e4e9a49f633a4799260e482c6b303
+      internalID: -868393339
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gun upgrade_4
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 0
+        width: 96
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c980133974dda94399c75d7cbc10860
+      internalID: -1054600572
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gun upgrade_5
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 0
+        width: 96
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 152d4f5d4dd8c0e458ccc74b5669e27e
+      internalID: -887403
       vertices: []
       indices: 
       edges: []
@@ -222,9 +285,12 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      chara_Marco-Sheet_0: -515234995
-      chara_Marco-Sheet_1: 1594905123
-      chara_Marco-Sheet_2: 657083737
+      Gun upgrade_0: -634849290
+      Gun upgrade_1: 1937592213
+      Gun upgrade_2: -1154731481
+      Gun upgrade_3: -868393339
+      Gun upgrade_4: -1054600572
+      Gun upgrade_5: -887403
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

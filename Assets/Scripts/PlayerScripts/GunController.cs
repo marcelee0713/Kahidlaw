@@ -19,8 +19,11 @@ public class GunController : MonoBehaviour
 
     void Start()
     {
+        PlayerPrefs.SetString("MarcoGun", "1stGun");
+
         anim = GetComponent<Animator>();
         gunObj.SetActive(false);
+        HandleGunChange();
     }
 
     void Update()
@@ -34,6 +37,7 @@ public class GunController : MonoBehaviour
         {
             onDialogue();
             anim.SetBool("isGunMode", true);
+            anim.SetBool("2ndGun", true);
             aimDirection = gunJoyStick.Direction.normalized;
             ShootingAnimation();
             ShootingWhileWalkingAnimation();
@@ -41,6 +45,8 @@ public class GunController : MonoBehaviour
         else
         {
             anim.SetBool("isGunMode", false);
+            anim.SetBool("1stGun", false);
+            anim.SetBool("2ndGun", false);
             gunObj.SetActive(false);
             anim.SetBool("isShooting", false);
             anim.SetBool("isWShooting", false);
@@ -92,5 +98,22 @@ public class GunController : MonoBehaviour
         projectile = Instantiate(bullet, muzzleLocation.position, Quaternion.identity);
         projectile.GetComponent<Rigidbody2D>().velocity = new Vector2(aimDirection.x * bulletSpeed, aimDirection.y * bulletSpeed);
         projectile.transform.Rotate(0.0f, 0.0f, Mathf.Atan2(aimDirection.y, aimDirection.x) * Mathf.Rad2Deg);
+    }
+
+    public void HandleGunChange()
+    {
+        anim.SetBool("1stGun", false);
+        anim.SetBool("2ndGun", false);
+
+        if (ModeChanger.currentCharacter == "Marco")
+        {
+            string status = PlayerPrefs.GetString("MarcoGun", "1stGun");
+            anim.SetBool(status, true);
+        }
+        else
+        {
+            string status = PlayerPrefs.GetString("IsabelGun", "1stGun");
+            anim.SetBool(status, true);
+        }
     }
 }
