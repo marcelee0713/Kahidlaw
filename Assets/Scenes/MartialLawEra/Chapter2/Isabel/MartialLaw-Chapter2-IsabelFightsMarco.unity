@@ -582,6 +582,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8998808046708070466, guid: 11688f11497167c41bcba36d26bbf343, type: 3}
+      propertyPath: health
+      value: 6000
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6728,7 +6732,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1161629466891365164, guid: caa5b40f68eb24a4bb644ba1d99dd8d0, type: 3}
       propertyPath: health
-      value: 650
+      value: 70
       objectReference: {fileID: 0}
     - target: {fileID: 1161629466891365164, guid: caa5b40f68eb24a4bb644ba1d99dd8d0, type: 3}
       propertyPath: redPanel
@@ -6744,7 +6748,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1161629466891365164, guid: caa5b40f68eb24a4bb644ba1d99dd8d0, type: 3}
       propertyPath: maxHealth
-      value: 650
+      value: 70
       objectReference: {fileID: 0}
     - target: {fileID: 1161629466891365164, guid: caa5b40f68eb24a4bb644ba1d99dd8d0, type: 3}
       propertyPath: deadPlayerCallback.m_PersistentCalls.m_Calls.Array.size

@@ -177,12 +177,10 @@ public class MainMenu : MonoBehaviour
                 FadeOutMusic();
                 break;
             case Eras.Japanese:
-                // Add a LoadLastGame for Japanese
                 levelLoader.LoadLastGame("Japanese-Era", "Japanese-Chapter1-Prologue");
                 FadeOutMusic();
                 break;
             case Eras.MartialLaw:
-                // Add a LoadLastGame for MartialLaw
                 levelLoader.LoadLastGame("MartialLaw-Era", "Japanese-Chapter1-Prologue");
                 FadeOutMusic();
                 break;
@@ -261,7 +259,10 @@ public class MainMenu : MonoBehaviour
 
     public void StartNewGame()
     {
-        switch(playerRefs.era)
+        PlayerPrefs.SetString("MarcoGun", "1stGun");
+        PlayerPrefs.SetString("IsabelGun", "1stGun");
+
+        switch (playerRefs.era)
         {
             case Eras.PreColonial:
                 ResetEra("PreColonial-Era", "PreColonialEraCurrentTime", "FinishedPreColonialEra", "UploadedPreColonialEra");
