@@ -56,4 +56,9 @@ public class IsabelRadius : MonoBehaviour
     {
         turnOn = true;
     }
+
+    public void TurnOnRadius()
+    {
+        onRadius = true;
+    }
 }
