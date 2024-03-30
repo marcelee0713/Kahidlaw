@@ -27177,9 +27177,9 @@ PrefabInstance:
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 5543724028333431837, guid: 81b77f2778a3e194598803af716baf3a, type: 3}
+    - targetCorrespondingSourceObject: {fileID: 626746223667640550, guid: 81b77f2778a3e194598803af716baf3a, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1910019537}
+      addedObject: {fileID: 330015991}
   m_SourcePrefab: {fileID: 100100000, guid: 81b77f2778a3e194598803af716baf3a, type: 3}
 --- !u!4 &330015989 stripped
 Transform:
@@ -27191,6 +27191,39 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 626746223667640550, guid: 81b77f2778a3e194598803af716baf3a, type: 3}
   m_PrefabInstance: {fileID: 330015988}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &330015991
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 330015990}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69c703cfe28666a4e82b4995135c7ee3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueTrigger: {fileID: 1910019532}
+  dialogueManager: {fileID: 995014282}
+  DialogueBox: {fileID: 995014283}
+  npcAnim: {fileID: 0}
+  yDirection: 0
+  xDirection: 0
+  callback:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 200186541}
+        m_TargetAssemblyTypeName: PlayerMovement, Assembly-CSharp
+        m_MethodName: DisableGloballyAnyMovements
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1001 &330429589
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -120441,55 +120474,17 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
---- !u!1 &1910019529 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5543724028333431837, guid: 81b77f2778a3e194598803af716baf3a, type: 3}
-  m_PrefabInstance: {fileID: 330015988}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1910019532 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 218630057397127132, guid: 81b77f2778a3e194598803af716baf3a, type: 3}
   m_PrefabInstance: {fileID: 330015988}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1910019529}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bd492cac8feb83c4e81db5a6a19f8f07, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1910019537
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1910019529}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 69c703cfe28666a4e82b4995135c7ee3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialogueTrigger: {fileID: 1910019532}
-  dialogueManager: {fileID: 995014282}
-  DialogueBox: {fileID: 995014283}
-  npcAnim: {fileID: 0}
-  yDirection: 0
-  xDirection: 0
-  callback:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 200186541}
-        m_TargetAssemblyTypeName: PlayerMovement, Assembly-CSharp
-        m_MethodName: DisableGloballyAnyMovements
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!1001 &1917229777
 PrefabInstance:
   m_ObjectHideFlags: 0

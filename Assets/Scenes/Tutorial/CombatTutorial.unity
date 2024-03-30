@@ -495,6 +495,8 @@ MonoBehaviour:
             movement joystick while shooting them!
           m_BoolArgument: 0
         m_CallState: 2
+  onRanged4D: {fileID: 0}
+  onRangedMelee4D: {fileID: 0}
   directionY: 0
   directionX: 0
   flashMaterial: {fileID: 2100000, guid: 9db01f4575cce734e98ca5e4e6a661de, type: 2}
@@ -502,6 +504,8 @@ MonoBehaviour:
   enemyIsHurt: 0
   slash: 5
   gun: 2
+  enableRage: 0
+  onRage: 0
 --- !u!50 &524986369
 Rigidbody2D:
   serializedVersion: 4
@@ -1263,6 +1267,8 @@ MonoBehaviour:
             movement joystick while shooting them!
           m_BoolArgument: 0
         m_CallState: 2
+  onRanged4D: {fileID: 0}
+  onRangedMelee4D: {fileID: 0}
   directionY: 0
   directionX: 0
   flashMaterial: {fileID: 2100000, guid: 9db01f4575cce734e98ca5e4e6a661de, type: 2}
@@ -1270,6 +1276,8 @@ MonoBehaviour:
   enemyIsHurt: 0
   slash: 5
   gun: 2
+  enableRage: 0
+  onRage: 0
 --- !u!50 &816348826
 Rigidbody2D:
   serializedVersion: 4
@@ -15368,17 +15376,9 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2623742064644884414, guid: ef68e329ac781444d977c0e6f029f062, type: 3}
-      propertyPath: bullet
-      value: 
-      objectReference: {fileID: 6151668769535732439, guid: 3956926fa00ce3b4995f140e604a7fb9, type: 3}
-    - target: {fileID: 2623742064644884414, guid: ef68e329ac781444d977c0e6f029f062, type: 3}
       propertyPath: gunObj
       value: 
       objectReference: {fileID: 1054016419}
-    - target: {fileID: 2623742064644884414, guid: ef68e329ac781444d977c0e6f029f062, type: 3}
-      propertyPath: bulletSpeed
-      value: 10
-      objectReference: {fileID: 0}
     - target: {fileID: 2623742064644884414, guid: ef68e329ac781444d977c0e6f029f062, type: 3}
       propertyPath: gunJoyStick
       value: 
@@ -16307,6 +16307,8 @@ MonoBehaviour:
             you could use your Gun!
           m_BoolArgument: 1
         m_CallState: 2
+  onRanged4D: {fileID: 0}
+  onRangedMelee4D: {fileID: 0}
   directionY: 0
   directionX: 0
   flashMaterial: {fileID: 2100000, guid: 9db01f4575cce734e98ca5e4e6a661de, type: 2}
@@ -16314,6 +16316,8 @@ MonoBehaviour:
   enemyIsHurt: 0
   slash: 5
   gun: 2
+  enableRage: 0
+  onRage: 0
 --- !u!1001 &1731705204
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16923,6 +16927,8 @@ MonoBehaviour:
             movement joystick while shooting them!
           m_BoolArgument: 0
         m_CallState: 2
+  onRanged4D: {fileID: 0}
+  onRangedMelee4D: {fileID: 0}
   directionY: 0
   directionX: 0
   flashMaterial: {fileID: 2100000, guid: 9db01f4575cce734e98ca5e4e6a661de, type: 2}
@@ -16930,6 +16936,8 @@ MonoBehaviour:
   enemyIsHurt: 0
   slash: 5
   gun: 2
+  enableRage: 0
+  onRage: 0
 --- !u!50 &2048875051
 Rigidbody2D:
   serializedVersion: 4
@@ -17639,8 +17647,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4575433770807093145, guid: feae179b249e66d44be8df6d9d00f374, type: 3}
       propertyPath: messages.Array.data[5].messageCallback.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_StringArgument
-      value: You can not use your attack button, when you're moving. Try to kill
-        that guard over there.
+      value: Try killing that guard over there.
       objectReference: {fileID: 0}
     - target: {fileID: 4575433770807093145, guid: feae179b249e66d44be8df6d9d00f374, type: 3}
       propertyPath: messages.Array.data[5].messageCallback.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName

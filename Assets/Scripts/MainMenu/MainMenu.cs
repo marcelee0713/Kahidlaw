@@ -259,12 +259,12 @@ public class MainMenu : MonoBehaviour
 
     public void StartNewGame()
     {
-        PlayerPrefs.SetString("MarcoGun", "1stGun");
-        PlayerPrefs.SetString("IsabelGun", "1stGun");
-
         switch (playerRefs.era)
         {
             case Eras.PreColonial:
+                PlayerPrefs.SetString("MarcoGun", "1stGun");
+                PlayerPrefs.SetString("IsabelGun", "1stGun");
+
                 ResetEra("PreColonial-Era", "PreColonialEraCurrentTime", "FinishedPreColonialEra", "UploadedPreColonialEra");
                 ResetEra("Spanish-Era", "SpanishEraCurrentTime", "FinishedSpanishEra", "UploadedSpanishEra");
                 ResetEra("American-Era", "AmericanEraCurrentTime", "FinishedAmericanEra", "UploadedAmericanEra");
