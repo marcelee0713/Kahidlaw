@@ -672,6 +672,7 @@ MonoBehaviour:
   finishedPlaceholder: {fileID: 1392382640}
   stayButton: {fileID: 1392382639}
   nextButton: {fileID: 1392382638}
+  minimap: {fileID: 0}
 --- !u!4 &213884008
 Transform:
   m_ObjectHideFlags: 0
@@ -813,6 +814,7 @@ MonoBehaviour:
   actors:
   - name: Marco
     sprite: {fileID: 21300000, guid: 6c0ecc78ad613014fa4ffbe03c90aab6, type: 3}
+    flipImage: 0
   gameManager: {fileID: 0}
   StartCallback:
     m_PersistentCalls:
@@ -1225,6 +1227,7 @@ MonoBehaviour:
   actors:
   - name: Marco
     sprite: {fileID: 21300000, guid: 6c0ecc78ad613014fa4ffbe03c90aab6, type: 3}
+    flipImage: 0
   gameManager: {fileID: 0}
   StartCallback:
     m_PersistentCalls:
@@ -1292,6 +1295,9 @@ MonoBehaviour:
   npcAnim: {fileID: 0}
   yDirection: 0
   xDirection: 0
+  callback:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1001 &467434526
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2045,6 +2051,7 @@ MonoBehaviour:
   FadeTime: 4
   volume: 0.2
   intenseMusic: {fileID: 8300000, guid: aa819caadf2bc9542836a7d20d3a6970, type: 3}
+  defaultMusic: {fileID: 0}
 --- !u!4 &947433002
 Transform:
   m_ObjectHideFlags: 0
@@ -9795,8 +9802,10 @@ MonoBehaviour:
   actors:
   - name: Marco
     sprite: {fileID: 21300000, guid: 6c0ecc78ad613014fa4ffbe03c90aab6, type: 3}
+    flipImage: 0
   - name: ???
     sprite: {fileID: 21300000, guid: 5a4acb4e7a01f1942b0b9ca857fa611a, type: 3}
+    flipImage: 0
   gameManager: {fileID: 0}
   StartCallback:
     m_PersistentCalls:

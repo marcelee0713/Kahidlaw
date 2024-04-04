@@ -16355,6 +16355,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   qte: {fileID: 414872982}
+  caughtCallback:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &414872982
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -88510,7 +88513,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6165566137979278393, guid: d359647ded4a58545ad4de2c55391dc3, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 315
+      value: 310
       objectReference: {fileID: 0}
     - target: {fileID: 6165566137979278393, guid: d359647ded4a58545ad4de2c55391dc3, type: 3}
       propertyPath: m_AnchoredPosition.y
