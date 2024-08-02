@@ -6,6 +6,10 @@ If you ever want to try our game here's the google drive [link](https://drive.go
 
 This was created for 9 months long and used Unity, C#, Photoshop, Sketchbook, and Firebase to create this project.
 
+We also got this project exhibited in the PGDX Manila 2024. 
+
+![Me and Allen at PGDX 2024](https://res.cloudinary.com/dop8qsdej/image/upload/v1722611632/my-uploads/at-PGDX-2024_o5e4fi.jpg)
+
 <hr>
 
 ### Acknowledgements
@@ -35,6 +39,10 @@ This was created for 9 months long and used Unity, C#, Photoshop, Sketchbook, an
 **John Mark Mejia & Genmar De Vera**
 
 - Thank you guys for making the documents in our project, without both of you. We wouldn't be able to pass our Capstone/Thesis Project.
+
+**Francis Gonzales**
+
+- We thank you so much for your support, lectures, and guidance. 
 
 <hr>
 
